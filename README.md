@@ -1,8 +1,10 @@
 ### Hi there 👋
 
+🔖 I'm <a href="https://github.com/Leomotors/">Leomotors</a>. You can call me **Leo**.
+
 🏫 Triam Udom Suksa School / TU82
 
-💻 C/C++・Python
+💻 C・C++・Python
 
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here!</a>
 
