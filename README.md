@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+🏫 Triam Udom Suksa School / TU82
+
 <!--
 **Leomotors/Leomotors** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
