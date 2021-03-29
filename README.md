@@ -2,6 +2,8 @@
 
 🏫 Triam Udom Suksa School / TU82
 
+💻 C/C++・Python
+
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here!</a>
 
 <!--
