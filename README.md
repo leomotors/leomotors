@@ -2,9 +2,13 @@
 
 🔖 I'm <a href="https://github.com/Leomotors/">Leomotors</a>. You can call me **Leo**.
 
+🎂 Age = 16
+
 🏫 Triam Udom Suksa School / TU82
 
 💻 C・C++・Python
+
+⭐ Please leave a star on my repo if you like it!
 
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here!</a>
 
