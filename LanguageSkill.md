@@ -10,7 +10,7 @@
 
 - Java
 - Kotlin
-- Javascript
-- Typescript
+- JavaScript
+- TypeScript
 - C#
 - Go
