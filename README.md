@@ -8,7 +8,7 @@
 
 💻 Programming since 14 Yrs Old
 
-**<>** C・C++・Python (<a href="https://github.com/Leomotors/Leomotors/blob/main/LanguageSkill.md">More Info</a>)
+👨‍💻 C・C++・Python (<a href="https://github.com/Leomotors/Leomotors/blob/main/LanguageSkill.md">More Info</a>)
 
 ⭐ Please leave a star on my repo if you like it!
 
