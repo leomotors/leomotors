@@ -13,4 +13,6 @@
 - JavaScript
 - TypeScript
 - C#
+
+## Language that I have look into it but didn't write much
 - Go
