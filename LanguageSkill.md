@@ -6,13 +6,10 @@
 - C++
 - Python
 
-## Other Language that I can code
+## Other Language that I can code (have finished some courses)
 
 - Java
 - Kotlin
 - JavaScript
 - TypeScript
 - C#
-
-## Language that I have look into it but didn't write much
-- Go
