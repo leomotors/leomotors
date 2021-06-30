@@ -12,6 +12,8 @@
 
 ⭐ Please leave a star on my repo if you like it!
 
+🪟 Love to code in WSL. Been Windows Insider (Dev Channel) since 26 May 2021
+
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here!</a>
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
