@@ -10,9 +10,9 @@
 
 👨‍💻 C・C++・Python (<a href="https://github.com/Leomotors/Leomotors/blob/main/LanguageSkill.md">More Info</a>)
 
-⭐ Please leave a star on my repo if you like it!
+🪟 Love to code in <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>. Been Windows Insider (Dev Channel) since 26 May 2021
 
-🪟 Love to code in WSL. Been Windows Insider (Dev Channel) since 26 May 2021
+⭐ Please leave a star on my repo if you like it!
 
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here!</a>
 
