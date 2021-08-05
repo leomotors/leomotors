@@ -16,7 +16,7 @@
 
 [Click here!](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10)](https://github.com/anuraghazra/github-readme-stats)
 
 <!-- [![Leomotors's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Leomotors&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 -->
