@@ -2,7 +2,7 @@
 
 🔖 I'm <a href="https://github.com/Leomotors/">Leomotors</a>. You can call me **Leo**.
 
-🚹 Male | 🎂 16 Yrs Old
+🚹 Male | 🎂 17 Yrs Old
 
 🏫 Studying at Triam Udom Suksa School (TU82) in Math&Science
 
@@ -12,7 +12,7 @@
 
 🪟 Love to code in <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>. Also Windows Insider (Dev Channel: 26/5 - 29/7, Beta Channel: 30/7 - Today)
 
-⭐ Please leave a star on my repo if you like it!
+⭐ Feel free to leave a star on my repo if you like it!
 
 [Click here!](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
