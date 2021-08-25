@@ -6,7 +6,9 @@
 
 🏫 Studying at Triam Udom Suksa School (TU82) in Math&Science
 
-💻 Programming since 14 Yrs Old
+🏆 POSN Olympic Student - Is representative of Bangkok and will attend in TOI 17 this December
+
+💻 Programming since 14 Yrs Old / Year 9
 
 👨‍💻 C・C++・Python (<a href="https://github.com/Leomotors/Leomotors/blob/main/LanguageSkill.md">More Info</a>)
 
