@@ -12,7 +12,7 @@
 
 👨‍💻 C・C++・Python (<a href="https://github.com/Leomotors/Leomotors/blob/main/LanguageSkill.md">More Info</a>)
 
-🪟 Love to code in <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>. Also Windows Insider (Dev Channel: 26/5 - 29/7, Beta Channel: 30/7 - Today)
+🪟 Code in Windows and Linux (Windows Linux Subsystem) | Windows 11 User
 
 ⭐ Feel free to leave a star on my repo if you like it!
 
