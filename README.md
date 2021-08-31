@@ -18,8 +18,8 @@
 
 [Click here!](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
-![My Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10)
- ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=Leomotors)
+![My Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true)
+ ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=Leomotors&count_private=true)
 
 <!-- [![Leomotors's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Leomotors&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 -->
