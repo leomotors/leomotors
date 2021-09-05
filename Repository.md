@@ -4,11 +4,11 @@
 
 🏅 - MVP
 
-🟢 - Big Project
+🟢 - Big Project (>25k)
 
-🟡 - Medium Project
+🟡 - Medium Project (>10k)
 
-🔴 - Small Project
+🔴 - Small Project (<10k)
 
 ## Vector Calculator Series
 
