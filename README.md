@@ -23,7 +23,6 @@
 <details>
  <summary>Click Here to Reveal</summary>
 
-- [CarelessDev/made-for-nathan](https://github.com/CarelessDev/made-for-nathan) => [Vercel App](https://made-for-nathan.vercel.app/)
 - [Website Vector Calculator 2](https://github.com/Leomotors/Website-Vector-Calculator-2) => [Vercel App](https://mini-vector-calculator.vercel.app/)
  
 </details>
