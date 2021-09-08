@@ -11,7 +11,8 @@
 - Console Application with C/C++/Python
 - Discord Bot with JavaScript/TypeScript
 - Mobile App with Flutter
-- Desktop App with pygame (Easiest GUI)
+- Desktop GUI App with pygame (Easiest GUI)
+- Desktop GUI App with wxWidgets (C++)
 - Basic Image Processing with PIL
 
 ## List of All Language I've finished its course on SoloLearn
@@ -24,3 +25,4 @@
 - C#
 - HTML
 - JavaScript
+- Go
