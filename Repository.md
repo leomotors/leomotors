@@ -60,7 +60,7 @@ Mobile App: [NSM2021-SmartWheelChair-MobileApp](https://github.com/Leomotors/NSM
 
 ## GitHub Actions
 
-[THIS-REPO-HAS-X-ISSUES](https://github.com/Leomotors/THIS-REPO-HAS-X-ISSUES)
+[THIS-REPO-HAS-X-ISSUES](https://github.com/Leomotors/THIS-REPO-HAS-X-ISSUES) 🔴
 
 ## My Dotfiles
 
