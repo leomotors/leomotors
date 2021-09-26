@@ -25,7 +25,9 @@
 <details>
  <summary>Click Here to Reveal</summary>
 
-- [Website Vector Calculator 2](https://github.com/Leomotors/Website-Vector-Calculator-2) => [Vercel App](https://mini-vector-calculator.vercel.app/)
+- [Website Vector Calculator 2](https://github.com/Leomotors/Website-Vector-Calculator-2) => [Vercel App](https://mini-vector-calculator.vercel.app)
+- [My Repositories](https://github.com/Leomotors/my-repos) => [Vercel App](https://leomotors-repos.vercel.app)
+- [Anime Captcha](https://github.com/Leomotors/anime-captcha) => [Vercel App](https://anime-captcha.vercel.app)
 
 </details>
 
