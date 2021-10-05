@@ -1,6 +1,19 @@
 # Hello! 👋 I'm Leo
 
-🔖 Or Leomotors (My Gamer Name)
+## It's Hacktoberfest 2021!
+
+[What is Hacktoberfest?](https://hacktoberfest.digitalocean.com/)
+
+### My Contribution
+
+- [narze/awesome-salim-quotes](https://github.com/narze/awesome-salim-quotes)
+- [WasinUddy/Reddit-Image-Scraper](https://github.com/WasinUddy/Reddit-Image-Scraper)
+
+### My Repository that joins the fest
+
+- [anime-captcha](https://github.com/Leomotors/anime-captcha)
+
+## My Info
 
 🚹 Male | 🎂 17 Yrs Old
 
@@ -16,9 +29,7 @@
 
 ⭐ Feel free to leave a star on my repo if you like it!
 
-[My Repository Categorized](https://github.com/Leomotors/Leomotors/blob/main/Repository.md)
-
-[don't click here](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[My Repository Categorized](https://github.com/Leomotors/Leomotors/blob/main/Repository.md) (rarely updated)
 
 ## My Deployed Project (On Vercel)
 
