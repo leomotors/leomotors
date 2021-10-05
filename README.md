@@ -1,6 +1,6 @@
 # Hello! 👋 I'm Leo
 
-## It's Hacktoberfest 2021!
+## 🎃 It's Hacktoberfest 2021!
 
 [What is Hacktoberfest?](https://hacktoberfest.digitalocean.com/)
 
@@ -13,15 +13,13 @@
 
 - [anime-captcha](https://github.com/Leomotors/anime-captcha)
 
-## My Info
+## 🏷️ My Info
 
 🚹 Male | 🎂 17 Yrs Old
 
-🏫 Studying at Triam Udom Suksa School (TU82) in Math&Science
+🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science
 
 🏆 POSN Olympic Student - Is representative of Bangkok and will attend in TOI 17 this December
-
-💻 Programming since 14 Yrs Old / Year 9
 
 👨‍💻 C・C++・JS/TS (nodejs)・Python | [My Skills](./LanguageSkill.md)
 
@@ -31,10 +29,10 @@
 
 [My Repository Categorized](https://github.com/Leomotors/Leomotors/blob/main/Repository.md) (rarely updated)
 
-## My Deployed Project (On Vercel)
+## ⚒️ My Deployed Project
 
 <details>
- <summary>Click Here to Reveal</summary>
+ <summary>🔺 Web App (Vercel)</summary>
 
 - [Website Vector Calculator 2](https://github.com/Leomotors/Website-Vector-Calculator-2) => [Vercel App](https://mini-vector-calculator.vercel.app)
 - [My Repositories](https://github.com/Leomotors/my-repos) => [Vercel App](https://leomotors-repos.vercel.app)
@@ -42,7 +40,7 @@
 
 </details>
 
-## My GitHub Stats
+## 🔢 My GitHub Stats
 
 ![My Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true)
  ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=Leomotors&count_private=true)
