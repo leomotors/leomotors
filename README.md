@@ -8,8 +8,10 @@
 
 - [narze/awesome-salim-quotes](https://github.com/narze/awesome-salim-quotes)
 - [WasinUddy/Reddit-Image-Scraper](https://github.com/WasinUddy/Reddit-Image-Scraper)
+- [Leomotors/anime-captcha](https://github.com/Leomotors/anime-captcha)
+- [WasinUddy/Banana-log](https://github.com/WasinUddy/Banana-log)
 
-### My Repository that joins the fest
+### My Repository that joins the fest (Contribution Welcome Here!)
 
 - [anime-captcha](https://github.com/Leomotors/anime-captcha)
 
