@@ -4,7 +4,7 @@
 
 [What is Hacktoberfest?](https://hacktoberfest.digitalocean.com/)
 
-### My Contribution
+### My Contribution [COMPLETED]
 
 - [narze/awesome-salim-quotes](https://github.com/narze/awesome-salim-quotes)
 - [WasinUddy/Reddit-Image-Scraper](https://github.com/WasinUddy/Reddit-Image-Scraper)
