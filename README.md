@@ -1,35 +1,18 @@
 # Hello! 👋 I'm Leo
 
-## 🎃 It's Hacktoberfest 2021!
-
-[What is Hacktoberfest?](https://hacktoberfest.digitalocean.com/)
-
-### My Contribution [COMPLETED]
-
-- [narze/awesome-salim-quotes](https://github.com/narze/awesome-salim-quotes)
-- [WasinUddy/Reddit-Image-Scraper](https://github.com/WasinUddy/Reddit-Image-Scraper)
-- [Leomotors/anime-captcha](https://github.com/Leomotors/anime-captcha)
-- [WasinUddy/Banana-log](https://github.com/WasinUddy/Banana-log)
-
-### My Repository that joins the fest (Contribution Welcome Here!)
-
-- [anime-captcha](https://github.com/Leomotors/anime-captcha)
-
 ## 🏷️ My Info
 
 🚹 Male | 🎂 17 Yrs Old
 
 🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science
 
-🏆 POSN Olympic Student - Is representative of Bangkok and will attend in TOI 17 this December
+🏆 POSN Olympic Student - Is representative of Bangkok and will attend in 17th TOI this December
 
-👨‍💻 C・C++・JS/TS (nodejs)・Python | [My Skills](./LanguageSkill.md)
+👨‍💻 C・C++・JS/TS (nodejs)・Python
 
 🪟 Code in Windows and Linux (Windows Linux Subsystem) | Windows 11 User
 
 ⭐ Feel free to leave a star on my repo if you like it!
-
-[My Repository Categorized](https://github.com/Leomotors/Leomotors/blob/main/Repository.md) (rarely updated)
 
 ## ⚒️ My Deployed Project
 
