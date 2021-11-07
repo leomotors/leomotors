@@ -4,13 +4,15 @@
 
 🚹 Male | 🎂 17 Yrs Old
 
-🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science
+🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science (GPAX 3.9+)
 
 🏆 POSN Olympic Student - Is representative of Bangkok and will attend in 17th TOI this December
 
-👨‍💻 C・C++・JS/TS (nodejs)・Python
+👨‍💻 C & C++・JS/TS (node)・Flutter (dart)
 
 🪟 Code in Windows and Linux (Windows Linux Subsystem) | Windows 11 User
+
+👀 Looking on creating more and more repositories as coding is my life
 
 ⭐ Feel free to leave a star on my repo if you like it!
 
