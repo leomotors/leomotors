@@ -4,9 +4,9 @@
 
 🚹 Male | 🎂 17 Yrs Old
 
-🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science (GPAX 3.9+)
+🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science (GPAX 3.94)
 
-🏆 POSN Olympic Student - Is representative of Bangkok and will attend in 17th TOI this December
+🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme)
 
 👨‍💻 C & C++・JS/TS (node)・Flutter (dart)
 
