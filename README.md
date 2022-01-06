@@ -1,5 +1,7 @@
 # Hello! 👋 I'm Leo
 
+### => [My Portfolio](https://leomotors-portfolio.vercel.app/) <==
+
 ## 🏷️ My Info
 
 🚹 Male | 🎂 17 Yrs Old
@@ -29,8 +31,8 @@
 
 ## 🔢 My GitHub Stats
 
-|![My Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true)|![My GitHub stats](https://github-readme-stats.vercel.app/api?username=Leomotors&count_private=true)|
-|---|---|
+| ![My Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true) | ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=Leomotors&count_private=true) |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 
 ![wakatime](https://wakatime.com/badge/user/7b85cf35-1e8b-4428-aed5-467d40e6e916.svg)
 
