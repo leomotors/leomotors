@@ -26,6 +26,17 @@
 - [Website Vector Calculator 2](https://github.com/Leomotors/Website-Vector-Calculator-2) => [Vercel App](https://mini-vector-calculator.vercel.app)
 - [My Repositories](https://github.com/Leomotors/my-repos) => [Vercel App](https://leomotors-repos.vercel.app)
 - [Anime Captcha](https://github.com/Leomotors/anime-captcha) => [Vercel App](https://anime-captcha.vercel.app)
+- [Stupid Problems](https://github.com/Leomotors/stupid-problems) => [GitHub Pages](https://leomotors.github.io/stupid-problems/)
+
+</details>
+
+<details>
+ <summary>📦 NPM Package</summary>
+
+- [My NPM Automation](https://github.com/Leomotors/my-npm-automation) => [npm](https://www.npmjs.com/package/leomotors-automation)
+- [S Bot Framework](https://github.com/Leomotors/s-bot-framework) => [npm](https://www.npmjs.com/package/s-bot-framework)
+- [Polynomial Generator](https://github.com/Leomotors/polynomial-generator) => [npm](https://www.npmjs.com/package/polynomial-generator)
+- [Cocoa Discord Utils](https://github.com/Leomotors/cocoa-discord-utils) => [npm](https://www.npmjs.com/package/cocoa-discord-utils)
 
 </details>
 
@@ -33,6 +44,8 @@
 
 | ![My Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true) | ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=Leomotors&count_private=true) |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+
+## 🕐 Wakatime
 
 ![wakatime](https://wakatime.com/badge/user/7b85cf35-1e8b-4428-aed5-467d40e6e916.svg)
 
