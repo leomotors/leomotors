@@ -1,6 +1,6 @@
 # Hello! 👋 I'm Leo
 
-## => [My Portfolio](https://leomotors-portfolio.vercel.app/) & [Blog](https://leomotors-portfolio.vercel.app/blog) <==
+## => [My Portfolio](https://portfolio.leomotors.vercel.app) & [Blog](https://portfolio.leomotors.vercel.app/blog) <==
 
 ## 🏷️ My Info
 
@@ -21,13 +21,13 @@
 ## ⚒️ My Deployed Project
 
 <details>
- <summary>🔺 Web App (Vercel)</summary>
+ <summary>🔺 Web App</summary>
 
 - [Website Vector Calculator 2](https://github.com/Leomotors/Website-Vector-Calculator-2) => [Vercel App](https://mini-vector-calculator.vercel.app)
 - [My Repositories](https://github.com/Leomotors/my-repos) => [Vercel App](https://leomotors-repos.vercel.app)
 - [Anime Captcha](https://github.com/Leomotors/anime-captcha) => [Vercel App](https://anime-captcha.vercel.app)
 - [Stupid Problems](https://github.com/Leomotors/stupid-problems) => [GitHub Pages](https://leomotors.github.io/stupid-problems/)
-- [My Portfolio](https://github.com/Leomotors/portfolio-sv) => [Vercel App](https://leomotors-portfolio.vercel.app)
+- [My Portfolio](https://github.com/Leomotors/portfolio-sv) => [Vercel App](https://portfolio.leomotors.vercel.app)
 
 </details>
 
