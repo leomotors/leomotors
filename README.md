@@ -6,7 +6,7 @@
 
 🚹 Male | 🎂 17 Yrs Old
 
-🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science (GPAX 3.94)
+🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science (GPAX 3.95)
 
 🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme)
 
