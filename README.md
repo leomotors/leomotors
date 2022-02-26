@@ -2,21 +2,21 @@
 
 ## => [My Portfolio](https://portfolio.leomotors.vercel.app) & [Blog](https://portfolio.leomotors.vercel.app/blog) <==
 
-## 🏷️ My Info
+## ℹ️ My Info
 
 🚹 Male | 🎂 17 Yrs Old
 
-🏫 Year 12 Student at Triam Udom Suksa School (TU82) in Math & Science (GPAX 3.95)
+🏫 Graduated from Triam Udom Suksa School (TU82) in Math & Science with GPAX of 3.95
 
-🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme)
+🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and currently under selection camp
 
 👨‍💻 C & C++・JS/TS (node)・Flutter (dart)
 
+🤖 Love creating Discord Bots and Websites
+
 🪟 Code in Windows and Linux (Windows Linux Subsystem) | Windows 11 User
 
-👀 Looking on creating more and more repositories as coding is my life
-
-⭐ Feel free to leave a star on my repo if you like it!
+👀 Looking on creating more and more open-source projects
 
 ## ⚒️ My Deployed Project
 
@@ -34,7 +34,7 @@
 <details>
  <summary>📦 NPM Package</summary>
 
-- [My NPM Automation](https://github.com/Leomotors/my-npm-automation) => [npm](https://www.npmjs.com/package/leomotors-automation)
+- [My NPM Scripts](https://github.com/Leomotors/npm-scripts) => [npm](https://www.npmjs.com/package/@leomotors/scripts)
 - [S Bot Framework](https://github.com/Leomotors/s-bot-framework) => [npm](https://www.npmjs.com/package/s-bot-framework)
 - [Polynomial Generator](https://github.com/Leomotors/polynomial-generator) => [npm](https://www.npmjs.com/package/polynomial-generator)
 - [Cocoa Discord Utils](https://github.com/Leomotors/cocoa-discord-utils) => [npm](https://www.npmjs.com/package/cocoa-discord-utils)
@@ -43,8 +43,11 @@
 
 ## 🔢 My GitHub Stats
 
-| ![My Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true) | ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=Leomotors&count_private=true) |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+<table>
+<tr><td> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true&theme=dark" /> </td>
+<td> <img src="https://github-readme-stats.vercel.app/api?username=Leomotors&count_private=true&theme=dark" /> </td></tr>
+<tr><td colspan="2" align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=Leomotors&theme=dark" /> </td></tr>
+</table>
 
 ## 🕐 Wakatime
 
