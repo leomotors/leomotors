@@ -32,7 +32,7 @@
 </details>
 
 <details>
- <summary>📦 NPM Package</summary>
+ <summary>📦 NPM Package <a href="https://www.npmjs.com/~leomotors">My Account</a> </summary>
 
 - [My NPM Scripts](https://github.com/Leomotors/npm-scripts) => [npm](https://www.npmjs.com/package/@leomotors/scripts)
 - [S Bot Framework](https://github.com/Leomotors/s-bot-framework) => [npm](https://www.npmjs.com/package/s-bot-framework)
