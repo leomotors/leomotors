@@ -1,20 +1,25 @@
-# Hello! 👋 I'm Leo
+<h1 align="center"> Hello! 👋 I'm Leo </h1>
 
-## => [My Portfolio](https://portfolio.leomotors.vercel.app) & [Blog](https://portfolio.leomotors.vercel.app/blog) <==
+<h3 align="center"> => <a href="https://portfolio.leomotors.vercel.app">My Portfolio</a> &
+ <a href="https://portfolio.leomotors.vercel.app/blog">Blog</a> <= </h3>
 
 ## ℹ️ My Info
 
-🚹 Male | 🎂 17 Yrs Old
+🚹 Male @ 🎂 17 Yrs Old
 
 🏫 Graduated from Triam Udom Suksa School (TU82) in Math & Science with GPAX of 3.95
 
-🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and currently under selection camp
+🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and currently under selection camp (IPST 1->2)
+ 
+### Skills & What I like to do
 
-👨‍💻 C & C++・JS/TS (node)・Flutter (dart)
+- 👨‍💻 Frequently used Language: C++ JavaScript TypeScript Python Dart
+ 
+- 🖼️ Frequently used Stuff: Svelte/Kit, Flutter 🐦, discord.js 🤖
+ 
+- Full List Coming Soon
 
-🤖 Love creating Discord Bots and Websites
-
-🪟 Code in Windows and Linux (Windows Linux Subsystem) | Windows 11 User
+🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and my laptop runs on Windows 11
 
 👀 Looking on creating more and more open-source projects
 
@@ -34,14 +39,28 @@
 <details>
  <summary>📦 NPM Package <a href="https://www.npmjs.com/~leomotors">My Account</a> </summary>
 
-- [My NPM Scripts](https://github.com/Leomotors/npm-scripts) => [npm](https://www.npmjs.com/package/@leomotors/scripts)
-- [S Bot Framework](https://github.com/Leomotors/s-bot-framework) => [npm](https://www.npmjs.com/package/s-bot-framework)
-- [Polynomial Generator](https://github.com/Leomotors/polynomial-generator) => [npm](https://www.npmjs.com/package/polynomial-generator)
-- [Cocoa Discord Utils](https://github.com/Leomotors/cocoa-discord-utils) => [npm](https://www.npmjs.com/package/cocoa-discord-utils)
+- [My NPM Scripts](https://github.com/Leomotors/npm-scripts) =>
+ [![](https://img.shields.io/npm/v/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
+ [![](https://img.shields.io/npm/dt/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
+- [S~~alim~~ Bot Framework](https://github.com/Leomotors/s-bot-framework) =>
+ [![](https://img.shields.io/npm/v/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
+ [![](https://img.shields.io/npm/dt/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
+- [Polynomial Generator](https://github.com/Leomotors/polynomial-generator) =>
+ [![](https://img.shields.io/npm/v/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
+ [![](https://img.shields.io/npm/dt/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
+- [Cocoa Discord Utils](https://github.com/Leomotors/cocoa-discord-utils) =>
+ [![](https://img.shields.io/npm/v/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
+ [![](https://img.shields.io/npm/dt/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
+ 
+PS: Most download came from me lmao.
 
 </details>
+ 
+## 🐄 Other Major Roles
+ 
+- Developer Head, Mobile App & Web Developer at [@Food-Busters](https://github.com/Food-Busters)
 
-## 🔢 My GitHub Stats
+## 🔢 GitHub Stats
 
 <table>
 <tr><td> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true&theme=dark" /> </td>
