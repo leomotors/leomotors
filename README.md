@@ -55,6 +55,13 @@
 PS: Most download came from me lmao.
 
 </details>
+
+<details>
+ <summary>🪟 Microsoft Store</summary>
+
+- [You are a Failure!](https://github.com/Leomotors/you-are-a-failure) => Public release in Microsoft Store available at 1 April
+
+</details>
  
 ## 🐄 Other Major Roles
  
