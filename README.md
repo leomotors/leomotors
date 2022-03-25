@@ -51,6 +51,9 @@
 - [Cocoa Discord Utils](https://github.com/Leomotors/cocoa-discord-utils) =>
  [![](https://img.shields.io/npm/v/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
  [![](https://img.shields.io/npm/dt/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
+- [baht.c](https://github.com/Leomotors/baht.c) =>
+ [![](https://img.shields.io/npm/v/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
+ [![](https://img.shields.io/npm/dt/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
  
 PS: Most download came from me lmao.
 
