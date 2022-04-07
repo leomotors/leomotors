@@ -19,7 +19,7 @@
 
 🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and my laptop runs on Windows 11
 
-👀 Looking on creating more and more open-source projects
+👀 Looking on collborating and contributing more to Open Source Community
 
 ## ⚒️ My Deployed Project
 
@@ -60,7 +60,10 @@ PS: Most download came from me lmao.
 <details>
  <summary>🪟 Microsoft Store</summary>
 
-- [You are a Failure!](https://github.com/Leomotors/you-are-a-failure) => Public release in Microsoft Store available at 1 April
+- [You are a Failure!](https://github.com/Leomotors/you-are-a-failure)
+ <a href="https://www.microsoft.com/store/productId/9NJ5TZW6MDGL">
+  <img src="https://getbadgecdn.azureedge.net/images/English_L.png" width=150>
+ </a>
 
 </details>
  
