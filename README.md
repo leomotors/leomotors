@@ -52,6 +52,9 @@
 - [baht.c](https://github.com/Leomotors/baht.c) =>
  [![](https://img.shields.io/npm/v/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
  [![](https://img.shields.io/npm/dt/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
+- [CRLF Phobia](https://github.com/Leomotors/CRLF-Phobia) =>
+ [![](https://img.shields.io/npm/v/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
+ [![](https://img.shields.io/npm/dt/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
  
 PS: Most download came from me lmao.
 
