@@ -19,7 +19,7 @@
 
 🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and my laptop runs on Windows 11
 
-👀 Looking on collborating and contributing more to Open Source Community
+👀 Looking on collaborating and contributing more to Open Source Community
 
 ## ⚒️ My Deployed Project
 
