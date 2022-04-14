@@ -7,7 +7,7 @@
 
 🚹 Male @ 🎂 17 Yrs Old
 
-🏫 Graduated from Triam Udom Suksa School (TU82) in Math & Science with GPAX of 3.95, will enroll at Chulalongkorn University in Computer Engineering (CP) this fall
+🏫 Graduated from Triam Udom Suksa School (TU82) in Math & Science with GPAX of 3.95, will enroll at Chulalongkorn University in Computer Engineering (CP) this fall (Admitted in 1st Round (Early Admission) from Olympic Portfolio)
 
 🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and currently under selection camp (waiting for IPST 2)
  
