@@ -55,6 +55,9 @@
 - [CRLF Phobia](https://github.com/Leomotors/CRLF-Phobia) =>
  [![](https://img.shields.io/npm/v/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
  [![](https://img.shields.io/npm/dt/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
+- [Music Discord Bot](https://github.com/Leomotors/music-bot) =>
+ [![](https://img.shields.io/npm/v/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
+ [![](https://img.shields.io/npm/dt/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
  
 PS: Most download came from me lmao.
 
