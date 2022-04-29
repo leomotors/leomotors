@@ -17,11 +17,11 @@
  
 - 🖼️ Frequently used Stuff: Svelte/Kit, Flutter 🐦, discord.js 🤖
 
-🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and my laptop runs on Windows 11
+🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and joining Windows Insider Program
 
 👀 Looking on collaborating and contributing more to Open Source Community
 
-## ⚒️ My Deployed Project
+## ⚒️ My Deployed/Published Projects/Apps/Packages
 
 <details>
  <summary>🔺 Web App</summary>
