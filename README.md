@@ -1,7 +1,6 @@
 <h1 align="center"> Hello! 👋 I'm Leo </h1>
 
-<h3 align="center"> => <a href="https://portfolio.leomotors.vercel.app">My Portfolio</a> &
- <a href="https://portfolio.leomotors.vercel.app/blog">Blog</a> <= </h3>
+<h3 align="center"> => <a href="https://leomotors.me">My Homepage</a> <=
 
 ## ℹ️ My Info
 
