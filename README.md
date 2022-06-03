@@ -58,6 +58,9 @@
 - [Music Discord Bot](https://github.com/Leomotors/music-bot) =>
  [![](https://img.shields.io/npm/v/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
  [![](https://img.shields.io/npm/dt/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
+- [Svelte Components](https://github.com/Leomotors/sv-components) =>
+ [![](https://img.shields.io/npm/v/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
+ [![](https://img.shields.io/npm/dt/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
  
 PS: Most download came from me lmao.
 
