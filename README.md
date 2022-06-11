@@ -67,6 +67,15 @@ PS: Most download came from me lmao.
 </details>
 
 <details>
+ <summary>🐍 PyPI Package <a href="https://pypi.org/user/Leomotors">My Account</a> </summary>
+
+- [Golden Frame (กรอบทอง)](https://github.com/Leomotors/golden-frame) =>
+ [![](https://img.shields.io/pypi/v/golden-frame)](https://pypi.org/project/golden-frame)
+ [![](https://img.shields.io/pypi/dm/golden-frame)](https://pypi.org/project/golden-frame)
+
+</details>
+
+<details>
  <summary>🪟 Microsoft Store</summary>
 
 - [You are a Failure!](https://github.com/Leomotors/you-are-a-failure)
