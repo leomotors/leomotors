@@ -90,6 +90,7 @@ PS: Most download came from me lmao.
 ## 🐄 Other Major Roles
  
 - Developer Head, Mobile App & Web Developer at [@Food-Busters](https://github.com/Food-Busters)
+- Server Administrator & Web Dev at [Crack 'n' Code](https://github.com/crackncode-th) in Pre-TOI18 Contest
 
 ## 🔢 GitHub Stats
 
