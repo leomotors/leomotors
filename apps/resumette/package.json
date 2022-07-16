@@ -8,7 +8,7 @@
     "build": "vite build",
     "test:watch": "jest --watchAll",
     "serve": "vite preview",
-    "lint": "eslint",
+    "lint": "eslint --max-warnings=0",
     "format": "prettier --write \"*.{cjs,js,ts}\" && prettier --write \"{src,test}/**/*.{js,ts,svelte}\"",
     "deps": "ncu -u"
   },
