@@ -27,6 +27,7 @@
         "data/**"
       ]
     },
+    "deps": {},
     "dev": {
       "cache": false
     }

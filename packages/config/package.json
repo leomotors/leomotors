@@ -3,17 +3,22 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "format": "prettier --write *.js"
+    "lint": "eslint",
+    "format": "prettier --write *.js",
+    "deps": "ncu -u"
   },
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-prettier": "latest",
-    "prettier": "latest"
+    "prettier": "latest",
+    "typescript": "^4.7.4"
   },
   "files": [
     "eslint-app.js",
+    "eslint-web.js",
     "prettier-app.js",
+    "prettier-web.js",
     "tsconfig-app.json"
   ]
 }

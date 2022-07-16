@@ -9,15 +9,16 @@
     "analyze": "node dist/src/analyze.js",
     "gql-codegen": "graphql-codegen --config codegen.yml",
     "lint": "eslint src",
-    "format": "prettier --write .*.cjs src/**/*.{js,ts}"
+    "format": "prettier --write .*.cjs src/**/*.{js,ts}",
+    "deps": "ncu -u"
   },
   "dependencies": {
-    "node-fetch": "^3.2.6"
+    "node-fetch": "^3.2.8"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "2.6.2",
-    "@graphql-codegen/typescript": "2.5.1",
-    "@graphql-codegen/typescript-operations": "2.4.2",
+    "@graphql-codegen/cli": "2.8.1",
+    "@graphql-codegen/typescript": "2.7.1",
+    "@graphql-codegen/typescript-operations": "2.5.1",
     "@leomotors/config": "*",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",

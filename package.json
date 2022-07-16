@@ -7,15 +7,17 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "load": "turbo run load",
-    "analyze": "turbo run analyze && yarn post-analyze",
+    "build": "FORCE_COLOR=2 turbo run build",
+    "dev": "FORCE_COLOR=2 turbo run dev --parallel",
+    "lint": "FORCE_COLOR=2 turbo run lint",
+    "load": "FORCE_COLOR=2 turbo run load",
+    "analyze": "FORCE_COLOR=2 turbo run analyze && yarn post-analyze",
     "post-analyze": "bash post-analyze.bash",
-    "format": "turbo run format"
+    "format": "FORCE_COLOR=2 turbo run format",
+    "deps": "ncu -u && turbo run deps"
   },
   "devDependencies": {
+    "npm-check-updates": "^15.3.3",
     "prettier": "latest",
     "turbo": "latest"
   },

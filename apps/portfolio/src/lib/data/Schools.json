@@ -1,0 +1,33 @@
+{
+    "schools": [
+        {
+            "name": "Assumption College",
+            "gen": "AC136 Gifted06",
+            "level": "Middle School",
+            "enroll": 2016,
+            "graduate": 2019,
+            "gpax": 3.88,
+            "image": "images/assumption.webp",
+            "website": "https://www.assumption.ac.th/"
+        },
+        {
+            "name": "Triam Udom Suksa School",
+            "gen": "TU82",
+            "level": "High School",
+            "enroll": 2019,
+            "graduate": 2022,
+            "gpax": 3.95,
+            "image": "images/triamudom.webp",
+            "website": "https://www.triamudom.ac.th/website/"
+        },
+        {
+            "name": "Accepted by Chulalongkorn University",
+            "gen": "Intania 106",
+            "level": "Undergraduate",
+            "enroll": 2022,
+            "graduate": 2026,
+            "image": "images/idk.webp",
+            "website": "https://www.chula.ac.th/"
+        }
+    ]
+}

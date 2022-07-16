@@ -1,0 +1,16 @@
+{
+  "name": "@leomotors/data",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint",
+    "format": "prettier --write *.js",
+    "deps": "ncu -u"
+  },
+  "devDependencies": {
+    "@leomotors/config": "*",
+    "eslint": "latest",
+    "prettier": "latest",
+    "typescript": "^4.7.4"
+  }
+}
