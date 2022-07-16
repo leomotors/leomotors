@@ -7,7 +7,11 @@
     "HTML": 2797,
     "CSS": 593
   },
-  "Leomotors": {},
+  "Leomotors": {
+    "JavaScript": 2716,
+    "TypeScript": 1019556,
+    "Shell": 89
+  },
   "Salim-Bot": {
     "TypeScript": 32345,
     "Shell": 177
@@ -273,6 +277,12 @@
     "SCSS": 221,
     "Svelte": 188,
     "Shell": 150
+  },
+  "Com-POG": {
+    "JavaScript": 1239,
+    "Vue": 2069,
+    "TypeScript": 3988,
+    "CSS": 965
   },
   "awesome-secured-config": {}
 }
