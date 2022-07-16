@@ -8,9 +8,13 @@
     "CSS": 593
   },
   "Leomotors": {
-    "JavaScript": 2716,
-    "TypeScript": 1757,
-    "Shell": 89
+    "JavaScript": 6650,
+    "TypeScript": 10874,
+    "Shell": 89,
+    "HTML": 1215,
+    "SCSS": 758,
+    "Svelte": 20155,
+    "CSS": 59
   },
   "Salim-Bot": {
     "TypeScript": 32345,
@@ -271,12 +275,12 @@
   },
   "test-on-production": {},
   "waifu-bot": {
-    "TypeScript": 43449,
+    "TypeScript": 47485,
     "JavaScript": 3508,
     "HTML": 404,
     "SCSS": 221,
-    "Svelte": 188,
-    "Shell": 150
+    "Svelte": 673,
+    "Shell": 338
   },
   "Com-POG": {
     "JavaScript": 1239,
