@@ -9,11 +9,11 @@
 🏫 Graduated from Triam Udom Suksa School (TU82) in Math & Science with GPAX of 3.95, will enroll at Chulalongkorn University in Computer Engineering (CP) this august (Admitted in 1st Round (Early Admission) from Olympic Portfolio)
 
 🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and have gone under IOI Selection Camp (IPST 2.2 / Final Round)
- 
+
 ### Skills & What I like to do
 
 - 👨‍💻 Frequently used Language: C++ JavaScript TypeScript Python Dart
- 
+
 - 🖼️ Frequently used Stuff: Svelte/Kit, Flutter 🐦, discord.js 🤖
 
 🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and joining Windows Insider Program
@@ -38,30 +38,30 @@
  <summary>📦 NPM Package <a href="https://www.npmjs.com/~leomotors">My Account</a> </summary>
 
 - [My NPM Scripts](https://github.com/Leomotors/npm-scripts) =>
- [![](https://img.shields.io/npm/v/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
- [![](https://img.shields.io/npm/dt/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
+  [![](https://img.shields.io/npm/v/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
+  [![](https://img.shields.io/npm/dt/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
 - [S~~alim~~ Bot Framework](https://github.com/Leomotors/s-bot-framework) =>
- [![](https://img.shields.io/npm/v/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
- [![](https://img.shields.io/npm/dt/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
+  [![](https://img.shields.io/npm/v/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
+  [![](https://img.shields.io/npm/dt/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
 - [Polynomial Generator](https://github.com/Leomotors/polynomial-generator) =>
- [![](https://img.shields.io/npm/v/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
- [![](https://img.shields.io/npm/dt/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
+  [![](https://img.shields.io/npm/v/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
+  [![](https://img.shields.io/npm/dt/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
 - [Cocoa Discord Utils](https://github.com/Leomotors/cocoa-discord-utils) =>
- [![](https://img.shields.io/npm/v/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
- [![](https://img.shields.io/npm/dt/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
+  [![](https://img.shields.io/npm/v/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
+  [![](https://img.shields.io/npm/dt/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
 - [baht.c](https://github.com/Leomotors/baht.c) =>
- [![](https://img.shields.io/npm/v/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
- [![](https://img.shields.io/npm/dt/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
+  [![](https://img.shields.io/npm/v/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
+  [![](https://img.shields.io/npm/dt/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
 - [CRLF Phobia](https://github.com/Leomotors/CRLF-Phobia) =>
- [![](https://img.shields.io/npm/v/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
- [![](https://img.shields.io/npm/dt/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
+  [![](https://img.shields.io/npm/v/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
+  [![](https://img.shields.io/npm/dt/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
 - [Music Discord Bot](https://github.com/Leomotors/music-bot) =>
- [![](https://img.shields.io/npm/v/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
- [![](https://img.shields.io/npm/dt/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
+  [![](https://img.shields.io/npm/v/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
+  [![](https://img.shields.io/npm/dt/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
 - [Svelte Components](https://github.com/Leomotors/sv-components) =>
- [![](https://img.shields.io/npm/v/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
- [![](https://img.shields.io/npm/dt/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
- 
+  [![](https://img.shields.io/npm/v/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
+  [![](https://img.shields.io/npm/dt/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
+
 PS: Most download came from me lmao.
 
 </details>
@@ -70,8 +70,8 @@ PS: Most download came from me lmao.
  <summary>🐍 PyPI Package <a href="https://pypi.org/user/Leomotors">My Account</a> </summary>
 
 - [Golden Frame (กรอบทอง)](https://github.com/Leomotors/golden-frame) =>
- [![](https://img.shields.io/pypi/v/golden-frame)](https://pypi.org/project/golden-frame)
- [![](https://img.shields.io/pypi/dm/golden-frame)](https://pypi.org/project/golden-frame)
+  [![](https://img.shields.io/pypi/v/golden-frame)](https://pypi.org/project/golden-frame)
+  [![](https://img.shields.io/pypi/dm/golden-frame)](https://pypi.org/project/golden-frame)
 
 </details>
 
@@ -79,9 +79,9 @@ PS: Most download came from me lmao.
  <summary>🪟 Microsoft Store</summary>
 
 - [You are a Failure!](https://github.com/Leomotors/you-are-a-failure)
- <a href="https://www.microsoft.com/store/productId/9NJ5TZW6MDGL">
+  <a href="https://www.microsoft.com/store/productId/9NJ5TZW6MDGL">
   <img src="https://getbadgecdn.azureedge.net/images/English_L.png" width=150>
- </a>
+  </a>
 
 </details>
  
@@ -127,3 +127,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+## 🚂
+
+This [repository](https://github.com/Leomotors/Leomotors) is also a monorepo running workflows like updating data and readme!

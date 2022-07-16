@@ -1,0 +1,11 @@
+overwrite: true
+schema:
+  - "https://api.github.com/graphql":
+      headers:
+        Authorization: "Bearer ${GH_PAT}"
+
+documents: "loadData.js"
+generates:
+  generated/graphql.ts:
+    - "typescript"
+    - "typescript-operations"

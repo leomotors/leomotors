@@ -1,0 +1,26 @@
+{
+  "name": "leomotors",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "load": "turbo run load",
+    "analyze": "turbo run analyze && yarn post-analyze",
+    "post-analyze": "bash post-analyze.bash",
+    "format": "turbo run format"
+  },
+  "devDependencies": {
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "yarn@3.2.1"
+}

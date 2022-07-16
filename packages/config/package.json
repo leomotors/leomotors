@@ -1,0 +1,19 @@
+{
+  "name": "@leomotors/config",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write *.js"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "prettier": "latest"
+  },
+  "files": [
+    "eslint-app.js",
+    "prettier-app.js",
+    "tsconfig-app.json"
+  ]
+}
