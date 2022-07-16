@@ -1276,9 +1276,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@leomotors/resume@workspace:apps/resumette":
+"@leomotors/resume@workspace:apps/resume":
   version: 0.0.0-use.local
-  resolution: "@leomotors/resume@workspace:apps/resumette"
+  resolution: "@leomotors/resume@workspace:apps/resume"
   dependencies:
     "@leomotors/config": "*"
     "@sveltejs/vite-plugin-svelte": ^1.0.1
