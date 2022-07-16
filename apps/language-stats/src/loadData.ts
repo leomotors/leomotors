@@ -35,6 +35,7 @@ const result = (
         },
         body: JSON.stringify({ query }),
     }).then(async (res) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const obj = (await res.json()) as any;
         if (res.status >= 400) {
             throw new Error(JSON.stringify(obj, null, 4));
