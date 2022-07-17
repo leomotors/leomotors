@@ -2,7 +2,12 @@
   "name": "@leomotors/data",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
+    "dev": "nodemon --watch src --ext \"js,ts,json\" --exec tsc",
     "lint": "eslint --max-warnings=0",
     "format": "prettier --write \"src/**/*.ts\"",
     "deps": "ncu -u"
@@ -10,6 +15,7 @@
   "devDependencies": {
     "@leomotors/config": "*",
     "eslint": "latest",
+    "nodemon": "^2.0.19",
     "prettier": "latest",
     "typescript": "^4.7.4"
   }

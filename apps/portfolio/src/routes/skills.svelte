@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import BigCard from "$lib/components/BigCard.svelte";
   import SkillCard from "$lib/components/SkillCard.svelte";
   import ext from "$lib/components/ext";

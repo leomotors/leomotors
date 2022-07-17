@@ -4,7 +4,7 @@
   export let position = "";
   export let company = "";
   export let url = "";
-  export let years: string[] = [];
+  export let years = "";
   export let details: string[] = [];
 </script>
 
@@ -15,7 +15,7 @@
     <div class="flex-0">
       <a href={url} target="_blank" rel="noreferrer">{company}</a>
     </div>
-    <div class="flex-1 text-right">{years.join("-")}</div>
+    <div class="flex-1 text-right">{years}</div>
   </div>
   <ul class="list-disc pl-8 text-left print:pl-6">
     {#each details as detail}

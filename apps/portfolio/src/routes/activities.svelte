@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { activities, awards } from "$lib/data/awards.json";
+  import { activities as _activities } from "@leomotors/data";
+  const { activities, awards } = _activities;
 
   import BigCard from "$lib/components/BigCard.svelte";
   import ImageCard from "$lib/components/ImageCard.svelte";

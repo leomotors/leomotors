@@ -3,7 +3,9 @@
   import ext from "$lib/components/ext";
   import RepoCard from "$lib/components/RepoCard.svelte";
 
-  import { featured, carelessdev, big_projects } from "$lib/data/projects.json";
+  import { projects } from "@leomotors/data";
+  const { featured, big_projects } = projects;
+
   import { harvard } from "$lib/data/amazingQuotes.json";
 </script>
 
@@ -36,17 +38,6 @@
     {/each}
   </BigCard>
 
-  <!-- CarelessDev -->
-  <BigCard
-    title="CarelessDev"
-    subtitle="CarelessDev is where my friends and I spend time creating useless stuff,
-  below is projects I have contributed to"
-  >
-    {#each carelessdev as repo}
-      <RepoCard data={repo} />
-    {/each}
-  </BigCard>
-
   <!-- Other Big Projects -->
   <BigCard
     title="Other Big Projects"
@@ -60,6 +51,6 @@
 
 <style lang="scss">
   a {
-    @apply text-blue-700 transition-all hover:text-pink-600 gdark:text-blue-400 gdark:hover:text-pink-400;
+    @apply gdark:text-blue-400 gdark:hover:text-pink-400 text-blue-700 transition-all hover:text-pink-600;
   }
 </style>
