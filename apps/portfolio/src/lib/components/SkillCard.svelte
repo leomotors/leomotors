@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { SkillData } from "$lib/data/skills.model";
+  import type { ISkill } from "@leomotors/data";
 
   import ImageCard from "./ImageCard.svelte";
 
-  export let data: SkillData;
+  export let data: ISkill;
 </script>
 
 <ImageCard

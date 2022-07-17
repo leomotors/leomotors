@@ -1246,6 +1246,7 @@ __metadata:
   resolution: "@leomotors/portfolio@workspace:apps/portfolio"
   dependencies:
     "@leomotors/config": "*"
+    "@leomotors/data": "*"
     "@leomotors/scripts": ^3.1.0
     "@leomotors/sv-components": ^0.4.0
     "@sveltejs/adapter-vercel": 1.0.0-next.63
@@ -1267,6 +1268,7 @@ __metadata:
     prettier-plugin-tailwindcss: ^0.1.12
     sass: ^1.53.0
     svelte: ^3.49.0
+    svelte-bootstrap-icons: ^2.2.0
     svelte-check: ^2.8.0
     svelte-preprocess: ^4.10.7
     tailwindcss: ^3.1.6
@@ -1283,6 +1285,8 @@ __metadata:
   dependencies:
     "@leomotors/config": "*"
     "@leomotors/data": "*"
+    "@sveltejs/adapter-vercel": ^1.0.0-next.63
+    "@sveltejs/kit": ^1.0.0-next.377
     "@sveltejs/vite-plugin-svelte": ^1.0.1
     autoprefixer: ^10.4.7
     cssnano: ^5.1.12
@@ -1485,7 +1489,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-vercel@npm:1.0.0-next.63":
+"@sveltejs/adapter-vercel@npm:1.0.0-next.63, @sveltejs/adapter-vercel@npm:^1.0.0-next.63":
   version: 1.0.0-next.63
   resolution: "@sveltejs/adapter-vercel@npm:1.0.0-next.63"
   dependencies:
@@ -1495,7 +1499,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:1.0.0-next.377":
+"@sveltejs/kit@npm:1.0.0-next.377, @sveltejs/kit@npm:^1.0.0-next.377":
   version: 1.0.0-next.377
   resolution: "@sveltejs/kit@npm:1.0.0-next.377"
   dependencies:
@@ -7672,6 +7676,13 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
+  languageName: node
+  linkType: hard
+
+"svelte-bootstrap-icons@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "svelte-bootstrap-icons@npm:2.2.0"
+  checksum: 63fa7f8044dfdc178c2b4fbb5e0bc9939fce76cd7cb39306e4c495fc4d8a64d31c4874be292915005a8967ca17ec1eb6d19cf757f33fa7d558c9183afa2da31f
   languageName: node
   linkType: hard
 

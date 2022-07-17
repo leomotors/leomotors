@@ -3,12 +3,8 @@
   import SkillCard from "$lib/components/SkillCard.svelte";
   import ext from "$lib/components/ext";
 
-  import {
-    proglang,
-    webtech,
-    appframework,
-    others,
-  } from "$lib/data/skills.json";
+  import { skills } from "@leomotors/data";
+  const { proglang, webtech, appframework, others } = skills;
 </script>
 
 <main class="card-page">
@@ -45,13 +41,12 @@
 
       <p>
         List of all my GitHub Repositories
-        <a
-          {...ext}
-          href="https://repos.leomotors.vercel.app/"
-          class="text-blue-700"
-        >
-          here
-        </a>
+        <a {...ext} href="https://repos.leomotors.me">here</a>
+      </p>
+
+      <p>
+        Full list of skills available in my resume
+        <a href="https://resume.leomotors.me" {...ext}>here</a>
       </p>
     </div>
   </header>
@@ -83,3 +78,9 @@
     {/each}
   </BigCard>
 </main>
+
+<style lang="postcss">
+  a {
+    @apply gdark:text-blue-400 text-blue-700;
+  }
+</style>

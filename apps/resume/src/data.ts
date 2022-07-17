@@ -1,4 +1,5 @@
-import { activities, projects as _projects } from "@leomotors/data";
+import { activities, projects as _projects, skills } from "@leomotors/data";
+const { proglang } = skills;
 
 export const fullVersionLink = "https://resume.leomotors.vercel.app";
 export const sourceLink = "https://github.com/Leomotors/resumette";
@@ -17,8 +18,7 @@ export const introData = {
 export const technologies = [
   {
     section: "Languages:",
-    details:
-      "C/C++, JavaScript, TypeScript (Strong), Node.js, Python, Dart, C#",
+    details: proglang.map((o) => o.name).join(", "),
   },
   {
     section: "Preferred Combo:",
@@ -27,7 +27,7 @@ export const technologies = [
   {
     section: "Library/Framework:",
     details:
-      "React, Next, Vue, Svelte/Kit, Bootstrap, TailwindCSS, Mocha, Jest, discord.js, UWP+WinUI (C++/C#), Flutter, OpenCV, CMake",
+      "React, Next, Vue, Svelte/Kit, Bootstrap, TailwindCSS, GraphQL, Nest, Mocha, Jest, Vitest, discord.js, UWP+WinUI (C++/C#), Flutter, OpenCV, CMake",
   },
   {
     section: "Tools:",

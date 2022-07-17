@@ -1,5 +1,5 @@
 <script lang="ts">
-  import HideToggle from "../HideToggle.svelte";
+  import HideToggle from "$components/HideToggle.svelte";
 
   export let position = "";
   export let company = "";

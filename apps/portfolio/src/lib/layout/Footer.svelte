@@ -1,7 +1,8 @@
 <script lang="ts">
   import ext from "$lib/components/ext";
-  import GitHub from "$lib/icons/GitHub.svelte";
   import { timeago } from "$lib/utils";
+
+  import GitHub from "svelte-bootstrap-icons/lib/Github.svelte";
 
   import { Version, BuildTime } from "../../config.g";
 </script>
@@ -14,9 +15,9 @@
       href="https://github.com/Leomotors"
       title="Click here to visit my GitHub Profile"
     >
-      <GitHub size="24" />
+      <GitHub width="24" height="24" />
     </a>
-    <p class="text-xl font-semibold">Copyright © 2022 Leomotors</p>
+    <p class="text-lg font-semibold sm:text-xl">Copyright © 2022 Leomotors</p>
   </div>
 
   <div class="middle text-lg" title="Version: {Version} @ {BuildTime}">
@@ -27,7 +28,7 @@
     <p>
       <a
         class="text-sky-300 hover:text-sky-200"
-        href="https://github.com/Leomotors/portfolio-sv"
+        href="https://github.com/Leomotors/Leomotors"
         {...ext}
       >
         Source Code

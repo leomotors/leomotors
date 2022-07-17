@@ -1,1 +1,4 @@
-module.exports = require("@leomotors/config/prettier-app");
+module.exports = {
+    ...require("@leomotors/config/prettier-app"),
+    tabWidth: 2,
+};

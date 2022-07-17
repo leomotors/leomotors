@@ -1,7 +1,9 @@
 <script lang="ts">
-  import Intro from "./components/Intro.svelte";
-  import Work from "./components/Work.svelte";
-  import HideToggle from "./HideToggle.svelte";
+  import "../app.css";
+
+  import Intro from "$components/Intro.svelte";
+  import Work from "$components/Work.svelte";
+  import HideToggle from "$components/HideToggle.svelte";
   import {
     educations,
     fullVersionLink,
@@ -12,7 +14,7 @@
     sourceLink,
     technologies,
     workExperiences,
-  } from "./data";
+  } from "../data";
 
   let editMode = false;
 
