@@ -2,7 +2,7 @@ import { activities, projects as _projects, skills } from "@leomotors/data";
 const { proglang } = skills;
 
 export const fullVersionLink = "https://resume.leomotors.vercel.app";
-export const sourceLink = "https://github.com/Leomotors/resumette";
+export const sourceLink = "https://github.com/Leomotors/Leomotors";
 
 export const introData = {
   name: "Nutthapat Pongtanyavichai",
@@ -11,7 +11,7 @@ export const introData = {
   email: import.meta.env.DEV ? import.meta.env.VITE_EMAIL : "",
   github: "Leomotors",
   linkedin: "leo-nutthapat",
-  location: "Samut Prakan, Thailand",
+  location: "Bangkok, Thailand",
   website: "leomotors.me",
 };
 
