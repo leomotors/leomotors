@@ -177,7 +177,7 @@
     "TeX": 24557
   },
   "cocoa-discord-utils": {
-    "TypeScript": 112038,
+    "TypeScript": 112288,
     "JavaScript": 1004,
     "CSS": 761,
     "Vue": 573
@@ -244,7 +244,7 @@
     "TypeScript": 1389
   },
   "cminusminus": {
-    "TypeScript": 5633
+    "TypeScript": 5233
   },
   "resumette": {
     "HTML": 561,
@@ -275,7 +275,7 @@
   },
   "test-on-production": {},
   "waifu-bot": {
-    "TypeScript": 47485,
+    "TypeScript": 48386,
     "JavaScript": 3508,
     "HTML": 404,
     "SCSS": 221,
@@ -285,7 +285,7 @@
   "Com-POG": {
     "JavaScript": 1247,
     "Vue": 2093,
-    "TypeScript": 4090,
+    "TypeScript": 4717,
     "CSS": 965
   },
   "awesome-secured-config": {}
