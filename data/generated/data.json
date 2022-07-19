@@ -177,7 +177,7 @@
     "TeX": 24557
   },
   "cocoa-discord-utils": {
-    "TypeScript": 112288,
+    "TypeScript": 112241,
     "JavaScript": 1004,
     "CSS": 761,
     "Vue": 573
@@ -255,11 +255,11 @@
   },
   "blog": {},
   "leomotors.github.io": {
-    "JavaScript": 1517,
+    "JavaScript": 980,
     "CSS": 214,
-    "TypeScript": 270,
+    "TypeScript": 538,
     "HTML": 484,
-    "Svelte": 6400
+    "Svelte": 3898
   },
   "sv-components": {
     "JavaScript": 1703,
@@ -275,7 +275,7 @@
   },
   "test-on-production": {},
   "waifu-bot": {
-    "TypeScript": 48386,
+    "TypeScript": 51254,
     "JavaScript": 3508,
     "HTML": 404,
     "SCSS": 221,
