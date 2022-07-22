@@ -17,7 +17,7 @@
     "CSS": 59
   },
   "Salim-Bot": {
-    "TypeScript": 37186,
+    "TypeScript": 37088,
     "Shell": 177
   },
   "Polynomial-Problems-Generator": {
@@ -177,7 +177,7 @@
     "TeX": 24557
   },
   "cocoa-discord-utils": {
-    "TypeScript": 112241,
+    "TypeScript": 116632,
     "JavaScript": 1004,
     "CSS": 761,
     "Vue": 573
@@ -283,9 +283,9 @@
     "Shell": 338
   },
   "Com-POG": {
-    "JavaScript": 1247,
-    "Vue": 2093,
-    "TypeScript": 4717,
+    "JavaScript": 1285,
+    "Vue": 1507,
+    "TypeScript": 5868,
     "CSS": 965
   },
   "awesome-secured-config": {}
