@@ -4,7 +4,7 @@ schema:
       headers:
         Authorization: "Bearer ${GH_PAT}"
 
-documents: "loadData.js"
+documents: "src/loadData.ts"
 generates:
   generated/graphql.ts:
     - "typescript"

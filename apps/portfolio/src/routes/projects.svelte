@@ -51,6 +51,6 @@
 
 <style lang="scss">
   a {
-    @apply gdark:text-blue-400 gdark:hover:text-pink-400 text-blue-700 transition-all hover:text-pink-600;
+    @apply text-blue-700 transition-all hover:text-pink-600 gdark:text-blue-400 gdark:hover:text-pink-400;
   }
 </style>

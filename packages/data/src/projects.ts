@@ -113,6 +113,7 @@ export const projects: Record<"featured" | "big_projects", IProject[]> = {
       desc: "Most advanced (or over-engineered?) discord bot. Has miscellanous feature and also is a music bot, Feature a full-stack web application.",
       resume_desc:
         "Most advanced (or over-engineered?) discord bot. Capable of doing miscellaneous things with Discord API like embeds. Can stream musics and also feature a full-stack web application (Svelte, Nest, GraphQL) for users to configure their personal playlist",
+      language: "TypeScript",
       img: "https://c.tenor.com/KI8wOfAPyagAAAAd/shikimori-anime-girl.gif",
     },
   ],

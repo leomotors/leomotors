@@ -1,6 +1,7 @@
 #!/bin/env bash
 
 lastCommitMsg=$(git log -1 --format=%s)
+
 if [[ $lastCommitMsg == *"[SKIP BUILD]"* ]]
 then
     exit 0

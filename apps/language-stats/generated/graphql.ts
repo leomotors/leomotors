@@ -2667,7 +2667,11 @@ export type ContributionsCollection = {
   pullRequestContributions: CreatedPullRequestContributionConnection;
   /** Pull request contributions made by the user, grouped by repository. */
   pullRequestContributionsByRepository: Array<PullRequestContributionsByRepository>;
-  /** Pull request review contributions made by the user. */
+  /**
+   * Pull request review contributions made by the user. Returns the most recently
+   * submitted review for each PR reviewed by the user.
+   *
+   */
   pullRequestReviewContributions: CreatedPullRequestReviewContributionConnection;
   /** Pull request review contributions made by the user, grouped by repository. */
   pullRequestReviewContributionsByRepository: Array<PullRequestReviewContributionsByRepository>;
@@ -5204,11 +5208,6 @@ export type Enterprise = Node & {
   slug: Scalars['String'];
   /** The HTTP URL for this enterprise. */
   url: Scalars['URI'];
-  /**
-   * A list of user accounts on this enterprise.
-   * @deprecated The `Enterprise.userAccounts` field is being removed. Use the `Enterprise.members` field instead. Removal on 2022-07-01 UTC.
-   */
-  userAccounts: EnterpriseUserAccountConnection;
   /** Is the current viewer an admin of this enterprise? */
   viewerIsAdmin: Scalars['Boolean'];
   /** The URL of the enterprise website. */
@@ -5245,15 +5244,6 @@ export type EnterpriseOrganizationsArgs = {
   orderBy?: InputMaybe<OrganizationOrder>;
   query?: InputMaybe<Scalars['String']>;
   viewerOrganizationRole?: InputMaybe<RoleInOrganization>;
-};
-
-
-/** An account to manage multiple organizations with consolidated policy and billing. */
-export type EnterpriseUserAccountsArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
 };
 
 /** The connection type for User. */
@@ -6303,28 +6293,6 @@ export type EnterpriseUserAccountOrganizationsArgs = {
   orderBy?: InputMaybe<OrganizationOrder>;
   query?: InputMaybe<Scalars['String']>;
   role?: InputMaybe<EnterpriseUserAccountMembershipRole>;
-};
-
-/** The connection type for EnterpriseUserAccount. */
-export type EnterpriseUserAccountConnection = {
-  __typename?: 'EnterpriseUserAccountConnection';
-  /** A list of edges. */
-  edges?: Maybe<Array<Maybe<EnterpriseUserAccountEdge>>>;
-  /** A list of nodes. */
-  nodes?: Maybe<Array<Maybe<EnterpriseUserAccount>>>;
-  /** Information to aid in pagination. */
-  pageInfo: PageInfo;
-  /** Identifies the total count of items in the connection. */
-  totalCount: Scalars['Int'];
-};
-
-/** An edge in a connection. */
-export type EnterpriseUserAccountEdge = {
-  __typename?: 'EnterpriseUserAccountEdge';
-  /** A cursor for use in pagination. */
-  cursor: Scalars['String'];
-  /** The item at the end of the edge. */
-  node?: Maybe<EnterpriseUserAccount>;
 };
 
 /** The possible roles for enterprise membership. */
@@ -12582,6 +12550,7 @@ export type OrganizationSponsorsArgs = {
 
 /** An account on GitHub, with one or more owners, that has repositories, members and teams. */
 export type OrganizationSponsorsActivitiesArgs = {
+  actions?: InputMaybe<Array<SponsorsActivityAction>>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -14530,6 +14499,7 @@ export type ProjectV2FieldsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2FieldOrder>;
 };
 
 
@@ -14539,6 +14509,7 @@ export type ProjectV2ItemsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2ItemOrder>;
 };
 
 
@@ -14548,6 +14519,7 @@ export type ProjectV2RepositoriesArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<RepositoryOrder>;
 };
 
 
@@ -14557,6 +14529,7 @@ export type ProjectV2ViewsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2ViewOrder>;
 };
 
 /** The connection type for ProjectV2. */
@@ -14663,6 +14636,24 @@ export type ProjectV2FieldEdge = {
   node?: Maybe<ProjectV2Field>;
 };
 
+/** Ordering options for project v2 field connections */
+export type ProjectV2FieldOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order the project v2 fields by. */
+  field: ProjectV2FieldOrderField;
+};
+
+/** Properties by which project v2 field connections can be ordered. */
+export enum ProjectV2FieldOrderField {
+  /** Order project v2 fields by creation time */
+  CreatedAt = 'CREATED_AT',
+  /** Order project v2 fields by name */
+  Name = 'NAME',
+  /** Order project v2 fields by position */
+  Position = 'POSITION'
+}
+
 /** The type of a project field. */
 export enum ProjectV2FieldType {
   /** Assignees */
@@ -14738,6 +14729,7 @@ export type ProjectV2ItemFieldValuesArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2ItemFieldValueOrder>;
 };
 
 /** The connection type for ProjectV2Item. */
@@ -14876,6 +14868,7 @@ export type ProjectV2ItemFieldPullRequestValuePullRequestsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<PullRequestOrder>;
 };
 
 /** The value of a repository field in a Project item. */
@@ -15008,6 +15001,34 @@ export type ProjectV2ItemFieldValueEdge = {
   /** The item at the end of the edge. */
   node?: Maybe<ProjectV2ItemFieldValue>;
 };
+
+/** Ordering options for project v2 item field value connections */
+export type ProjectV2ItemFieldValueOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order the project v2 item field values by. */
+  field: ProjectV2ItemFieldValueOrderField;
+};
+
+/** Properties by which project v2 item field value connections can be ordered. */
+export enum ProjectV2ItemFieldValueOrderField {
+  /** Order project v2 item field values by the their position in the project */
+  Position = 'POSITION'
+}
+
+/** Ordering options for project v2 item connections */
+export type ProjectV2ItemOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order the project v2 items by. */
+  field: ProjectV2ItemOrderField;
+};
+
+/** Properties by which project v2 item connections can be ordered. */
+export enum ProjectV2ItemOrderField {
+  /** Order project v2 items by the their position in the project */
+  Position = 'POSITION'
+}
 
 /** The type of a project item. */
 export enum ProjectV2ItemType {
@@ -15204,8 +15225,6 @@ export type ProjectV2View = Node & {
   /** The view's group-by field. */
   groupBy?: Maybe<ProjectV2FieldConnection>;
   id: Scalars['ID'];
-  /** The view's filtered items. */
-  items: ProjectV2ItemConnection;
   /** The project view's layout. */
   layout: ProjectV2ViewLayout;
   /** The project view's name. */
@@ -15231,15 +15250,7 @@ export type ProjectV2ViewGroupByArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
-};
-
-
-/** A view within a ProjectV2. */
-export type ProjectV2ViewItemsArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2FieldOrder>;
 };
 
 
@@ -15258,6 +15269,7 @@ export type ProjectV2ViewVerticalGroupByArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2FieldOrder>;
 };
 
 
@@ -15267,6 +15279,7 @@ export type ProjectV2ViewVisibleFieldsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2FieldOrder>;
 };
 
 /** The connection type for ProjectV2View. */
@@ -15299,6 +15312,24 @@ export enum ProjectV2ViewLayout {
   TableLayout = 'TABLE_LAYOUT'
 }
 
+/** Ordering options for project v2 view connections */
+export type ProjectV2ViewOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order the project v2 views by. */
+  field: ProjectV2ViewOrderField;
+};
+
+/** Properties by which project v2 view connections can be ordered. */
+export enum ProjectV2ViewOrderField {
+  /** Order project v2 views by creation time */
+  CreatedAt = 'CREATED_AT',
+  /** Order project v2 views by name */
+  Name = 'NAME',
+  /** Order project v2 views by position */
+  Position = 'POSITION'
+}
+
 /** A view within a Project. */
 export type ProjectView = Node & {
   __typename?: 'ProjectView';
@@ -15323,11 +15354,6 @@ export type ProjectView = Node & {
    */
   groupBy?: Maybe<Array<Scalars['Int']>>;
   id: Scalars['ID'];
-  /**
-   * The view's filtered items.
-   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.
-   */
-  items: ProjectNextItemConnection;
   /**
    * The project view's layout.
    * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.
@@ -15368,15 +15394,6 @@ export type ProjectView = Node & {
    * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.
    */
   visibleFields?: Maybe<Array<Scalars['Int']>>;
-};
-
-
-/** A view within a Project. */
-export type ProjectViewItemsArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
 };
 
 /** The connection type for ProjectView. */
@@ -19481,6 +19498,7 @@ export type RepositorySubmodulesArgs = {
 export type RepositoryVulnerabilityAlertsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
+  dependencyScopes?: InputMaybe<Array<RepositoryVulnerabilityAlertDependencyScope>>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   states?: InputMaybe<Array<RepositoryVulnerabilityAlertState>>;
@@ -20137,6 +20155,8 @@ export type RepositoryVulnerabilityAlert = Node & RepositoryNode & {
   createdAt: Scalars['DateTime'];
   /** The associated Dependabot update */
   dependabotUpdate?: Maybe<DependabotUpdate>;
+  /** The scope of an alert's dependency */
+  dependencyScope?: Maybe<RepositoryVulnerabilityAlertDependencyScope>;
   /** The reason the alert was dismissed */
   dismissReason?: Maybe<Scalars['String']>;
   /** When was the alert dismissed? */
@@ -20181,6 +20201,14 @@ export type RepositoryVulnerabilityAlertConnection = {
   /** Identifies the total count of items in the connection. */
   totalCount: Scalars['Int'];
 };
+
+/** The possible scopes of an alert's dependency. */
+export enum RepositoryVulnerabilityAlertDependencyScope {
+  /** A dependency that is only used in development */
+  Development = 'DEVELOPMENT',
+  /** A dependency that is leveraged during application runtime */
+  Runtime = 'RUNTIME'
+}
 
 /** An edge in a connection. */
 export type RepositoryVulnerabilityAlertEdge = {
@@ -20770,6 +20798,8 @@ export type SecurityAdvisoryConnection = {
 export enum SecurityAdvisoryEcosystem {
   /** PHP packages hosted at packagist.org */
   Composer = 'COMPOSER',
+  /** Erlang/Elixir packages hosted at hex.pm */
+  Erlang = 'ERLANG',
   /** Go modules */
   Go = 'GO',
   /** Java artifacts hosted at the Maven central repository */
@@ -21158,6 +21188,7 @@ export type SponsorableSponsorsArgs = {
 
 /** Entities that can be sponsored through GitHub Sponsors */
 export type SponsorableSponsorsActivitiesArgs = {
+  actions?: InputMaybe<Array<SponsorsActivityAction>>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -25187,6 +25218,7 @@ export type UserSponsorsArgs = {
 
 /** A user is an individual's account on GitHub that owns repositories and can make new content. */
 export type UserSponsorsActivitiesArgs = {
+  actions?: InputMaybe<Array<SponsorsActivityAction>>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -25599,4 +25631,4 @@ export type WorkflowRunPendingDeploymentRequestsArgs = {
 export type GetRepoLangsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetRepoLangsQuery = { __typename?: 'Query', viewer: { __typename?: 'User', repositories: { __typename?: 'RepositoryConnection', totalCount: number, nodes?: Array<{ __typename?: 'Repository', name: string, languages?: { __typename?: 'LanguageConnection', edges?: Array<{ __typename?: 'LanguageEdge', size: number, node: { __typename?: 'Language', color?: string | null, name: string } } | null> | null } | null } | null> | null, pageInfo: { __typename?: 'PageInfo', endCursor?: string | null } } } };
+export type GetRepoLangsQuery = { __typename?: 'Query', viewer: { __typename?: 'User', repositories: { __typename?: 'RepositoryConnection', totalCount: number, nodes?: Array<{ __typename?: 'Repository', name: string, isArchived: boolean, pushedAt?: any | null, languages?: { __typename?: 'LanguageConnection', edges?: Array<{ __typename?: 'LanguageEdge', size: number, node: { __typename?: 'Language', color?: string | null, name: string } } | null> | null } | null } | null> | null } } };

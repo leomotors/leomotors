@@ -81,6 +81,6 @@
 
 <style lang="postcss">
   a {
-    @apply gdark:text-blue-400 text-blue-700;
+    @apply text-blue-700 gdark:text-blue-400;
   }
 </style>

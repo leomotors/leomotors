@@ -5,10 +5,17 @@ import type { GetRepoLangsQuery } from "../generated/graphql";
 const query = /* GraphQL */ `
     query getRepoLangs {
         viewer {
-            repositories(ownerAffiliations: OWNER, isFork: false, first: 100) {
+            repositories(
+                ownerAffiliations: OWNER
+                isFork: false
+                privacy: PUBLIC
+                first: 100
+            ) {
                 totalCount
                 nodes {
                     name
+                    isArchived
+                    pushedAt
                     languages(first: 100) {
                         edges {
                             size
@@ -18,9 +25,6 @@ const query = /* GraphQL */ `
                             }
                         }
                     }
-                }
-                pageInfo {
-                    endCursor
                 }
             }
         }
@@ -46,15 +50,22 @@ const result = (
 
 const repos = result.viewer.repositories.nodes ?? [];
 
-const data: { [repoName: string]: { [langName: string]: number } } = {};
+const data: {
+    [repoName: string]: { [langName: string]: number } & {
+        __isArchived?: boolean;
+        __pushedAt?: string;
+    };
+} = {};
 
 for (const repo of repos) {
     const repoLangs: typeof data[string] = {};
 
-    for (const edge of repo?.languages?.edges ?? []) {
+    for (const edge of repo!.languages?.edges ?? []) {
         repoLangs[edge!.node.name] = edge!.size;
     }
 
+    repoLangs.__isArchived = repo!.isArchived;
+    repoLangs.__pushedAt = repo!.pushedAt;
     data[repo!.name] = repoLangs;
 }
 
