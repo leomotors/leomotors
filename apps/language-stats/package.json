@@ -13,12 +13,12 @@
     "deps": "ncu -u"
   },
   "dependencies": {
-    "node-fetch": "^3.2.8"
+    "node-fetch": "^3.2.9"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "2.8.1",
-    "@graphql-codegen/typescript": "2.7.1",
-    "@graphql-codegen/typescript-operations": "2.5.1",
+    "@graphql-codegen/cli": "2.9.1",
+    "@graphql-codegen/typescript": "2.7.2",
+    "@graphql-codegen/typescript-operations": "2.5.2",
     "@leomotors/config": "*",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",

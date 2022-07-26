@@ -27,17 +27,17 @@ export const technologies = [
   {
     section: "Library/Framework:",
     details:
-      "React, Next, Vue, Svelte/Kit, Bootstrap, TailwindCSS, GraphQL, Nest, Mocha, Jest, Vitest, discord.js, UWP+WinUI (C++/C#), Flutter, OpenCV, CMake",
+      "React, Next, Vue, Svelte/Kit, Bootstrap, TailwindCSS, GraphQL, Nest, Prisma, Mocha, Jest, Vitest, discord.js, UWP+WinUI (C++/C#), Flutter, OpenCV, CMake",
   },
   {
-    section: "Tools:",
+    section: "Tools (misc):",
     details:
-      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi",
+      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi, PostgreSQL, Turborepo",
   },
   {
     section: "IaaS, PaaS:",
     details:
-      "Vercel, Netlify, GitHub Pages, Github Actions, Firebase (Firestore & Realtime Database), DigitalOcean (Droplet), Microsoft Azure (Functions)",
+      "Vercel, Netlify, GitHub Pages, Github Actions, Firebase (Firestore & Realtime Database), DigitalOcean (Droplet), Microsoft Azure (Functions & VM)",
   },
 ];
 
@@ -58,12 +58,13 @@ export const educations = [
 
 export const workExperiences = [
   {
-    position: "Frontend Developer",
+    position: "Full Stack Developer (Internship)",
     company: "Monkey Everyday",
     url: "https://monkeyeveryday.com/",
-    years: "June 2022-Present",
+    years: "June 2022 - Present",
     details: [
       "Maintain monkeyeveryday.com and its CMS with Next.js, TailwindCSS and GraphQL",
+      "Maintain GraphQL API that will be consumed by Frontend, used Prisma and NestJS",
     ],
   },
 ];
@@ -83,5 +84,5 @@ export const projects = [..._projects.big_projects, ..._projects.featured]
 export const interests = [
   "Areas: RGB, Mechanical Keyboard, Anime, Dual Monitor Desk Setup, Windows Insider",
   "Typing: 80-100 WPM (English) 40-50 WPM (Thai)",
-  "Games: Any game that can be played with friends happily",
+  "Games: Any game that can be played with friends happily, rythm game sometimes",
 ];

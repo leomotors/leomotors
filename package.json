@@ -17,7 +17,7 @@
     "deps": "ncu -u && turbo run deps"
   },
   "devDependencies": {
-    "npm-check-updates": "^15.3.4",
+    "npm-check-updates": "^16.0.1",
     "prettier": "latest",
     "turbo": "latest"
   },

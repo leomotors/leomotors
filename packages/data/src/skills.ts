@@ -44,6 +44,11 @@ export const skills: Record<
       img: "https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png",
       star: 2,
     },
+    {
+      name: "SQL",
+      img: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+      star: 2,
+    },
   ],
   webtech: [
     {

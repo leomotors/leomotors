@@ -1,4 +1,4 @@
-interface IActivity {
+export interface IActivity {
   title: string;
   desc: string;
   resume_desc?: string;
@@ -15,7 +15,7 @@ export const activities: Record<"awards" | "activities", IActivity[]> = {
       link: "https://news.samsung.com/th/samsung-innovation-campus",
     },
     {
-      title: "Silver Medal & Determination Award in TOI17",
+      title: "Silver Medal & Determination Award in TOI17 (2022)",
       desc: "17th Thailand Olympiad in Informatics is a competition about solving alogrithmic puzzle. This award allows me to be accepted to Chulalongkorn University with no exam",
       resume_desc:
         "17th Thailand Olympiad in Informatics is a competition where around 90 students from each center solve algorithmic puzzle. Winning medal award in this competition open chance for students to be accepted by every university including Chulalongkorn.",
@@ -29,7 +29,7 @@ export const activities: Record<"awards" | "activities", IActivity[]> = {
     },
     {
       title:
-        "6th Stupid Hackathon in Thailand, Most Aesthetically Pleasing Award winner",
+        "6th Stupid Hackathon in Thailand (2022), Most Aesthetically Pleasing Award winner",
       desc: "A Hackathon where you do anything you want without caring about anything. The awards are decided by voting",
       img: "https://github.com/cunny-SHiT6/yellow-house/raw/main/apps/lighthouse/icon.png",
       link: "https://stupidhackth.github.io/6/#cunny",
@@ -37,7 +37,7 @@ export const activities: Record<"awards" | "activities", IActivity[]> = {
   ],
   activities: [
     {
-      title: "IPST Camp 2.2",
+      title: "IPST Camp 2.2 (2022)",
       desc: "IOI Training Camp to find representative of Thailand, made into the final selection round of 9 people",
       img: "images/imso.webp",
     },
@@ -48,7 +48,7 @@ export const activities: Record<"awards" | "activities", IActivity[]> = {
       link: "https://www.apio2022.org",
     },
     {
-      title: "Code in the Wind Participant",
+      title: "Code in the Wind (2022) Participant",
       desc: "Game Show for TailwindCSS users in Thailand",
       img: "images/citw1.webp",
       link: "https://showdown.space/events/code-in-the-wind-1",

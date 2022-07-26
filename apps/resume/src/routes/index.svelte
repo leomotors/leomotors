@@ -15,12 +15,16 @@
     technologies,
     workExperiences,
   } from "../data";
+  import { certificates } from "@leomotors/data";
+  import Certificate from "$components/Certificate.svelte";
 
   let editMode = false;
 
   function toggleMode() {
     editMode = !editMode;
   }
+
+  const h2clsx = "text-left text-2xl uppercase print:text-4xl";
 </script>
 
 <header
@@ -57,9 +61,7 @@
 
   <section>
     <HideToggle />
-    <h2 class="text-left text-2xl uppercase print:text-4xl">
-      Technologies and Languages
-    </h2>
+    <h2 class={h2clsx}>Technologies and Languages</h2>
     <hr />
 
     <table class="table table-fixed items-start text-left">
@@ -82,7 +84,7 @@
 
   <section>
     <HideToggle />
-    <h2 class="text-left text-2xl uppercase print:text-4xl">Education</h2>
+    <h2 class={h2clsx}>Education</h2>
     <hr />
 
     <ul>
@@ -97,9 +99,7 @@
 
   <section>
     <HideToggle />
-    <h2 class="text-left text-2xl uppercase print:text-4xl">
-      Awards & Activities
-    </h2>
+    <h2 class={h2clsx}>Awards & Activities</h2>
     <hr />
 
     <ul>
@@ -114,7 +114,19 @@
 
   <section>
     <HideToggle />
-    <h2 class="text-left text-2xl uppercase print:text-4xl">Work Experience</h2>
+    <h2 class={h2clsx}>Certificates</h2>
+    <hr />
+
+    <div class="flex">
+      {#each certificates as certificate}
+        <Certificate {...certificate} />
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <HideToggle />
+    <h2 class={h2clsx}>Work Experience</h2>
     <hr />
 
     {#each workExperiences as exp}
@@ -124,7 +136,7 @@
 
   <section>
     <HideToggle />
-    <h2 class="text-left text-2xl uppercase print:text-4xl">Projects</h2>
+    <h2 class={h2clsx}>Projects</h2>
     <hr />
 
     <ul>
@@ -143,7 +155,7 @@
 
   <section>
     <HideToggle />
-    <h2 class="text-left text-2xl uppercase print:text-4xl">Interests</h2>
+    <h2 class={h2clsx}>Interests</h2>
     <hr />
 
     <ul>
@@ -157,8 +169,9 @@
   </section>
 
   <footer class="print-only">
-    (See in <a href={fullVersionLink} target="_blank" rel="noopener">web</a>
-    or view <a href={sourceLink} target="_blank" rel="noopener">source code</a>)
+    (See in <a href={fullVersionLink} target="_blank" rel="noopener">web</a> for
+    full version or view
+    <a href={sourceLink} target="_blank" rel="noopener">source code</a>)
   </footer>
 </main>
 
