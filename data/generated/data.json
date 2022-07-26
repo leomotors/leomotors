@@ -13,14 +13,14 @@
   },
   "Leomotors": {
     "JavaScript": 7341,
-    "TypeScript": 19622,
+    "TypeScript": 20681,
     "Shell": 226,
     "HTML": 1257,
     "SCSS": 758,
-    "Svelte": 19929,
+    "Svelte": 20616,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-07-24T21:12:14Z"
+    "__pushedAt": "2022-07-26T15:13:32Z"
   },
   "Salim-Bot": {
     "TypeScript": 37088,
