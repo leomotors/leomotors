@@ -12,15 +12,15 @@
     "__pushedAt": "2021-06-14T10:52:05Z"
   },
   "Leomotors": {
-    "JavaScript": 7341,
-    "TypeScript": 20681,
+    "JavaScript": 8518,
+    "TypeScript": 25667,
     "Shell": 226,
     "HTML": 1257,
-    "SCSS": 758,
+    "SCSS": 1047,
     "Svelte": 20616,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-07-26T21:12:24Z"
+    "__pushedAt": "2022-07-28T15:01:40Z"
   },
   "Salim-Bot": {
     "TypeScript": 37088,
@@ -370,7 +370,7 @@
     "HTML": 484,
     "Svelte": 3898,
     "__isArchived": false,
-    "__pushedAt": "2022-07-19T14:43:55Z"
+    "__pushedAt": "2022-07-28T14:55:02Z"
   },
   "sv-components": {
     "JavaScript": 1703,
