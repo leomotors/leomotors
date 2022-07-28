@@ -8,6 +8,7 @@
     "deps": "ncu -u"
   },
   "devDependencies": {
+    "@types/eslint": "^8.4.5",
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-prettier": "latest",
@@ -20,5 +21,10 @@
     "prettier-app.js",
     "prettier-web.js",
     "tsconfig-app.json"
-  ]
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6"
+  }
 }
