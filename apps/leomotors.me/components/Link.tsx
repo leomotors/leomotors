@@ -18,12 +18,15 @@ const Link: FC<LinkProps> = ({
       href={to}
       target="_blank"
       rel="noreferrer"
-      className="flex cursor-pointer select-none flex-row items-center gap-2 rounded-lg border-2 border-slate-400 bg-slate-800 p-3 transition-all hover:bg-slate-700"
+      className={clsx(
+        "flex cursor-pointer select-none flex-row items-center gap-2 rounded-lg border-2 border-slate-400 bg-slate-800 transition-all hover:bg-slate-700",
+        size == "lg" ? "p-3" : "p-2"
+      )}
     >
       {children}
 
       {name && (
-        <p className={clsx("font-bold", size == "lg" ? "text-2xl" : "text-xl")}>
+        <p className={size == "lg" ? "text-2xl font-bold" : "text-lg"}>
           {name}
         </p>
       )}

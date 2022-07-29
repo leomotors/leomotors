@@ -11,7 +11,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/cocoa-discord-utils",
+        source: "/cocoa-discord-utils/(.*)",
         destination: "https://leomotors.github.io/cocoa-discord-utils",
         permanent: true,
       },

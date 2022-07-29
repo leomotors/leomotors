@@ -130,4 +130,4 @@ Here are some ideas to get you started:
 
 ## 🚂
 
-This [repository](https://github.com/Leomotors/Leomotors) is also a monorepo running workflows like updating data and readme!
+This [repository](https://github.com/Leomotors/Leomotors) is also a monorepo running workflows like updating data, readme and also source codes of websites such as personal homepage, portfolio and resume! (See `apps` directory)

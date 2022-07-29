@@ -73,7 +73,7 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
         </Link>
       </section>
 
-      <footer className={styles.section}>
+      <section className={styles.section}>
         <Link
           name="Creators Garten"
           to="https://creatorsgarten.org/ring"
@@ -81,6 +81,21 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
         >
           <CgWebring />
         </Link>
+      </section>
+
+      <footer>
+        <p className="flex flex-col items-center gap-2 sm:flex-row">
+          Source Code of this website is available on
+          <a
+            href="https://github.com/Leomotors/Leomotors"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1 text-slate-300 transition-colors hover:text-slate-400"
+          >
+            <Github size="20" />
+            <p>GitHub</p>
+          </a>
+        </p>
       </footer>
     </main>
   );
