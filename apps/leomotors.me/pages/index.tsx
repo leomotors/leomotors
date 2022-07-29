@@ -84,8 +84,8 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
       </section>
 
       <footer>
-        <p className="flex flex-col items-center gap-2 sm:flex-row">
-          Source Code of this website is available on
+        <div className="flex flex-col items-center gap-2 sm:flex-row">
+          <p>Source Code of this website is available on</p>
           <a
             href="https://github.com/Leomotors/Leomotors"
             target="_blank"
@@ -95,7 +95,7 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
             <Github size="20" />
             <p>GitHub</p>
           </a>
-        </p>
+        </div>
       </footer>
     </main>
   );
