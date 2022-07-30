@@ -1,20 +1,18 @@
+import type { Endpoints } from "@octokit/types";
 import type { GetStaticProps, NextPage } from "next";
-import Link from "components/Link";
-
 import {
   Award,
   Briefcase,
-  JournalRichtext,
   CodeSquare,
   Github,
-  Twitter,
+  JournalRichtext,
   Linkedin,
+  Twitter,
 } from "react-bootstrap-icons";
 
-import type { Endpoints } from "@octokit/types";
-
-import styles from "styles/Home.module.scss";
-import CgWebring from "components/CgWebring";
+import CgWebring from "$components/CgWebring";
+import Link from "$components/Link";
+import styles from "$styles/Home.module.scss";
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const res = (await fetch("https://api.github.com/users/Leomotors").then((r) =>
@@ -68,7 +66,7 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
           <Twitter width="32" height="32" />
         </Link>
 
-        <Link name="LinkedIn" to="https://www.linkedin.com/in/leo-nutthapat/">
+        <Link name="LinkedIn" to="https://www.linkedin.com/in/leo-nutthapat">
           <Linkedin width="32" height="32" />
         </Link>
       </section>

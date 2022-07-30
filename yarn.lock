@@ -1426,13 +1426,15 @@ __metadata:
   resolution: "@leomotors/config@workspace:packages/config"
   dependencies:
     "@types/eslint": ^8.4.5
-    autoprefixer: ^10.4.7
+    autoprefixer: ^10.4.8
     eslint: latest
     eslint-config-prettier: latest
     eslint-plugin-prettier: latest
+    eslint-plugin-simple-import-sort: ^7.0.0
     postcss: ^8.4.14
     prettier: latest
-    tailwindcss: ^3.1.6
+    tailwindcss: ^3.1.7
+    tailwindcss-global-dark: ^1.0.1
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
@@ -1476,11 +1478,11 @@ __metadata:
     "@leomotors/scripts": ^3.1.0
     "@leomotors/sv-components": ^0.4.0
     "@sveltejs/adapter-vercel": 1.0.0-next.66
-    "@sveltejs/kit": 1.0.0-next.396
+    "@sveltejs/kit": 1.0.0-next.398
     "@types/tailwindcss": ^3.0.11
     "@typescript-eslint/eslint-plugin": ^5.31.0
     "@typescript-eslint/parser": ^5.31.0
-    autoprefixer: ^10.4.7
+    autoprefixer: ^10.4.8
     chalk: ^5.0.1
     eslint: ^8.20.0
     eslint-config-prettier: ^8.5.0
@@ -1495,11 +1497,10 @@ __metadata:
     svelte-bootstrap-icons: ^2.2.0
     svelte-check: ^2.8.0
     svelte-preprocess: ^4.10.7
-    tailwindcss: ^3.1.6
-    tailwindcss-global-dark: ^1.0.1
+    tailwindcss: ^3.1.7
     tslib: ^2.4.0
     typescript: ^4.7.4
-    vite: ^3.0.3
+    vite: ^3.0.4
   languageName: unknown
   linkType: soft
 
@@ -1510,9 +1511,9 @@ __metadata:
     "@leomotors/config": "*"
     "@leomotors/data": "*"
     "@sveltejs/adapter-vercel": ^1.0.0-next.66
-    "@sveltejs/kit": ^1.0.0-next.396
+    "@sveltejs/kit": ^1.0.0-next.398
     "@sveltejs/vite-plugin-svelte": ^1.0.1
-    autoprefixer: ^10.4.7
+    autoprefixer: ^10.4.8
     eslint: latest
     postcss: ^8.4.14
     postcss-load-config: ^4.0.1
@@ -1520,9 +1521,9 @@ __metadata:
     prettier-plugin-svelte: ^2.7.0
     svelte: ^3.49.0
     svelte-preprocess: ^4.10.7
-    tailwindcss: ^3.1.6
+    tailwindcss: ^3.1.7
     typescript: ^4.7.4
-    vite: ^3.0.3
+    vite: ^3.0.4
   languageName: unknown
   linkType: soft
 
@@ -1885,9 +1886,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:1.0.0-next.396, @sveltejs/kit@npm:^1.0.0-next.396":
-  version: 1.0.0-next.396
-  resolution: "@sveltejs/kit@npm:1.0.0-next.396"
+"@sveltejs/kit@npm:1.0.0-next.398, @sveltejs/kit@npm:^1.0.0-next.398":
+  version: 1.0.0-next.398
+  resolution: "@sveltejs/kit@npm:1.0.0-next.398"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.1
     chokidar: ^3.5.3
@@ -1897,7 +1898,7 @@ __metadata:
     vite: ^3.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 724ea1a5fa94d9142832e1536c4e5b56f5805aeeb2aab52d63cabca7bf9d06641f3b54890949f2072c322fa2d4c0e9fb4d982fc954645b813d4499dce3e8c45c
+  checksum: 7b672c5b42531b66a382356d00d36784af1fdb21a0fa6279496f7d5e11ef3daa9d0e45fc035de523354df40678301b071b94590f53f9187cef8d5e6bab7f69b6
   languageName: node
   linkType: hard
 
@@ -2729,12 +2730,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.7":
-  version: 10.4.7
-  resolution: "autoprefixer@npm:10.4.7"
+"autoprefixer@npm:^10.4.8":
+  version: 10.4.8
+  resolution: "autoprefixer@npm:10.4.8"
   dependencies:
-    browserslist: ^4.20.3
-    caniuse-lite: ^1.0.30001335
+    browserslist: ^4.21.3
+    caniuse-lite: ^1.0.30001373
     fraction.js: ^4.2.0
     normalize-range: ^0.1.2
     picocolors: ^1.0.0
@@ -2743,7 +2744,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 0e55d0d19806c672ec0c79cc23c27cf77e90edf2600670735266ba33ec5294458f404baaa2f7cd4cfe359cf7a97b3c86f01886bdbdc129a4f2f76ca5977a91af
+  checksum: 06cb4c497bb948714d5b1b4f7e7465fd88c50f90788fc2020b3d97d7661fb4dd0d9918c1b09dd3e909acd4485cbb27ad99085487d8ed5d75915e646d2b535770
   languageName: node
   linkType: hard
 
@@ -2899,7 +2900,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.20.2, browserslist@npm:^4.20.3":
+"browserslist@npm:^4.20.2":
   version: 4.21.2
   resolution: "browserslist@npm:4.21.2"
   dependencies:
@@ -2910,6 +2911,20 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 30fe59f8b065f99665ea63819d29c797660f7975857c290f61f570403abed4d7039ca15b6fd21e39a57b87e1a9262f94676114040766fc0da6ccc11faf9fc377
+  languageName: node
+  linkType: hard
+
+"browserslist@npm:^4.21.3":
+  version: 4.21.3
+  resolution: "browserslist@npm:4.21.3"
+  dependencies:
+    caniuse-lite: ^1.0.30001370
+    electron-to-chromium: ^1.4.202
+    node-releases: ^2.0.6
+    update-browserslist-db: ^1.0.5
+  bin:
+    browserslist: cli.js
+  checksum: ff512a7bcca1c530e2854bbdfc7be2791d0fb524097a6340e56e1d5924164c7e4e0a9b070de04cdc4c149d15cb4d4275cb7c626ebbce954278a2823aaad2452a
   languageName: node
   linkType: hard
 
@@ -3067,14 +3082,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001332":
+"caniuse-lite@npm:^1.0.30001332, caniuse-lite@npm:^1.0.30001370, caniuse-lite@npm:^1.0.30001373":
   version: 1.0.30001373
   resolution: "caniuse-lite@npm:1.0.30001373"
   checksum: cd2f027e2fcf66ed3b0e3eccec89df871f951f2e7600944fae2c3f6f1c37ac82392e573c279e15bf851b75f9696472e38d33fd52d964819ffb8af7af4078ceba
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001335, caniuse-lite@npm:^1.0.30001366":
+"caniuse-lite@npm:^1.0.30001366":
   version: 1.0.30001367
   resolution: "caniuse-lite@npm:1.0.30001367"
   checksum: 9912aed182b8b3a834787424b56a0e71b5ecb5d2cb7235fb022227bc3a81202e8a34bebc5dc9cc504c515b4e052f825c36c2db4b0b880c10e195fe63673edfc6
@@ -3363,7 +3378,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^9.3.0":
+"commander@npm:^9.4.0":
   version: 9.4.0
   resolution: "commander@npm:9.4.0"
   checksum: a322de584a6ccd1ea83c24f6a660e52d16ffbe2613fcfbb8d2cc68bc9dec637492456d754fe8bb5b039ad843ed8e04fb0b107e581a75f62cde9e1a0ab1546e09
@@ -3824,6 +3839,13 @@ __metadata:
   version: 1.4.191
   resolution: "electron-to-chromium@npm:1.4.191"
   checksum: d7bd39517da1fc6c392e87f18df0ce8697814105a663fbc8df51a346f230920ef31adb465cc355fea0ee9c6c9fba6da653ee04f99d515f7280a50f3d394801e4
+  languageName: node
+  linkType: hard
+
+"electron-to-chromium@npm:^1.4.202":
+  version: 1.4.206
+  resolution: "electron-to-chromium@npm:1.4.206"
+  checksum: 1c9b7e867de6a074b389126a655e8edcb1841fb10e44e221164315169d0e53cacb3f90e75ae863f07d74764271720693f5708596f36575c6cd2264651b87bd33
   languageName: node
   linkType: hard
 
@@ -4340,6 +4362,15 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
   checksum: 553fb9ece6beb7c14cf6f84670c786c8ac978c2918421994dcc4edd2385302022e5d5ac4a39fafdb35954e29cecddefed61758040c3c530cafcf651f674a9d51
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-simple-import-sort@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "eslint-plugin-simple-import-sort@npm:7.0.0"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 6aacb7179c213cd2081950630368d1f3b1dcb4f5674d8b989fe7839e7b317ee521d74761676e8b1a7cab49f20405dbcc9aac05358ae804e6bcba6cbf1daccb3d
   languageName: node
   linkType: hard
 
@@ -6043,7 +6074,7 @@ __metadata:
     react-bootstrap-icons: ^1.8.4
     react-dom: 18.2.0
     sass: ^1.54.0
-    tailwindcss: ^3.1.6
+    tailwindcss: ^3.1.7
     typescript: 4.7.4
   languageName: unknown
   linkType: soft
@@ -6052,7 +6083,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "leomotors@workspace:."
   dependencies:
-    npm-check-updates: ^16.0.1
+    eslint-plugin-simple-import-sort: ^7.0.0
+    npm-check-updates: ^16.0.3
     prettier: latest
     prettier-plugin-tailwindcss: ^0.1.13
     turbo: latest
@@ -6069,7 +6101,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:^2.0.5":
+"lilconfig@npm:^2.0.5, lilconfig@npm:^2.0.6":
   version: 2.0.6
   resolution: "lilconfig@npm:2.0.6"
   checksum: 40a3cd72f103b1be5975f2ac1850810b61d4053e20ab09be8d3aeddfe042187e1ba70b4651a7e70f95efa1642e7dc8b2ae395b317b7d7753b241b43cef7c0f7d
@@ -6862,13 +6894,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^16.0.1":
-  version: 16.0.1
-  resolution: "npm-check-updates@npm:16.0.1"
+"npm-check-updates@npm:^16.0.3":
+  version: 16.0.3
+  resolution: "npm-check-updates@npm:16.0.3"
   dependencies:
     chalk: ^5.0.1
     cli-table: ^0.3.11
-    commander: ^9.3.0
+    commander: ^9.4.0
     fast-memoize: ^2.5.2
     find-up: 5.0.0
     fp-and-or: ^0.1.3
@@ -6896,7 +6928,7 @@ __metadata:
   bin:
     ncu: build/src/bin/cli.js
     npm-check-updates: build/src/bin/cli.js
-  checksum: 1e747421f3d34055183037335437db91cd300448dccaad305925499719d4d34e6c1adfa3ce35a178f209106a40dcd57da088d9125dab2bd125ae54f5ae1c131c
+  checksum: 06c53c3f1988a3427074d216f02c84f905718c1e666f8ea98d079072de9f50919a21540cbbe5f9b4552c7607440a471d7a04345822a9d3a4b68fabfaea5a8cf7
   languageName: node
   linkType: hard
 
@@ -8760,9 +8792,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.1.6":
-  version: 3.1.6
-  resolution: "tailwindcss@npm:3.1.6"
+"tailwindcss@npm:^3.1.7":
+  version: 3.1.7
+  resolution: "tailwindcss@npm:3.1.7"
   dependencies:
     arg: ^5.0.2
     chokidar: ^3.5.3
@@ -8773,7 +8805,7 @@ __metadata:
     fast-glob: ^3.2.11
     glob-parent: ^6.0.2
     is-glob: ^4.0.3
-    lilconfig: ^2.0.5
+    lilconfig: ^2.0.6
     normalize-path: ^3.0.0
     object-hash: ^3.0.0
     picocolors: ^1.0.0
@@ -8791,7 +8823,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 90719c6fd0dcdda5c8e2882ad421048c9dd90890e0c118d12ff3ec31adba53eb2df8fed1ed203e728e5b32297e1cc207df463a6b196d37344a63fde9f67c52b6
+  checksum: adbc9869b72f741e9a0fc281b79710863617a588fd5d897316b676f789b6482c79f46f324223300ca962afbe55bed3ec16a37a6ccf4bb2c99c53cf8c5dd9700d
   languageName: node
   linkType: hard
 
@@ -9254,6 +9286,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"update-browserslist-db@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "update-browserslist-db@npm:1.0.5"
+  dependencies:
+    escalade: ^3.1.1
+    picocolors: ^1.0.0
+  peerDependencies:
+    browserslist: ">= 4.21.0"
+  bin:
+    browserslist-lint: cli.js
+  checksum: 7e425fe5dbbebdccf72a84ce70ec47fc74dce561d28f47bc2b84a1c2b84179a862c2261b18ab66a5e73e261c7e2ef9e11c6129112989d4d52e8f75a56bb923f8
+  languageName: node
+  linkType: hard
+
 "update-notifier@npm:^6.0.2":
   version: 6.0.2
   resolution: "update-notifier@npm:6.0.2"
@@ -9352,9 +9398,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "vite@npm:3.0.3"
+"vite@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "vite@npm:3.0.4"
   dependencies:
     esbuild: ^0.14.47
     fsevents: ~2.3.2
@@ -9380,7 +9426,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 0b15d6bb062ab56dd8a0d47262344dcb48423d658c153c88a8a41f9301a70f32dd0fa2c037fa39a0a7888be1005cb763aad94235f82439441a13cef5103c29c4
+  checksum: f13eceb94f7b399942ce5e7c10df73314f7b073171d6594228b078cc1203042c4cdb9e8356fe64ad444c3533c31437abb3c64ac56478f0865fab598e924cf68b
   languageName: node
   linkType: hard
 

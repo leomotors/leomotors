@@ -30,6 +30,13 @@ export const projects: Record<"featured" | "big_projects", IProject[]> = {
       bgtl: true,
     },
     {
+      title: "Leomotors Monorepo",
+      link: "https://github.com/Leomotors/Leomotors",
+      desc: "Monorepo including my main homepage, resume and portfolio you may be seeing right now. And other scripts such as data scraper.",
+      language: "TypeScript",
+      img: "images/leomotors.me.webp",
+    },
+    {
       title: "You are a Failure!",
       link: "https://github.com/Leomotors/you-are-a-failure",
       desc: "My first UWP Desktop C# App to fire up your motivation. Published to Microsoft Store",

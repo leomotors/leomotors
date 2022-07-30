@@ -4,7 +4,9 @@
   export let data: ImageCardData;
 </script>
 
-<div class="card bg-white expand-sm dark:bg-slate-700 dark:shadow-white">
+<div
+  class="card bg-white transition-transform hover:scale-[1.025] dark:bg-slate-700 dark:shadow-white"
+>
   <div
     class="img {data.link ? 'cursor-pointer' : ''} {data.bgtl
       ? 'bg-left-top'

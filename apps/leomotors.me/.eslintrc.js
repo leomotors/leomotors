@@ -8,9 +8,12 @@ const config = {
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
   ],
+  plugins: ["simple-import-sort"],
   rules: {
     "prettier/prettier": "warn",
     "react/no-unescaped-entities": "off",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
   },
 };
 

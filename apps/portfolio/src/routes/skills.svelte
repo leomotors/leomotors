@@ -1,9 +1,9 @@
 <script lang="ts">
-  import BigCard from "$lib/components/BigCard.svelte";
-  import SkillCard from "$lib/components/SkillCard.svelte";
-  import ext from "$lib/components/ext";
-
   import { skills } from "@leomotors/data";
+
+  import BigCard from "$lib/components/BigCard.svelte";
+  import ext from "$lib/components/ext";
+  import SkillCard from "$lib/components/SkillCard.svelte";
   const { proglang, webtech, appframework, others } = skills;
 </script>
 

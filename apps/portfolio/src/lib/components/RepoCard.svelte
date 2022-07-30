@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { RepoData } from "$lib/data/repos.model";
   import LangIcons from "$lib/data/lang_icons.json";
+  import type { RepoData } from "$lib/data/repos.model";
 
   import ImageCard from "./ImageCard.svelte";
 

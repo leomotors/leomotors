@@ -1,5 +1,6 @@
-import fetch from "node-fetch";
 import fs from "node:fs/promises";
+import fetch from "node-fetch";
+
 import type { GetRepoLangsQuery } from "../generated/graphql";
 
 const query = /* GraphQL */ `

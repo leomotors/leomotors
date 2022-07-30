@@ -1,9 +1,9 @@
 <script lang="ts">
+  import { projects } from "@leomotors/data";
+
   import BigCard from "$lib/components/BigCard.svelte";
   import ext from "$lib/components/ext";
   import RepoCard from "$lib/components/RepoCard.svelte";
-
-  import { projects } from "@leomotors/data";
   const { featured, big_projects } = projects;
 
   import { harvard } from "$lib/data/amazingQuotes.json";

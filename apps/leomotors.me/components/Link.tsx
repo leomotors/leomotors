@@ -3,7 +3,7 @@ import type { FC, PropsWithChildren } from "react";
 
 interface LinkProps extends PropsWithChildren {
   name: string;
-  to: `http${"s" | ""}://${string}`;
+  to: `http${"s" | ""}://${string}.${string}`;
   size?: "sm" | "lg";
 }
 

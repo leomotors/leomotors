@@ -32,7 +32,7 @@ export const technologies = [
   {
     section: "Tools (misc):",
     details:
-      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi, PostgreSQL, Turborepo",
+      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi, PostgreSQL, Turborepo, Figma (View)",
   },
   {
     section: "IaaS, PaaS:",

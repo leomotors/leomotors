@@ -1,10 +1,10 @@
 <script lang="ts">
+  import GitHub from "svelte-bootstrap-icons/lib/Github.svelte";
+
   import ext from "$lib/components/ext";
   import { timeago } from "$lib/utils";
 
-  import GitHub from "svelte-bootstrap-icons/lib/Github.svelte";
-
-  import { Version, BuildTime } from "../../config.g";
+  import { BuildTime, Version } from "../../config.g";
 </script>
 
 <main class="h-32 w-full bg-slate-800 py-2 px-6 text-white lg:h-16 xl:px-8">

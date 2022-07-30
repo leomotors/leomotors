@@ -1,4 +1,5 @@
 <script lang="ts">
+  // eslint-disable-next-line simple-import-sort/imports
   import { NavBar } from "@leomotors/sv-components";
 
   import "../app.scss";

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import ext from "$lib/components/ext";
-
   import Link45deg from "svelte-bootstrap-icons/lib/Link45deg.svelte";
+
+  import ext from "$lib/components/ext";
 </script>
 
 <h1 class="page-title">Welcome to my Portfolio!</h1>
