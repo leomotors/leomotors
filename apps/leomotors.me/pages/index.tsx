@@ -41,33 +41,33 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
 
       <section className={styles.section}>
         <Link name="Portfolio" to="https://portfolio.leomotors.me">
-          <Award width="32" height="32" />
+          <Award size="32" />
         </Link>
 
         <Link name="Resume" to="https://resume.leomotors.me">
-          <Briefcase width="32" height="32" />
+          <Briefcase size="32" />
         </Link>
 
         <Link name="Blog" to="https://blog.leomotors.me">
-          <JournalRichtext width="32" height="32" />
+          <JournalRichtext size="32" />
         </Link>
 
         <Link name="Repo List" to="https://repos.leomotors.me">
-          <CodeSquare width="32" height="32" />
+          <CodeSquare size="32" />
         </Link>
       </section>
 
       <section className={styles.section}>
         <Link name="GitHub" to="https://github.com/Leomotors">
-          <Github width="32" height="32" />
+          <Github size="32" />
         </Link>
 
         <Link name="Twitter" to="https://twitter.com/LeomotorsTH">
-          <Twitter width="32" height="32" />
+          <Twitter size="32" />
         </Link>
 
         <Link name="LinkedIn" to="https://www.linkedin.com/in/leo-nutthapat">
-          <Linkedin width="32" height="32" />
+          <Linkedin size="32" />
         </Link>
       </section>
 

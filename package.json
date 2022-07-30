@@ -17,6 +17,7 @@
     "deps": "ncu -u && turbo run deps"
   },
   "devDependencies": {
+    "eslint": "^8.20.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "npm-check-updates": "^16.0.3",
     "prettier": "latest",
@@ -26,5 +27,5 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.2"
 }
