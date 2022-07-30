@@ -12,15 +12,15 @@
     "__pushedAt": "2021-06-14T10:52:05Z"
   },
   "Leomotors": {
-    "JavaScript": 8462,
-    "TypeScript": 25979,
+    "JavaScript": 8363,
+    "TypeScript": 23368,
     "Shell": 226,
     "HTML": 1257,
     "SCSS": 1047,
-    "Svelte": 20616,
+    "Svelte": 20178,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-07-29T17:20:33Z"
+    "__pushedAt": "2022-07-30T18:34:25Z"
   },
   "Salim-Bot": {
     "TypeScript": 37088,
@@ -154,12 +154,12 @@
   },
   "anime-captcha": {
     "HTML": 773,
-    "Svelte": 24542,
-    "TypeScript": 5844,
-    "JavaScript": 4072,
-    "CSS": 1304,
+    "Svelte": 24636,
+    "TypeScript": 7419,
+    "JavaScript": 3296,
+    "SCSS": 1285,
     "__isArchived": false,
-    "__pushedAt": "2022-06-02T10:40:21Z"
+    "__pushedAt": "2022-07-30T17:57:31Z"
   },
   "npm-scripts": {
     "JavaScript": 1631,
@@ -364,13 +364,9 @@
     "__pushedAt": "2022-07-18T14:57:34Z"
   },
   "leomotors.github.io": {
-    "JavaScript": 980,
-    "CSS": 214,
-    "TypeScript": 538,
-    "HTML": 484,
-    "Svelte": 3898,
+    "HTML": 355,
     "__isArchived": false,
-    "__pushedAt": "2022-07-28T14:55:02Z"
+    "__pushedAt": "2022-07-30T08:53:55Z"
   },
   "sv-components": {
     "JavaScript": 1703,
