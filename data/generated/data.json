@@ -12,7 +12,7 @@
     "__pushedAt": "2021-06-14T10:52:05Z"
   },
   "Leomotors": {
-    "JavaScript": 8363,
+    "JavaScript": 8548,
     "TypeScript": 23368,
     "Shell": 226,
     "HTML": 1257,
@@ -20,13 +20,13 @@
     "Svelte": 20178,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-07-30T21:12:09Z"
+    "__pushedAt": "2022-08-01T06:54:21Z"
   },
   "Salim-Bot": {
-    "TypeScript": 37088,
+    "TypeScript": 37100,
     "Shell": 177,
     "__isArchived": false,
-    "__pushedAt": "2022-07-22T16:13:35Z"
+    "__pushedAt": "2022-08-01T13:37:32Z"
   },
   "Polynomial-Problems-Generator": {
     "C++": 33793,
@@ -115,7 +115,7 @@
     "Shell": 5053,
     "PowerShell": 458,
     "__isArchived": false,
-    "__pushedAt": "2022-07-14T13:46:55Z"
+    "__pushedAt": "2022-08-01T02:22:26Z"
   },
   "THIS-REPO-HAS-9-ISSUES": {
     "JavaScript": 930,
@@ -389,12 +389,12 @@
     "__pushedAt": "2022-06-27T13:27:32Z"
   },
   "waifu-bot": {
-    "TypeScript": 62330,
-    "JavaScript": 4110,
+    "TypeScript": 64108,
+    "JavaScript": 4125,
     "SCSS": 328,
     "Shell": 301,
     "__isArchived": false,
-    "__pushedAt": "2022-07-31T15:29:52Z"
+    "__pushedAt": "2022-08-01T14:33:42Z"
   },
   "awesome-secured-config": {
     "__isArchived": false,
