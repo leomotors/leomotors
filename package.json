@@ -17,9 +17,9 @@
     "deps": "ncu -u && turbo run deps"
   },
   "devDependencies": {
-    "eslint": "^8.20.0",
+    "eslint": "^8.21.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "npm-check-updates": "^16.0.3",
+    "npm-check-updates": "^16.0.4",
     "prettier": "latest",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "turbo": "latest"
