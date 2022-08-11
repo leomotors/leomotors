@@ -61,6 +61,9 @@
 - [Svelte Components](https://github.com/Leomotors/sv-components) =>
   [![](https://img.shields.io/npm/v/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
   [![](https://img.shields.io/npm/dt/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
+- [Cocoa Vitepress Theme](https://github.com/Leomotors/cocoa-vitepress-theme) =>
+  [![](https://img.shields.io/npm/v/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
+  [![](https://img.shields.io/npm/dt/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
 
 PS: Most download came from me lmao.
 
