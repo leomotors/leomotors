@@ -12,15 +12,15 @@
     "__pushedAt": "2021-06-14T10:52:05Z"
   },
   "Leomotors": {
-    "JavaScript": 8548,
+    "JavaScript": 8589,
     "TypeScript": 23368,
     "Shell": 226,
     "HTML": 1257,
     "SCSS": 1047,
-    "Svelte": 20178,
+    "Svelte": 20164,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-08-11T17:08:03Z"
+    "__pushedAt": "2022-08-12T10:21:21Z"
   },
   "Salim-Bot": {
     "TypeScript": 37548,
@@ -396,6 +396,14 @@
     "__isArchived": false,
     "__pushedAt": "2022-08-07T11:37:08Z"
   },
+  "Com-POG": {
+    "JavaScript": 1409,
+    "Vue": 1555,
+    "TypeScript": 6292,
+    "CSS": 59,
+    "__isArchived": false,
+    "__pushedAt": "2022-08-12T09:06:19Z"
+  },
   "awesome-secured-config": {
     "__isArchived": false,
     "__pushedAt": "2022-07-14T14:11:33Z"
@@ -408,11 +416,11 @@
     "__pushedAt": "2022-08-07T09:04:03Z"
   },
   "2110101-com-prog": {
-    "Python": 11644,
+    "Python": 11795,
     "Haskell": 76,
-    "TypeScript": 1916,
+    "TypeScript": 2113,
     "__isArchived": false,
-    "__pushedAt": "2022-08-11T17:00:26Z"
+    "__pushedAt": "2022-08-12T09:08:06Z"
   },
   "cocoa-vitepress-theme": {
     "CSS": 905,
