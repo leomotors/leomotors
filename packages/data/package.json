@@ -9,14 +9,13 @@
     "build": "tsc",
     "dev": "nodemon --watch src --ext \"js,ts,json\" --exec tsc",
     "lint": "eslint --max-warnings=0",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "deps": "ncu -u"
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "devDependencies": {
-    "@leomotors/config": "*",
-    "eslint": "latest",
+    "@leomotors/config": "workspace:0.0.0",
+    "eslint": "^8.21.0",
     "nodemon": "^2.0.19",
-    "prettier": "latest",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
 }

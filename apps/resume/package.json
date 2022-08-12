@@ -11,25 +11,24 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint --max-warnings=0",
-    "format": "prettier --write \"*.{cjs,js,ts}\" && prettier --write \"{src,test}/**/*.{js,ts,svelte}\"",
-    "deps": "ncu -u"
+    "format": "prettier --write \"*.{cjs,js,ts}\" && prettier --write \"{src,test}/**/*.{js,ts,svelte}\""
   },
   "devDependencies": {
-    "@leomotors/config": "*",
-    "@leomotors/data": "*",
-    "@sveltejs/adapter-vercel": "^1.0.0-next.66",
-    "@sveltejs/kit": "^1.0.0-next.401",
+    "@leomotors/config": "workspace:0.0.0",
+    "@leomotors/data": "workspace:0.0.0",
+    "@sveltejs/adapter-vercel": "1.0.0-next.66",
+    "@sveltejs/kit": "1.0.0-next.405",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "autoprefixer": "^10.4.8",
-    "eslint": "latest",
-    "postcss": "^8.4.14",
+    "eslint": "^8.21.0",
+    "postcss": "^8.4.16",
     "postcss-load-config": "^4.0.1",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
     "svelte": "^3.49.0",
     "svelte-preprocess": "^4.10.7",
-    "tailwindcss": "^3.1.7",
+    "tailwindcss": "^3.1.8",
     "typescript": "^4.7.4",
-    "vite": "^3.0.4"
+    "vite": "^3.0.6"
   }
 }

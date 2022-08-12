@@ -4,7 +4,7 @@
   import ext from "$lib/components/ext";
   import { timeago } from "$lib/utils";
 
-  import { BuildTime, Version } from "../../config.g";
+  import { BuildTime } from "../../config.g";
 </script>
 
 <main class="h-32 w-full bg-slate-800 py-2 px-6 text-white lg:h-16 xl:px-8">
@@ -20,7 +20,7 @@
     <p class="text-lg font-semibold sm:text-xl">Copyright © 2022 Leomotors</p>
   </div>
 
-  <div class="middle text-lg" title="Version: {Version} @ {BuildTime}">
+  <div class="middle text-lg" title="Last Updated at {BuildTime}">
     Last Updated: {timeago(BuildTime)}
   </div>
 

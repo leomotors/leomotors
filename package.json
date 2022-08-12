@@ -13,19 +13,17 @@
     "load": "FORCE_COLOR=2 turbo run load",
     "analyze": "FORCE_COLOR=2 turbo run analyze && yarn post-analyze",
     "post-analyze": "bash post-analyze.bash",
-    "format": "FORCE_COLOR=2 turbo run format",
-    "deps": "ncu -u && turbo run deps"
+    "format": "FORCE_COLOR=2 turbo run format"
   },
   "devDependencies": {
     "eslint": "^8.21.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "npm-check-updates": "^16.0.4",
-    "prettier": "latest",
+    "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "turbo": "latest"
+    "turbo": "^1.4.3"
   },
   "engines": {
-    "node": ">=16.0.0"
-  },
-  "packageManager": "yarn@3.2.2"
+    "node": ">=16.0.0",
+    "pnpm": ">=7"
+  }
 }
