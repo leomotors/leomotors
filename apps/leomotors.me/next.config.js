@@ -17,6 +17,11 @@ const nextConfig = withBundleAnalyzer({
         permanent: true,
       },
       {
+        source: "/jobs",
+        destination: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        permanent: false,
+      },
+      {
         source: "/jobs/(.*)",
         destination: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         permanent: false,
