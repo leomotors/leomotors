@@ -20,7 +20,7 @@
     "Svelte": 20164,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-08-13T14:04:42Z"
+    "__pushedAt": "2022-08-13T21:12:03Z"
   },
   "Salim-Bot": {
     "TypeScript": 37548,
@@ -389,20 +389,19 @@
     "__pushedAt": "2022-06-27T13:27:32Z"
   },
   "waifu-bot": {
-    "TypeScript": 87709,
+    "TypeScript": 90425,
     "JavaScript": 4574,
     "SCSS": 929,
     "Shell": 301,
     "__isArchived": false,
-    "__pushedAt": "2022-08-13T16:34:19Z"
+    "__pushedAt": "2022-08-14T08:42:48Z"
   },
   "Com-POG": {
-    "JavaScript": 1409,
-    "Vue": 1555,
-    "TypeScript": 6311,
+    "JavaScript": 628,
+    "TypeScript": 11035,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-08-13T17:02:15Z"
+    "__pushedAt": "2022-08-14T15:34:01Z"
   },
   "awesome-secured-config": {
     "__isArchived": false,
@@ -420,7 +419,7 @@
     "Haskell": 76,
     "TypeScript": 2276,
     "__isArchived": false,
-    "__pushedAt": "2022-08-12T16:52:47Z"
+    "__pushedAt": "2022-08-14T15:18:35Z"
   },
   "cocoa-vitepress-theme": {
     "CSS": 905,
