@@ -1,5 +1,5 @@
 {
-  "name": "@leomotors/portfolio",
+  "name": "portfolio.leomotors.me",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -19,12 +19,12 @@
     "@leomotors/scripts": "^3.1.0",
     "@leomotors/sv-components": "^0.4.0",
     "@sveltejs/adapter-vercel": "1.0.0-next.66",
-    "@sveltejs/kit": "1.0.0-next.405",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
+    "@sveltejs/kit": "1.0.0-next.410",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
     "autoprefixer": "^10.4.8",
     "chalk": "^5.0.1",
-    "eslint": "^8.21.0",
+    "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-svelte3": "^4.0.0",
@@ -40,6 +40,6 @@
     "tailwindcss": "^3.1.8",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4",
-    "vite": "^3.0.6"
+    "vite": "^3.0.8"
   }
 }

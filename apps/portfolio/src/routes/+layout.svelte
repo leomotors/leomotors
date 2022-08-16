@@ -7,7 +7,7 @@
   import { goto } from "$app/navigation";
   import Footer from "$lib/layout/Footer.svelte";
 
-  export let dark: boolean;
+  let dark: boolean;
 </script>
 
 <div class:dark>
