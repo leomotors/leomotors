@@ -1,3 +1,6 @@
+import type { GraphQLClient } from 'graphql-request';
+import type * as Dom from 'graphql-request/dist/types.dom';
+import gql from 'graphql-tag';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -14125,6 +14128,11 @@ export enum ProjectNextFieldType {
    */
   SingleSelect = 'SINGLE_SELECT',
   /**
+   * Tasks
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.
+   */
+  Tasks = 'TASKS',
+  /**
    * Text
    * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.
    */
@@ -14133,12 +14141,7 @@ export enum ProjectNextFieldType {
    * Title
    * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.
    */
-  Title = 'TITLE',
-  /**
-   * Tracks
-   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.
-   */
-  Tracks = 'TRACKS'
+  Title = 'TITLE'
 }
 
 /** An item within a new Project. */
@@ -14676,12 +14679,12 @@ export enum ProjectV2FieldType {
   Reviewers = 'REVIEWERS',
   /** Single Select */
   SingleSelect = 'SINGLE_SELECT',
+  /** Tasks */
+  Tasks = 'TASKS',
   /** Text */
   Text = 'TEXT',
   /** Title */
-  Title = 'TITLE',
-  /** Tracks */
-  Tracks = 'TRACKS'
+  Title = 'TITLE'
 }
 
 /** The values that can be used to update a field of an item inside a Project. Only 1 value can be updated at a time. */
@@ -14709,6 +14712,8 @@ export type ProjectV2Item = Node & {
   creator?: Maybe<Actor>;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** A specific field value given a field name */
+  fieldValueByName?: Maybe<ProjectV2ItemFieldValue>;
   /** List of field values */
   fieldValues: ProjectV2ItemFieldValueConnection;
   id: Scalars['ID'];
@@ -14720,6 +14725,12 @@ export type ProjectV2Item = Node & {
   type: ProjectV2ItemType;
   /** Identifies the date and time when the object was last updated. */
   updatedAt: Scalars['DateTime'];
+};
+
+
+/** An item within a Project. */
+export type ProjectV2ItemFieldValueByNameArgs = {
+  name: Scalars['String'];
 };
 
 
@@ -16501,6 +16512,42 @@ export type PullRequestTemplate = {
   filename?: Maybe<Scalars['String']>;
   /** The repository the template belongs to */
   repository: Repository;
+};
+
+/** A threaded list of comments for a given pull request. */
+export type PullRequestThread = Node & {
+  __typename?: 'PullRequestThread';
+  /** A list of pull request comments associated with the thread. */
+  comments: PullRequestReviewCommentConnection;
+  id: Scalars['ID'];
+  /** Whether or not the thread has been collapsed (resolved) */
+  isCollapsed: Scalars['Boolean'];
+  /** Indicates whether this thread was outdated by newer changes. */
+  isOutdated: Scalars['Boolean'];
+  /** Whether this thread has been resolved */
+  isResolved: Scalars['Boolean'];
+  /** Identifies the pull request associated with this thread. */
+  pullRequest: PullRequest;
+  /** Identifies the repository associated with this thread. */
+  repository: Repository;
+  /** The user who resolved this thread */
+  resolvedBy?: Maybe<User>;
+  /** Indicates whether the current viewer can reply to this thread. */
+  viewerCanReply: Scalars['Boolean'];
+  /** Whether or not the viewer can resolve this thread */
+  viewerCanResolve: Scalars['Boolean'];
+  /** Whether or not the viewer can unresolve this thread */
+  viewerCanUnresolve: Scalars['Boolean'];
+};
+
+
+/** A threaded list of comments for a given pull request. */
+export type PullRequestThreadCommentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  skip?: InputMaybe<Scalars['Int']>;
 };
 
 /** The connection type for PullRequestTimelineItem. */
@@ -20796,6 +20843,8 @@ export type SecurityAdvisoryConnection = {
 
 /** The possible ecosystems of a security vulnerability's package. */
 export enum SecurityAdvisoryEcosystem {
+  /** GitHub Actions */
+  Actions = 'ACTIONS',
   /** PHP packages hosted at packagist.org */
   Composer = 'COMPOSER',
   /** Erlang/Elixir packages hosted at hex.pm */
@@ -21740,6 +21789,8 @@ export type StartRepositoryMigrationInput = {
   sourceId: Scalars['ID'];
   /** The Octoshift migration source repository URL. */
   sourceRepositoryUrl: Scalars['URI'];
+  /** The visibility of the imported repository. */
+  targetRepoVisibility?: InputMaybe<Scalars['String']>;
 };
 
 /** Autogenerated return type of StartRepositoryMigration */
@@ -23059,6 +23110,8 @@ export type TreeEntry = {
   path?: Maybe<Scalars['String']>;
   /** The Repository the tree entry belongs to */
   repository: Repository;
+  /** Entry byte size */
+  size: Scalars['Int'];
   /** If the TreeEntry is for a directory occupied by a submodule project, this returns the corresponding submodule */
   submodule?: Maybe<Submodule>;
   /** Entry file type. */
@@ -25632,3 +25685,47 @@ export type GetRepoLangsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type GetRepoLangsQuery = { __typename?: 'Query', viewer: { __typename?: 'User', repositories: { __typename?: 'RepositoryConnection', totalCount: number, nodes?: Array<{ __typename?: 'Repository', name: string, isArchived: boolean, pushedAt?: any | null, languages?: { __typename?: 'LanguageConnection', edges?: Array<{ __typename?: 'LanguageEdge', size: number, node: { __typename?: 'Language', color?: string | null, name: string } } | null> | null } | null } | null> | null } } };
+
+
+export const GetRepoLangsDocument = gql`
+    query getRepoLangs {
+  viewer {
+    repositories(
+      ownerAffiliations: OWNER
+      isFork: false
+      privacy: PUBLIC
+      first: 100
+    ) {
+      totalCount
+      nodes {
+        name
+        isArchived
+        pushedAt
+        languages(first: 100) {
+          edges {
+            size
+            node {
+              color
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}
+    `;
+
+export type SdkFunctionWrapper = <T>(action: (requestHeaders?:Record<string, string>) => Promise<T>, operationName: string, operationType?: string) => Promise<T>;
+
+
+const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationType) => action();
+
+export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
+  return {
+    getRepoLangs(variables?: GetRepoLangsQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<GetRepoLangsQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<GetRepoLangsQuery>(GetRepoLangsDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'getRepoLangs', 'query');
+    }
+  };
+}
+export type Sdk = ReturnType<typeof getSdk>;

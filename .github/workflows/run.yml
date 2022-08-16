@@ -46,7 +46,7 @@ jobs:
         run: pnpm install
 
       - name: Turborepo Magic
-        run: GH_PAT=${{ secrets.GH_PAT }} pnpm analyze
+        run: GH_PAT=${{ secrets.GH_PAT }} pnpm turbo run analyze --filter="@leomotors/language-stats"
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7

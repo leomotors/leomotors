@@ -1,53 +1,17 @@
+import { GraphQLClient } from "graphql-request";
 import fs from "node:fs/promises";
-import fetch from "node-fetch";
 
-import type { GetRepoLangsQuery } from "../generated/graphql";
+import { getSdk } from "../generated/graphql.js";
 
-const query = /* GraphQL */ `
-    query getRepoLangs {
-        viewer {
-            repositories(
-                ownerAffiliations: OWNER
-                isFork: false
-                privacy: PUBLIC
-                first: 100
-            ) {
-                totalCount
-                nodes {
-                    name
-                    isArchived
-                    pushedAt
-                    languages(first: 100) {
-                        edges {
-                            size
-                            node {
-                                color
-                                name
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-`;
+const gqlClient = new GraphQLClient("https://api.github.com/graphql", {
+    headers: {
+        Authorization: "Bearer " + process.env.GH_PAT,
+    },
+});
 
-const result = (
-    (await fetch("https://api.github.com/graphql", {
-        method: "POST",
-        headers: {
-            Authorization: `Bearer ${process.env.GH_PAT}`,
-        },
-        body: JSON.stringify({ query }),
-    }).then(async (res) => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const obj = (await res.json()) as any;
-        if (res.status >= 400) {
-            throw new Error(JSON.stringify(obj, null, 4));
-        }
-        return obj;
-    })) as { data: unknown }
-).data as GetRepoLangsQuery;
+const sdk = getSdk(gqlClient);
+
+const result = await sdk.getRepoLangs();
 
 const repos = result.viewer.repositories.nodes ?? [];
 

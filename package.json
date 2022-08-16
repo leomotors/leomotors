@@ -11,11 +11,12 @@
     "dev": "FORCE_COLOR=2 turbo run dev --parallel",
     "lint": "FORCE_COLOR=2 turbo run lint",
     "load": "FORCE_COLOR=2 turbo run load",
-    "analyze": "FORCE_COLOR=2 turbo run analyze && yarn post-analyze",
+    "analyze": "FORCE_COLOR=2 turbo run analyze --filter=\"@leomotors/language-stats\" && pnpm post-analyze",
     "post-analyze": "bash post-analyze.bash",
     "format": "FORCE_COLOR=2 turbo run format"
   },
   "devDependencies": {
+    "@types/node": "18.7.5",
     "eslint": "^8.22.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.7.1",

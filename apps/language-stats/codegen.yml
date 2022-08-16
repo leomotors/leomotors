@@ -4,8 +4,12 @@ schema:
       headers:
         Authorization: "Bearer ${GH_PAT}"
 
-documents: "src/loadData.ts"
+documents: "src/query.graphql"
 generates:
   generated/graphql.ts:
-    - "typescript"
-    - "typescript-operations"
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
+    config:
+      useTypeImports: true
