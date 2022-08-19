@@ -1,5 +1,5 @@
 {
-  "name": "resume.leomotors.me",
+  "name": "resume.leomotors.net",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -17,7 +17,7 @@
     "@leomotors/config": "workspace:0.0.0",
     "@leomotors/data": "workspace:0.0.0",
     "@sveltejs/adapter-vercel": "1.0.0-next.66",
-    "@sveltejs/kit": "1.0.0-next.410",
+    "@sveltejs/kit": "1.0.0-next.426",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "autoprefixer": "^10.4.8",
     "eslint": "^8.22.0",
@@ -29,6 +29,6 @@
     "svelte-preprocess": "^4.10.7",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.7.4",
-    "vite": "^3.0.8"
+    "vite": "^3.0.9"
   }
 }

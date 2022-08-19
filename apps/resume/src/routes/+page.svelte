@@ -50,6 +50,13 @@
     to hide some sections before printing.
   </p>
   (<a href={sourceLink} target="_blank" rel="noopener">Source</a>)
+
+  <p>
+    See all my other websites at
+    <a href={"https://" + introData.website} target="_blank" rel="noreferrer">
+      leomotors.net
+    </a>
+  </p>
 </header>
 
 <main

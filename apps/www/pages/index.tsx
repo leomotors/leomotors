@@ -40,19 +40,19 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
       </p>
 
       <section className={styles.section}>
-        <Link name="Portfolio" to="https://portfolio.leomotors.me">
+        <Link name="Portfolio" to="https://portfolio.leomotors.net">
           <Award size="32" />
         </Link>
 
-        <Link name="Resume" to="https://resume.leomotors.me">
+        <Link name="Resume" to="https://resume.leomotors.net">
           <Briefcase size="32" />
         </Link>
 
-        <Link name="Blog" to="https://blog.leomotors.me">
+        <Link name="Blog" to="https://blog.leomotors.net">
           <JournalRichtext size="32" />
         </Link>
 
-        <Link name="Repo List" to="https://repos.leomotors.me">
+        <Link name="Repo List" to="https://repos.leomotors.net">
           <CodeSquare size="32" />
         </Link>
       </section>

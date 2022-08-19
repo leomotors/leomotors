@@ -34,7 +34,7 @@ export const projects: Record<"featured" | "big_projects", IProject[]> = {
       link: "https://github.com/Leomotors/Leomotors",
       desc: "Monorepo including my main homepage, resume and portfolio you may be seeing right now. And other scripts such as data scraper.",
       language: "TypeScript",
-      img: "images/leomotors.me.webp",
+      img: "images/leomotors-www.webp",
     },
     {
       title: "You are a Failure!",

@@ -12,7 +12,7 @@ export const introData = {
   github: "Leomotors",
   linkedin: "leo-nutthapat",
   location: "Bangkok, Thailand",
-  website: "leomotors.me",
+  website: "leomotors.net",
 };
 
 export const technologies = [

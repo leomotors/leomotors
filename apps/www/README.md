@@ -1,6 +1,6 @@
-# leomotors.me
+# leomotors.net
 
-just https://leomotors.me
+just https://leomotors.net
 
 Home Page contains link to every other website
 

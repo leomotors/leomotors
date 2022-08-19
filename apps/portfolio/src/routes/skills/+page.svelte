@@ -46,7 +46,7 @@
 
       <p>
         Full list of skills available in my resume
-        <a href="https://resume.leomotors.me" {...ext}>here</a>
+        <a href="https://resume.leomotors.net" {...ext}>here</a>
       </p>
     </div>
   </header>
