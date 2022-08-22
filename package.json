@@ -16,7 +16,7 @@
     "format": "FORCE_COLOR=2 turbo run format"
   },
   "devDependencies": {
-    "@types/node": "18.7.6",
+    "@types/node": "18.7.9",
     "eslint": "^8.22.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.7.1",

@@ -1,0 +1,9 @@
+.NavBar {
+  @apply mt-32 mb-16 flex justify-center gap-2;
+
+  @apply text-2xl font-bold;
+
+  & > a {
+    @apply transition-colors hover:text-slate-400;
+  }
+}

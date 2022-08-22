@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="Brief Introduction about me and as portal to my resume, portfolio, blog"
+          content="Brief Introduction about me and as portal to my resume, portfolio, blog and other sites"
         />
         <link
           rel="icon"

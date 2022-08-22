@@ -1,3 +1,8 @@
+.section,
+.sectionMini {
+  @apply flex flex-col justify-center gap-2 lg:flex-row;
+}
+
 .section {
-  @apply my-2 flex flex-col justify-center gap-2 lg:flex-row;
+  @apply my-2;
 }

@@ -64,7 +64,7 @@ export const skills: Record<
     {
       name: "React",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-      star: 2,
+      star: 5,
     },
     {
       name: "Firebase",
@@ -74,6 +74,11 @@ export const skills: Record<
     {
       name: "REST API",
       img: "https://res.cloudinary.com/practicaldev/image/fetch/s--RK-AgEnh--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1s3bedypkt7zm8maikzg.png",
+      star: 3,
+    },
+    {
+      name: "GraphQL",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png",
       star: 3,
     },
   ],

@@ -4,7 +4,7 @@
 const config = {
     ...require("./prettier-app"),
     tabWidth: 2,
-    plugins: ["prettier-plugin-svelte"],
+    plugins: [require("prettier-plugin-tailwindcss")],
 };
 
 module.exports = config;

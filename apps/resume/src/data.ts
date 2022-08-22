@@ -21,8 +21,8 @@ export const technologies = [
     details: proglang.map((o) => o.name).join(", "),
   },
   {
-    section: "Preferred Combo:",
-    details: "SvelteKit + TailwindCSS, TypeScript",
+    section: "Preferred Stuff:",
+    details: "TypeScript, TailwindCSS, SvelteKit, Nextjs",
   },
   {
     section: "Library/Framework:",
@@ -58,10 +58,16 @@ export const educations = [
 
 export const workExperiences = [
   {
+    position: "Full Stack Developer (Part Time)",
+    company: "Monkey Everyday",
+    url: "https://monkeyeveryday.com/",
+    years: "August 2022 - Present",
+  },
+  {
     position: "Full Stack Developer (Internship)",
     company: "Monkey Everyday",
     url: "https://monkeyeveryday.com/",
-    years: "June 2022 - Present",
+    years: "June 2022 - August 2022",
     details: [
       "Maintain monkeyeveryday.com and its CMS with Next.js, TailwindCSS and GraphQL",
       "Maintain GraphQL API that will be consumed by Frontend, used Prisma and NestJS",

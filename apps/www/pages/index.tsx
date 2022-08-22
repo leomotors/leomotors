@@ -10,8 +10,8 @@ import {
   Twitter,
 } from "react-bootstrap-icons";
 
-import CgWebring from "$components/CgWebring";
-import Link from "$components/Link";
+import CgWebring from "$components/elements/CgWebring";
+import Link from "$components/elements/Link";
 import styles from "$styles/Home.module.scss";
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
@@ -29,9 +29,9 @@ interface HomeProps {
   bio: string | null;
 }
 
-const Home: NextPage<HomeProps> = ({ bio }) => {
+const HomePage: NextPage<HomeProps> = ({ bio }) => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-slate-900 py-6 px-1 text-center text-white">
+    <main className="flex flex-col items-center gap-4 text-center">
       <h1 className="text-4xl font-bold">Hello! I'm Leo ✨</h1>
       <h2 className="text-3xl font-bold">Nutthapat Pongtanyavichai</h2>
 
@@ -71,7 +71,8 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
         </Link>
       </section>
 
-      <section className={styles.section}>
+      <h2 className="text-2xl font-bold">Webrings</h2>
+      <section className={styles.sectionMini}>
         <Link
           name="Creators Garten"
           to="https://creatorsgarten.org/ring"
@@ -80,23 +81,8 @@ const Home: NextPage<HomeProps> = ({ bio }) => {
           <CgWebring />
         </Link>
       </section>
-
-      <footer>
-        <div className="flex flex-col items-center gap-2 sm:flex-row">
-          <p>Source Code of this website is available on</p>
-          <a
-            href="https://github.com/Leomotors/Leomotors"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-1 text-slate-300 transition-colors hover:text-slate-400"
-          >
-            <Github size="20" />
-            <p>GitHub</p>
-          </a>
-        </div>
-      </footer>
     </main>
   );
 };
 
-export default Home;
+export default HomePage;
