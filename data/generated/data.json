@@ -12,15 +12,15 @@
     "__pushedAt": "2021-06-14T10:52:05Z"
   },
   "Leomotors": {
-    "JavaScript": 8589,
-    "TypeScript": 23661,
+    "JavaScript": 8740,
+    "TypeScript": 26878,
     "Shell": 226,
     "HTML": 1257,
-    "SCSS": 1047,
-    "Svelte": 20164,
+    "SCSS": 1241,
+    "Svelte": 20315,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-08-15T21:12:37Z"
+    "__pushedAt": "2022-08-25T01:40:44Z"
   },
   "Salim-Bot": {
     "TypeScript": 37548,
@@ -154,12 +154,12 @@
   },
   "anime-captcha": {
     "HTML": 773,
-    "Svelte": 24636,
-    "TypeScript": 7419,
-    "JavaScript": 3296,
+    "Svelte": 23772,
+    "TypeScript": 7563,
+    "JavaScript": 3481,
     "SCSS": 1285,
     "__isArchived": false,
-    "__pushedAt": "2022-07-30T17:57:31Z"
+    "__pushedAt": "2022-08-23T01:33:14Z"
   },
   "npm-scripts": {
     "JavaScript": 1631,
@@ -276,9 +276,9 @@
     "__pushedAt": "2022-05-12T14:40:16Z"
   },
   "golden-frame": {
-    "Python": 3899,
+    "Python": 4700,
     "__isArchived": false,
-    "__pushedAt": "2022-06-20T16:09:26Z"
+    "__pushedAt": "2022-08-22T03:29:25Z"
   },
   "you-are-a-failure": {
     "C#": 53631,
@@ -389,19 +389,19 @@
     "__pushedAt": "2022-06-27T13:27:32Z"
   },
   "waifu-bot": {
-    "TypeScript": 90395,
+    "TypeScript": 90611,
     "JavaScript": 4574,
-    "SCSS": 929,
+    "SCSS": 931,
     "Shell": 688,
     "__isArchived": false,
-    "__pushedAt": "2022-08-15T04:50:44Z"
+    "__pushedAt": "2022-08-22T02:52:43Z"
   },
   "Com-POG": {
     "JavaScript": 628,
-    "TypeScript": 10881,
+    "TypeScript": 11107,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-08-16T11:22:00Z"
+    "__pushedAt": "2022-08-24T05:03:45Z"
   },
   "awesome-secured-config": {
     "__isArchived": false,
@@ -411,15 +411,15 @@
     "TypeScript": 12174,
     "JavaScript": 755,
     "SCSS": 59,
-    "__isArchived": false,
+    "__isArchived": true,
     "__pushedAt": "2022-08-07T09:04:03Z"
   },
   "2110101-com-prog": {
-    "Python": 11795,
+    "Python": 32180,
     "Haskell": 76,
-    "TypeScript": 2276,
+    "TypeScript": 2444,
     "__isArchived": false,
-    "__pushedAt": "2022-08-14T15:18:35Z"
+    "__pushedAt": "2022-08-24T08:53:27Z"
   },
   "cocoa-vitepress-theme": {
     "CSS": 905,
