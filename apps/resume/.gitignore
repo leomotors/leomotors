@@ -1,9 +1,0 @@
-/node_modules/
-/dist/
-/.vscode/
-.DS_Store
-.env
-
-.svelte-kit
-.vercel
-.vercel_build_output
