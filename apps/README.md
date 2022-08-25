@@ -1,5 +1,7 @@
 # apps
 
+Monorepo for `apps` related to my profile
+
 ## Cron Jobs
 
 - language-stats -> Fetching and create language stats report
