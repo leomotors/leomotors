@@ -74,7 +74,7 @@ const HomePage: NextPage<HomeProps> = ({ bio }) => {
       <h2 className="text-2xl font-bold">Webrings</h2>
       <section className={styles.sectionMini}>
         <Link
-          name="Creators Garten"
+          name="Creatorsgarten"
           to="https://creatorsgarten.org/ring"
           size="sm"
         >
