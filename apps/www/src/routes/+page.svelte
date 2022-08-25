@@ -6,7 +6,7 @@
   import JournalRichtext from "svelte-bootstrap-icons/lib/JournalRichtext.svelte";
   import Linkedin from "svelte-bootstrap-icons/lib/Linkedin.svelte";
   import Twitter from "svelte-bootstrap-icons/lib/Twitter.svelte";
-  
+
   import CgWebring from "$components/elements/CgWebring.svelte";
   import Link from "$components/elements/Link.svelte";
 </script>
@@ -15,7 +15,7 @@
   <h1 class="font-bold text-4xl">Hello! I'm Leo ✨</h1>
   <h2 class="text-3xl font-bold">Nutthapat Pongtanyavichai</h2>
 
-  <p class="w-full md:w-2/3 mx-auto text-xl font-semibold p-2">TODO</p>
+  <!-- <p class="w-full md:w-2/3 mx-auto text-xl font-semibold p-2">TODO</p> -->
 
   <section class="my-2">
     <Link name="Portfolio" to="https://portfolio.leomotors.net">
