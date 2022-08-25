@@ -8,7 +8,7 @@
 
 ## 🏢 Position
 
-- Chulalongkorn University, Compter Engineering (Intania 106, CP49) 
+- Chulalongkorn University, Computer Engineering (Intania 106, CP49) 
   - Member of @thinc-org
 
 - Full Stack Developer at @monkey-monkey (Monkey Everyday)
