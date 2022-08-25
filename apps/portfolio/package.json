@@ -19,7 +19,7 @@
     "@leomotors/scripts": "^3.1.0",
     "@leomotors/sv-components": "^0.4.0",
     "@sveltejs/adapter-vercel": "1.0.0-next.68",
-    "@sveltejs/kit": "1.0.0-next.436",
+    "@sveltejs/kit": "1.0.0-next.440",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
     "autoprefixer": "^10.4.8",
