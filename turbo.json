@@ -6,7 +6,8 @@
       ],
       "outputs": [
         "dist/**",
-        ".next/**"
+        ".svelte-kit/**",
+        ".vercel/**"
       ]
     },
     "lint": {},
