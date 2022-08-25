@@ -4,17 +4,26 @@
 
 ## ℹ️ My Info
 
-🚹 Male @ 🎂 17 Yrs Old
+🚹 Male @ 🎂 18 Yrs Old
 
-🏫 Graduated from Triam Udom Suksa School (TU82) in Math & Science with GPAX of 3.95, will enroll at Chulalongkorn University in Computer Engineering (CP) this august (Admitted in 1st Round (Early Admission) from Olympic Portfolio)
+## 🏢 Position
 
-🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and have gone under IOI Selection Camp (IPST 2.2 / Final Round)
+- Chulalongkorn University, Compter Engineering (Intania 106, CP49) 
+  - Member of @thinc-org
+
+- Full Stack Developer at @monkey-monkey (Monkey Everyday)
+
+## 🎒 Academic Stuff
+
+- 🏫 Graduated from (High School) Triam Udom Suksa School (TU82) in Math & Science with GPAX of 3.95
+
+- 🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and have gone under IOI Selection Camp (IPST 2.2 / Final Round)
 
 ### Skills & What I like to do
 
 - 👨‍💻 Frequently used Language: C++ JavaScript TypeScript Python Dart
 
-- 🖼️ Frequently used Stuff: Svelte/Kit, Flutter 🐦, discord.js 🤖
+- 🖼️ Frequently used Stuff: Svelte/Kit, discord.js 🤖, Next.js 🔺, NestJS 🐈
 
 🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and joining Windows Insider Program
 
