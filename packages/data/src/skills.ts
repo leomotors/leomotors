@@ -52,7 +52,7 @@ export const skills: Record<
   ],
   webtech: [
     {
-      name: "Svelte",
+      name: "Svelte/SvelteKit",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png",
       star: 5,
     },
@@ -64,6 +64,11 @@ export const skills: Record<
     {
       name: "React",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+      star: 5,
+    },
+    {
+      name: "Next.js",
+      img: "https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png",
       star: 5,
     },
     {
@@ -87,6 +92,11 @@ export const skills: Record<
       name: "Flutter",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/2560px-Google-flutter-logo.svg.png",
       star: 4,
+    },
+    {
+      name: "NestJS",
+      img: "https://docs.nestjs.com/assets/logo-small.svg",
+      star: 3,
     },
     {
       name: "Pygame",
