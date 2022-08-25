@@ -12,15 +12,15 @@
     "__pushedAt": "2021-06-14T10:52:05Z"
   },
   "Leomotors": {
-    "JavaScript": 8740,
-    "TypeScript": 26878,
+    "JavaScript": 7955,
+    "TypeScript": 20906,
     "Shell": 226,
-    "HTML": 1257,
-    "SCSS": 1241,
-    "Svelte": 20315,
+    "HTML": 1886,
+    "SCSS": 979,
+    "Svelte": 25311,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-08-25T01:40:44Z"
+    "__pushedAt": "2022-08-25T18:27:02Z"
   },
   "Salim-Bot": {
     "TypeScript": 37548,
