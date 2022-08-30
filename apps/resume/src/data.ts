@@ -58,10 +58,16 @@ export const educations = [
 
 export const workExperiences = [
   {
+    position: "Software Engineer (Frontend, Part Time)",
+    company: "Brikl",
+    url: "https://www.brikl.com/jobs",
+    years: "September 2022 - Present",
+  },
+  {
     position: "Full Stack Developer (Part Time)",
     company: "Monkey Everyday",
     url: "https://monkeyeveryday.com/",
-    years: "August 2022 - Present",
+    years: "August 2022 - August 2022",
   },
   {
     position: "Full Stack Developer (Internship)",

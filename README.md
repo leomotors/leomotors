@@ -8,10 +8,11 @@
 
 ## 🏢 Position
 
-- Chulalongkorn University, Computer Engineering (Intania 106, CP49) 
-  - Member of @thinc-org
+- Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49) 
 
-- Full Stack Developer at @monkey-monkey (Monkey Everyday)
+- Software Engineer at Brikl
+
+Full List in my [resume](https://resume.leomotors.net)
 
 ## 🎒 Academic Stuff
 
