@@ -10,7 +10,7 @@
 
 - Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49) 
 
-- Software Engineer at Brikl
+- Software Engineer at Brikl [brikl.com/jobs](https://www.brikl.com/jobs)
 
 Full List in my [resume](https://resume.leomotors.net)
 
