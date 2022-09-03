@@ -48,7 +48,6 @@ jobs:
       run: |
         cd apps/github-stats
         python3 --version
-        cd apps/github-stats
         python3 generate_images.py
         mv generated/* ../../data/generated
       env:
