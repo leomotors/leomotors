@@ -80,7 +80,7 @@ jobs:
       run: GH_PAT=${{ secrets.GH_PAT }} pnpm analyze
 
     - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          message: "Update Generated Data"
-          default_author: github_actions
+      uses: EndBug/add-and-commit@v7
+      with:
+        message: "Update Generated Data"
+        default_author: github_actions
