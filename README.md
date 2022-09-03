@@ -8,7 +8,8 @@
 
 ## 🏢 Position
 
-- Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49) 
+- Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49)
+  - Member of @thinc-org [thinc.in.th](https://thinc.in.th)
 
 - Software Engineer at Brikl [brikl.com/jobs](https://www.brikl.com/jobs)
 
@@ -118,8 +119,8 @@ PS: Most download came from me lmao.
 ## 🔢 GitHub Stats
 
 <table>
-<tr><td> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Leomotors&layout=compact&langs_count=10&count_private=true&theme=dark" /> </td>
-<td> <img src="https://github-readme-stats.vercel.app/api?username=Leomotors&count_private=true&theme=dark" /> </td></tr>
+<tr><td> <img src="./data/generated/languages.svg#gh-dark-mode-only" /> </td>
+<td> <img src="./data/generated/overview.svg#gh-dark-mode-only" /> </td></tr>
 </table>
 
 ## 🕐 Wakatime
