@@ -20,7 +20,7 @@
     "Svelte": 25310,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-09-03T21:23:08Z"
+    "__pushedAt": "2022-09-04T21:22:00Z"
   },
   "Salim-Bot": {
     "TypeScript": 37548,
@@ -244,13 +244,13 @@
     "HTML": 1197,
     "JavaScript": 722,
     "CSS": 1037,
-    "TypeScript": 8235,
+    "TypeScript": 8360,
     "Shell": 885,
-    "Python": 11206,
-    "C++": 28166,
+    "Python": 12342,
+    "C++": 42821,
     "TeX": 24557,
     "__isArchived": false,
-    "__pushedAt": "2022-06-26T08:49:37Z"
+    "__pushedAt": "2022-09-05T14:33:35Z"
   },
   "cocoa-discord-utils": {
     "TypeScript": 117016,
