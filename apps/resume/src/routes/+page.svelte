@@ -1,25 +1,26 @@
 <script lang="ts">
   import "../app.css";
 
-  import Intro from "$components/Intro.svelte";
-  import Work from "$components/Work.svelte";
-  import HideToggle from "$components/HideToggle.svelte";
+  import { certificates } from "@leomotors/data";
   import {
+    awards,
     educations,
     fullVersionLink,
     interests,
-    introData,
     projects,
-    awards,
     sourceLink,
     technologies,
     workExperiences,
-  } from "../data";
-  import { certificates } from "@leomotors/data";
+  } from "@leomotors/data/resume";
+
   import Certificate from "$components/Certificate.svelte";
+  import HideToggle from "$components/HideToggle.svelte";
+  import Intro from "$components/Intro.svelte";
+  import Work from "$components/Work.svelte";
+
+  import { introData } from "../data";
 
   let editMode = false;
-
   function toggleMode() {
     editMode = !editMode;
   }

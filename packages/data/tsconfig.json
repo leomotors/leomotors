@@ -1,8 +1,3 @@
 {
-    "extends": "@leomotors/config/tsconfig-app.json",
-    "compilerOptions": {
-        "outDir": "dist",
-        "declaration": true,
-        "resolveJsonModule": true
-    }
+    "extends": "@leomotors/config/tsconfig-app.json"
 }

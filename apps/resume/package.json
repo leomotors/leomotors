@@ -10,8 +10,8 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "eslint --max-warnings=0",
-    "format": "prettier --write \"*.{cjs,js,ts}\" && prettier --write \"{src,test}/**/*.{js,ts,svelte}\""
+    "lint": "eslint src --max-warnings=0",
+    "format": "eslint src --fix && prettier --write \"*.{cjs,js,ts}\" && prettier --write \"{src,test}/**/*.{js,ts,svelte}\""
   },
   "devDependencies": {
     "@leomotors/config": "workspace:0.0.0",

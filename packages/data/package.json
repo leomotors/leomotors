@@ -3,11 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src",
+    "./resume": "./src/resume"
+  },
+  "typesVersions": {
+    "*": {
+      "resume": [
+        "src/resume"
+      ]
+    }
+  },
   "scripts": {
-    "build": "tsc",
-    "dev": "nodemon --watch src --ext \"js,ts,json\" --exec tsc",
     "lint": "eslint --max-warnings=0",
     "format": "prettier --write \"src/**/*.ts\""
   },
