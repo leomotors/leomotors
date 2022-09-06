@@ -12,15 +12,15 @@
     "__pushedAt": "2021-06-14T10:52:05Z"
   },
   "Leomotors": {
-    "JavaScript": 7964,
-    "TypeScript": 21076,
+    "JavaScript": 7861,
+    "TypeScript": 21351,
     "Shell": 89,
-    "HTML": 1912,
+    "HTML": 1213,
     "SCSS": 979,
-    "Svelte": 25310,
+    "Svelte": 26008,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-09-04T21:22:00Z"
+    "__pushedAt": "2022-09-06T16:17:14Z"
   },
   "Salim-Bot": {
     "TypeScript": 37548,
@@ -348,7 +348,7 @@
   "cminusminus": {
     "TypeScript": 5233,
     "__isArchived": false,
-    "__pushedAt": "2022-07-18T14:37:37Z"
+    "__pushedAt": "2022-09-06T13:59:54Z"
   },
   "resumette": {
     "HTML": 561,
@@ -389,12 +389,12 @@
     "__pushedAt": "2022-06-27T13:27:32Z"
   },
   "waifu-bot": {
-    "TypeScript": 90590,
+    "TypeScript": 90683,
     "JavaScript": 4574,
     "SCSS": 931,
     "Shell": 688,
     "__isArchived": false,
-    "__pushedAt": "2022-09-04T11:16:56Z"
+    "__pushedAt": "2022-09-06T17:36:53Z"
   },
   "Com-POG": {
     "JavaScript": 628,
