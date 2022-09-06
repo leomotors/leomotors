@@ -16,12 +16,12 @@
     "format": "FORCE_COLOR=2 turbo run format"
   },
   "devDependencies": {
-    "@types/node": "18.7.13",
-    "eslint": "^8.22.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "@types/node": "18.7.15",
+    "eslint": "^8.23.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "turbo": "^1.4.3"
+    "turbo": "^1.4.5"
   },
   "engines": {
     "node": ">=16.0.0",

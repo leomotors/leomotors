@@ -12,8 +12,5 @@ export default {
   ],
   kit: {
     adapter: vercel(),
-    prerender: {
-      default: true,
-    },
   },
 };

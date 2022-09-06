@@ -1,5 +1,6 @@
-import { GraphQLClient } from "graphql-request";
 import fs from "node:fs/promises";
+
+import { GraphQLClient } from "graphql-request";
 
 import { getSdk } from "../generated/graphql.js";
 

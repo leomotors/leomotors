@@ -1,7 +1,8 @@
 // @ts-check
 
-import vercel from "@sveltejs/adapter-vercel";
 import path from "node:path";
+
+import vercel from "@sveltejs/adapter-vercel";
 import preprocess from "svelte-preprocess";
 
 /** @type {import("@sveltejs/kit").Config} */
@@ -13,9 +14,6 @@ export default {
   ],
   kit: {
     adapter: vercel(),
-    prerender: {
-      default: true,
-    },
     alias: {
       $components: path.resolve("src/components"),
     },
