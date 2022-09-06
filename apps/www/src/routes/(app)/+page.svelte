@@ -12,10 +12,8 @@
 </script>
 
 <main class="flex flex-col items-center gap-4 text-center">
-  <h1 class="font-bold text-4xl">Hello! I'm Leo ✨</h1>
+  <h1 class="text-4xl font-bold">Hello! I'm Leo ✨</h1>
   <h2 class="text-3xl font-bold">Nutthapat Pongtanyavichai</h2>
-
-  <!-- <p class="w-full md:w-2/3 mx-auto text-xl font-semibold p-2">TODO</p> -->
 
   <section class="my-2">
     <Link name="Portfolio" to="https://portfolio.leomotors.net">
@@ -59,6 +57,6 @@
 
 <style lang="postcss">
   section {
-    @apply flex flex-col justify-center gap-2 lg:flex-row;
+    @apply flex w-[calc(100vw-4rem)] flex-col justify-center gap-2 sm:w-1/2 lg:w-fit lg:flex-row;
   }
 </style>

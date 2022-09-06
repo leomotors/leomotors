@@ -2,7 +2,7 @@
   import Github from "svelte-bootstrap-icons/lib/Github.svelte";
 </script>
 
-<footer class="mt-8 self-center">
+<footer class="self-center">
   <div class="flex flex-col items-center gap-2 sm:flex-row">
     <p>Source Code of this website is available on</p>
     <a

@@ -14,13 +14,13 @@
   <slot />
 
   {#if name}
-    <p class={size == "lg" ? "font-bold text-2xl" : "text-lg"}>{name}</p>
+    <p class={size == "lg" ? "text-2xl font-bold" : "text-lg"}>{name}</p>
   {/if}
 </a>
 
 <style lang="postcss">
   a {
-    @apply border-2 border-slate-400 bg-slate-800 hover:bg-slate-700;
-    @apply transition-all rounded-lg flex flex-row items-center gap-2 cursor-pointer select-none;
+    @apply border-2 border-slate-400 bg-slate-800 transition-all hover:bg-slate-700;
+    @apply flex cursor-pointer select-none flex-row items-center justify-center gap-2 rounded-lg;
   }
 </style>

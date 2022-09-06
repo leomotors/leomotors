@@ -10,7 +10,7 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint . --max-warnings=0",
-    "format": "eslint . --fix"
+    "format": "eslint . --fix && prettier --write \"src/**/*.{js,ts,svelte,scss}\""
   },
   "devDependencies": {
     "@leomotors/config": "workspace:0.0.0",

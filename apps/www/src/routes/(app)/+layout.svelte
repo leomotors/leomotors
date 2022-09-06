@@ -13,7 +13,9 @@
   />
 </svelte:head>
 
-<div class="flex min-h-screen flex-col bg-slate-900 px-1 py-8 text-white">
+<div
+  class="flex min-h-screen flex-col justify-between gap-16 bg-slate-900 px-1 py-8 text-white"
+>
   <Navbar />
   <slot />
   <Footer />
