@@ -75,8 +75,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Build all websites
-        run: pnpm build
+      - name: Build project
+        run: pnpm turbo run --filter="${args.package}" build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
@@ -115,8 +115,6 @@ const projects: IArgs[] = [
   },
 ];
 
-await Promise.all(
-  projects.map((project) =>
-    Bun.write(`.github/workflows/pages.${project.short}.yml`, template(project))
-  )
+projects.map((project) =>
+  Bun.write(`.github/workflows/pages.${project.short}.yml`, template(project))
 );

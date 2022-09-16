@@ -64,8 +64,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Build all websites
-        run: pnpm build
+      - name: Build project
+        run: pnpm turbo run --filter="portfolio.leomotors.net" build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
