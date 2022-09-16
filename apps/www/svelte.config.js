@@ -2,7 +2,7 @@
 
 import path from "node:path";
 
-import vercel from "@sveltejs/adapter-vercel";
+import adapter from "@sveltejs/adapter-cloudflare";
 import preprocess from "svelte-preprocess";
 
 /** @type {import("@sveltejs/kit").Config} */
@@ -13,7 +13,7 @@ export default {
     }),
   ],
   kit: {
-    adapter: vercel(),
+    adapter: adapter(),
     alias: {
       $: path.resolve("src"),
       $components: path.resolve("src/components"),
