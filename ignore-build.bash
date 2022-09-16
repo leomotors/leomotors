@@ -2,7 +2,7 @@
 
 npx turbo-ignore $1
 
-if [ $? ]
+if [ $? = 1 ]
 then
     echo "::set-output name=run_jobs::true"
 else
