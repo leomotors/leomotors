@@ -10,6 +10,7 @@ const config = {
         "plugin:prettier/recommended",
     ],
     plugins: ["svelte3", "@typescript-eslint", "simple-import-sort"],
+    ignorePatterns: ["build/**"],
     overrides: [
         { files: ["*.svelte"], processor: "svelte3/svelte3" },
         {

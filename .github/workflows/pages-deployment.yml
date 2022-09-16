@@ -74,7 +74,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           projectName: portfolio-leomotors
-          directory: apps/portfolio/.svelte-kit/cloudflare
+          directory: apps/portfolio/build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
@@ -83,7 +83,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           projectName: resume-leomotors
-          directory: apps/resume/.svelte-kit/cloudflare
+          directory: apps/resume/build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
@@ -92,4 +92,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           projectName: www-leomotors
-          directory: apps/www/.svelte-kit/cloudflare
+          directory: apps/www/build
