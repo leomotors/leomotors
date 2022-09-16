@@ -8,23 +8,16 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.4.6",
-    "eslint": "^8.23.0",
+    "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.3"
   },
-  "files": [
-    "eslint-app.js",
-    "eslint-web.js",
-    "prettier-app.js",
-    "prettier-web.js",
-    "tsconfig-app.json"
-  ],
   "dependencies": {
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.11",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
     "tailwindcss-global-dark": "^1.0.1"
