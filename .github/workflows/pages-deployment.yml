@@ -1,3 +1,5 @@
+name: Deploy Cloudflare Pages
+
 on:
   push:
     branches:
@@ -5,7 +7,7 @@ on:
 
 jobs:
   ignore_build:
-    name: Ignore Build Steps
+    name: Ignored Build Step
     runs-on: ubuntu-latest
     outputs:
       run_rest_jobs: ${{ steps.set_output.outputs.run_jobs }}
@@ -13,8 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        # with:
-        #   fetch-depth: 10
+        with:
+          fetch-depth: 10
 
       - name: Check if new build is needed
         id: set_output
@@ -33,7 +35,7 @@ jobs:
 
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+      TURBO_TEAM: leomotors
 
     steps:
       - name: Checkout
