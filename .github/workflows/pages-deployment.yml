@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        # with:
+        #   fetch-depth: 10
 
       - name: Check if new build is needed
         id: set_output
@@ -28,6 +30,10 @@ jobs:
     permissions:
       contents: read
       deployments: write
+
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
     steps:
       - name: Checkout
@@ -55,6 +61,9 @@ jobs:
 
       - name: Install Dependencies
         run: pnpm install
+
+      - name: Build all websites
+        run: pnpm build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
