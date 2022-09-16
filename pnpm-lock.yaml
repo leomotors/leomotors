@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@types/node': 18.7.18
+      bun-types: ^0.1.11
       eslint: ^8.23.1
       eslint-plugin-simple-import-sort: ^8.0.0
       prettier: ^2.7.1
@@ -12,6 +13,7 @@ importers:
       turbo: ^1.4.6
     devDependencies:
       '@types/node': 18.7.18
+      bun-types: 0.1.11
       eslint: 8.23.1
       eslint-plugin-simple-import-sort: 8.0.0_eslint@8.23.1
       prettier: 2.7.1
@@ -2056,6 +2058,10 @@ packages:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
+    dev: true
+
+  /bun-types/0.1.11:
+    resolution: {integrity: sha512-a5G9LZtF5qBsDMjGnS5FfTvIeg1bS0PzI3Q2LqShEjJWdhZTB56xO8ewqZ83J+3my5rW/PPPWT/udAofRQ3zdg==}
     dev: true
 
   /busboy/1.6.0:

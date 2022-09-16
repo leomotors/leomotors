@@ -1,4 +1,4 @@
-name: Deploy Cloudflare Pages
+name: migration
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Check if new build is needed
         id: set_output
-        run: bash ignore-build.bash
+        run: bash ignore-build.bash @leomotors/migration
 
   deploy:
     name: Deploy to Cloudflare Pages
@@ -73,23 +73,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: portfolio-leomotors
-          directory: apps/portfolio/build
-
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: resume-leomotors
-          directory: apps/resume/build
-
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: www-leomotors
-          directory: apps/www/build
+          projectName: migration-leomotors
+          directory: apps/migration/build
