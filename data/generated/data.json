@@ -20,7 +20,7 @@
     "Svelte": 26730,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-09-16T19:43:42Z"
+    "__pushedAt": "2022-09-17T06:11:16Z"
   },
   "Salim-Bot": {
     "TypeScript": 37548,
@@ -153,13 +153,14 @@
     "__pushedAt": "2022-04-23T11:24:46Z"
   },
   "anime-captcha": {
-    "HTML": 773,
-    "Svelte": 23772,
-    "TypeScript": 7563,
-    "JavaScript": 3481,
+    "HTML": 670,
+    "Svelte": 24190,
+    "TypeScript": 7593,
+    "JavaScript": 3436,
     "SCSS": 1285,
+    "Shell": 136,
     "__isArchived": false,
-    "__pushedAt": "2022-08-23T01:33:14Z"
+    "__pushedAt": "2022-09-17T10:02:34Z"
   },
   "npm-scripts": {
     "JavaScript": 1631,
@@ -415,12 +416,12 @@
     "__pushedAt": "2022-08-07T09:04:03Z"
   },
   "2110101-com-prog": {
-    "Python": 38502,
+    "Python": 43833,
     "Haskell": 76,
     "TypeScript": 2444,
     "Jupyter Notebook": 39981,
     "__isArchived": false,
-    "__pushedAt": "2022-09-13T16:53:32Z"
+    "__pushedAt": "2022-09-17T15:25:27Z"
   },
   "cocoa-vitepress-theme": {
     "CSS": 905,
