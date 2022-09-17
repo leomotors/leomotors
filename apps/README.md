@@ -9,6 +9,8 @@ Monorepo for `apps` related to my profile
 
 ## Websites
 
+- migration -> https://migration-leomotors.pages.dev
+
 - portfolio -> https://portfolio.leomotors.net
 - resume -> https://resume.leomotors.net
 - www -> https://leomotors.net
