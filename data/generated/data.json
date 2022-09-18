@@ -20,13 +20,14 @@
     "Svelte": 26730,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-09-17T06:11:16Z"
+    "__pushedAt": "2022-09-17T21:27:06Z"
   },
   "Salim-Bot": {
-    "TypeScript": 37548,
-    "Shell": 177,
+    "TypeScript": 37697,
+    "Shell": 204,
+    "JavaScript": 541,
     "__isArchived": false,
-    "__pushedAt": "2022-08-04T16:12:30Z"
+    "__pushedAt": "2022-09-18T14:58:45Z"
   },
   "Polynomial-Problems-Generator": {
     "C++": 33793,
@@ -254,12 +255,12 @@
     "__pushedAt": "2022-09-11T06:02:24Z"
   },
   "cocoa-discord-utils": {
-    "TypeScript": 117016,
-    "JavaScript": 3920,
+    "TypeScript": 126135,
+    "JavaScript": 6921,
     "CSS": 727,
-    "Shell": 131,
+    "Shell": 176,
     "__isArchived": false,
-    "__pushedAt": "2022-08-07T14:32:36Z"
+    "__pushedAt": "2022-09-18T13:33:02Z"
   },
   "simple-todo-app-tauri": {
     "HTML": 351,
@@ -333,9 +334,9 @@
   },
   "music-bot": {
     "TypeScript": 21743,
-    "JavaScript": 2123,
+    "JavaScript": 2497,
     "__isArchived": false,
-    "__pushedAt": "2022-09-04T10:08:58Z"
+    "__pushedAt": "2022-09-18T13:42:55Z"
   },
   "grab-krub": {
     "JavaScript": 3828,
@@ -347,9 +348,9 @@
     "__pushedAt": "2022-05-03T13:06:13Z"
   },
   "cminusminus": {
-    "TypeScript": 5233,
+    "TypeScript": 5240,
     "__isArchived": false,
-    "__pushedAt": "2022-09-06T13:59:54Z"
+    "__pushedAt": "2022-09-18T13:53:55Z"
   },
   "resumette": {
     "HTML": 561,
@@ -390,12 +391,12 @@
     "__pushedAt": "2022-06-27T13:27:32Z"
   },
   "waifu-bot": {
-    "TypeScript": 100842,
-    "JavaScript": 4591,
+    "TypeScript": 103364,
+    "JavaScript": 4635,
     "SCSS": 931,
-    "Shell": 688,
+    "Shell": 715,
     "__isArchived": false,
-    "__pushedAt": "2022-09-07T17:36:53Z"
+    "__pushedAt": "2022-09-18T14:25:49Z"
   },
   "Com-POG": {
     "JavaScript": 628,
