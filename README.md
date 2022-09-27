@@ -16,8 +16,8 @@ Feel free to contribute to my repositories below
 - [Terminal Video Player](https://github.com/Leomotors/Terminal-Video-Player) -> Do what it say
 - [Salim Quote Delivery](https://github.com/Leomotors/salim-quote-delivery) -> VSCode extension no one use
 
-These are repos I would want you to contribute, however if you find other repos you would like to contribute.
-Feel free to open PR and don't forget to tell me hacktoberfest so that I can add label for you.
+These are repos I would want you to contribute, however if you find other repos you would like to contribute.  
+Feel free to open PR and don't forget to tell me hacktoberfest so that I can add label for you.  
 Note that your PR must be relevant otherwise I won't merge. Please read CONTRIBUTING.md of each repo.
 
 ## ℹ️ My Info
