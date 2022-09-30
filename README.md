@@ -2,9 +2,9 @@
 
 <h3 align="center"> => <a href="https://leomotors.net">My Homepage</a> <=
 
-## 🎃 Hacktoberfest is coming 🎃
+## 🎃 Hacktoberfest Time!!! 🎃
 
-Be ready to contribute to my repositories below
+Feel free to contribute to my repositories below
 
 - [Anime Captcha](https://github.com/Leomotors/anime-captcha) -> My most popular Repo
 - [Com POG](https://github.com/Leomotors/Com-POG) -> Writing solutions for grader solutions (Chula Intania Only)
