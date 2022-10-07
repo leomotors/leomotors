@@ -20,7 +20,7 @@
     "Svelte": 26730,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-10-05T21:29:49Z"
+    "__pushedAt": "2022-10-06T21:30:36Z"
   },
   "Salim-Bot": {
     "TypeScript": 37697,
@@ -255,12 +255,12 @@
     "__pushedAt": "2022-10-06T13:46:50Z"
   },
   "cocoa-discord-utils": {
-    "TypeScript": 126135,
+    "TypeScript": 125964,
     "JavaScript": 6921,
     "CSS": 727,
     "Shell": 176,
     "__isArchived": false,
-    "__pushedAt": "2022-09-19T04:42:59Z"
+    "__pushedAt": "2022-10-07T13:41:09Z"
   },
   "simple-todo-app-tauri": {
     "HTML": 351,
