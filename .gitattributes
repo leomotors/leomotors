@@ -1,2 +1,1 @@
 *.d.ts linguist-vendored=false
-apps/github-stats/** linguist-vendored=true
