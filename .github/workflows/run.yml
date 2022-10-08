@@ -87,10 +87,10 @@ jobs:
       run: GH_PAT=${{ secrets.GH_PAT }} pnpm analyze
 
     - name: Push data to branches
-        uses: JamesIves/github-pages-deploy-action@4.4.0
-        with:
-          branch: generated
-          folder: generated
-          git-config-name: github-actions
-          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
-          commit-message: Update Generated Data ✨
+      uses: JamesIves/github-pages-deploy-action@4.4.0
+      with:
+        branch: generated
+        folder: generated
+        git-config-name: github-actions
+        git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
+        commit-message: Update Generated Data ✨
