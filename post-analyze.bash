@@ -1,3 +1,3 @@
 #!/bin/env bash
 
-mkdir -p data/generated && cp apps/language-stats/data/* data/generated
+mkdir -p generated && cp apps/language-stats/data/* generated
