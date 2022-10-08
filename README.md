@@ -14,7 +14,7 @@ Feel free to contribute to my repositories below
 - [RTX 2090 TiFy SUPER](https://github.com/Leomotors/RTX-2090-TiFy-SUPER) -> C++ UWP App + OpenCV
 - [Grab Krub](https://github.com/Leomotors/grab-krub) -> Internal meme of IPST, only contribute if you know
 - [You are a Failure](https://github.com/Leomotors/you-are-a-failure) -> FAILURE! Get it in Microsoft Store
-- [Terminal Video Player](https://github.com/Leomotors/Terminal-Video-Player) -> Do what it say
+- [Terminal Video Player](https://github.com/Leomotors/Terminal-Video-Player) -> Do what it say (Want someone to optimize algo into sublinear)
 - [Salim Quote Delivery](https://github.com/Leomotors/salim-quote-delivery) -> VSCode extension no one use
 
 These are repos I would want you to contribute, however if you find other repos you would like to contribute.  
