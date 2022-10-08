@@ -87,7 +87,7 @@ jobs:
       run: GH_PAT=${{ secrets.GH_PAT }} pnpm analyze
 
     - name: Push data to branches
-      uses: JamesIves/github-pages-deploy-action@4.4.0
+      uses: JamesIves/github-pages-deploy-action@v4.4.0
       with:
         branch: generated
         folder: generated
