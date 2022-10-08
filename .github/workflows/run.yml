@@ -21,7 +21,6 @@ jobs:
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_TEAM: leomotors
-      EXCLUDED_LANGS: Jupyter Notebook
 
     steps:
     - uses: actions/checkout@v2
@@ -60,6 +59,7 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.GH_PAT }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         EXCLUDE_FORKED_REPOS: true
+        EXCLUDED_LANGS: Jupyter Notebook
 
     - uses: pnpm/action-setup@v2
       name: Install pnpm
