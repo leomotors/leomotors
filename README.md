@@ -138,8 +138,8 @@ PS: Most download came from me lmao.
 ## 🔢 GitHub Stats
 
 <table>
-<tr><td> <img src="./data/generated/languages.svg#gh-dark-mode-only" /> </td>
-<td> <img src="./data/generated/overview.svg#gh-dark-mode-only" /> </td></tr>
+<tr><td> <img src="https://raw.githubusercontent.com/Leomotors/Leomotors/59934f71865bbd7f5b2313450498737f6f9a3a8a/languages.svg#gh-dark-mode-only" /> </td>
+<td> <img src="https://raw.githubusercontent.com/Leomotors/Leomotors/59934f71865bbd7f5b2313450498737f6f9a3a8a/overview.svg#gh-dark-mode-only" /> </td></tr>
 </table>
 
 ## 🕐 Wakatime
