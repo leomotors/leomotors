@@ -126,6 +126,12 @@ export const projects: Record<"featured" | "big_projects", IProject[]> = {
   ],
   big_projects: [
     {
+      title: "CU Get Reg",
+      link: "https://github.com/thinc-org/cugetreg",
+      desc: "Collaborated to CU Get Reg, the app to help plan enrolling courses in Chulalongkorn University. Used by most of Chulalongkorn Students because it is very useful app.",
+      img: "https://user-images.githubusercontent.com/33742791/142388797-fa14bcfa-b01e-45ab-a271-bfdeeb26285f.png",
+    },
+    {
       title: "Food Busters",
       link: "https://github.com/Food-Busters",
       desc: "Participated in AIS Jump Thailand Hackathon, Our goal is to make innovation that reduces pollution from food wastes",

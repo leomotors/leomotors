@@ -33,7 +33,7 @@ export const technologies = [
   {
     section: "Tools (misc):",
     details:
-      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi, PostgreSQL, Turborepo, Figma (View)",
+      "Git, GitHub, VSCode, Visual Studio, zsh, Powershell, ssh, Markdown, LaTeX, Raspberry Pi, PostgreSQL, Turborepo, Figma (View), Storybook",
   },
   {
     section: "IaaS, PaaS:",
@@ -63,6 +63,10 @@ export const workExperiences = [
     company: "Brikl",
     url: "https://www.brikl.com/jobs",
     years: "September 2022 - Present",
+    details: [
+      "Fixing bugs and implement new feature for storefront",
+      "Maintain frontend codebase, improve code quality and DX",
+    ],
   },
   {
     position: "Full Stack Developer (Part Time)",
