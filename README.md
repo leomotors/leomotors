@@ -28,6 +28,7 @@ Note that your PR must be relevant otherwise I won't merge. Please read CONTRIBU
 ## 🏢 Position
 
 - Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49)
+
   - Member of @thinc-org [thinc.in.th](https://thinc.in.th)
 
 - Software Engineer at Brikl [brikl.com/jobs](https://www.brikl.com/jobs)
@@ -160,7 +161,3 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-
-## 🚂
-
-This [repository](https://github.com/Leomotors/Leomotors) is also a monorepo running workflows like updating data, readme and also source codes of websites such as personal homepage, portfolio and resume! (See `apps` directory)

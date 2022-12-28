@@ -1,26 +1,26 @@
 query getRepoLangs {
-    viewer {
-        repositories(
-            ownerAffiliations: OWNER
-            isFork: false
-            privacy: PUBLIC
-            first: 100
-        ) {
-            totalCount
-            nodes {
-                name
-                isArchived
-                pushedAt
-                languages(first: 100) {
-                    edges {
-                        size
-                        node {
-                            color
-                            name
-                        }
-                    }
-                }
+  viewer {
+    repositories(
+      ownerAffiliations: OWNER
+      isFork: false
+      privacy: PUBLIC
+      first: 100
+    ) {
+      totalCount
+      nodes {
+        name
+        isArchived
+        pushedAt
+        languages(first: 100) {
+          edges {
+            size
+            node {
+              color
+              name
             }
+          }
         }
+      }
     }
+  }
 }

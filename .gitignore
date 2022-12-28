@@ -50,5 +50,3 @@ dist
 # Generate
 
 *.g.*
-
-/generated

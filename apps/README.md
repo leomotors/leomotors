@@ -9,8 +9,4 @@ Monorepo for `apps` related to my profile
 
 ## Websites
 
-- migration -> https://migration-leomotors.pages.dev
-
-- portfolio -> https://portfolio.leomotors.net
-- resume -> https://resume.leomotors.net
-- www -> https://leomotors.net
+Moved to [this repo](https://github.com/Leomotors/daydream-cafe)

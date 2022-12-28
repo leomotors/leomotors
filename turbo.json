@@ -12,10 +12,13 @@
       ]
     },
     "lint": {},
-    "format": {},
+    "format": {
+      "cache": false
+    },
     "load": {
       "dependsOn": [
-        "build"
+        "build",
+        "^build"
       ],
       "outputs": [
         "data/**"
