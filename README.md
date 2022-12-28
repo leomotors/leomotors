@@ -1,6 +1,9 @@
 <h1 align="center"> Hello! 👋 I'm Leo </h1>
 
-<h3 align="center"> => <a href="https://leomotors.net">My Homepage</a> <=
+<h3 align="center"> => <a href="https://leomotors.net">My Homepage</a> <= </h3>
+
+<details>
+<summary><b> Hacktoberfest Repos (in case you still want to contribute) </b></summary>
 
 ## 🎃 Hacktoberfest Time!!! 🎃
 
@@ -21,19 +24,21 @@ These are repos I would want you to contribute, however if you find other repos 
 Feel free to open PR and don't forget to tell me hacktoberfest so that I can add label for you.  
 Note that your PR must be relevant otherwise I won't merge. Please read CONTRIBUTING.md of each repo.
 
+</details>
+
 ## ℹ️ My Info
 
 🚹 Male @ 🎂 18 Yrs Old
 
 ## 🏢 Position
 
-- Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49)
+- Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49 🥗)
 
-  - Member of @thinc-org [thinc.in.th](https://thinc.in.th)
+  - Member of @thinc-org [thinc.in.th](https://thinc.in.th) working on [CU Get Reg](https://github.com/thinc-org/cugetreg)
 
-- Software Engineer at Brikl [brikl.com/jobs](https://www.brikl.com/jobs)
+- Platform Engineer at Brikl [brikl.com/jobs](https://www.brikl.com/jobs)
 
-Full List in my [resume](https://resume.leomotors.net)
+Full List in my [resume](https://resume.leomotors.me)
 
 ## 🎒 Academic Stuff
 
@@ -43,13 +48,15 @@ Full List in my [resume](https://resume.leomotors.net)
 
 ### Skills & What I like to do
 
-- 👨‍💻 Frequently used Language: C++ JavaScript TypeScript Python Dart
+- 👨‍💻 Frequently used Language: C++ JavaScript TypeScript Python ~~Dart~~
 
-- 🖼️ Frequently used Stuff: Svelte/Kit, discord.js 🤖, Next.js 🔺, NestJS 🐈
+- 🖼️ Frequently used Stuff
+  - For Web Application: Svelte/Kit, Solid/Start, Next.js🔺, NestJS🐈
+  - Other Application: discord.js 🤖 (Active Developer badge holder)
 
-🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and joining Windows Insider Program
+🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and is Windows Insider
 
-👀 Looking on collaborating and contributing more to Open Source Community
+👀 Looking on collaborating, contributing to Open-source community and create more useful things
 
 ## ⚒️ My Deployed/Published Projects/Apps/Packages
 
@@ -62,6 +69,8 @@ Full List in my [resume](https://resume.leomotors.net)
 - [Stupid Problems](https://github.com/Leomotors/stupid-problems) => [GitHub Pages](https://leomotors.github.io/stupid-problems/)
 - [My Portfolio](https://github.com/Leomotors/portfolio-sv) => [Vercel App](https://portfolio.leomotors.vercel.app)
 - [กราบครับ](https://github.com/Leomotors/grab-krub) => [Vercel App](https://grab-krub.vercel.app)
+
+and more, I'm lazy to update
 
 </details>
 
@@ -96,7 +105,7 @@ Full List in my [resume](https://resume.leomotors.net)
   [![](https://img.shields.io/npm/v/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
   [![](https://img.shields.io/npm/dt/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
 
-PS: Most download came from me lmao.
+and more, I'm lazy to update
 
 </details>
 
