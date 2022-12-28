@@ -8,7 +8,6 @@
   ],
   "scripts": {
     "build": "FORCE_COLOR=2 turbo run build",
-    "dev": "FORCE_COLOR=2 turbo run dev --parallel",
     "lint": "FORCE_COLOR=2 turbo run lint",
     "load": "FORCE_COLOR=2 turbo run load",
     "analyze": "FORCE_COLOR=2 turbo run analyze --filter=\"@leomotors/language-stats\" && pnpm post-analyze",
@@ -22,7 +21,7 @@
     "turbo": "^1.5.5"
   },
   "engines": {
-    "node": ">=16.0.0",
-    "pnpm": ">=7"
+    "node": "^18.12.0",
+    "pnpm": "^7.0.0"
   }
 }

@@ -12,9 +12,23 @@ const gqlClient = new GraphQLClient("https://api.github.com/graphql", {
 
 const sdk = getSdk(gqlClient);
 
-const result = await sdk.getRepoLangs();
+console.log("Fetching Page 1");
+let result = await sdk.getRepoLangs();
+let page = 1;
 
 const repos = result.viewer.repositories.nodes ?? [];
+
+while (result.viewer.repositories.pageInfo.hasNextPage) {
+  page++;
+  console.log(`Fetching Page ${page}`);
+  result = await sdk.getRepoLangs({
+    after: result.viewer.repositories.pageInfo.endCursor,
+  });
+
+  for (const node of result.viewer.repositories.nodes ?? []) {
+    repos.push(node);
+  }
+}
 
 const data: {
   [repoName: string]: { [langName: string]: number } & {

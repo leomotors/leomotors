@@ -1,12 +1,17 @@
-query getRepoLangs {
+query getRepoLangs($after: String) {
   viewer {
     repositories(
       ownerAffiliations: OWNER
       isFork: false
       privacy: PUBLIC
       first: 100
+      after: $after
     ) {
       totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
       nodes {
         name
         isArchived

@@ -5,10 +5,7 @@
         "^build"
       ],
       "outputs": [
-        "dist/**",
-        ".svelte-kit/**",
-        ".vercel/**",
-        "build/**"
+        "dist/**"
       ]
     },
     "lint": {},
@@ -21,19 +18,17 @@
         "^build"
       ],
       "outputs": [
-        "data/**"
+        "data/data.json"
       ]
     },
     "analyze": {
       "dependsOn": [
-        "load"
+        "load",
+        "^load"
       ],
       "outputs": [
-        "data/**"
+        "data/lang.csv"
       ]
-    },
-    "dev": {
-      "cache": false
     }
   }
 }
