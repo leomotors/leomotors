@@ -77,39 +77,9 @@ and more, I'm lazy to update
 <details>
  <summary>📦 NPM Package <a href="https://www.npmjs.com/~leomotors">My Account</a> </summary>
 
-- [s-bot-framework](https://github.com/Leomotors/s-bot-framework) =>
-  [![](https://img.shields.io/npm/v/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
-  [![](https://img.shields.io/npm/dt/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
-- [polynomial-generator](https://github.com/Leomotors/polynomial-generator) =>
-  [![](https://img.shields.io/npm/v/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
-  [![](https://img.shields.io/npm/dt/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
-- [cocoa-discord-utils](https://github.com/Leomotors/cocoa-discord-utils) =>
-  [![](https://img.shields.io/npm/v/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
-  [![](https://img.shields.io/npm/dt/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
-- [@leomotors/scripts](https://github.com/Leomotors/npm-scripts) =>
-  [![](https://img.shields.io/npm/v/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
-  [![](https://img.shields.io/npm/dt/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
-- [baht.c](https://github.com/Leomotors/baht.c) =>
-  [![](https://img.shields.io/npm/v/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
-  [![](https://img.shields.io/npm/dt/baht.c.svg?maxAge=3600)](https://www.npmjs.com/package/baht.c)
-- [crlf-phobia](https://github.com/Leomotors/CRLF-Phobia) =>
-  [![](https://img.shields.io/npm/v/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
-  [![](https://img.shields.io/npm/dt/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
-- [@leomotors/music-bot](https://github.com/Leomotors/music-bot) =>
-  [![](https://img.shields.io/npm/v/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
-  [![](https://img.shields.io/npm/dt/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
-- [@leomotors/sv-components](https://github.com/Leomotors/sv-components) =>
-  [![](https://img.shields.io/npm/v/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
-  [![](https://img.shields.io/npm/dt/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
-- [@leomotors/cocoa-vitepress-theme](https://github.com/Leomotors/cocoa-vitepress-theme) =>
-  [![](https://img.shields.io/npm/v/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
-  [![](https://img.shields.io/npm/dt/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
-- [@leomotors/config](https://github.com/Leomotors/node-config) =>
-  [![](https://img.shields.io/npm/v/@leomotors/config.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/config)
-  [![](https://img.shields.io/npm/dt/@leomotors/config.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/config)
-- [@leomotors/prisma-nestjs-graphql](https://github.com/Leomotors/prisma-nestjs-graphql) =>
-  [![](https://img.shields.io/npm/v/@leomotors/prisma-nestjs-graphql.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/prisma-nestjs-graphql)
-  [![](https://img.shields.io/npm/dt/@leomotors/prisma-nestjs-graphql.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/prisma-nestjs-graphql)
+<npm-packages />
+
+This list is automatically kept up to date by this monorepo.
 
 </details>
 

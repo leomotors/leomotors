@@ -6,6 +6,7 @@ Monorepo for `apps` related to my profile
 
 - github-stats -> [Repo Link](https://github.com/jstrieb/github-stats)
 - language-stats -> Fetching and create language stats report
+- readme -> Updating README.md
 
 ## Websites
 

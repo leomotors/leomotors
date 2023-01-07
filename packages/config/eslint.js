@@ -13,6 +13,7 @@ const config = {
     "plugin:prettier/recommended",
   ],
   plugins: ["@typescript-eslint/eslint-plugin", "simple-import-sort"],
+  ignorePatterns: ["dist", "out", "generated"],
   rules: {
     "prettier/prettier": "warn",
     "simple-import-sort/imports": "warn",
@@ -26,9 +27,18 @@ const config = {
       },
     ],
     "prefer-const": "warn",
+    eqeqeq: "warn",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-namespace": "off",
   },
+  overrides: [
+    {
+      files: ["*.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+      },
+    },
+  ],
 };
 
 module.exports = config;

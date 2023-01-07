@@ -1,0 +1,35 @@
+name: Update Data
+
+on:
+  workflow_dispatch:
+
+jobs:
+  readme:
+    name: Readme Only
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      - name: Setup node with cache
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Turborepo Magic
+        run: GH_PAT=${{ secrets.GH_PAT }} pnpm turbo --filter=@leomotors/readme post-analyze
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: "Update Readme"
+          default_author: github_actions

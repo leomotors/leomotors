@@ -1,33 +1,16 @@
 {
   "name": "@leomotors/language-stats",
   "version": "2.0.2",
+  "private": true,
   "description": "Get Summary of Your Language Stats",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "load": "mkdir -p data && node dist/src/loadData.js",
-    "analyze": "node dist/src/analyze.js",
     "codegen": "graphql-codegen --config codegen.yml",
+    "build": "tsc",
+    "load": "mkdir -p data && mkdir -p out && node dist/src/loadData.js",
+    "analyze": "node dist/src/analyze.js",
+    "post-analyze": "bash post-analyze.bash",
     "lint": "eslint src --max-warnings=0",
-    "format": "prettier --write .*.cjs src/**/*.{js,ts}"
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "2.13.5",
-    "@graphql-codegen/typescript": "2.7.3",
-    "@graphql-codegen/typescript-graphql-request": "^4.5.5",
-    "@graphql-codegen/typescript-operations": "2.5.3",
-    "@leomotors/config": "workspace:0.0.0",
-    "@types/node": "18.8.3",
-    "@typescript-eslint/eslint-plugin": "^5.39.0",
-    "@typescript-eslint/parser": "^5.39.0",
-    "eslint": "^8.25.0",
-    "graphql": "^16.6.0",
-    "prettier": "^2.7.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.4"
-  },
-  "dependencies": {
-    "graphql-request": "^5.0.0",
-    "graphql-tag": "^2.12.6"
+    "format": "eslint src --fix"
   }
 }

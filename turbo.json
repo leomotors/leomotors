@@ -1,34 +1,48 @@
 {
   "pipeline": {
+    "codegen": {
+      "cache": false
+    },
     "build": {
       "dependsOn": [
+        "codegen",
         "^build"
       ],
       "outputs": [
         "dist/**"
       ]
     },
-    "lint": {},
-    "format": {
-      "cache": false
-    },
     "load": {
       "dependsOn": [
         "build",
-        "^build"
+        "^build",
+        "codegen"
       ],
       "outputs": [
-        "data/data.json"
-      ]
+        "data"
+      ],
+      "cache": false
     },
     "analyze": {
       "dependsOn": [
-        "load",
-        "^load"
+        "load"
       ],
       "outputs": [
-        "data/lang.csv"
+        "out"
       ]
+    },
+    "post-analyze": {
+      "dependsOn": [
+        "analyze"
+      ],
+      "cache": false
+    },
+    "lint": {},
+    "format": {
+      "cache": false
     }
-  }
+  },
+  "globalEnv": [
+    "GH_PAT"
+  ]
 }

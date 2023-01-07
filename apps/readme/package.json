@@ -1,0 +1,13 @@
+{
+  "name": "@leomotors/readme",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src --max-warnings=0",
+    "format": "eslint src --fix",
+    "build": "tsc",
+    "load": "node dist/index.js",
+    "post-analyze": "bash post-analyze.bash"
+  }
+}

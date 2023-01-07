@@ -98,6 +98,6 @@ for (const lang of sorted)
   CSVWrite += `${((100 * lang[1]) / totalポイッ).toFixed(2)},`;
 CSVWrite += "100.00,\n";
 
-await fs.writeFile("data/lang.csv", CSVWrite);
+await fs.writeFile("out/lang.csv", CSVWrite);
 
 console.log("Convert to CSV Success");
