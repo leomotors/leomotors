@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "load": "mkdir -p data && node dist/src/loadData.js",
-    "analyze": "node dist/src/analyze.js",
+    "analyze": "mkdir -p out && node dist/src/analyze.js",
     "codegen": "graphql-codegen --config codegen.yml",
     "lint": "eslint src --max-warnings=0",
     "format": "prettier --write .*.cjs src/**/*.{js,ts}"
