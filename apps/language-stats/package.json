@@ -1,16 +1,30 @@
 {
   "name": "@leomotors/language-stats",
   "version": "2.0.2",
-  "private": true,
   "description": "Get Summary of Your Language Stats",
   "type": "module",
   "scripts": {
-    "codegen": "graphql-codegen --config codegen.yml",
     "build": "tsc",
-    "load": "mkdir -p data && mkdir -p out && node dist/src/loadData.js",
+    "load": "mkdir -p data && node dist/src/loadData.js",
     "analyze": "node dist/src/analyze.js",
-    "post-analyze": "bash post-analyze.bash",
+    "codegen": "graphql-codegen --config codegen.yml",
     "lint": "eslint src --max-warnings=0",
-    "format": "eslint src --fix"
+    "format": "prettier --write .*.cjs src/**/*.{js,ts}"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@graphql-codegen/cli": "^2.16.3",
+    "@graphql-codegen/typescript": "^2.8.7",
+    "@graphql-codegen/typescript-graphql-request": "^4.5.8",
+    "@graphql-codegen/typescript-operations": "^2.5.12",
+    "@leomotors/config": "workspace:0.0.0",
+    "@types/node": "^18.11.18",
+    "graphql": "^16.6.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "graphql-request": "^5.1.0",
+    "graphql-tag": "^2.12.6"
   }
 }
