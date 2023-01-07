@@ -111,6 +111,8 @@ and more, I'm lazy to update
   [![](https://img.shields.io/npm/v/@leomotors/prisma-nestjs-graphql.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/prisma-nestjs-graphql)
   [![](https://img.shields.io/npm/dt/@leomotors/prisma-nestjs-graphql.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/prisma-nestjs-graphql)
 
+This list is automatically kept up to date by this monorepo.
+
 </details>
 
 <details>
