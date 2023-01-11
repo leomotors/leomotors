@@ -110,6 +110,9 @@ and more, I'm lazy to update
 - [@leomotors/prisma-nestjs-graphql](https://github.com/Leomotors/prisma-nestjs-graphql) =>
   [![](https://img.shields.io/npm/v/@leomotors/prisma-nestjs-graphql.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/prisma-nestjs-graphql)
   [![](https://img.shields.io/npm/dt/@leomotors/prisma-nestjs-graphql.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/prisma-nestjs-graphql)
+- [cunny](https://github.com/CunnyDev/cunny) =>
+  [![](https://img.shields.io/npm/v/cunny.svg?maxAge=3600)](https://www.npmjs.com/package/cunny)
+  [![](https://img.shields.io/npm/dt/cunny.svg?maxAge=3600)](https://www.npmjs.com/package/cunny)
 
 This list is automatically kept up to date by this monorepo.
 
