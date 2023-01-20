@@ -3314,7 +3314,7 @@ export type CreateMigrationSourceInput = {
   ownerId: Scalars['ID'];
   /** The migration source type. */
   type: MigrationSourceType;
-  /** The migration source URL. */
+  /** The migration source URL, for example `https://github.com` or `https://monalisa.ghe.com`. */
   url: Scalars['String'];
 };
 
@@ -9123,7 +9123,7 @@ export type Migration = {
   migrationSource: MigrationSource;
   /** The target repository name. */
   repositoryName: Scalars['String'];
-  /** The migration source URL. */
+  /** The migration source URL, for example `https://github.com` or `https://monalisa.ghe.com`. */
   sourceUrl: Scalars['URI'];
   /** The migration state. */
   state: MigrationState;
@@ -9137,7 +9137,7 @@ export type MigrationSource = Node & {
   name: Scalars['String'];
   /** The migration source type. */
   type: MigrationSourceType;
-  /** The migration source URL. */
+  /** The migration source URL, for example `https://github.com` or `https://monalisa.ghe.com`. */
   url: Scalars['URI'];
 };
 
@@ -19824,7 +19824,7 @@ export type RepositoryMigration = Migration & Node & {
   migrationSource: MigrationSource;
   /** The target repository name. */
   repositoryName: Scalars['String'];
-  /** The migration source URL. */
+  /** The migration source URL, for example `https://github.com` or `https://monalisa.ghe.com`. */
   sourceUrl: Scalars['URI'];
   /** The migration state. */
   state: MigrationState;
