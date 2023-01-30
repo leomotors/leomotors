@@ -527,6 +527,16 @@ export type AddedToProjectEvent = Node & {
   id: Scalars['ID'];
 };
 
+/** Represents an announcement banner. */
+export type AnnouncementBanner = {
+  /** The text of the announcement */
+  announcement?: Maybe<Scalars['String']>;
+  /** The expiration date of the announcement, if any */
+  announcementExpiresAt?: Maybe<Scalars['DateTime']>;
+  /** Whether the announcement can be dismissed by the user */
+  announcementUserDismissible?: Maybe<Scalars['Boolean']>;
+};
+
 /** A GitHub App. */
 export type App = Node & {
   __typename?: 'App';
@@ -5340,8 +5350,14 @@ export type EnablePullRequestAutoMergePayload = {
 };
 
 /** An account to manage multiple organizations with consolidated policy and billing. */
-export type Enterprise = Node & {
+export type Enterprise = AnnouncementBanner & Node & {
   __typename?: 'Enterprise';
+  /** The text of the announcement */
+  announcement?: Maybe<Scalars['String']>;
+  /** The expiration date of the announcement, if any */
+  announcementExpiresAt?: Maybe<Scalars['DateTime']>;
+  /** Whether the announcement can be dismissed by the user */
+  announcementUserDismissible?: Maybe<Scalars['Boolean']>;
   /** A URL pointing to the enterprise's public avatar. */
   avatarUrl: Scalars['URI'];
   /** Enterprise billing information visible to enterprise billing managers. */
@@ -5579,6 +5595,30 @@ export enum EnterpriseEnabledSettingValue {
   NoPolicy = 'NO_POLICY'
 }
 
+/** The connection type for OrganizationInvitation. */
+export type EnterpriseFailedInvitationConnection = {
+  __typename?: 'EnterpriseFailedInvitationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EnterpriseFailedInvitationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<OrganizationInvitation>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+  /** Identifies the total count of unique users in the connection. */
+  totalUniqueUserCount: Scalars['Int'];
+};
+
+/** A failed invitation to be a member in an enterprise organization. */
+export type EnterpriseFailedInvitationEdge = {
+  __typename?: 'EnterpriseFailedInvitationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<OrganizationInvitation>;
+};
+
 /** An identity provider configured to provision identities for an enterprise. */
 export type EnterpriseIdentityProvider = Node & {
   __typename?: 'EnterpriseIdentityProvider';
@@ -5757,6 +5797,8 @@ export type EnterpriseOwnerInfo = {
   domains: VerifiableDomainConnection;
   /** Enterprise Server installations owned by the enterprise. */
   enterpriseServerInstallations: EnterpriseServerInstallationConnection;
+  /** A list of failed invitations in the enterprise. */
+  failedInvitations: EnterpriseFailedInvitationConnection;
   /** The setting value for whether the enterprise has an IP allow list enabled. */
   ipAllowListEnabledSetting: IpAllowListEnabledSettingValue;
   /** The IP addresses that are allowed to access resources owned by the enterprise. */
@@ -5909,6 +5951,16 @@ export type EnterpriseOwnerInfoEnterpriseServerInstallationsArgs = {
 
 
 /** Enterprise information only visible to enterprise owners. */
+export type EnterpriseOwnerInfoFailedInvitationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  query?: InputMaybe<Scalars['String']>;
+};
+
+
+/** Enterprise information only visible to enterprise owners. */
 export type EnterpriseOwnerInfoIpAllowListEntriesArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -6049,6 +6101,7 @@ export type EnterpriseOwnerInfoPendingMemberInvitationsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  invitationSource?: InputMaybe<OrganizationInvitationSource>;
   last?: InputMaybe<Scalars['Int']>;
   organizationLogins?: InputMaybe<Array<Scalars['String']>>;
   query?: InputMaybe<Scalars['String']>;
@@ -12490,8 +12543,14 @@ export type OrgUpdateMemberRepositoryInvitationPermissionAuditEntry = AuditEntry
 };
 
 /** An account on GitHub, with one or more owners, that has repositories, members and teams. */
-export type Organization = Actor & MemberStatusable & Node & PackageOwner & ProfileOwner & ProjectOwner & ProjectV2Owner & ProjectV2Recent & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable & {
+export type Organization = Actor & AnnouncementBanner & MemberStatusable & Node & PackageOwner & ProfileOwner & ProjectOwner & ProjectV2Owner & ProjectV2Recent & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable & {
   __typename?: 'Organization';
+  /** The text of the announcement */
+  announcement?: Maybe<Scalars['String']>;
+  /** The expiration date of the announcement, if any */
+  announcementExpiresAt?: Maybe<Scalars['DateTime']>;
+  /** Whether the announcement can be dismissed by the user */
+  announcementUserDismissible?: Maybe<Scalars['Boolean']>;
   /** Determine if this repository owner has any items that can be pinned to their profile. */
   anyPinnableItems: Scalars['Boolean'];
   /** Audit log entries of the organization */
@@ -13125,6 +13184,8 @@ export type OrganizationInvitation = Node & {
   /** The email address of the user invited to the organization. */
   email?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
+  /** The source of the invitation. */
+  invitationSource: OrganizationInvitationSource;
   /** The type of invitation that was sent (e.g. email, user). */
   invitationType: OrganizationInvitationType;
   /** The user who was invited to the organization. */
@@ -13169,6 +13230,16 @@ export enum OrganizationInvitationRole {
   DirectMember = 'DIRECT_MEMBER',
   /** The user's previous role will be reinstated. */
   Reinstate = 'REINSTATE'
+}
+
+/** The possible organization invitation sources. */
+export enum OrganizationInvitationSource {
+  /** The invitation was created from the web interface or from API */
+  Member = 'MEMBER',
+  /** The invitation was created from SCIM */
+  Scim = 'SCIM',
+  /** The invitation was sent before this feature was added */
+  Unknown = 'UNKNOWN'
 }
 
 /** The possible organization invitation types. */
