@@ -14494,6 +14494,10 @@ export type ProjectV2 = Closable & Node & Updatable & {
   viewerCanUpdate: Scalars['Boolean'];
   /** List of views in the project */
   views: ProjectV2ViewConnection;
+  /** A workflow of the project */
+  workflow?: Maybe<ProjectV2Workflow>;
+  /** List of the workflows in the project */
+  workflows: ProjectV2WorkflowConnection;
 };
 
 
@@ -14556,6 +14560,22 @@ export type ProjectV2ViewsArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   orderBy?: InputMaybe<ProjectV2ViewOrder>;
+};
+
+
+/** New projects that manage issues, pull requests and drafts using tables and boards. */
+export type ProjectV2WorkflowArgs = {
+  number: Scalars['Int'];
+};
+
+
+/** New projects that manage issues, pull requests and drafts using tables and boards. */
+export type ProjectV2WorkflowsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2WorkflowOrder>;
 };
 
 /** The connection type for ProjectV2. */
@@ -15468,6 +15488,68 @@ export enum ProjectV2ViewOrderField {
   Name = 'NAME',
   /** Order project v2 views by position */
   Position = 'POSITION'
+}
+
+/** A workflow inside a project. */
+export type ProjectV2Workflow = Node & {
+  __typename?: 'ProjectV2Workflow';
+  /** Identifies the date and time when the object was created. */
+  createdAt: Scalars['DateTime'];
+  /** Identifies the primary key from the database. */
+  databaseId?: Maybe<Scalars['Int']>;
+  /** The workflows' enabled state. */
+  enabled: Scalars['Boolean'];
+  id: Scalars['ID'];
+  /** The workflows' name. */
+  name: Scalars['String'];
+  /** The workflows' number. */
+  number: Scalars['Int'];
+  /** The project that contains this workflow. */
+  project: ProjectV2;
+  /** Identifies the date and time when the object was last updated. */
+  updatedAt: Scalars['DateTime'];
+};
+
+/** The connection type for ProjectV2Workflow. */
+export type ProjectV2WorkflowConnection = {
+  __typename?: 'ProjectV2WorkflowConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProjectV2WorkflowEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProjectV2Workflow>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+};
+
+/** An edge in a connection. */
+export type ProjectV2WorkflowEdge = {
+  __typename?: 'ProjectV2WorkflowEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProjectV2Workflow>;
+};
+
+/** Ordering options for project v2 workflows connections */
+export type ProjectV2WorkflowOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order the project v2 workflows by. */
+  field: ProjectV2WorkflowsOrderField;
+};
+
+/** Properties by which project workflows can be ordered. */
+export enum ProjectV2WorkflowsOrderField {
+  /** The workflows' date and time of creation */
+  CreatedAt = 'CREATED_AT',
+  /** The workflows' name */
+  Name = 'NAME',
+  /** The workflows' number */
+  Number = 'NUMBER',
+  /** The workflows' date and time of update */
+  UpdatedAt = 'UPDATED_AT'
 }
 
 /** A user's public key. */
