@@ -3,6 +3,7 @@ schema:
   - "https://api.github.com/graphql":
       headers:
         Authorization: "Bearer ${GH_PAT}"
+        User-Agent: leomotors-language-stats
 
 documents: "src/query.graphql"
 generates:
