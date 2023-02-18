@@ -18,6 +18,7 @@ for (const repo in langObj) {
   const langStats = langObj[repo];
   for (const lang in langStats) {
     if (lang.startsWith("__")) continue;
+    if (lang.includes("Jupyter")) continue;
 
     if (langCounter[lang]) {
       langCounter[lang] += parseInt(langStats[lang]);

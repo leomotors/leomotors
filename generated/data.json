@@ -12,12 +12,12 @@
     "__pushedAt": "2021-06-14T10:52:05Z"
   },
   "Leomotors": {
-    "JavaScript": 3713,
-    "TypeScript": 1262,
-    "Shell": 79,
+    "JavaScript": 3552,
+    "TypeScript": 3469,
+    "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-01-06T21:13:07Z"
+    "__pushedAt": "2023-02-17T21:13:21Z"
   },
   "Salim-Bot": {
     "TypeScript": 37697,
@@ -113,7 +113,7 @@
     "Shell": 2667,
     "PowerShell": 458,
     "__isArchived": false,
-    "__pushedAt": "2022-11-18T16:36:50Z"
+    "__pushedAt": "2023-02-17T17:05:46Z"
   },
   "THIS-REPO-HAS-9-ISSUES": {
     "JavaScript": 930,
@@ -246,12 +246,12 @@
     "CSS": 1037,
     "TypeScript": 8514,
     "Shell": 885,
-    "Python": 11771,
-    "C++": 46514,
+    "Python": 12033,
+    "C++": 56153,
     "TeX": 24557,
     "C": 4686,
     "__isArchived": false,
-    "__pushedAt": "2022-11-06T15:06:28Z"
+    "__pushedAt": "2023-01-18T08:38:36Z"
   },
   "cocoa-discord-utils": {
     "TypeScript": 125964,
@@ -450,11 +450,11 @@
   },
   "turbo-next-nest-graphql-prisma": {
     "Dockerfile": 48,
-    "JavaScript": 1096,
-    "TypeScript": 6590,
+    "JavaScript": 1114,
+    "TypeScript": 6946,
     "SCSS": 261,
     "__isArchived": false,
-    "__pushedAt": "2022-12-17T07:29:37Z"
+    "__pushedAt": "2023-01-09T08:49:02Z"
   },
   "deploy-deemai": {
     "TypeScript": 1430,
@@ -469,14 +469,14 @@
   },
   "daydream-cafe": {
     "JavaScript": 3683,
-    "TypeScript": 25080,
+    "TypeScript": 24678,
     "HTML": 843,
     "SCSS": 255,
-    "Svelte": 17282,
+    "Svelte": 17330,
     "Shell": 154,
     "CSS": 59,
     "__isArchived": false,
-    "__pushedAt": "2022-12-28T17:44:59Z"
+    "__pushedAt": "2023-01-29T15:56:12Z"
   },
   "drunk-captcha": {
     "JavaScript": 1817,
@@ -498,7 +498,7 @@
     "TypeScript": 5163,
     "JavaScript": 233,
     "__isArchived": false,
-    "__pushedAt": "2022-12-21T12:51:31Z"
+    "__pushedAt": "2023-01-07T13:48:25Z"
   },
   "brikl-introduction": {
     "__isArchived": false,
@@ -508,5 +508,20 @@
     "HTML": 839,
     "__isArchived": false,
     "__pushedAt": "2022-12-22T01:24:07Z"
+  },
+  "2110215-prog-meth": {
+    "Shell": 219,
+    "TypeScript": 402,
+    "__isArchived": false,
+    "__pushedAt": "2023-02-15T06:42:15Z"
+  },
+  "A-chuan": {
+    "JavaScript": 2166,
+    "HTML": 485,
+    "SCSS": 380,
+    "TypeScript": 5694,
+    "Svelte": 2582,
+    "__isArchived": false,
+    "__pushedAt": "2023-02-17T16:56:15Z"
   }
 }
