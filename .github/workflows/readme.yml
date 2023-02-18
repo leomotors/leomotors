@@ -1,4 +1,4 @@
-name: Update Data
+name: Update Readme Only
 
 on:
   workflow_dispatch:

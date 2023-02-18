@@ -1,4 +1,4 @@
-name: Update Data
+name: Update All Data
 
 on:
   schedule:
