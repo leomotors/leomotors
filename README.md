@@ -113,6 +113,9 @@ and more, I'm lazy to update
 - [cunny](https://github.com/CunnyDev/cunny) =>
   [![](https://img.shields.io/npm/v/cunny.svg?maxAge=3600)](https://www.npmjs.com/package/cunny)
   [![](https://img.shields.io/npm/dt/cunny.svg?maxAge=3600)](https://www.npmjs.com/package/cunny)
+- [@cunny/archive](https://github.com/saltyaom/cunny-archive) =>
+  [![](https://img.shields.io/npm/v/@cunny/archive.svg?maxAge=3600)](https://www.npmjs.com/package/@cunny/archive)
+  [![](https://img.shields.io/npm/dt/@cunny/archive.svg?maxAge=3600)](https://www.npmjs.com/package/@cunny/archive)
 
 This list is automatically kept up to date by this monorepo.
 
