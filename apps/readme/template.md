@@ -1,6 +1,6 @@
 <h1 align="center"> Hello! 👋 I'm Leo </h1>
 
-<h3 align="center"> => <a href="https://leomotors.net">My Homepage</a> <= </h3>
+<h3 align="center"> => <a href="https://leomotors.me">My Homepage</a> <= </h3>
 
 <details>
 <summary><b> Hacktoberfest Repos (in case you still want to contribute) </b></summary>
@@ -36,7 +36,7 @@ Note that your PR must be relevant otherwise I won't merge. Please read CONTRIBU
 
   - Member of @thinc-org [thinc.in.th](https://thinc.in.th) working on [CU Get Reg](https://github.com/thinc-org/cugetreg)
 
-- Platform Engineer at Brikl [brikl.com/jobs](https://www.brikl.com/jobs)
+- Platform Engineer at Brikl
 
 Full List in my [resume](https://resume.leomotors.me)
 
