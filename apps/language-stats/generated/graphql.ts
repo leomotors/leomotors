@@ -1011,6 +1011,8 @@ export type BranchProtectionRule = Node & {
   requireLastPushApproval: Scalars['Boolean'];
   /** Number of approving reviews required to update matching branches. */
   requiredApprovingReviewCount?: Maybe<Scalars['Int']>;
+  /** List of required deployment environments that must be deployed successfully to update matching branches */
+  requiredDeploymentEnvironments?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** List of required status check contexts that must pass for commits to be accepted to matching branches. */
   requiredStatusCheckContexts?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** List of required status checks that must pass for commits to be accepted to matching branches. */
@@ -1023,6 +1025,8 @@ export type BranchProtectionRule = Node & {
   requiresCommitSignatures: Scalars['Boolean'];
   /** Are conversations required to be resolved before merging. */
   requiresConversationResolution: Scalars['Boolean'];
+  /** Does this branch require deployment to specific environments before merging */
+  requiresDeployments: Scalars['Boolean'];
   /** Are merge commits prohibited from being pushed to this branch. */
   requiresLinearHistory: Scalars['Boolean'];
   /** Are status checks required to update matching branches. */
@@ -3071,6 +3075,8 @@ export type CreateBranchProtectionRuleInput = {
   requireLastPushApproval?: InputMaybe<Scalars['Boolean']>;
   /** Number of approving reviews required to update matching branches. */
   requiredApprovingReviewCount?: InputMaybe<Scalars['Int']>;
+  /** The list of required deployment environments */
+  requiredDeploymentEnvironments?: InputMaybe<Array<Scalars['String']>>;
   /** List of required status check contexts that must pass for commits to be accepted to matching branches. */
   requiredStatusCheckContexts?: InputMaybe<Array<Scalars['String']>>;
   /** The list of required status checks */
@@ -3083,6 +3089,8 @@ export type CreateBranchProtectionRuleInput = {
   requiresCommitSignatures?: InputMaybe<Scalars['Boolean']>;
   /** Are conversations required to be resolved before merging. */
   requiresConversationResolution?: InputMaybe<Scalars['Boolean']>;
+  /** Are successful deployments required before merging. */
+  requiresDeployments?: InputMaybe<Scalars['Boolean']>;
   /** Are merge commits prohibited from being pushed to this branch. */
   requiresLinearHistory?: InputMaybe<Scalars['Boolean']>;
   /** Are status checks required to update matching branches. */
@@ -24578,6 +24586,8 @@ export type UpdateBranchProtectionRuleInput = {
   requireLastPushApproval?: InputMaybe<Scalars['Boolean']>;
   /** Number of approving reviews required to update matching branches. */
   requiredApprovingReviewCount?: InputMaybe<Scalars['Int']>;
+  /** The list of required deployment environments */
+  requiredDeploymentEnvironments?: InputMaybe<Array<Scalars['String']>>;
   /** List of required status check contexts that must pass for commits to be accepted to matching branches. */
   requiredStatusCheckContexts?: InputMaybe<Array<Scalars['String']>>;
   /** The list of required status checks */
@@ -24590,6 +24600,8 @@ export type UpdateBranchProtectionRuleInput = {
   requiresCommitSignatures?: InputMaybe<Scalars['Boolean']>;
   /** Are conversations required to be resolved before merging. */
   requiresConversationResolution?: InputMaybe<Scalars['Boolean']>;
+  /** Are successful deployments required before merging. */
+  requiresDeployments?: InputMaybe<Scalars['Boolean']>;
   /** Are merge commits prohibited from being pushed to this branch. */
   requiresLinearHistory?: InputMaybe<Scalars['Boolean']>;
   /** Are status checks required to update matching branches. */
@@ -26679,6 +26691,8 @@ export type WorkflowRun = Node & UniformResourceLocatable & {
   databaseId?: Maybe<Scalars['Int']>;
   /** The log of deployment reviews */
   deploymentReviews: DeploymentReviewConnection;
+  /** The event that triggered the workflow run */
+  event: Scalars['String'];
   id: Scalars['ID'];
   /** The pending deployment requests of all check runs in this workflow run */
   pendingDeploymentRequests: DeploymentRequestConnection;
