@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-03-20T21:19:33Z"
+    "__pushedAt": "2023-03-21T21:19:10Z"
   },
   "Salim-Bot": {
     "TypeScript": 37697,
@@ -510,11 +510,11 @@
     "__pushedAt": "2022-12-22T01:24:07Z"
   },
   "2110215-prog-meth": {
-    "Shell": 637,
+    "Shell": 628,
     "TypeScript": 1206,
     "Java": 75371,
     "__isArchived": false,
-    "__pushedAt": "2023-02-26T04:32:33Z"
+    "__pushedAt": "2023-03-22T09:08:35Z"
   },
   "A-chuan": {
     "JavaScript": 2166,
@@ -524,5 +524,10 @@
     "Svelte": 6482,
     "__isArchived": false,
     "__pushedAt": "2023-02-23T13:48:33Z"
+  },
+  "compengess-2022-2-activity-8-backend-group-35": {
+    "JavaScript": 9591,
+    "__isArchived": false,
+    "__pushedAt": "2023-03-22T05:08:30Z"
   }
 }

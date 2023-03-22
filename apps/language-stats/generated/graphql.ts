@@ -6453,6 +6453,30 @@ export type EnterpriseServerInstallationEdge = {
   node?: Maybe<EnterpriseServerInstallation>;
 };
 
+/** The connection type for EnterpriseServerInstallation. */
+export type EnterpriseServerInstallationMembershipConnection = {
+  __typename?: 'EnterpriseServerInstallationMembershipConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EnterpriseServerInstallationMembershipEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<EnterpriseServerInstallation>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+};
+
+/** An Enterprise Server installation that a user is a member of. */
+export type EnterpriseServerInstallationMembershipEdge = {
+  __typename?: 'EnterpriseServerInstallationMembershipEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<EnterpriseServerInstallation>;
+  /** The role of the user in the enterprise membership. */
+  role: EnterpriseUserAccountMembershipRole;
+};
+
 /** Ordering options for Enterprise Server installation connections. */
 export type EnterpriseServerInstallationOrder = {
   /** The ordering direction. */
@@ -6668,6 +6692,8 @@ export type EnterpriseUserAccount = Actor & Node & {
   createdAt: Scalars['DateTime'];
   /** The enterprise in which this user account exists. */
   enterprise: Enterprise;
+  /** A list of Enterprise Server installations this user is a member of. */
+  enterpriseInstallations: EnterpriseServerInstallationMembershipConnection;
   id: Scalars['ID'];
   /** An identifier for the enterprise user account, a login or email address */
   login: Scalars['String'];
@@ -6689,6 +6715,18 @@ export type EnterpriseUserAccount = Actor & Node & {
 /** An account for a user who is an admin of an enterprise or a member of an enterprise through one or more organizations. */
 export type EnterpriseUserAccountAvatarUrlArgs = {
   size?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** An account for a user who is an admin of an enterprise or a member of an enterprise through one or more organizations. */
+export type EnterpriseUserAccountEnterpriseInstallationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<EnterpriseServerInstallationOrder>;
+  query?: InputMaybe<Scalars['String']>;
+  role?: InputMaybe<EnterpriseUserAccountMembershipRole>;
 };
 
 
@@ -26082,6 +26120,8 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectOwner & P
   projectsUrl: Scalars['URI'];
   /** A list of projects under the owner. */
   projectsV2: ProjectV2Connection;
+  /** The user's profile pronouns */
+  pronouns?: Maybe<Scalars['String']>;
   /** A list of public keys associated with this user. */
   publicKeys: PublicKeyConnection;
   /** A list of pull requests associated with this user. */
@@ -26886,6 +26926,8 @@ export type Workflow = Node & {
   name: Scalars['String'];
   /** The runs of the workflow. */
   runs: WorkflowRunConnection;
+  /** The state of the workflow. */
+  state: WorkflowState;
   /** Identifies the date and time when the object was last updated. */
   updatedAt: Scalars['DateTime'];
 };
@@ -26980,6 +27022,20 @@ export type WorkflowRunOrder = {
 export enum WorkflowRunOrderField {
   /** Order workflow runs by most recently created */
   CreatedAt = 'CREATED_AT'
+}
+
+/** The possible states for a workflow. */
+export enum WorkflowState {
+  /** The workflow is active. */
+  Active = 'ACTIVE',
+  /** The workflow was deleted from the git repository. */
+  Deleted = 'DELETED',
+  /** The workflow was disabled by default on a fork. */
+  DisabledFork = 'DISABLED_FORK',
+  /** The workflow was disabled for inactivity in the repository. */
+  DisabledInactivity = 'DISABLED_INACTIVITY',
+  /** The workflow was disabled manually. */
+  DisabledManually = 'DISABLED_MANUALLY'
 }
 
 export type GetRepoLangsQueryVariables = Exact<{
