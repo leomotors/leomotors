@@ -16629,12 +16629,18 @@ export type PullRequestReviewComment = Comment & Deletable & Minimizable & Node 
   isMinimized: Scalars['Boolean'];
   /** The moment the editor made the last edit */
   lastEditedAt?: Maybe<Scalars['DateTime']>;
+  /** The end line number on the file to which the comment applies */
+  line?: Maybe<Scalars['Int']>;
   /** Returns why the comment was minimized. One of `abuse`, `off-topic`, `outdated`, `resolved`, `duplicate` and `spam`. Note that the case and formatting of these values differs from the inputs to the `MinimizeComment` mutation. */
   minimizedReason?: Maybe<Scalars['String']>;
   /** Identifies the original commit associated with the comment. */
   originalCommit?: Maybe<Commit>;
+  /** The end line number on the file to which the comment applied when it was first created */
+  originalLine?: Maybe<Scalars['Int']>;
   /** The original line index in the diff to which the comment applies. */
   originalPosition: Scalars['Int'];
+  /** The start line number on the file to which the comment applied when it was first created */
+  originalStartLine?: Maybe<Scalars['Int']>;
   /** Identifies when the comment body is outdated */
   outdated: Scalars['Boolean'];
   /** The path to which the comment applies. */
@@ -16657,6 +16663,8 @@ export type PullRequestReviewComment = Comment & Deletable & Minimizable & Node 
   repository: Repository;
   /** The HTTP path permalink for this review comment. */
   resourcePath: Scalars['URI'];
+  /** The start line number on the file to which the comment applies */
+  startLine?: Maybe<Scalars['Int']>;
   /** Identifies the state of the comment. */
   state: PullRequestReviewCommentState;
   /** Identifies when the comment was last updated. */
