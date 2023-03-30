@@ -2234,7 +2234,10 @@ export type Commit = GitObject & Node & Subscribable & UniformResourceLocatable 
   onBehalfOf?: Maybe<Organization>;
   /** The parents of a commit. */
   parents: CommitConnection;
-  /** The datetime when this commit was pushed. */
+  /**
+   * The datetime when this commit was pushed.
+   * @deprecated `pushedDate` is no longer supported. Removal on 2023-07-01 UTC.
+   */
   pushedDate?: Maybe<Scalars['DateTime']>;
   /** The Repository this commit belongs to */
   repository: Repository;
