@@ -4855,6 +4855,8 @@ export enum DeploymentState {
   Pending = 'PENDING',
   /** The deployment has queued */
   Queued = 'QUEUED',
+  /** The deployment was successful. */
+  Success = 'SUCCESS',
   /** The deployment is waiting. */
   Waiting = 'WAITING'
 }
