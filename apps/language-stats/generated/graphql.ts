@@ -19462,6 +19462,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   __typename?: 'Repository';
   /** Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging. */
   allowUpdateBranch: Scalars['Boolean'];
+  /** Identifies the date and time when the repository was archived. */
+  archivedAt?: Maybe<Scalars['DateTime']>;
   /** A list of users that can be assigned to issues in this repository. */
   assignableUsers: UserConnection;
   /** Whether or not Auto-merge can be enabled on pull requests in this repository. */
@@ -19627,7 +19629,7 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   pullRequestTemplates?: Maybe<Array<PullRequestTemplate>>;
   /** A list of pull requests that have been opened in the repository. */
   pullRequests: PullRequestConnection;
-  /** Identifies when the repository was last pushed to. */
+  /** Identifies the date and time when the repository was last pushed to. */
   pushedAt?: Maybe<Scalars['DateTime']>;
   /** Whether or not rebase-merging is enabled on this repository. */
   rebaseMergeAllowed: Scalars['Boolean'];
@@ -20279,6 +20281,8 @@ export type RepositoryEdge = {
 
 /** A subset of repository info. */
 export type RepositoryInfo = {
+  /** Identifies the date and time when the repository was archived. */
+  archivedAt?: Maybe<Scalars['DateTime']>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
   /** The description of the repository. */
@@ -20325,7 +20329,7 @@ export type RepositoryInfo = {
   openGraphImageUrl: Scalars['URI'];
   /** The User owner of the repository. */
   owner: RepositoryOwner;
-  /** Identifies when the repository was last pushed to. */
+  /** Identifies the date and time when the repository was last pushed to. */
   pushedAt?: Maybe<Scalars['DateTime']>;
   /** The HTTP path for this repository */
   resourcePath: Scalars['URI'];
