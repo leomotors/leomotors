@@ -27910,7 +27910,7 @@ export type Votable = {
 };
 
 /** A workflow contains meta information about an Actions workflow file. */
-export type Workflow = Node & {
+export type Workflow = Node & UniformResourceLocatable & {
   __typename?: 'Workflow';
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
@@ -27919,12 +27919,16 @@ export type Workflow = Node & {
   id: Scalars['ID'];
   /** The name of the workflow. */
   name: Scalars['String'];
+  /** The HTTP path for this workflow */
+  resourcePath: Scalars['URI'];
   /** The runs of the workflow. */
   runs: WorkflowRunConnection;
   /** The state of the workflow. */
   state: WorkflowState;
   /** Identifies the date and time when the object was last updated. */
   updatedAt: Scalars['DateTime'];
+  /** The HTTP URL for this workflow */
+  url: Scalars['URI'];
 };
 
 
