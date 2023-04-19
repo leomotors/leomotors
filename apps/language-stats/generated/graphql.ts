@@ -8567,10 +8567,22 @@ export type IssueTemplate = {
   body?: Maybe<Scalars['String']>;
   /** The template filename. */
   filename: Scalars['String'];
+  /** The suggested issue labels */
+  labels?: Maybe<LabelConnection>;
   /** The template name. */
   name: Scalars['String'];
   /** The suggested issue title. */
   title?: Maybe<Scalars['String']>;
+};
+
+
+/** A repository issue template. */
+export type IssueTemplateLabelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<LabelOrder>;
 };
 
 /** The connection type for IssueTimelineItem. */
