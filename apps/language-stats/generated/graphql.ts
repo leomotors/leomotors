@@ -1050,13 +1050,13 @@ export type BranchActorAllowanceActor = App | Team | User;
 export type BranchNamePatternParameters = {
   __typename?: 'BranchNamePatternParameters';
   /** How this rule will appear to users. */
-  name: Scalars['String'];
+  name?: Maybe<Scalars['String']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean'];
   /** The operator to use for matching. */
-  operator?: Maybe<Scalars['String']>;
+  operator: Scalars['String'];
   /** The pattern to match with. */
-  pattern?: Maybe<Scalars['String']>;
+  pattern: Scalars['String'];
 };
 
 /** Parameters to be used for the branch_name_pattern rule */
@@ -2434,13 +2434,13 @@ export type CommitAuthor = {
 export type CommitAuthorEmailPatternParameters = {
   __typename?: 'CommitAuthorEmailPatternParameters';
   /** How this rule will appear to users. */
-  name: Scalars['String'];
+  name?: Maybe<Scalars['String']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean'];
   /** The operator to use for matching. */
-  operator?: Maybe<Scalars['String']>;
+  operator: Scalars['String'];
   /** The pattern to match with. */
-  pattern?: Maybe<Scalars['String']>;
+  pattern: Scalars['String'];
 };
 
 /** Parameters to be used for the commit_author_email_pattern rule */
@@ -2674,13 +2674,13 @@ export type CommitMessage = {
 export type CommitMessagePatternParameters = {
   __typename?: 'CommitMessagePatternParameters';
   /** How this rule will appear to users. */
-  name: Scalars['String'];
+  name?: Maybe<Scalars['String']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean'];
   /** The operator to use for matching. */
-  operator?: Maybe<Scalars['String']>;
+  operator: Scalars['String'];
   /** The pattern to match with. */
-  pattern?: Maybe<Scalars['String']>;
+  pattern: Scalars['String'];
 };
 
 /** Parameters to be used for the commit_message_pattern rule */
@@ -2733,13 +2733,13 @@ export type CommittableBranch = {
 export type CommitterEmailPatternParameters = {
   __typename?: 'CommitterEmailPatternParameters';
   /** How this rule will appear to users. */
-  name: Scalars['String'];
+  name?: Maybe<Scalars['String']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean'];
   /** The operator to use for matching. */
-  operator?: Maybe<Scalars['String']>;
+  operator: Scalars['String'];
   /** The pattern to match with. */
-  pattern?: Maybe<Scalars['String']>;
+  pattern: Scalars['String'];
 };
 
 /** Parameters to be used for the committer_email_pattern rule */
@@ -8563,6 +8563,8 @@ export type IssueTemplate = {
   __typename?: 'IssueTemplate';
   /** The template purpose. */
   about?: Maybe<Scalars['String']>;
+  /** The suggested assignees. */
+  assignees: UserConnection;
   /** The suggested issue body. */
   body?: Maybe<Scalars['String']>;
   /** The template filename. */
@@ -8573,6 +8575,15 @@ export type IssueTemplate = {
   name: Scalars['String'];
   /** The suggested issue title. */
   title?: Maybe<Scalars['String']>;
+};
+
+
+/** A repository issue template. */
+export type IssueTemplateAssigneesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -16992,15 +17003,15 @@ export enum PullRequestOrderField {
 export type PullRequestParameters = {
   __typename?: 'PullRequestParameters';
   /** New, reviewable commits pushed will dismiss previous pull request review approvals. */
-  dismissStaleReviewsOnPush?: Maybe<Scalars['Boolean']>;
+  dismissStaleReviewsOnPush: Scalars['Boolean'];
   /** Require an approving review in pull requests that modify files that have a designated code owner. */
-  requireCodeOwnerReview?: Maybe<Scalars['Boolean']>;
+  requireCodeOwnerReview: Scalars['Boolean'];
   /** Whether the most recent reviewable push must be approved by someone other than the person who pushed it. */
-  requireLastPushApproval?: Maybe<Scalars['Boolean']>;
+  requireLastPushApproval: Scalars['Boolean'];
   /** The number of approving reviews that are required before a pull request can be merged. */
-  requiredApprovingReviewCount?: Maybe<Scalars['Int']>;
+  requiredApprovingReviewCount: Scalars['Int'];
   /** All conversations on code must be resolved before a pull request can be merged. */
-  requiredReviewThreadResolution?: Maybe<Scalars['Boolean']>;
+  requiredReviewThreadResolution: Scalars['Boolean'];
 };
 
 /** Parameters to be used for the pull_request rule */
@@ -18278,9 +18289,9 @@ export type RefEdge = {
 export type RefNameConditionTarget = {
   __typename?: 'RefNameConditionTarget';
   /** Array of ref names or patterns to exclude. The condition will not pass if any of these patterns match. */
-  exclude?: Maybe<Array<Scalars['String']>>;
+  exclude: Array<Scalars['String']>;
   /** Array of ref names or patterns to include. One of these patterns must match for the condition to pass. Also accepts `~DEFAULT_BRANCH` to include the default branch or `~ALL` to include all branches. */
-  include?: Maybe<Array<Scalars['String']>>;
+  include: Array<Scalars['String']>;
 };
 
 /** Parameters to be used for the ref_name condition */
@@ -21052,9 +21063,9 @@ export enum RepositoryMigrationOrderField {
 export type RepositoryNameConditionTarget = {
   __typename?: 'RepositoryNameConditionTarget';
   /** Array of repository names or patterns to exclude. The condition will not pass if any of these patterns match. */
-  exclude?: Maybe<Array<Scalars['String']>>;
+  exclude: Array<Scalars['String']>;
   /** Array of repository names or patterns to include. One of these patterns must match for the condition to pass. Also accepts `~ALL` to include all repositories. */
-  include?: Maybe<Array<Scalars['String']>>;
+  include: Array<Scalars['String']>;
   /** Target changes that match these patterns will be prevented except by those with bypass permissions. */
   protected: Scalars['Boolean'];
 };
@@ -21661,7 +21672,7 @@ export type RequirableByPullRequestIsRequiredArgs = {
 export type RequiredDeploymentsParameters = {
   __typename?: 'RequiredDeploymentsParameters';
   /** The environments that must be successfully deployed to before branches can be merged. */
-  requiredDeploymentEnvironments?: Maybe<Array<Scalars['String']>>;
+  requiredDeploymentEnvironments: Array<Scalars['String']>;
 };
 
 /** Parameters to be used for the required_deployments rule */
@@ -21691,9 +21702,9 @@ export type RequiredStatusCheckInput = {
 export type RequiredStatusChecksParameters = {
   __typename?: 'RequiredStatusChecksParameters';
   /** Status checks that are required. */
-  requiredStatusChecks?: Maybe<Array<StatusCheckConfiguration>>;
+  requiredStatusChecks: Array<StatusCheckConfiguration>;
   /** Whether pull requests targeting a matching branch must be tested with the latest code. This setting will not take effect unless at least one status check is enabled. */
-  strictRequiredStatusChecksPolicy?: Maybe<Scalars['Boolean']>;
+  strictRequiredStatusChecksPolicy: Scalars['Boolean'];
 };
 
 /** Parameters to be used for the required_status_checks rule */
@@ -23965,9 +23976,9 @@ export type StatusContextArgs = {
 export type StatusCheckConfiguration = {
   __typename?: 'StatusCheckConfiguration';
   /** The status check context name that must be present on the commit. */
-  context?: Maybe<Scalars['String']>;
+  context: Scalars['String'];
   /** The optional integration ID that this status check must originate from. */
-  integrationId: Scalars['Int'];
+  integrationId?: Maybe<Scalars['Int']>;
 };
 
 /** Required status check */
@@ -24243,13 +24254,13 @@ export type Tag = GitObject & Node & {
 export type TagNamePatternParameters = {
   __typename?: 'TagNamePatternParameters';
   /** How this rule will appear to users. */
-  name: Scalars['String'];
+  name?: Maybe<Scalars['String']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean'];
   /** The operator to use for matching. */
-  operator?: Maybe<Scalars['String']>;
+  operator: Scalars['String'];
   /** The pattern to match with. */
-  pattern?: Maybe<Scalars['String']>;
+  pattern: Scalars['String'];
 };
 
 /** Parameters to be used for the tag_name_pattern rule */
@@ -26502,7 +26513,7 @@ export type UpdateOrganizationWebCommitSignoffSettingPayload = {
 export type UpdateParameters = {
   __typename?: 'UpdateParameters';
   /** Branch can pull changes from its upstream repository */
-  updateAllowsFetchAndMerge?: Maybe<Scalars['Boolean']>;
+  updateAllowsFetchAndMerge: Scalars['Boolean'];
 };
 
 /** Parameters to be used for the update rule */
