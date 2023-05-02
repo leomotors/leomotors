@@ -17789,7 +17789,7 @@ export type Query = {
   organization?: Maybe<Organization>;
   /** The client's rate limit information. */
   rateLimit?: Maybe<RateLimit>;
-  /** Hack to workaround https://github.com/facebook/relay/issues/112 re-exposing the root query object */
+  /** Workaround for re-exposing the root query object. (Refer to https://github.com/facebook/relay/issues/112 for more information.) */
   relay: Query;
   /** Lookup a given repository by the owner and repository name. */
   repository?: Maybe<Repository>;
