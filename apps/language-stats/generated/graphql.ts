@@ -15533,9 +15533,9 @@ export type ProjectV2Item = Node & {
   creator?: Maybe<Actor>;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
-  /** A specific field value given a field name */
+  /** The field value of the first project field which matches the 'name' argument that is set on the item. */
   fieldValueByName?: Maybe<ProjectV2ItemFieldValue>;
-  /** List of field values */
+  /** The field values that are set on the item. */
   fieldValues: ProjectV2ItemFieldValueConnection;
   id: Scalars['ID'];
   /** Whether the item is archived. */
