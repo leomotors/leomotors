@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-05-20T21:12:49Z"
+    "__pushedAt": "2023-05-21T21:14:12Z"
   },
   "Salim-Bot": {
     "TypeScript": 37201,
@@ -527,5 +527,11 @@
     "JavaScript": 9591,
     "__isArchived": false,
     "__pushedAt": "2023-03-22T05:08:30Z"
+  },
+  "javadx-sun-plus": {
+    "JavaScript": 1084,
+    "Java": 126314,
+    "__isArchived": true,
+    "__pushedAt": "2023-05-22T13:18:18Z"
   }
 }
