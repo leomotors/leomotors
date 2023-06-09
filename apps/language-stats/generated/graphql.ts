@@ -28007,6 +28007,8 @@ export type WorkflowRun = Node & UniformResourceLocatable & {
   deploymentReviews: DeploymentReviewConnection;
   /** The event that triggered the workflow run */
   event: Scalars['String'];
+  /** The workflow file */
+  file?: Maybe<WorkflowRunFile>;
   id: Scalars['ID'];
   /** The pending deployment requests of all check runs in this workflow run */
   pendingDeploymentRequests: DeploymentRequestConnection;
@@ -28060,6 +28062,28 @@ export type WorkflowRunEdge = {
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
   node?: Maybe<WorkflowRun>;
+};
+
+/** An executed workflow file for a workflow run. */
+export type WorkflowRunFile = Node & UniformResourceLocatable & {
+  __typename?: 'WorkflowRunFile';
+  id: Scalars['ID'];
+  /** The path of the workflow file relative to its repository. */
+  path: Scalars['String'];
+  /** The direct link to the file in the repository which stores the workflow file. */
+  repositoryFileUrl: Scalars['URI'];
+  /** The repository name and owner which stores the workflow file. */
+  repositoryName: Scalars['URI'];
+  /** The HTTP path for this workflow run file */
+  resourcePath: Scalars['URI'];
+  /** The parent workflow run execution for this file. */
+  run: WorkflowRun;
+  /** The HTTP URL for this workflow run file */
+  url: Scalars['URI'];
+  /** If the viewer has permissions to push to the repository which stores the workflow. */
+  viewerCanPushRepository: Scalars['Boolean'];
+  /** If the viewer has permissions to read the repository which stores the workflow. */
+  viewerCanReadRepository: Scalars['Boolean'];
 };
 
 /** Ways in which lists of workflow runs can be ordered upon return. */
