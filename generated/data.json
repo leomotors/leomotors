@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-06-10T21:15:06Z"
+    "__pushedAt": "2023-06-11T21:13:35Z"
   },
   "Salim-Bot": {
     "TypeScript": 37201,
@@ -541,7 +541,7 @@
     "SCSS": 59,
     "Svelte": 10656,
     "Python": 1094,
-    "__isArchived": false,
+    "__isArchived": true,
     "__pushedAt": "2023-06-11T17:32:44Z"
   }
 }
