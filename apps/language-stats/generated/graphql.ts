@@ -22086,6 +22086,12 @@ export enum RuleBypassMode {
   None = 'NONE',
   /** Those with bypass permission at the organization level can bypass */
   Organization = 'ORGANIZATION',
+  /** Those with bypass permission at the organization level can always bypass */
+  OrganizationAlways = 'ORGANIZATION_ALWAYS',
+  /** Bypassing is disabled */
+  OrganizationNone = 'ORGANIZATION_NONE',
+  /** Those with bypass permission at the organization level can bypass for pull requests only */
+  OrganizationPrsOnly = 'ORGANIZATION_PRS_ONLY',
   /** Those with bypass permission at the repository level can bypass */
   Repository = 'REPOSITORY'
 }
