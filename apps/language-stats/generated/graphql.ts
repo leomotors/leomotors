@@ -11936,11 +11936,11 @@ export enum OidcProviderType {
 
 /** Metadata for an audit entry with action oauth_application.* */
 export type OauthApplicationAuditEntryData = {
-  /** The name of the OAuth Application. */
+  /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
-  /** The HTTP path for the OAuth Application */
+  /** The HTTP path for the OAuth application */
   oauthApplicationResourcePath?: Maybe<Scalars['URI']>;
-  /** The HTTP URL for the OAuth Application */
+  /** The HTTP URL for the OAuth application */
   oauthApplicationUrl?: Maybe<Scalars['URI']>;
 };
 
@@ -11961,18 +11961,18 @@ export type OauthApplicationCreateAuditEntry = AuditEntry & Node & OauthApplicat
   actorResourcePath?: Maybe<Scalars['URI']>;
   /** The HTTP URL for the actor. */
   actorUrl?: Maybe<Scalars['URI']>;
-  /** The application URL of the OAuth Application. */
+  /** The application URL of the OAuth application. */
   applicationUrl?: Maybe<Scalars['URI']>;
-  /** The callback URL of the OAuth Application. */
+  /** The callback URL of the OAuth application. */
   callbackUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
   id: Scalars['ID'];
-  /** The name of the OAuth Application. */
+  /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
-  /** The HTTP path for the OAuth Application */
+  /** The HTTP path for the OAuth application */
   oauthApplicationResourcePath?: Maybe<Scalars['URI']>;
-  /** The HTTP URL for the OAuth Application */
+  /** The HTTP URL for the OAuth application */
   oauthApplicationUrl?: Maybe<Scalars['URI']>;
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -11984,9 +11984,9 @@ export type OauthApplicationCreateAuditEntry = AuditEntry & Node & OauthApplicat
   organizationResourcePath?: Maybe<Scalars['URI']>;
   /** The HTTP URL for the organization */
   organizationUrl?: Maybe<Scalars['URI']>;
-  /** The rate limit of the OAuth Application. */
+  /** The rate limit of the OAuth application. */
   rateLimit?: Maybe<Scalars['Int']>;
-  /** The state of the OAuth Application. */
+  /** The state of the OAuth application. */
   state?: Maybe<OauthApplicationCreateAuditEntryState>;
   /** The user affected by the action */
   user?: Maybe<User>;
@@ -11998,13 +11998,13 @@ export type OauthApplicationCreateAuditEntry = AuditEntry & Node & OauthApplicat
   userUrl?: Maybe<Scalars['URI']>;
 };
 
-/** The state of an OAuth Application when it was created. */
+/** The state of an OAuth application when it was created. */
 export enum OauthApplicationCreateAuditEntryState {
-  /** The OAuth Application was active and allowed to have OAuth Accesses. */
+  /** The OAuth application was active and allowed to have OAuth Accesses. */
   Active = 'ACTIVE',
-  /** The OAuth Application was in the process of being deleted. */
+  /** The OAuth application was in the process of being deleted. */
   PendingDeletion = 'PENDING_DELETION',
-  /** The OAuth Application was suspended from generating OAuth Accesses due to abuse or security concerns. */
+  /** The OAuth application was suspended from generating OAuth Accesses due to abuse or security concerns. */
   Suspended = 'SUSPENDED'
 }
 
@@ -12690,11 +12690,11 @@ export type OrgOauthAppAccessApprovedAuditEntry = AuditEntry & Node & OauthAppli
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
   id: Scalars['ID'];
-  /** The name of the OAuth Application. */
+  /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
-  /** The HTTP path for the OAuth Application */
+  /** The HTTP path for the OAuth application */
   oauthApplicationResourcePath?: Maybe<Scalars['URI']>;
-  /** The HTTP URL for the OAuth Application */
+  /** The HTTP URL for the OAuth application */
   oauthApplicationUrl?: Maybe<Scalars['URI']>;
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12736,11 +12736,11 @@ export type OrgOauthAppAccessDeniedAuditEntry = AuditEntry & Node & OauthApplica
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
   id: Scalars['ID'];
-  /** The name of the OAuth Application. */
+  /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
-  /** The HTTP path for the OAuth Application */
+  /** The HTTP path for the OAuth application */
   oauthApplicationResourcePath?: Maybe<Scalars['URI']>;
-  /** The HTTP URL for the OAuth Application */
+  /** The HTTP URL for the OAuth application */
   oauthApplicationUrl?: Maybe<Scalars['URI']>;
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12782,11 +12782,11 @@ export type OrgOauthAppAccessRequestedAuditEntry = AuditEntry & Node & OauthAppl
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
   id: Scalars['ID'];
-  /** The name of the OAuth Application. */
+  /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
-  /** The HTTP path for the OAuth Application */
+  /** The HTTP path for the OAuth application */
   oauthApplicationResourcePath?: Maybe<Scalars['URI']>;
-  /** The HTTP URL for the OAuth Application */
+  /** The HTTP URL for the OAuth application */
   oauthApplicationUrl?: Maybe<Scalars['URI']>;
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
