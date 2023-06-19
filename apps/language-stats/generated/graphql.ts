@@ -16107,6 +16107,12 @@ export type ProjectV2SingleSelectField = Node & ProjectV2FieldCommon & {
   updatedAt: Scalars['DateTime'];
 };
 
+
+/** A single select field inside a project. */
+export type ProjectV2SingleSelectFieldOptionsArgs = {
+  names?: InputMaybe<Array<Scalars['String']>>;
+};
+
 /** Single select field option for a configuration for a project. */
 export type ProjectV2SingleSelectFieldOption = {
   __typename?: 'ProjectV2SingleSelectFieldOption';
@@ -20695,6 +20701,7 @@ export type RepositoryRepositoryTopicsArgs = {
 /** A repository contains the content for a project. */
 export type RepositoryRulesetArgs = {
   databaseId: Scalars['Int'];
+  includeParents?: InputMaybe<Scalars['Boolean']>;
 };
 
 
@@ -22421,7 +22428,9 @@ export enum SecurityAdvisoryEcosystem {
   /** Ruby gems hosted at RubyGems.org */
   Rubygems = 'RUBYGEMS',
   /** Rust crates */
-  Rust = 'RUST'
+  Rust = 'RUST',
+  /** Swift packages */
+  Swift = 'SWIFT'
 }
 
 /** An edge in a connection. */
