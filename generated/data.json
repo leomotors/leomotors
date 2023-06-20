@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-06-18T21:16:26Z"
+    "__pushedAt": "2023-06-19T21:18:49Z"
   },
   "Salim-Bot": {
     "TypeScript": 37201,
@@ -543,5 +543,11 @@
     "Python": 1094,
     "__isArchived": true,
     "__pushedAt": "2023-06-11T17:32:44Z"
+  },
+  "adobe-renew": {
+    "JavaScript": 137,
+    "TypeScript": 3624,
+    "__isArchived": false,
+    "__pushedAt": "2023-06-20T13:36:50Z"
   }
 }
