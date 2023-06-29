@@ -15522,26 +15522,6 @@ export type ProjectV2Collaborator = {
   userId?: InputMaybe<Scalars['ID']>;
 };
 
-/** Name of a color. */
-export enum ProjectV2ColorName {
-  /** Blue */
-  Blue = 'BLUE',
-  /** Gray */
-  Gray = 'GRAY',
-  /** Green */
-  Green = 'GREEN',
-  /** Orange */
-  Orange = 'ORANGE',
-  /** Pink */
-  Pink = 'PINK',
-  /** Purple */
-  Purple = 'PURPLE',
-  /** Red */
-  Red = 'RED',
-  /** Yellow */
-  Yellow = 'YELLOW'
-}
-
 /** The connection type for ProjectV2. */
 export type ProjectV2Connection = {
   __typename?: 'ProjectV2Connection';
@@ -15940,7 +15920,7 @@ export type ProjectV2ItemFieldReviewerValueReviewersArgs = {
 export type ProjectV2ItemFieldSingleSelectValue = Node & ProjectV2ItemFieldValueCommon & {
   __typename?: 'ProjectV2ItemFieldSingleSelectValue';
   /** The color applied to the selected single-select option. */
-  color: ProjectV2ColorName;
+  color: ProjectV2SingleSelectFieldOptionColor;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
   /** The actor who created the item. */
@@ -16236,6 +16216,12 @@ export type ProjectV2SingleSelectFieldOptionsArgs = {
 /** Single select field option for a configuration for a project. */
 export type ProjectV2SingleSelectFieldOption = {
   __typename?: 'ProjectV2SingleSelectFieldOption';
+  /** The option's display color. */
+  color: ProjectV2SingleSelectFieldOptionColor;
+  /** The option's plain-text description. */
+  description: Scalars['String'];
+  /** The option's description, possibly containing HTML. */
+  descriptionHTML: Scalars['String'];
   /** The option's ID. */
   id: Scalars['String'];
   /** The option's name. */
