@@ -23100,6 +23100,8 @@ export type SponsorsActivity = Node & {
   __typename?: 'SponsorsActivity';
   /** What action this activity indicates took place. */
   action: SponsorsActivityAction;
+  /** The sponsor's current privacy level. */
+  currentPrivacyLevel?: Maybe<SponsorshipPrivacy>;
   id: Scalars['ID'];
   /** The tier that the sponsorship used to use, for tier change events. */
   previousSponsorsTier?: Maybe<SponsorsTier>;
