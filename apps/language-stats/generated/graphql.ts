@@ -13740,6 +13740,7 @@ export type OrganizationMannequinsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  login?: InputMaybe<Scalars['String']>;
   orderBy?: InputMaybe<MannequinOrder>;
 };
 
@@ -21957,7 +21958,7 @@ export enum RequestableCheckStatusState {
 }
 
 /** Types that can be requested reviewers. */
-export type RequestedReviewer = Mannequin | Team | User;
+export type RequestedReviewer = Bot | Mannequin | Team | User;
 
 /** The connection type for RequestedReviewer. */
 export type RequestedReviewerConnection = {
