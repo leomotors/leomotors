@@ -77,9 +77,6 @@ and more, I'm lazy to update
 <details>
  <summary>📦 NPM Package <a href="https://www.npmjs.com/~leomotors">My Account</a> </summary>
 
-- [s-bot-framework](https://github.com/Leomotors/s-bot-framework) =>
-  [![](https://img.shields.io/npm/v/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
-  [![](https://img.shields.io/npm/dt/s-bot-framework.svg?maxAge=3600)](https://www.npmjs.com/package/s-bot-framework)
 - [polynomial-generator](https://github.com/Leomotors/polynomial-generator) =>
   [![](https://img.shields.io/npm/v/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
   [![](https://img.shields.io/npm/dt/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
