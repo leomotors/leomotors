@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-09-01T21:13:03Z"
+    "__pushedAt": "2023-09-02T21:13:54Z"
   },
   "salim-bot": {
     "TypeScript": 78909,
@@ -580,5 +580,14 @@
     "JavaScript": 1502,
     "__isArchived": false,
     "__pushedAt": "2023-08-28T07:24:47Z"
+  },
+  "espresso-generator": {
+    "JavaScript": 1520,
+    "HTML": 343,
+    "SCSS": 191,
+    "TypeScript": 7684,
+    "Svelte": 4186,
+    "__isArchived": false,
+    "__pushedAt": "2023-09-03T18:08:46Z"
   }
 }
