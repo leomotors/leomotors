@@ -17,28 +17,32 @@ Feel free to contribute to my repositories below
 - [RTX 2090 TiFy SUPER](https://github.com/Leomotors/RTX-2090-TiFy-SUPER) -> C++ UWP App + OpenCV
 - [Grab Krub](https://github.com/Leomotors/grab-krub) -> Internal meme of IPST, only contribute if you know
 - [You are a Failure](https://github.com/Leomotors/you-are-a-failure) -> FAILURE! Get it in Microsoft Store
-- [Terminal Video Player](https://github.com/Leomotors/Terminal-Video-Player) -> Do what it says (Want someone to optimize algo into sublinear)
+- [Terminal Video Player](https://github.com/Leomotors/Terminal-Video-Player) -> Do what it say (Want someone to optimize algo into sublinear)
 - [Salim Quote Delivery](https://github.com/Leomotors/salim-quote-delivery) -> VSCode extension no one use
 
-These are repos I would want you to contribute, however, if you find other repos you would like to contribute.  
-Feel free to open PR and don't forget to tell me hacktoberfest so that I can add a label for you.  
-Note that your PR must be relevant otherwise, I won't merge. Please read the CONTRIBUTING.md of each repo.
+These are repos I would want you to contribute, however if you find other repos you would like to contribute.  
+Feel free to open PR and don't forget to tell me hacktoberfest so that I can add label for you.  
+Note that your PR must be relevant otherwise I won't merge. Please read CONTRIBUTING.md of each repo.
 
 </details>
+
+## ℹ️ My Info
+
+🚹 Male @ 🎂 18 Yrs Old
 
 ## 🏢 Position
 
 - Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49 🥗)
 
-  - Core Team of @thinc-org [thinc.in.th](https://thinc.in.th) working on [CU Get Reg](https://github.com/thinc-org/cugetreg)
+  - Member of @thinc-org [thinc.in.th](https://thinc.in.th) working on [CU Get Reg](https://github.com/thinc-org/cugetreg)
 
 - Platform Engineer at Brikl
 
-Complete List in my [resume](https://resume.leomotors.me)
+Full List in my [resume](https://resume.leomotors.me)
 
 ## 🎒 Academic Stuff
 
-- 🏫 Graduated from (High School) Triam Udom Suksa School (TU82) in Math & Science with a GPAX of 3.95
+- 🏫 Graduated from (High School) Triam Udom Suksa School (TU82) in Math & Science with GPAX of 3.95
 
 - 🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and have gone under IOI Selection Camp (IPST 2.2 / Final Round)
 
@@ -52,7 +56,7 @@ Complete List in my [resume](https://resume.leomotors.me)
 
 🪟 Mostly code in Linux (WSL), powerlevel10k enjoyer, and is Windows Insider
 
-👀 Looking to collaborate, contribute to the Open-source community, and create more useful things
+👀 Looking on collaborating, contributing to Open-source community and create more useful things
 
 ## ⚒️ My Deployed/Published Projects/Apps/Packages
 
@@ -66,7 +70,7 @@ Complete List in my [resume](https://resume.leomotors.me)
 - [My Portfolio](https://github.com/Leomotors/portfolio-sv) => [Vercel App](https://portfolio.leomotors.vercel.app)
 - [กราบครับ](https://github.com/Leomotors/grab-krub) => [Vercel App](https://grab-krub.vercel.app)
 
-and more, I'm too lazy to update
+and more, I'm lazy to update
 
 </details>
 
