@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-09-05T21:12:59Z"
+    "__pushedAt": "2023-09-07T14:09:41Z"
   },
   "salim-bot": {
     "TypeScript": 78909,
@@ -582,6 +582,13 @@
     "__isArchived": false,
     "__pushedAt": "2023-09-04T07:42:51Z"
   },
+  "intro-cedt-backend-activity": {
+    "JavaScript": 7419,
+    "HTML": 1773,
+    "CSS": 1218,
+    "__isArchived": true,
+    "__pushedAt": "2023-09-06T15:56:52Z"
+  },
   "espresso-generator": {
     "JavaScript": 1520,
     "HTML": 359,
@@ -594,10 +601,10 @@
   },
   "home-env": {
     "C++": 1786,
-    "Dockerfile": 685,
-    "HTML": 1258,
-    "Go": 3083,
+    "Dockerfile": 861,
+    "HTML": 1882,
+    "Go": 4420,
     "__isArchived": false,
-    "__pushedAt": "2023-09-06T15:20:59Z"
+    "__pushedAt": "2023-09-07T13:19:25Z"
   }
 }

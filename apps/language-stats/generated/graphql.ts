@@ -6104,6 +6104,19 @@ export type EnterpriseBillingInfo = {
   totalLicenses: Scalars['Int'];
 };
 
+/** The connection type for Enterprise. */
+export type EnterpriseConnection = {
+  __typename?: 'EnterpriseConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EnterpriseEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Enterprise>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+};
+
 /** The possible values for the enterprise base repository permission setting. */
 export enum EnterpriseDefaultRepositoryPermissionSettingValue {
   /** Organization members will be able to clone, pull, push, and add new collaborators to all organization repositories. */
@@ -6117,6 +6130,15 @@ export enum EnterpriseDefaultRepositoryPermissionSettingValue {
   /** Organization members will be able to clone, pull, and push all organization repositories. */
   Write = 'WRITE'
 }
+
+/** An edge in a connection. */
+export type EnterpriseEdge = {
+  __typename?: 'EnterpriseEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Enterprise>;
+};
 
 /** The possible values for an enabled/disabled enterprise setting. */
 export enum EnterpriseEnabledDisabledSettingValue {
@@ -6255,6 +6277,32 @@ export enum EnterpriseMembersCanMakePurchasesSettingValue {
   Disabled = 'DISABLED',
   /** The setting is enabled for organizations in the enterprise. */
   Enabled = 'ENABLED'
+}
+
+/** The possible values we have for filtering Platform::Objects::User#enterprises. */
+export enum EnterpriseMembershipType {
+  /** Returns all enterprises in which the user is an admin. */
+  Admin = 'ADMIN',
+  /** Returns all enterprises in which the user is a member, admin, or billing manager. */
+  All = 'ALL',
+  /** Returns all enterprises in which the user is a billing manager. */
+  BillingManager = 'BILLING_MANAGER',
+  /** Returns all enterprises in which the user is a member of an org that is owned by the enterprise. */
+  OrgMembership = 'ORG_MEMBERSHIP'
+}
+
+/** Ordering options for enterprises. */
+export type EnterpriseOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order enterprises by. */
+  field: EnterpriseOrderField;
+};
+
+/** Properties by which enterprise connections can be ordered. */
+export enum EnterpriseOrderField {
+  /** Order enterprises by name */
+  Name = 'NAME'
 }
 
 /** The connection type for Organization. */
@@ -27585,6 +27633,8 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectOwner & P
   databaseId?: Maybe<Scalars['Int']>;
   /** The user's publicly visible profile email. */
   email: Scalars['String'];
+  /** A list of enterprises that the user belongs to. */
+  enterprises?: Maybe<EnterpriseConnection>;
   /** The estimated next GitHub Sponsors payout for this user/organization in cents (USD). */
   estimatedNextSponsorsPayoutInCents: Scalars['Int'];
   /** A list of users the given user is followed by. */
@@ -27776,6 +27826,17 @@ export type UserContributionsCollectionArgs = {
   from?: InputMaybe<Scalars['DateTime']>;
   organizationID?: InputMaybe<Scalars['ID']>;
   to?: InputMaybe<Scalars['DateTime']>;
+};
+
+
+/** A user is an individual's account on GitHub that owns repositories and can make new content. */
+export type UserEnterprisesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  membershipType?: InputMaybe<EnterpriseMembershipType>;
+  orderBy?: InputMaybe<EnterpriseOrder>;
 };
 
 
