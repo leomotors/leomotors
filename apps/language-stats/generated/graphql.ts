@@ -13602,6 +13602,8 @@ export type Organization = Actor & AnnouncementBanner & MemberStatusable & Node 
   announcementUserDismissible?: Maybe<Scalars['Boolean']>;
   /** Determine if this repository owner has any items that can be pinned to their profile. */
   anyPinnableItems: Scalars['Boolean'];
+  /** Identifies the date and time when the organization was archived. */
+  archivedAt?: Maybe<Scalars['DateTime']>;
   /** Audit log entries of the organization */
   auditLog: OrganizationAuditEntryConnection;
   /** A URL pointing to the organization's public avatar. */
