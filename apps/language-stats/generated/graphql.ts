@@ -2845,6 +2845,17 @@ export type ConnectedEvent = Node & {
   subject: ReferencedSubject;
 };
 
+/** The Contributing Guidelines for a repository. */
+export type ContributingGuidelines = {
+  __typename?: 'ContributingGuidelines';
+  /** The body of the Contributing Guidelines. */
+  body?: Maybe<Scalars['String']>;
+  /** The HTTP path for the Contributing Guidelines. */
+  resourcePath?: Maybe<Scalars['URI']>;
+  /** The HTTP URL for the Contributing Guidelines. */
+  url?: Maybe<Scalars['URI']>;
+};
+
 /** Represents a contribution a user made on GitHub, such as opening an issue. */
 export type Contribution = {
   /**
@@ -20362,6 +20373,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   commitComments: CommitCommentConnection;
   /** Returns a list of contact links associated to the repository */
   contactLinks?: Maybe<Array<RepositoryContactLink>>;
+  /** Returns the contributing guidelines for this repository. */
+  contributingGuidelines?: Maybe<ContributingGuidelines>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
