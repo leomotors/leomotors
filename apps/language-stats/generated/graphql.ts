@@ -21599,6 +21599,8 @@ export type RepositoryRule = Node & {
   id: Scalars['ID'];
   /** The parameters for this rule. */
   parameters?: Maybe<RuleParameters>;
+  /** The repository ruleset associated with this rule configuration */
+  repositoryRuleset?: Maybe<RepositoryRuleset>;
   /** The type of rule. */
   type: RepositoryRuleType;
 };
