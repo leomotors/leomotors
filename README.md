@@ -109,6 +109,9 @@ and more, I'm too lazy to update
 - [@cunny/archive](https://github.com/saltyaom/cunny-archive) =>
   [![](https://img.shields.io/npm/v/@cunny/archive.svg?maxAge=3600)](https://www.npmjs.com/package/@cunny/archive)
   [![](https://img.shields.io/npm/dt/@cunny/archive.svg?maxAge=3600)](https://www.npmjs.com/package/@cunny/archive)
+- [cocoa-discord](https://github.com/Leomotors/cocoa-discord) =>
+  [![](https://img.shields.io/npm/v/cocoa-discord.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord)
+  [![](https://img.shields.io/npm/dt/cocoa-discord.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord)
 
 This list is automatically kept up to date by this monorepo.
 

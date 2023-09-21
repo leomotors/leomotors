@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-09-19T21:14:53Z"
+    "__pushedAt": "2023-09-20T21:14:11Z"
   },
   "salim-bot": {
     "TypeScript": 78909,
@@ -167,9 +167,9 @@
   },
   "auto-publish-release": {
     "JavaScript": 1082,
-    "TypeScript": 3336,
+    "TypeScript": 3468,
     "__isArchived": false,
-    "__pushedAt": "2022-12-10T16:56:11Z"
+    "__pushedAt": "2023-09-21T14:33:57Z"
   },
   "Steganoplusplus": {
     "CMake": 850,
@@ -254,12 +254,12 @@
     "__pushedAt": "2023-01-18T08:38:36Z"
   },
   "cocoa-discord": {
-    "TypeScript": 125964,
-    "JavaScript": 6921,
+    "TypeScript": 119363,
+    "JavaScript": 5838,
     "CSS": 727,
-    "Shell": 176,
+    "Shell": 250,
     "__isArchived": false,
-    "__pushedAt": "2023-09-14T04:11:46Z"
+    "__pushedAt": "2023-09-21T16:12:11Z"
   },
   "simple-todo-app-tauri": {
     "HTML": 351,
