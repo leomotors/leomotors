@@ -5304,6 +5304,8 @@ export type Discussion = Closable & Comment & Deletable & Labelable & Lockable &
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
+  /** Only return answered/unanswered discussions */
+  isAnswered?: Maybe<Scalars['Boolean']>;
   /** A list of labels associated with the object. */
   labels?: Maybe<LabelConnection>;
   /** The moment the editor made the last edit */
@@ -20708,6 +20710,7 @@ export type RepositoryDiscussionCategoryArgs = {
 /** A repository contains the content for a project. */
 export type RepositoryDiscussionsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  answered?: InputMaybe<Scalars['Boolean']>;
   before?: InputMaybe<Scalars['String']>;
   categoryId?: InputMaybe<Scalars['ID']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -21672,17 +21675,17 @@ export enum RepositoryRuleType {
   Creation = 'CREATION',
   /** Only allow users with bypass permissions to delete matching refs. */
   Deletion = 'DELETION',
-  /** Prevent users with push access from force pushing to branches. */
+  /** Prevent users with push access from force pushing to refs. */
   NonFastForward = 'NON_FAST_FORWARD',
   /** Require all commits be made to a non-target branch and submitted via a pull request before they can be merged. */
   PullRequest = 'PULL_REQUEST',
-  /** Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule. */
+  /** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
   RequiredDeployments = 'REQUIRED_DEPLOYMENTS',
-  /** Prevent merge commits from being pushed to matching branches. */
+  /** Prevent merge commits from being pushed to matching refs. */
   RequiredLinearHistory = 'REQUIRED_LINEAR_HISTORY',
-  /** Commits pushed to matching branches must have verified signatures. */
+  /** Commits pushed to matching refs must have verified signatures. */
   RequiredSignatures = 'REQUIRED_SIGNATURES',
-  /** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed. */
+  /** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed. */
   RequiredStatusChecks = 'REQUIRED_STATUS_CHECKS',
   /** Tag name pattern */
   TagNamePattern = 'TAG_NAME_PATTERN',
@@ -22122,14 +22125,14 @@ export type RequirableByPullRequestIsRequiredArgs = {
   pullRequestNumber?: InputMaybe<Scalars['Int']>;
 };
 
-/** Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule. */
+/** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
 export type RequiredDeploymentsParameters = {
   __typename?: 'RequiredDeploymentsParameters';
   /** The environments that must be successfully deployed to before branches can be merged. */
   requiredDeploymentEnvironments: Array<Scalars['String']>;
 };
 
-/** Choose which environments must be successfully deployed to before branches can be merged into a branch that matches this rule. */
+/** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
 export type RequiredDeploymentsParametersInput = {
   /** The environments that must be successfully deployed to before branches can be merged. */
   requiredDeploymentEnvironments: Array<Scalars['String']>;
@@ -22152,7 +22155,7 @@ export type RequiredStatusCheckInput = {
   context: Scalars['String'];
 };
 
-/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed. */
+/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed. */
 export type RequiredStatusChecksParameters = {
   __typename?: 'RequiredStatusChecksParameters';
   /** Status checks that are required. */
@@ -22161,7 +22164,7 @@ export type RequiredStatusChecksParameters = {
   strictRequiredStatusChecksPolicy: Scalars['Boolean'];
 };
 
-/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a branch that matches this rule after status checks have passed. */
+/** Choose which status checks must pass before branches can be merged into a branch that matches this rule. When enabled, commits must first be pushed to another branch, then merged or pushed directly to a ref that matches this rule after status checks have passed. */
 export type RequiredStatusChecksParametersInput = {
   /** Status checks that are required. */
   requiredStatusChecks: Array<StatusCheckConfigurationInput>;

@@ -88,9 +88,6 @@ and more, I'm too lazy to update
 - [crlf-phobia](https://github.com/Leomotors/CRLF-Phobia) =>
   [![](https://img.shields.io/npm/v/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
   [![](https://img.shields.io/npm/dt/crlf-phobia.svg?maxAge=3600)](https://www.npmjs.com/package/crlf-phobia)
-- [@leomotors/music-bot](https://github.com/Leomotors/music-bot) =>
-  [![](https://img.shields.io/npm/v/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
-  [![](https://img.shields.io/npm/dt/@leomotors/music-bot.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/music-bot)
 - [@leomotors/sv-components](https://github.com/Leomotors/sv-components) =>
   [![](https://img.shields.io/npm/v/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
   [![](https://img.shields.io/npm/dt/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
@@ -112,6 +109,9 @@ and more, I'm too lazy to update
 - [cocoa-discord](https://github.com/Leomotors/cocoa-discord) =>
   [![](https://img.shields.io/npm/v/cocoa-discord.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord)
   [![](https://img.shields.io/npm/dt/cocoa-discord.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord)
+- [@cocoa-discord/music-module](https://github.com/Leomotors/cocoa-discord) =>
+  [![](https://img.shields.io/npm/v/@cocoa-discord/music-module.svg?maxAge=3600)](https://www.npmjs.com/package/@cocoa-discord/music-module)
+  [![](https://img.shields.io/npm/dt/@cocoa-discord/music-module.svg?maxAge=3600)](https://www.npmjs.com/package/@cocoa-discord/music-module)
 
 This list is automatically kept up to date by this monorepo.
 
