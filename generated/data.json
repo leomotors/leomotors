@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-09-23T21:20:22Z"
+    "__pushedAt": "2023-09-24T21:12:59Z"
   },
   "salim-bot": {
     "TypeScript": 78909,
@@ -152,13 +152,13 @@
   },
   "anime-captcha": {
     "HTML": 670,
-    "Svelte": 24730,
-    "TypeScript": 7688,
-    "JavaScript": 3589,
-    "SCSS": 1285,
+    "Svelte": 24779,
+    "TypeScript": 7689,
+    "JavaScript": 3594,
+    "SCSS": 1361,
     "Shell": 136,
     "__isArchived": false,
-    "__pushedAt": "2022-12-24T19:54:57Z"
+    "__pushedAt": "2023-09-25T10:44:37Z"
   },
   "npm-scripts": {
     "JavaScript": 1631,
@@ -254,12 +254,12 @@
     "__pushedAt": "2023-01-18T08:38:36Z"
   },
   "cocoa-discord": {
-    "TypeScript": 126778,
-    "JavaScript": 6211,
+    "TypeScript": 126139,
+    "JavaScript": 6142,
     "CSS": 727,
     "Shell": 250,
     "__isArchived": false,
-    "__pushedAt": "2023-09-23T08:30:47Z"
+    "__pushedAt": "2023-09-25T12:47:16Z"
   },
   "simple-todo-app-tauri": {
     "HTML": 351,
