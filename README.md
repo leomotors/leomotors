@@ -32,7 +32,7 @@ Note that your PR must be relevant otherwise, I won't merge. Please read the CON
 
   - Core Team of @thinc-org [thinc.in.th](https://thinc.in.th) working on [CU Get Reg](https://github.com/thinc-org/cugetreg)
 
-- Platform Engineer at Brikl
+- Ex-Platform Engineer at Brikl
 
 Complete List in my [resume](https://resume.leomotors.me)
 
