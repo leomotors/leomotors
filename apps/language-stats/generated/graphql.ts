@@ -23084,6 +23084,8 @@ export enum SocialAccountProvider {
   Linkedin = 'LINKEDIN',
   /** Open-source federated microblogging service. */
   Mastodon = 'MASTODON',
+  /** JavaScript package registry. */
+  Npm = 'NPM',
   /** Social news aggregation and discussion website. */
   Reddit = 'REDDIT',
   /** Live-streaming service. */
