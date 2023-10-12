@@ -76,9 +76,6 @@ and more, I'm too lazy to update
 - [polynomial-generator](https://github.com/Leomotors/polynomial-generator) =>
   [![](https://img.shields.io/npm/v/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
   [![](https://img.shields.io/npm/dt/polynomial-generator.svg?maxAge=3600)](https://www.npmjs.com/package/polynomial-generator)
-- [cocoa-discord-utils](https://github.com/Leomotors/cocoa-discord-utils) =>
-  [![](https://img.shields.io/npm/v/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
-  [![](https://img.shields.io/npm/dt/cocoa-discord-utils.svg?maxAge=3600)](https://www.npmjs.com/package/cocoa-discord-utils)
 - [@leomotors/scripts](https://github.com/Leomotors/npm-scripts) =>
   [![](https://img.shields.io/npm/v/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
   [![](https://img.shields.io/npm/dt/@leomotors/scripts.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/scripts)
