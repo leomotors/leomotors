@@ -2,29 +2,17 @@
 
 <h3 align="center"> => <a href="https://leomotors.me">My Homepage</a> <= </h3>
 
-<details>
-<summary><b> Hacktoberfest Repos (in case you still want to contribute) </b></summary>
-
 ## 🎃 Hacktoberfest Time!!! 🎃
 
 Feel free to contribute to my repositories below
 
 - [Anime Captcha](https://github.com/Leomotors/anime-captcha) -> My most popular Repo
-- [Com POG](https://github.com/Leomotors/Com-POG) -> Writing solutions for grader solutions (Chula Intania Only)
 - [Golden Frame](https://github.com/Leomotors/golden-frame) -> Just Golden Frame, OpenCV Python
-- [MIND Is Not Difficult](https://github.com/Leomotors/MIND-Is-Not-Difficult) -> Polynomial Factor Game
-- [Rabbit House Menu](https://github.com/Leomotors/rabbit-house-menu) -> C# UWP App
-- [RTX 2090 TiFy SUPER](https://github.com/Leomotors/RTX-2090-TiFy-SUPER) -> C++ UWP App + OpenCV
-- [Grab Krub](https://github.com/Leomotors/grab-krub) -> Internal meme of IPST, only contribute if you know
-- [You are a Failure](https://github.com/Leomotors/you-are-a-failure) -> FAILURE! Get it in Microsoft Store
 - [Terminal Video Player](https://github.com/Leomotors/Terminal-Video-Player) -> Do what it says (Want someone to optimize algo into sublinear)
-- [Salim Quote Delivery](https://github.com/Leomotors/salim-quote-delivery) -> VSCode extension no one use
 
 These are repos I would want you to contribute, however, if you find other repos you would like to contribute.  
 Feel free to open PR and don't forget to tell me hacktoberfest so that I can add a label for you.  
 Note that your PR must be relevant otherwise, I won't merge. Please read the CONTRIBUTING.md of each repo.
-
-</details>
 
 ## 🏢 Position
 
