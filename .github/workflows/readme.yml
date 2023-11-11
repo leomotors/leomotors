@@ -3,6 +3,12 @@ name: Update Readme Only
 on:
   workflow_dispatch:
 
+  push:
+    branches:
+      - main
+    paths:
+      - apps/readme/template.md
+
 jobs:
   readme:
     name: Readme Only

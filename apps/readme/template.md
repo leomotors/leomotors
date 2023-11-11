@@ -31,7 +31,7 @@ Note that your PR must be relevant otherwise, I won't merge. Please read the CON
 
 - Ex Platform Engineer (Frontend) at BRIKL
 
-Complete List in my [resume](https://resume.leomotors.me) (Note: Not updated)
+See more in my [resume](https://resume.leomotors.me) (Note: Not updated)
 
 ## 🎒 Academic Stuff
 
