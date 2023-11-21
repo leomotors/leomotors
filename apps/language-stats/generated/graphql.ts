@@ -10441,7 +10441,7 @@ export type Mutation = {
   createCommitOnBranch?: Maybe<CreateCommitOnBranchPayload>;
   /** Create a discussion. */
   createDiscussion?: Maybe<CreateDiscussionPayload>;
-  /** Creates an organization as part of an enterprise account. */
+  /** Creates an organization as part of an enterprise account. A personal access token used to create an organization is implicitly permitted to update the organization it created, if the organization is part of an enterprise that has SAML enabled or uses Enterprise Managed Users. If the organization is not part of such an enterprise, and instead has SAML enabled for it individually, the token will then require SAML authorization to continue working against that organization. */
   createEnterpriseOrganization?: Maybe<CreateEnterpriseOrganizationPayload>;
   /** Creates an environment or simply returns it if already exists. */
   createEnvironment?: Maybe<CreateEnvironmentPayload>;
