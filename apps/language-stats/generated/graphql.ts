@@ -621,6 +621,7 @@ export type AddedToMergeQueueEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The user who added this Pull Request to the merge queue */
   enqueuer?: Maybe<User>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The merge queue where this pull request was added to. */
   mergeQueue?: Maybe<MergeQueue>;
@@ -637,6 +638,7 @@ export type AddedToProjectEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -659,6 +661,7 @@ export type App = Node & {
   databaseId?: Maybe<Scalars['Int']>;
   /** The description of the app. */
   description?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The IP addresses of the app. */
   ipAllowListEntries: IpAllowListEntryConnection;
@@ -792,6 +795,7 @@ export type AssignedEvent = Node & {
   assignee?: Maybe<Assignee>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /**
    * Identifies the user who was assigned.
@@ -859,6 +863,7 @@ export type AutoMergeDisabledEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The user who disabled auto-merge for this Pull Request */
   disabler?: Maybe<User>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event */
   pullRequest?: Maybe<PullRequest>;
@@ -877,6 +882,7 @@ export type AutoMergeEnabledEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The user who enabled auto-merge for this Pull Request */
   enabler?: Maybe<User>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest?: Maybe<PullRequest>;
@@ -910,6 +916,7 @@ export type AutoRebaseEnabledEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The user who enabled auto-merge (rebase) for this Pull Request */
   enabler?: Maybe<User>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest?: Maybe<PullRequest>;
@@ -924,6 +931,7 @@ export type AutoSquashEnabledEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The user who enabled auto-merge (squash) for this Pull Request */
   enabler?: Maybe<User>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest?: Maybe<PullRequest>;
@@ -936,6 +944,7 @@ export type AutomaticBaseChangeFailedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The new base for this PR */
   newBase: Scalars['String'];
@@ -952,6 +961,7 @@ export type AutomaticBaseChangeSucceededEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The new base for this PR */
   newBase: Scalars['String'];
@@ -972,6 +982,7 @@ export type BaseRefChangedEvent = Node & {
   currentRefName: Scalars['String'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the name of the base ref for the pull request before it was changed. */
   previousRefName: Scalars['String'];
@@ -988,6 +999,7 @@ export type BaseRefDeletedEvent = Node & {
   baseRefName?: Maybe<Scalars['String']>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest?: Maybe<PullRequest>;
@@ -1004,6 +1016,7 @@ export type BaseRefForcePushedEvent = Node & {
   beforeCommit?: Maybe<Commit>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -1042,6 +1055,7 @@ export type Blob = GitObject & Node & {
   commitResourcePath: Scalars['URI'];
   /** The HTTP URL for this Git object */
   commitUrl: Scalars['URI'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Indicates whether the Blob is binary or text. Returns null if unable to determine the encoding. */
   isBinary?: Maybe<Scalars['Boolean']>;
@@ -1064,6 +1078,7 @@ export type Bot = Actor & Node & UniformResourceLocatable & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The username of the actor. */
   login: Scalars['String'];
@@ -1130,6 +1145,7 @@ export type BranchProtectionRule = Node & {
   databaseId?: Maybe<Scalars['Int']>;
   /** Will new commits pushed to matching branches dismiss pull request review approvals. */
   dismissesStaleReviews: Scalars['Boolean'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Can admins overwrite branch protection. */
   isAdminEnforced: Scalars['Boolean'];
@@ -1309,6 +1325,7 @@ export type BypassForcePushAllowance = Node & {
   actor?: Maybe<BranchActorAllowanceActor>;
   /** Identifies the branch protection rule associated with the allowed user, team, or app. */
   branchProtectionRule?: Maybe<BranchProtectionRule>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -1341,6 +1358,7 @@ export type BypassPullRequestAllowance = Node & {
   actor?: Maybe<BranchActorAllowanceActor>;
   /** Identifies the branch protection rule associated with the allowed user, team, or app. */
   branchProtectionRule?: Maybe<BranchProtectionRule>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -1382,6 +1400,7 @@ export type Cwe = Node & {
   cweId: Scalars['String'];
   /** A detailed description of this CWE */
   description: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of this CWE */
   name: Scalars['String'];
@@ -1616,6 +1635,7 @@ export type CheckRun = Node & RequirableByPullRequest & UniformResourceLocatable
   detailsUrl?: Maybe<Scalars['URI']>;
   /** A reference for the check run on the integrator's system. */
   externalId?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether this is required to pass before merging for a specific pull request. */
   isRequired: Scalars['Boolean'];
@@ -1870,6 +1890,7 @@ export type CheckSuite = Node & {
   creator?: Maybe<User>;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** A list of open pull requests matching the check suite. */
   matchingPullRequests?: Maybe<PullRequestConnection>;
@@ -2126,6 +2147,7 @@ export type ClosedEvent = Node & UniformResourceLocatable & {
   closer?: Maybe<Closer>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The HTTP path for this closed event. */
   resourcePath: Scalars['URI'];
@@ -2143,6 +2165,7 @@ export type CodeOfConduct = Node & {
   __typename?: 'CodeOfConduct';
   /** The body of the Code of Conduct */
   body?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The key for the Code of Conduct */
   key: Scalars['String'];
@@ -2182,6 +2205,7 @@ export type Comment = {
   createdViaEmail: Scalars['Boolean'];
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** The Node ID of the Comment object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -2255,6 +2279,7 @@ export type CommentDeletedEvent = Node & {
   databaseId?: Maybe<Scalars['Int']>;
   /** The user who authored the deleted comment. */
   deletedCommentAuthor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -2310,6 +2335,7 @@ export type Commit = GitObject & Node & Subscribable & UniformResourceLocatable 
   file?: Maybe<TreeEntry>;
   /** The linear commit history starting from (and including) this commit, in the same order as `git log`. */
   history: CommitHistoryConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The Git commit message */
   message: Scalars['String'];
@@ -2516,6 +2542,7 @@ export type CommitComment = Comment & Deletable & Minimizable & Node & Reactable
   databaseId?: Maybe<Scalars['Int']>;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -2608,6 +2635,7 @@ export type CommitCommentThread = Node & RepositoryNode & {
   comments: CommitCommentConnection;
   /** The commit the comments were made on. */
   commit?: Maybe<Commit>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The file the comments were made on. */
   path?: Maybe<Scalars['String']>;
@@ -2805,6 +2833,7 @@ export type Comparison = Node & {
   commits: ComparisonCommitConnection;
   /** The head revision of this comparison. */
   headTarget: GitObject;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The status of this comparison. */
   status: ComparisonStatus;
@@ -2853,6 +2882,7 @@ export type ConnectedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Reference originated in a different repository. */
   isCrossRepository: Scalars['Boolean'];
@@ -3225,6 +3255,7 @@ export type ConvertToDraftEvent = Node & UniformResourceLocatable & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -3243,6 +3274,7 @@ export type ConvertedNoteToIssueEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -3255,6 +3287,7 @@ export type ConvertedToDiscussionEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The discussion that the issue was converted into. */
   discussion?: Maybe<Discussion>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -4297,6 +4330,7 @@ export type CrossReferencedEvent = Node & UniformResourceLocatable & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Reference originated in a different repository. */
   isCrossRepository: Scalars['Boolean'];
@@ -4745,6 +4779,7 @@ export type DemilestonedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the milestone title associated with the 'demilestoned' event. */
   milestoneTitle: Scalars['String'];
@@ -4805,6 +4840,7 @@ export type DeployKey = Node & {
   __typename?: 'DeployKey';
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of the DeployKey object */
   id: Scalars['ID'];
   /** The deploy key. */
   key: Scalars['String'];
@@ -4849,6 +4885,7 @@ export type DeployedEvent = Node & {
   databaseId?: Maybe<Scalars['Int']>;
   /** The deployment associated with the 'deployed' event. */
   deployment: Deployment;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -4873,6 +4910,7 @@ export type Deployment = Node & {
   description?: Maybe<Scalars['String']>;
   /** The latest environment to which this deployment was made. */
   environment?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The latest environment to which this deployment was made. */
   latestEnvironment?: Maybe<Scalars['String']>;
@@ -4936,6 +4974,7 @@ export type DeploymentEnvironmentChangedEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The deployment status that updated the deployment environment. */
   deploymentStatus: DeploymentStatus;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -5064,6 +5103,7 @@ export type DeploymentReview = Node & {
   databaseId?: Maybe<Scalars['Int']>;
   /** The environments approved or rejected */
   environments: EnvironmentConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The decision of the user. */
   state: DeploymentReviewState;
@@ -5174,6 +5214,7 @@ export type DeploymentStatus = Node & {
   description?: Maybe<Scalars['String']>;
   /** Identifies the environment URL of the deployment. */
   environmentUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the log URL of the deployment. */
   logUrl?: Maybe<Scalars['URI']>;
@@ -5276,6 +5317,7 @@ export type DisconnectedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Reference originated in a different repository. */
   isCrossRepository: Scalars['Boolean'];
@@ -5322,6 +5364,7 @@ export type Discussion = Closable & Comment & Deletable & Labelable & Lockable &
   databaseId?: Maybe<Scalars['Int']>;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -5431,6 +5474,7 @@ export type DiscussionCategory = Node & RepositoryNode & {
   emoji: Scalars['String'];
   /** This category's emoji rendered as HTML. */
   emojiHTML: Scalars['HTML'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether or not discussions in this category support choosing an answer with the markDiscussionCommentAsAnswer mutation. */
   isAnswerable: Scalars['Boolean'];
@@ -5501,6 +5545,7 @@ export type DiscussionComment = Comment & Deletable & Minimizable & Node & React
   discussion?: Maybe<Discussion>;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -5648,6 +5693,7 @@ export type DiscussionPoll = Node & {
   __typename?: 'DiscussionPoll';
   /** The discussion that this poll belongs to. */
   discussion?: Maybe<Discussion>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The options for this poll. */
   options?: Maybe<DiscussionPollOptionConnection>;
@@ -5674,6 +5720,7 @@ export type DiscussionPollOptionsArgs = {
 /** An option for a discussion poll. */
 export type DiscussionPollOption = Node & {
   __typename?: 'DiscussionPollOption';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The text for this option. */
   option: Scalars['String'];
@@ -5810,6 +5857,7 @@ export type DraftIssue = Node & {
   createdAt: Scalars['DateTime'];
   /** The actor who created this draft issue. */
   creator?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** List of items linked with the draft issue (currently draft issue can be linked to only one item). */
   projectV2Items: ProjectV2ItemConnection;
@@ -5945,6 +5993,7 @@ export type Enterprise = AnnouncementBanner & Node & {
   description?: Maybe<Scalars['String']>;
   /** The description of the enterprise as HTML. */
   descriptionHTML: Scalars['HTML'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The location of the enterprise. */
   location?: Maybe<Scalars['String']>;
@@ -6034,6 +6083,7 @@ export type EnterpriseAdministratorInvitation = Node & {
   email?: Maybe<Scalars['String']>;
   /** The enterprise the invitation is for. */
   enterprise: Enterprise;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The user who was invited to the enterprise. */
   invitee?: Maybe<User>;
@@ -6225,6 +6275,7 @@ export type EnterpriseIdentityProvider = Node & {
   enterprise?: Maybe<Enterprise>;
   /** ExternalIdentities provisioned by this identity provider. */
   externalIdentities: ExternalIdentityConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The x509 certificate used by the identity provider to sign assertions and responses. */
   idpCertificate?: Maybe<Scalars['X509Certificate']>;
@@ -6811,6 +6862,7 @@ export type EnterprisePendingMemberInvitationEdge = {
 /** A subset of repository information queryable from an enterprise. */
 export type EnterpriseRepositoryInfo = Node & {
   __typename?: 'EnterpriseRepositoryInfo';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies if the repository is private or internal. */
   isPrivate: Scalars['Boolean'];
@@ -6851,6 +6903,7 @@ export type EnterpriseServerInstallation = Node & {
   customerName: Scalars['String'];
   /** The host name of the Enterprise Server installation. */
   hostName: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether or not the installation is connected to an Enterprise Server installation via GitHub Connect. */
   isConnected: Scalars['Boolean'];
@@ -6955,6 +7008,7 @@ export type EnterpriseServerUserAccount = Node & {
   emails: EnterpriseServerUserAccountEmailConnection;
   /** The Enterprise Server installation on which this user account exists. */
   enterpriseServerInstallation: EnterpriseServerInstallation;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the user account is a site administrator on the Enterprise Server installation. */
   isSiteAdmin: Scalars['Boolean'];
@@ -7009,6 +7063,7 @@ export type EnterpriseServerUserAccountEmail = Node & {
   createdAt: Scalars['DateTime'];
   /** The email address. */
   email: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Indicates whether this is the primary email of the associated user account. */
   isPrimary: Scalars['Boolean'];
@@ -7079,6 +7134,7 @@ export type EnterpriseServerUserAccountsUpload = Node & {
   enterprise: Enterprise;
   /** The Enterprise Server installation for which this upload was generated. */
   enterpriseServerInstallation: EnterpriseServerInstallation;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the file uploaded. */
   name: Scalars['String'];
@@ -7145,6 +7201,7 @@ export type EnterpriseUserAccount = Actor & Node & {
   enterprise: Enterprise;
   /** A list of Enterprise Server installations this user is a member of. */
   enterpriseInstallations: EnterpriseServerInstallationMembershipConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** An identifier for the enterprise user account, a login or email address */
   login: Scalars['String'];
@@ -7215,6 +7272,7 @@ export type Environment = Node & {
   __typename?: 'Environment';
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the environment */
   name: Scalars['String'];
@@ -7272,6 +7330,7 @@ export type ExternalIdentity = Node & {
   __typename?: 'ExternalIdentity';
   /** The GUID for this identity */
   guid: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Organization invitation for this SCIM-provisioned external identity */
   organizationInvitation?: Maybe<OrganizationInvitation>;
@@ -7614,6 +7673,7 @@ export type Gist = Node & Starrable & UniformResourceLocatable & {
   files?: Maybe<Array<Maybe<GistFile>>>;
   /** A list of forks associated with the gist */
   forks: GistConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies if the gist is a fork. */
   isFork: Scalars['Boolean'];
@@ -7701,6 +7761,7 @@ export type GistComment = Comment & Deletable & Minimizable & Node & Updatable &
   editor?: Maybe<Actor>;
   /** The associated gist. */
   gist: Gist;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -7908,6 +7969,7 @@ export type GitObject = {
   commitResourcePath: Scalars['URI'];
   /** The HTTP URL for this Git object */
   commitUrl: Scalars['URI'];
+  /** The Node ID of the GitObject object */
   id: Scalars['ID'];
   /** The Git object ID */
   oid: Scalars['GitObjectID'];
@@ -8052,6 +8114,7 @@ export type HeadRefDeletedEvent = Node & {
   headRef?: Maybe<Ref>;
   /** Identifies the name of the Ref associated with the `head_ref_deleted` event. */
   headRefName: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -8068,6 +8131,7 @@ export type HeadRefForcePushedEvent = Node & {
   beforeCommit?: Maybe<Commit>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -8082,6 +8146,7 @@ export type HeadRefRestoredEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -8150,6 +8215,7 @@ export type IpAllowListEntry = Node & {
   allowListValue: Scalars['String'];
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the entry is currently active. */
   isActive: Scalars['Boolean'];
@@ -8249,6 +8315,7 @@ export type Issue = Assignable & Closable & Comment & Deletable & Labelable & Lo
   fullDatabaseId?: Maybe<Scalars['BigInt']>;
   /** The hovercard information for this issue */
   hovercard: Hovercard;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -8526,6 +8593,7 @@ export type IssueComment = Comment & Deletable & Minimizable & Node & Reactable 
   editor?: Maybe<Actor>;
   /** Identifies the primary key from the database as a BigInt. */
   fullDatabaseId?: Maybe<Scalars['BigInt']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -8923,6 +8991,7 @@ export type Label = Node & {
   createdAt?: Maybe<Scalars['DateTime']>;
   /** A brief description of this label. */
   description?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Indicates whether or not this is a default label. */
   isDefault: Scalars['Boolean'];
@@ -9030,6 +9099,7 @@ export type LabeledEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the label associated with the 'labeled' event. */
   label: Label;
@@ -9042,6 +9112,7 @@ export type Language = Node & {
   __typename?: 'Language';
   /** The color defined for the current language. */
   color?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the current language. */
   name: Scalars['String'];
@@ -9098,6 +9169,7 @@ export type License = Node & {
   featured: Scalars['Boolean'];
   /** Whether the license should be displayed in license pickers */
   hidden: Scalars['Boolean'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Instructions on how to implement the license */
   implementation?: Maybe<Scalars['String']>;
@@ -9192,6 +9264,7 @@ export type LinkRepositoryToProjectPayload = {
 /** A branch linked to an issue. */
 export type LinkedBranch = Node & {
   __typename?: 'LinkedBranch';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The branch's ref. */
   ref?: Maybe<Ref>;
@@ -9267,6 +9340,7 @@ export type LockedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Reason that the conversation was locked (optional). */
   lockReason?: Maybe<LockReason>;
@@ -9287,6 +9361,7 @@ export type Mannequin = Actor & Node & UniformResourceLocatable & {
   databaseId?: Maybe<Scalars['Int']>;
   /** The mannequin's email on the source instance. */
   email?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The username of the actor. */
   login: Scalars['String'];
@@ -9423,6 +9498,7 @@ export type MarkedAsDuplicateEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The issue or pull request which has been marked as a duplicate of another. */
   duplicate?: Maybe<IssueOrPullRequest>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Canonical and duplicate belong to different repositories. */
   isCrossRepository: Scalars['Boolean'];
@@ -9435,6 +9511,7 @@ export type MarketplaceCategory = Node & {
   description?: Maybe<Scalars['String']>;
   /** The technical description of how apps listed in this category work with GitHub. */
   howItWorks?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The category's name. */
   name: Scalars['String'];
@@ -9481,6 +9558,7 @@ export type MarketplaceListing = Node & {
   howItWorks?: Maybe<Scalars['String']>;
   /** The listing's technical description rendered to HTML. */
   howItWorksHTML: Scalars['HTML'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** URL to install the product to the viewer's account or organization. */
   installationUrl?: Maybe<Scalars['URI']>;
@@ -9625,6 +9703,7 @@ export type MemberFeatureRequestNotification = Node & {
   __typename?: 'MemberFeatureRequestNotification';
   /** Represents member feature request body containing organization name and the number of feature requests */
   body: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Represents member feature request notification title */
   title: Scalars['String'];
@@ -9673,6 +9752,7 @@ export type MembersCanDeleteReposClearAuditEntry = AuditEntry & EnterpriseAuditE
   enterpriseSlug?: Maybe<Scalars['String']>;
   /** The HTTP URL for this enterprise. */
   enterpriseUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -9719,6 +9799,7 @@ export type MembersCanDeleteReposDisableAuditEntry = AuditEntry & EnterpriseAudi
   enterpriseSlug?: Maybe<Scalars['String']>;
   /** The HTTP URL for this enterprise. */
   enterpriseUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -9765,6 +9846,7 @@ export type MembersCanDeleteReposEnableAuditEntry = AuditEntry & EnterpriseAudit
   enterpriseSlug?: Maybe<Scalars['String']>;
   /** The HTTP URL for this enterprise. */
   enterpriseUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -9795,6 +9877,7 @@ export type MentionedEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -9877,6 +9960,7 @@ export type MergeQueue = Node & {
   configuration?: Maybe<MergeQueueConfiguration>;
   /** The entries in the queue */
   entries?: Maybe<MergeQueueEntryConnection>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The estimated time in seconds until a newly added entry would be merged */
   nextEntryEstimatedTimeToMerge?: Maybe<Scalars['Int']>;
@@ -9929,6 +10013,7 @@ export type MergeQueueEntry = Node & {
   estimatedTimeToMerge?: Maybe<Scalars['Int']>;
   /** The head commit for this entry */
   headCommit?: Maybe<Commit>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether this pull request should jump the queue */
   jump: Scalars['Boolean'];
@@ -10007,6 +10092,7 @@ export type MergedEvent = Node & UniformResourceLocatable & {
   commit?: Maybe<Commit>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the Ref associated with the `merge` event. */
   mergeRef?: Maybe<Ref>;
@@ -10030,6 +10116,7 @@ export type Migration = {
   databaseId?: Maybe<Scalars['String']>;
   /** The reason the migration failed. */
   failureReason?: Maybe<Scalars['String']>;
+  /** The Node ID of the Migration object */
   id: Scalars['ID'];
   /** The URL for the migration log (expires 1 day after migration completes). */
   migrationLogUrl?: Maybe<Scalars['URI']>;
@@ -10048,6 +10135,7 @@ export type Migration = {
 /** A GitHub Enterprise Importer (GEI) migration source. */
 export type MigrationSource = Node & {
   __typename?: 'MigrationSource';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The migration source name. */
   name: Scalars['String'];
@@ -10100,6 +10188,7 @@ export type Milestone = Closable & Node & UniformResourceLocatable & {
   description?: Maybe<Scalars['String']>;
   /** Identifies the due date of the milestone. */
   dueOn?: Maybe<Scalars['DateTime']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** A list of issues associated with the milestone. */
   issues: IssueConnection;
@@ -10214,6 +10303,7 @@ export type MilestonedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the milestone title associated with the 'milestoned' event. */
   milestoneTitle: Scalars['String'];
@@ -10299,6 +10389,7 @@ export type MovedColumnsInProjectEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -12124,6 +12215,7 @@ export type OidcProvider = Node & {
   enterprise?: Maybe<Enterprise>;
   /** ExternalIdentities provisioned by this identity provider. */
   externalIdentities: ExternalIdentityConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The OIDC identity provider type */
   providerType: OidcProviderType;
@@ -12182,6 +12274,7 @@ export type OauthApplicationCreateAuditEntry = AuditEntry & Node & OauthApplicat
   callbackUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
@@ -12268,6 +12361,7 @@ export type OrgAddBillingManagerAuditEntry = AuditEntry & Node & OrganizationAud
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The email address used to invite a billing manager for the organization. */
   invitationEmail?: Maybe<Scalars['String']>;
@@ -12310,6 +12404,7 @@ export type OrgAddMemberAuditEntry = AuditEntry & Node & OrganizationAuditEntryD
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12368,6 +12463,7 @@ export type OrgBlockUserAuditEntry = AuditEntry & Node & OrganizationAuditEntryD
   blockedUserUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12408,6 +12504,7 @@ export type OrgConfigDisableCollaboratorsOnlyAuditEntry = AuditEntry & Node & Or
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12448,6 +12545,7 @@ export type OrgConfigEnableCollaboratorsOnlyAuditEntry = AuditEntry & Node & Org
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12490,6 +12588,7 @@ export type OrgCreateAuditEntry = AuditEntry & Node & OrganizationAuditEntryData
   billingPlan?: Maybe<OrgCreateAuditEntryBillingPlan>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12544,6 +12643,7 @@ export type OrgDisableOauthAppRestrictionsAuditEntry = AuditEntry & Node & Organ
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12586,6 +12686,7 @@ export type OrgDisableSamlAuditEntry = AuditEntry & Node & OrganizationAuditEntr
   createdAt: Scalars['PreciseDateTime'];
   /** The SAML provider's digest algorithm URL. */
   digestMethodUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The SAML provider's issuer URL. */
   issuerUrl?: Maybe<Scalars['URI']>;
@@ -12632,6 +12733,7 @@ export type OrgDisableTwoFactorRequirementAuditEntry = AuditEntry & Node & Organ
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12672,6 +12774,7 @@ export type OrgEnableOauthAppRestrictionsAuditEntry = AuditEntry & Node & Organi
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12714,6 +12817,7 @@ export type OrgEnableSamlAuditEntry = AuditEntry & Node & OrganizationAuditEntry
   createdAt: Scalars['PreciseDateTime'];
   /** The SAML provider's digest algorithm URL. */
   digestMethodUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The SAML provider's issuer URL. */
   issuerUrl?: Maybe<Scalars['URI']>;
@@ -12760,6 +12864,7 @@ export type OrgEnableTwoFactorRequirementAuditEntry = AuditEntry & Node & Organi
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12816,6 +12921,7 @@ export type OrgInviteMemberAuditEntry = AuditEntry & Node & OrganizationAuditEnt
   createdAt: Scalars['PreciseDateTime'];
   /** The email address of the organization invitation. */
   email?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12864,6 +12970,7 @@ export type OrgInviteToBusinessAuditEntry = AuditEntry & EnterpriseAuditEntryDat
   enterpriseSlug?: Maybe<Scalars['String']>;
   /** The HTTP URL for this enterprise. */
   enterpriseUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -12904,6 +13011,7 @@ export type OrgOauthAppAccessApprovedAuditEntry = AuditEntry & Node & OauthAppli
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
@@ -12950,6 +13058,7 @@ export type OrgOauthAppAccessBlockedAuditEntry = AuditEntry & Node & OauthApplic
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
@@ -12996,6 +13105,7 @@ export type OrgOauthAppAccessDeniedAuditEntry = AuditEntry & Node & OauthApplica
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
@@ -13042,6 +13152,7 @@ export type OrgOauthAppAccessRequestedAuditEntry = AuditEntry & Node & OauthAppl
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
@@ -13088,6 +13199,7 @@ export type OrgOauthAppAccessUnblockedAuditEntry = AuditEntry & Node & OauthAppl
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the OAuth application. */
   oauthApplicationName?: Maybe<Scalars['String']>;
@@ -13134,6 +13246,7 @@ export type OrgRemoveBillingManagerAuditEntry = AuditEntry & Node & Organization
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -13186,6 +13299,7 @@ export type OrgRemoveMemberAuditEntry = AuditEntry & Node & OrganizationAuditEnt
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The types of membership the member has with the organization. */
   membershipTypes?: Maybe<Array<OrgRemoveMemberAuditEntryMembershipType>>;
@@ -13260,6 +13374,7 @@ export type OrgRemoveOutsideCollaboratorAuditEntry = AuditEntry & Node & Organiz
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The types of membership the outside collaborator has with the organization. */
   membershipTypes?: Maybe<Array<OrgRemoveOutsideCollaboratorAuditEntryMembershipType>>;
@@ -13322,6 +13437,7 @@ export type OrgRestoreMemberAuditEntry = AuditEntry & Node & OrganizationAuditEn
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -13426,6 +13542,7 @@ export type OrgUnblockUserAuditEntry = AuditEntry & Node & OrganizationAuditEntr
   blockedUserUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -13466,6 +13583,7 @@ export type OrgUpdateDefaultRepositoryPermissionAuditEntry = AuditEntry & Node &
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -13522,6 +13640,7 @@ export type OrgUpdateMemberAuditEntry = AuditEntry & Node & OrganizationAuditEnt
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -13576,6 +13695,7 @@ export type OrgUpdateMemberRepositoryCreationPermissionAuditEntry = AuditEntry &
   canCreateRepositories?: Maybe<Scalars['Boolean']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -13640,6 +13760,7 @@ export type OrgUpdateMemberRepositoryInvitationPermissionAuditEntry = AuditEntry
   canInviteOutsideCollaboratorsToRepositories?: Maybe<Scalars['Boolean']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -13696,6 +13817,7 @@ export type Organization = Actor & AnnouncementBanner & MemberStatusable & Node 
   estimatedNextSponsorsPayoutInCents: Scalars['Int'];
   /** True if this user/organization has a GitHub Sponsors listing. */
   hasSponsorsListing: Scalars['Boolean'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The interaction ability settings for this organization. */
   interactionAbility?: Maybe<RepositoryInteractionAbility>;
@@ -14298,6 +14420,7 @@ export type OrganizationIdentityProvider = Node & {
   digestMethod?: Maybe<Scalars['URI']>;
   /** External Identities provisioned by this Identity Provider */
   externalIdentities: ExternalIdentityConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The x509 certificate used by the Identity Provider to sign assertions and responses. */
   idpCertificate?: Maybe<Scalars['X509Certificate']>;
@@ -14330,6 +14453,7 @@ export type OrganizationInvitation = Node & {
   createdAt: Scalars['DateTime'];
   /** The email address of the user invited to the organization. */
   email?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The source of the invitation. */
   invitationSource: OrganizationInvitationSource;
@@ -14452,6 +14576,7 @@ export type OrganizationMigration = Node & {
   databaseId?: Maybe<Scalars['String']>;
   /** The reason the organization migration failed. */
   failureReason?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The remaining amount of repos to be migrated. */
   remainingRepositoriesCount?: Maybe<Scalars['Int']>;
@@ -14562,6 +14687,7 @@ export type OrganizationsHovercardContextRelevantOrganizationsArgs = {
 /** Information for an uploaded package. */
 export type Package = Node & {
   __typename?: 'Package';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Find the latest version for the package. */
   latestVersion?: Maybe<PackageVersion>;
@@ -14620,6 +14746,7 @@ export type PackageEdge = {
 /** A file in a package version. */
 export type PackageFile = Node & {
   __typename?: 'PackageFile';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** MD5 hash of the file. */
   md5?: Maybe<Scalars['String']>;
@@ -14691,6 +14818,7 @@ export enum PackageOrderField {
 
 /** Represents an owner of a package. */
 export type PackageOwner = {
+  /** The Node ID of the PackageOwner object */
   id: Scalars['ID'];
   /** A list of packages under the owner. */
   packages: PackageConnection;
@@ -14719,6 +14847,7 @@ export type PackageStatistics = {
 /** A version tag contains the mapping between a tag name and a version. */
 export type PackageTag = Node & {
   __typename?: 'PackageTag';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the tag name of the version. */
   name: Scalars['String'];
@@ -14764,6 +14893,7 @@ export type PackageVersion = Node & {
   __typename?: 'PackageVersion';
   /** List of files associated with this package version */
   files: PackageFileConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The package associated with this version. */
   package?: Maybe<Package>;
@@ -14954,6 +15084,7 @@ export type PinnedDiscussion = Node & RepositoryNode & {
   discussion: Discussion;
   /** Color stops of the chosen gradient */
   gradientStopColors: Array<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Background texture pattern */
   pattern: PinnedDiscussionPattern;
@@ -15026,6 +15157,7 @@ export type PinnedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the issue associated with the event. */
   issue: Issue;
@@ -15038,6 +15170,7 @@ export type PinnedIssue = Node & {
   databaseId?: Maybe<Scalars['Int']>;
   /** Identifies the primary key from the database as a BigInt. */
   fullDatabaseId?: Maybe<Scalars['BigInt']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The issue that was pinned. */
   issue: Issue;
@@ -15094,6 +15227,7 @@ export type PrivateRepositoryForkingDisableAuditEntry = AuditEntry & EnterpriseA
   enterpriseSlug?: Maybe<Scalars['String']>;
   /** The HTTP URL for this enterprise. */
   enterpriseUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -15148,6 +15282,7 @@ export type PrivateRepositoryForkingEnableAuditEntry = AuditEntry & EnterpriseAu
   enterpriseSlug?: Maybe<Scalars['String']>;
   /** The HTTP URL for this enterprise. */
   enterpriseUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -15201,6 +15336,7 @@ export type ProfileOwner = {
   anyPinnableItems: Scalars['Boolean'];
   /** The public profile email. */
   email?: Maybe<Scalars['String']>;
+  /** The Node ID of the ProfileOwner object */
   id: Scalars['ID'];
   /** Showcases a selection of repositories and gists that the profile owner has either curated or that have been selected automatically based on popularity. */
   itemShowcase: ProfileItemShowcase;
@@ -15267,6 +15403,7 @@ export type Project = Closable & Node & Updatable & {
   creator?: Maybe<Actor>;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project's name. */
   name: Scalars['String'];
@@ -15332,6 +15469,7 @@ export type ProjectCard = Node & {
   creator?: Maybe<Actor>;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the card is archived */
   isArchived: Scalars['Boolean'];
@@ -15401,6 +15539,7 @@ export type ProjectColumn = Node & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project column's name. */
   name: Scalars['String'];
@@ -15500,6 +15639,7 @@ export enum ProjectOrderField {
 
 /** Represents an owner of a Project. */
 export type ProjectOwner = {
+  /** The Node ID of the ProjectOwner object */
   id: Scalars['ID'];
   /** Find project by number. */
   project?: Maybe<Project>;
@@ -15587,6 +15727,7 @@ export type ProjectV2 = Closable & Node & Updatable & {
   field?: Maybe<ProjectV2FieldConfiguration>;
   /** List of fields and their constraints in the project */
   fields: ProjectV2FieldConfigurationConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** List of items in the project */
   items: ProjectV2ItemConnection;
@@ -15786,6 +15927,7 @@ export type ProjectV2Field = Node & ProjectV2FieldCommon & {
   dataType: ProjectV2FieldType;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project field's name. */
   name: Scalars['String'];
@@ -15803,6 +15945,7 @@ export type ProjectV2FieldCommon = {
   dataType: ProjectV2FieldType;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of the ProjectV2FieldCommon object */
   id: Scalars['ID'];
   /** The project field's name. */
   name: Scalars['String'];
@@ -15944,6 +16087,7 @@ export type ProjectV2Item = Node & {
   fieldValueByName?: Maybe<ProjectV2ItemFieldValue>;
   /** The field values that are set on the item. */
   fieldValues: ProjectV2ItemFieldValueConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the item is archived. */
   isArchived: Scalars['Boolean'];
@@ -16009,6 +16153,7 @@ export type ProjectV2ItemFieldDateValue = Node & ProjectV2ItemFieldValueCommon &
   date?: Maybe<Scalars['Date']>;
   /** The project field that contains this value. */
   field: ProjectV2FieldConfiguration;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project item that contains this value. */
   item: ProjectV2Item;
@@ -16029,6 +16174,7 @@ export type ProjectV2ItemFieldIterationValue = Node & ProjectV2ItemFieldValueCom
   duration: Scalars['Int'];
   /** The project field that contains this value. */
   field: ProjectV2FieldConfiguration;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project item that contains this value. */
   item: ProjectV2Item;
@@ -16082,6 +16228,7 @@ export type ProjectV2ItemFieldNumberValue = Node & ProjectV2ItemFieldValueCommon
   databaseId?: Maybe<Scalars['Int']>;
   /** The project field that contains this value. */
   field: ProjectV2FieldConfiguration;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project item that contains this value. */
   item: ProjectV2Item;
@@ -16154,6 +16301,7 @@ export type ProjectV2ItemFieldSingleSelectValue = Node & ProjectV2ItemFieldValue
   descriptionHTML?: Maybe<Scalars['String']>;
   /** The project field that contains this value. */
   field: ProjectV2FieldConfiguration;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project item that contains this value. */
   item: ProjectV2Item;
@@ -16178,6 +16326,7 @@ export type ProjectV2ItemFieldTextValue = Node & ProjectV2ItemFieldValueCommon &
   databaseId?: Maybe<Scalars['Int']>;
   /** The project field that contains this value. */
   field: ProjectV2FieldConfiguration;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project item that contains this value. */
   item: ProjectV2Item;
@@ -16218,6 +16367,7 @@ export type ProjectV2ItemFieldValueCommon = {
   databaseId?: Maybe<Scalars['Int']>;
   /** The project field that contains this value. */
   field: ProjectV2FieldConfiguration;
+  /** The Node ID of the ProjectV2ItemFieldValueCommon object */
   id: Scalars['ID'];
   /** The project item that contains this value. */
   item: ProjectV2Item;
@@ -16298,6 +16448,7 @@ export type ProjectV2IterationField = Node & ProjectV2FieldCommon & {
   dataType: ProjectV2FieldType;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project field's name. */
   name: Scalars['String'];
@@ -16357,6 +16508,7 @@ export enum ProjectV2OrderField {
 
 /** Represents an owner of a project (beta). */
 export type ProjectV2Owner = {
+  /** The Node ID of the ProjectV2Owner object */
   id: Scalars['ID'];
   /** Find a project by number. */
   projectV2?: Maybe<ProjectV2>;
@@ -16417,6 +16569,7 @@ export type ProjectV2SingleSelectField = Node & ProjectV2FieldCommon & {
   dataType: ProjectV2FieldType;
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project field's name. */
   name: Scalars['String'];
@@ -16569,6 +16722,7 @@ export type ProjectV2View = Node & {
   groupBy?: Maybe<ProjectV2FieldConnection>;
   /** The view's group-by field. */
   groupByFields?: Maybe<ProjectV2FieldConfigurationConnection>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The project view's layout. */
   layout: ProjectV2ViewLayout;
@@ -16738,6 +16892,7 @@ export type ProjectV2Workflow = Node & {
   databaseId?: Maybe<Scalars['Int']>;
   /** Whether the workflow is enabled. */
   enabled: Scalars['Boolean'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the workflow. */
   name: Scalars['String'];
@@ -16800,6 +16955,7 @@ export type PublicKey = Node & {
   createdAt?: Maybe<Scalars['DateTime']>;
   /** The fingerprint for this PublicKey. */
   fingerprint: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether this PublicKey is read-only or not. Values will be null for keys not owned by the user. */
   isReadOnly?: Maybe<Scalars['Boolean']>;
@@ -16917,6 +17073,7 @@ export type PullRequest = Assignable & Closable & Comment & Labelable & Lockable
   headRepositoryOwner?: Maybe<RepositoryOwner>;
   /** The hovercard information for this issue */
   hovercard: Hovercard;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -17319,6 +17476,7 @@ export type PullRequestCommit = Node & UniformResourceLocatable & {
   __typename?: 'PullRequestCommit';
   /** The Git commit object */
   commit: Commit;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The pull request this commit belongs to */
   pullRequest: PullRequest;
@@ -17335,6 +17493,7 @@ export type PullRequestCommitCommentThread = Node & RepositoryNode & {
   comments: CommitCommentConnection;
   /** The commit the comments were made on. */
   commit: Commit;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The file the comments were made on. */
   path?: Maybe<Scalars['String']>;
@@ -17500,6 +17659,7 @@ export type PullRequestReview = Comment & Deletable & Minimizable & Node & React
   databaseId?: Maybe<Scalars['Int']>;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -17612,6 +17772,7 @@ export type PullRequestReviewComment = Comment & Deletable & Minimizable & Node 
   draftedAt: Scalars['DateTime'];
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -17819,6 +17980,7 @@ export type PullRequestReviewThread = Node & {
   comments: PullRequestReviewCommentConnection;
   /** The side of the diff on which this thread was placed. */
   diffSide: DiffSide;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether or not the thread has been collapsed (resolved) */
   isCollapsed: Scalars['Boolean'];
@@ -17933,6 +18095,7 @@ export type PullRequestThread = Node & {
   comments: PullRequestReviewCommentConnection;
   /** The side of the diff on which this thread was placed. */
   diffSide: DiffSide;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether or not the thread has been collapsed (resolved) */
   isCollapsed: Scalars['Boolean'];
@@ -18161,6 +18324,7 @@ export enum PullRequestUpdateState {
 /** A Git push. */
 export type Push = Node & {
   __typename?: 'Push';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The SHA after the push */
   nextSha?: Maybe<Scalars['GitObjectID']>;
@@ -18181,6 +18345,7 @@ export type PushAllowance = Node & {
   actor?: Maybe<PushAllowanceActor>;
   /** Identifies the branch protection rule associated with the allowed user, team, or app. */
   branchProtectionRule?: Maybe<BranchProtectionRule>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -18478,6 +18643,7 @@ export type RateLimit = {
 export type Reactable = {
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of the Reactable object */
   id: Scalars['ID'];
   /** A list of reactions grouped by content left on the subject. */
   reactionGroups?: Maybe<Array<ReactionGroup>>;
@@ -18530,6 +18696,7 @@ export type Reaction = Node & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The reactable piece of content */
   reactable: Reactable;
@@ -18667,6 +18834,7 @@ export type ReadyForReviewEvent = Node & UniformResourceLocatable & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -18685,6 +18853,7 @@ export type Ref = Node & {
   branchProtectionRule?: Maybe<BranchProtectionRule>;
   /** Compares the current ref as a base ref to another head ref, if the comparison can be made. */
   compare?: Maybe<Comparison>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The ref name. */
   name: Scalars['String'];
@@ -18813,6 +18982,7 @@ export type ReferencedEvent = Node & {
   commitRepository: Repository;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Reference originated in a different repository. */
   isCrossRepository: Scalars['Boolean'];
@@ -18893,6 +19063,7 @@ export type Release = Node & Reactable & UniformResourceLocatable & {
   description?: Maybe<Scalars['String']>;
   /** The description of this release rendered to HTML. */
   descriptionHTML?: Maybe<Scalars['HTML']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether or not the release is a draft */
   isDraft: Scalars['Boolean'];
@@ -18979,6 +19150,7 @@ export type ReleaseAsset = Node & {
   downloadCount: Scalars['Int'];
   /** Identifies the URL where you can download the release asset via the browser. */
   downloadUrl: Scalars['URI'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the title of the release asset. */
   name: Scalars['String'];
@@ -19286,6 +19458,7 @@ export type RemovedFromMergeQueueEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The user who removed this Pull Request from the merge queue */
   enqueuer?: Maybe<User>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The merge queue where this pull request was removed from. */
   mergeQueue?: Maybe<MergeQueue>;
@@ -19304,6 +19477,7 @@ export type RemovedFromProjectEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -19316,6 +19490,7 @@ export type RenamedTitleEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** Identifies the current title of the issue or pull request. */
   currentTitle: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the previous title of the issue or pull request. */
   previousTitle: Scalars['String'];
@@ -19386,6 +19561,7 @@ export type ReopenedEvent = Node & {
   closable: Closable;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The reason the issue state was changed to open. */
   stateReason?: Maybe<IssueStateReason>;
@@ -19410,6 +19586,7 @@ export type RepoAccessAuditEntry = AuditEntry & Node & OrganizationAuditEntryDat
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19470,6 +19647,7 @@ export type RepoAddMemberAuditEntry = AuditEntry & Node & OrganizationAuditEntry
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19530,6 +19708,7 @@ export type RepoAddTopicAuditEntry = AuditEntry & Node & OrganizationAuditEntryD
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19582,6 +19761,7 @@ export type RepoArchivedAuditEntry = AuditEntry & Node & OrganizationAuditEntryD
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19642,6 +19822,7 @@ export type RepoChangeMergeSettingAuditEntry = AuditEntry & Node & OrganizationA
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the change was to enable (true) or disable (false) the merge type */
   isEnabled?: Maybe<Scalars['Boolean']>;
@@ -19704,6 +19885,7 @@ export type RepoConfigDisableAnonymousGitAccessAuditEntry = AuditEntry & Node & 
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19752,6 +19934,7 @@ export type RepoConfigDisableCollaboratorsOnlyAuditEntry = AuditEntry & Node & O
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19800,6 +19983,7 @@ export type RepoConfigDisableContributorsOnlyAuditEntry = AuditEntry & Node & Or
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19848,6 +20032,7 @@ export type RepoConfigDisableSockpuppetDisallowedAuditEntry = AuditEntry & Node 
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19896,6 +20081,7 @@ export type RepoConfigEnableAnonymousGitAccessAuditEntry = AuditEntry & Node & O
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19944,6 +20130,7 @@ export type RepoConfigEnableCollaboratorsOnlyAuditEntry = AuditEntry & Node & Or
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -19992,6 +20179,7 @@ export type RepoConfigEnableContributorsOnlyAuditEntry = AuditEntry & Node & Org
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -20040,6 +20228,7 @@ export type RepoConfigEnableSockpuppetDisallowedAuditEntry = AuditEntry & Node &
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -20088,6 +20277,7 @@ export type RepoConfigLockAnonymousGitAccessAuditEntry = AuditEntry & Node & Org
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -20136,6 +20326,7 @@ export type RepoConfigUnlockAnonymousGitAccessAuditEntry = AuditEntry & Node & O
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -20188,6 +20379,7 @@ export type RepoCreateAuditEntry = AuditEntry & Node & OrganizationAuditEntryDat
   forkParentName?: Maybe<Scalars['String']>;
   /** The name of the root repository for this network. */
   forkSourceName?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -20248,6 +20440,7 @@ export type RepoDestroyAuditEntry = AuditEntry & Node & OrganizationAuditEntryDa
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -20308,6 +20501,7 @@ export type RepoRemoveMemberAuditEntry = AuditEntry & Node & OrganizationAuditEn
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -20368,6 +20562,7 @@ export type RepoRemoveTopicAuditEntry = AuditEntry & Node & OrganizationAuditEnt
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -20492,6 +20687,7 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   hasWikiEnabled: Scalars['Boolean'];
   /** The repository's URL. */
   homepageUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The interaction ability settings for this repository. */
   interactionAbility?: Maybe<RepositoryInteractionAbility>;
@@ -21410,6 +21606,7 @@ export type RepositoryInvitation = Node & {
   __typename?: 'RepositoryInvitation';
   /** The email address that received the invitation. */
   email?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The user who received the invitation. */
   invitee?: Maybe<User>;
@@ -21486,6 +21683,7 @@ export type RepositoryMigration = Migration & Node & {
   databaseId?: Maybe<Scalars['String']>;
   /** The reason the migration failed. */
   failureReason?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The URL for the migration log (expires 1 day after migration completes). */
   migrationLogUrl?: Maybe<Scalars['URI']>;
@@ -21598,6 +21796,7 @@ export enum RepositoryOrderField {
 export type RepositoryOwner = {
   /** A URL pointing to the owner's public avatar. */
   avatarUrl: Scalars['URI'];
+  /** The Node ID of the RepositoryOwner object */
   id: Scalars['ID'];
   /** The username used to login. */
   login: Scalars['String'];
@@ -21666,6 +21865,7 @@ export enum RepositoryPrivacy {
 /** A repository rule. */
 export type RepositoryRule = Node & {
   __typename?: 'RepositoryRule';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The parameters for this rule. */
   parameters?: Maybe<RuleParameters>;
@@ -21797,6 +21997,7 @@ export type RepositoryRuleset = Node & {
   databaseId?: Maybe<Scalars['Int']>;
   /** The enforcement level of this ruleset */
   enforcement: RuleEnforcement;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Name of the ruleset. */
   name: Scalars['String'];
@@ -21836,6 +22037,7 @@ export type RepositoryRulesetBypassActor = Node & {
   actor?: Maybe<BypassActor>;
   /** The mode for the bypass actor */
   bypassMode?: Maybe<RepositoryRulesetBypassActorBypassMode>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** This actor represents the ability for an organization owner to bypass */
   organizationAdmin: Scalars['Boolean'];
@@ -21922,6 +22124,7 @@ export enum RepositoryRulesetTarget {
 /** A repository-topic connects a repository to a topic. */
 export type RepositoryTopic = Node & UniformResourceLocatable & {
   __typename?: 'RepositoryTopic';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The HTTP path for this repository-topic. */
   resourcePath: Scalars['URI'];
@@ -21988,6 +22191,7 @@ export type RepositoryVisibilityChangeDisableAuditEntry = AuditEntry & Enterpris
   enterpriseSlug?: Maybe<Scalars['String']>;
   /** The HTTP URL for this enterprise. */
   enterpriseUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -22034,6 +22238,7 @@ export type RepositoryVisibilityChangeEnableAuditEntry = AuditEntry & Enterprise
   enterpriseSlug?: Maybe<Scalars['String']>;
   /** The HTTP URL for this enterprise. */
   enterpriseUrl?: Maybe<Scalars['URI']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The corresponding operation type for the action */
   operationType?: Maybe<OperationType>;
@@ -22076,6 +22281,7 @@ export type RepositoryVulnerabilityAlert = Node & RepositoryNode & {
   dismisser?: Maybe<User>;
   /** When was the alert fixed? */
   fixedAt?: Maybe<Scalars['DateTime']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the alert number. */
   number: Scalars['Int'];
@@ -22371,6 +22577,7 @@ export type ReviewDismissalAllowance = Node & {
   actor?: Maybe<ReviewDismissalAllowanceActor>;
   /** Identifies the branch protection rule associated with the allowed user, team, or app. */
   branchProtectionRule?: Maybe<BranchProtectionRule>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
 };
 
@@ -22412,6 +22619,7 @@ export type ReviewDismissedEvent = Node & UniformResourceLocatable & {
   dismissalMessage?: Maybe<Scalars['String']>;
   /** Identifies the optional message associated with the event, rendered to HTML. */
   dismissalMessageHTML?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the previous state of the review with the 'review_dismissed' event. */
   previousReviewState: PullRequestReviewState;
@@ -22434,6 +22642,7 @@ export type ReviewRequest = Node & {
   asCodeOwner: Scalars['Boolean'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the pull request associated with this review request. */
   pullRequest: PullRequest;
@@ -22470,6 +22679,7 @@ export type ReviewRequestRemovedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -22484,6 +22694,7 @@ export type ReviewRequestedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** PullRequest referenced by event. */
   pullRequest: PullRequest;
@@ -22638,6 +22849,7 @@ export type SavedReply = Node & {
   bodyHTML: Scalars['HTML'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The title of the saved reply. */
   title: Scalars['String'];
@@ -22745,6 +22957,7 @@ export type SecurityAdvisory = Node & {
   description: Scalars['String'];
   /** The GitHub Security Advisory ID */
   ghsaId: Scalars['String'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** A list of identifiers for this advisory */
   identifiers: Array<SecurityAdvisoryIdentifier>;
@@ -23379,6 +23592,7 @@ export type SponsorsActivity = Node & {
   action: SponsorsActivityAction;
   /** The sponsor's current privacy level. */
   currentPrivacyLevel?: Maybe<SponsorshipPrivacy>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The platform that was used to pay for the sponsorship. */
   paymentSource?: Maybe<SponsorshipPaymentSource>;
@@ -24004,6 +24218,7 @@ export type SponsorsListing = Node & {
   fullDescription: Scalars['String'];
   /** The full description of the listing rendered to HTML. */
   fullDescriptionHTML: Scalars['HTML'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether this listing is publicly visible. */
   isPublic: Scalars['Boolean'];
@@ -24056,6 +24271,7 @@ export type SponsorsListingFeaturedItem = Node & {
   description?: Maybe<Scalars['String']>;
   /** The record that is featured on the GitHub Sponsors profile. */
   featureable: SponsorsListingFeatureableItem;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The position of this featured item on the GitHub Sponsors profile with a lower position indicating higher precedence. Starts at 1. */
   position: Scalars['Int'];
@@ -24086,6 +24302,7 @@ export type SponsorsTier = Node & {
   description: Scalars['String'];
   /** The tier description rendered to HTML */
   descriptionHTML: Scalars['HTML'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether this tier was chosen at checkout time by the sponsor rather than defined ahead of time by the maintainer who manages the Sponsors listing. */
   isCustomAmount: Scalars['Boolean'];
@@ -24170,6 +24387,7 @@ export type Sponsorship = Node & {
   __typename?: 'Sponsorship';
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the sponsorship is active. False implies the sponsor is a past sponsor of the maintainer, while true implies they are a current sponsor. */
   isActive: Scalars['Boolean'];
@@ -24236,6 +24454,7 @@ export type SponsorshipNewsletter = Node & {
   body: Scalars['String'];
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Indicates if the newsletter has been made available to sponsors. */
   isPublished: Scalars['Boolean'];
@@ -24391,6 +24610,7 @@ export type StargazerEdge = {
 
 /** Things that can be starred. */
 export type Starrable = {
+  /** The Node ID of the Starrable object */
   id: Scalars['ID'];
   /**
    * Returns a count of how many stargazers there are on this object
@@ -24511,6 +24731,7 @@ export type Status = Node & {
   context?: Maybe<StatusContext>;
   /** The individual status contexts for this commit. */
   contexts: Array<StatusContext>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The combined commit status. */
   state: StatusState;
@@ -24555,6 +24776,7 @@ export type StatusCheckRollup = Node & {
   commit?: Maybe<Commit>;
   /** A list of status contexts and check runs for this commit. */
   contexts: StatusCheckRollupContextConnection;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The combined status for the commit. */
   state: StatusState;
@@ -24617,6 +24839,7 @@ export type StatusContext = Node & RequirableByPullRequest & {
   creator?: Maybe<Actor>;
   /** The description for this status context. */
   description?: Maybe<Scalars['String']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether this is required to pass before merging for a specific pull request. */
   isRequired: Scalars['Boolean'];
@@ -24745,6 +24968,7 @@ export type SubmoduleEdge = {
 
 /** Entities that can be subscribed to for web and email notifications. */
 export type Subscribable = {
+  /** The Node ID of the Subscribable object */
   id: Scalars['ID'];
   /** Check if the viewer is able to change their subscription status for the repository. */
   viewerCanSubscribe: Scalars['Boolean'];
@@ -24754,6 +24978,7 @@ export type Subscribable = {
 
 /** Entities that can be subscribed to for web and email notifications. */
 export type SubscribableThread = {
+  /** The Node ID of the SubscribableThread object */
   id: Scalars['ID'];
   /** Identifies the viewer's thread subscription form action. */
   viewerThreadSubscriptionFormAction?: Maybe<ThreadSubscriptionFormAction>;
@@ -24768,6 +24993,7 @@ export type SubscribedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Object referenced by event. */
   subscribable: Subscribable;
@@ -24803,6 +25029,7 @@ export type Tag = GitObject & Node & {
   commitResourcePath: Scalars['URI'];
   /** The HTTP URL for this Git object */
   commitUrl: Scalars['URI'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The Git tag message. */
   message?: Maybe<Scalars['String']>;
@@ -24872,6 +25099,7 @@ export type Team = MemberStatusable & Node & Subscribable & {
   editTeamResourcePath: Scalars['URI'];
   /** The HTTP URL for editing this team */
   editTeamUrl: Scalars['URI'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** A list of pending invitations for users to this team */
   invitations?: Maybe<OrganizationInvitationConnection>;
@@ -25051,6 +25279,7 @@ export type TeamAddMemberAuditEntry = AuditEntry & Node & OrganizationAuditEntry
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the team was mapped to an LDAP Group. */
   isLdapMapped?: Maybe<Scalars['Boolean']>;
@@ -25101,6 +25330,7 @@ export type TeamAddRepositoryAuditEntry = AuditEntry & Node & OrganizationAuditE
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the team was mapped to an LDAP Group. */
   isLdapMapped?: Maybe<Scalars['Boolean']>;
@@ -25171,6 +25401,7 @@ export type TeamChangeParentTeamAuditEntry = AuditEntry & Node & OrganizationAud
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the team was mapped to an LDAP Group. */
   isLdapMapped?: Maybe<Scalars['Boolean']>;
@@ -25275,6 +25506,7 @@ export type TeamDiscussion = Comment & Deletable & Node & Reactable & Subscribab
   databaseId?: Maybe<Scalars['Int']>;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -25411,6 +25643,7 @@ export type TeamDiscussionComment = Comment & Deletable & Node & Reactable & Uni
   discussion: TeamDiscussion;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -25664,6 +25897,7 @@ export type TeamRemoveMemberAuditEntry = AuditEntry & Node & OrganizationAuditEn
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the team was mapped to an LDAP Group. */
   isLdapMapped?: Maybe<Scalars['Boolean']>;
@@ -25714,6 +25948,7 @@ export type TeamRemoveRepositoryAuditEntry = AuditEntry & Node & OrganizationAud
   actorUrl?: Maybe<Scalars['URI']>;
   /** The time the action was initiated */
   createdAt: Scalars['PreciseDateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether the team was mapped to an LDAP Group. */
   isLdapMapped?: Maybe<Scalars['Boolean']>;
@@ -25865,6 +26100,7 @@ export enum ThreadSubscriptionState {
 /** A topic aggregates entities that are related to a subject. */
 export type Topic = Node & Starrable & {
   __typename?: 'Topic';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The topic's name. */
   name: Scalars['String'];
@@ -25996,6 +26232,7 @@ export type TransferredEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The repository this came from */
   fromRepository?: Maybe<Repository>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the issue associated with the event. */
   issue: Issue;
@@ -26012,6 +26249,7 @@ export type Tree = GitObject & Node & {
   commitUrl: Scalars['URI'];
   /** A list of tree entries. */
   entries?: Maybe<Array<TreeEntry>>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The Git object ID */
   oid: Scalars['GitObjectID'];
@@ -26101,6 +26339,7 @@ export type UnassignedEvent = Node & {
   assignee?: Maybe<Assignee>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /**
    * Identifies the subject (user) who was unassigned.
@@ -26177,6 +26416,7 @@ export type UnlabeledEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the label associated with the 'unlabeled' event. */
   label: Label;
@@ -26269,6 +26509,7 @@ export type UnlockedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Object that was unlocked. */
   lockable: Lockable;
@@ -26357,6 +26598,7 @@ export type UnmarkedAsDuplicateEvent = Node & {
   createdAt: Scalars['DateTime'];
   /** The issue or pull request which has been marked as a duplicate of another. */
   duplicate?: Maybe<IssueOrPullRequest>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Canonical and duplicate belong to different repositories. */
   isCrossRepository: Scalars['Boolean'];
@@ -26403,6 +26645,7 @@ export type UnpinnedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the issue associated with the event. */
   issue: Issue;
@@ -26449,6 +26692,7 @@ export type UnsubscribedEvent = Node & {
   actor?: Maybe<Actor>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Object referenced by event. */
   subscribable: Subscribable;
@@ -27816,6 +28060,7 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectOwner & P
   hasSponsorsListing: Scalars['Boolean'];
   /** The hovercard information for this user in a given context */
   hovercard: Hovercard;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The interaction ability settings for this user. */
   interactionAbility?: Maybe<RepositoryInteractionAbility>;
@@ -28438,6 +28683,7 @@ export type UserBlockedEvent = Node & {
   blockDuration: UserBlockDuration;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The user who was blocked. */
   subject?: Maybe<User>;
@@ -28471,6 +28717,7 @@ export type UserContentEdit = Node & {
   editedAt: Scalars['DateTime'];
   /** The actor who edited this content */
   editor?: Maybe<Actor>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Identifies the date and time when the object was last updated. */
   updatedAt: Scalars['DateTime'];
@@ -28529,6 +28776,7 @@ export type UserStatus = Node & {
   emojiHTML?: Maybe<Scalars['HTML']>;
   /** If set, the status will not be shown after this date. */
   expiresAt?: Maybe<Scalars['DateTime']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether this status indicates the user is not fully available on GitHub. */
   indicatesLimitedAvailability: Scalars['Boolean'];
@@ -28593,6 +28841,7 @@ export type VerifiableDomain = Node & {
   hasFoundHostName: Scalars['Boolean'];
   /** Whether a TXT record for verification with the expected verification token was found. */
   hasFoundVerificationToken: Scalars['Boolean'];
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** Whether or not the domain is approved. */
   isApproved: Scalars['Boolean'];
@@ -28698,6 +28947,7 @@ export type Workflow = Node & UniformResourceLocatable & {
   createdAt: Scalars['DateTime'];
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The name of the workflow. */
   name: Scalars['String'];
@@ -28763,6 +29013,7 @@ export type WorkflowRun = Node & UniformResourceLocatable & {
   event: Scalars['String'];
   /** The workflow file */
   file?: Maybe<WorkflowRunFile>;
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The pending deployment requests of all check runs in this workflow run */
   pendingDeploymentRequests: DeploymentRequestConnection;
@@ -28821,6 +29072,7 @@ export type WorkflowRunEdge = {
 /** An executed workflow file for a workflow run. */
 export type WorkflowRunFile = Node & UniformResourceLocatable & {
   __typename?: 'WorkflowRunFile';
+  /** The Node ID of this object */
   id: Scalars['ID'];
   /** The path of the workflow file relative to its repository. */
   path: Scalars['String'];
