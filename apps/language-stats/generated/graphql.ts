@@ -1147,7 +1147,7 @@ export type BranchProtectionRule = Node & {
   dismissesStaleReviews: Scalars['Boolean'];
   /** The Node ID of this object */
   id: Scalars['ID'];
-  /** Can admins overwrite branch protection. */
+  /** Can admins override branch protection. */
   isAdminEnforced: Scalars['Boolean'];
   /** Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing. */
   lockAllowsFetchAndMerge: Scalars['Boolean'];
@@ -3355,7 +3355,7 @@ export type CreateBranchProtectionRuleInput = {
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Will new commits pushed to matching branches dismiss pull request review approvals. */
   dismissesStaleReviews?: InputMaybe<Scalars['Boolean']>;
-  /** Can admins overwrite branch protection. */
+  /** Can admins override branch protection. */
   isAdminEnforced?: InputMaybe<Scalars['Boolean']>;
   /** Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing. */
   lockAllowsFetchAndMerge?: InputMaybe<Scalars['Boolean']>;
@@ -19014,7 +19014,7 @@ export enum RefOrderField {
   TagCommitDate = 'TAG_COMMIT_DATE'
 }
 
-/** A ref update rules for a viewer. */
+/** Branch protection rules that are enforced on the viewer. */
 export type RefUpdateRule = {
   __typename?: 'RefUpdateRule';
   /** Can this branch be deleted. */
@@ -26800,7 +26800,7 @@ export type UpdateBranchProtectionRuleInput = {
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Will new commits pushed to matching branches dismiss pull request review approvals. */
   dismissesStaleReviews?: InputMaybe<Scalars['Boolean']>;
-  /** Can admins overwrite branch protection. */
+  /** Can admins override branch protection. */
   isAdminEnforced?: InputMaybe<Scalars['Boolean']>;
   /** Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing. */
   lockAllowsFetchAndMerge?: InputMaybe<Scalars['Boolean']>;
