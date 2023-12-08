@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22421,
     "__isArchived": false,
-    "__pushedAt": "2023-12-05T21:14:01Z"
+    "__pushedAt": "2023-12-06T21:18:46Z"
   },
   "salim-bot": {
     "TypeScript": 78909,
@@ -608,8 +608,8 @@
   },
   "leo-need": {
     "JavaScript": 366,
-    "Astro": 3100,
+    "Astro": 2998,
     "__isArchived": false,
-    "__pushedAt": "2023-11-30T05:09:14Z"
+    "__pushedAt": "2023-12-07T14:22:14Z"
   }
 }
