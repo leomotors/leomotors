@@ -38,10 +38,6 @@ class Queries(object):
         :param generated_query: string query to be sent to the API
         :return: decoded GraphQL JSON output
         """
-
-        if os.getenv("DEBUG"):
-            print(f"DEBUG: GRAPHQL querying {generated_query}")
-
         headers = {
             "Authorization": f"Bearer {self.access_token}",
         }
@@ -76,9 +72,6 @@ class Queries(object):
         :param params: Query parameters to be passed to the API
         :return: deserialized REST JSON output
         """
-
-        if os.getenv("DEBUG"):
-            print(f"DEBUG: REST querying {path=}")
 
         for _ in range(60):
             headers = {
@@ -136,7 +129,6 @@ class Queries(object):
     name,
     repositories(
         first: 100,
-        ownerAffiliations: OWNER,
         orderBy: {{
             field: UPDATED_AT,
             direction: DESC
@@ -154,7 +146,7 @@ class Queries(object):
           totalCount
         }}
         forkCount
-        languages(first: 50, orderBy: {{field: SIZE, direction: DESC}}) {{
+        languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{
           edges {{
             size
             node {{
@@ -190,7 +182,7 @@ class Queries(object):
           totalCount
         }}
         forkCount
-        languages(first: 50, orderBy: {{field: SIZE, direction: DESC}}) {{
+        languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{
           edges {{
             size
             node {{
@@ -358,9 +350,8 @@ Languages:
                 self._forks += repo.get("forkCount", 0)
 
                 # * CUSTOM: Ignore language for others' repo
-                if not name.startswith("Leomotors"):
+                if not name.startswith(self.username):
                     continue
-
                 for lang in repo.get("languages", {}).get("edges", []):
                     name = lang.get("node", {}).get("name", "Other")
                     languages = await self.languages
