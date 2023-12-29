@@ -19,18 +19,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Run using Python 3.8 for consistency and aiohttp
       - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: "3.8"
-          architecture: "x64"
 
       # Cache dependencies. From:
       # https://github.com/actions/cache/blob/master/examples.md#python---pip
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -58,13 +57,11 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
-        with:
-          version: 7
 
       - name: Setup node with cache
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version-file: .nvmrc
           cache: pnpm
 
       - name: Install Dependencies
@@ -74,7 +71,7 @@ jobs:
         run: GH_PAT=${{ secrets.GH_PAT }} pnpm post-analyze
 
       - name: Commit changes
-        uses: EndBug/add-and-commit@v7
+        uses: EndBug/add-and-commit@v9
         with:
           message: "Update Generated Data and Readme"
           default_author: github_actions
