@@ -116,8 +116,8 @@ This list is automatically kept up to date by this monorepo.
 ## 🔢 GitHub Stats
 
 <table>
-<tr><td> <img src="generated/languages.svg#gh-dark-mode-only" /> </td>
-<td> <img src="generated/overview.svg#gh-dark-mode-only" /> </td></tr>
+<tr><td> <img src="generated/languages.svg" /> </td>
+<td> <img src="generated/overview.svg" /> </td></tr>
 </table>
 
 ## 🕐 Wakatime
