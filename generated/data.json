@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2024-01-06T21:21:19Z"
+    "__pushedAt": "2024-01-08T06:01:03Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -244,11 +244,11 @@
     "TypeScript": 8514,
     "Shell": 885,
     "Python": 12033,
-    "C++": 56153,
+    "C++": 57299,
     "TeX": 24557,
-    "C": 4686,
+    "C": 5150,
     "__isArchived": false,
-    "__pushedAt": "2023-01-18T08:38:36Z"
+    "__pushedAt": "2024-01-08T01:51:27Z"
   },
   "cocoa-discord": {
     "TypeScript": 126139,
@@ -466,16 +466,16 @@
     "__pushedAt": "2022-12-07T08:32:50Z"
   },
   "daydream-cafe": {
-    "JavaScript": 4413,
+    "JavaScript": 4412,
     "TypeScript": 17149,
     "HTML": 346,
     "SCSS": 223,
-    "Svelte": 17242,
+    "Svelte": 17341,
     "Shell": 154,
     "CSS": 260,
     "Astro": 4027,
     "__isArchived": false,
-    "__pushedAt": "2024-01-07T14:46:11Z"
+    "__pushedAt": "2024-01-08T13:31:45Z"
   },
   "drunk-captcha": {
     "JavaScript": 1817,
