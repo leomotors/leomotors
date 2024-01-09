@@ -14270,6 +14270,7 @@ export type OrganizationRepositoriesArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -14576,8 +14577,13 @@ export type OrganizationInvitation = Node & {
   invitationType: OrganizationInvitationType;
   /** The user who was invited to the organization. */
   invitee?: Maybe<User>;
-  /** The user who created the invitation. */
+  /**
+   * The user who created the invitation.
+   * @deprecated `inviter` will be removed. `inviter` will be replaced by `inviterActor`. Removal on 2024-07-01 UTC.
+   */
   inviter: User;
+  /** The user who created the invitation. */
+  inviterActor?: Maybe<User>;
   /** The organization the invite is for */
   organization: Organization;
   /** The user's pending role in the organization (e.g. member, owner). */
@@ -21136,6 +21142,7 @@ export type RepositoryForksArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -21958,6 +21965,7 @@ export type RepositoryOwnerRepositoriesArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -26288,6 +26296,7 @@ export type TopicRepositoriesArgs = {
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
   sponsorableOnly?: InputMaybe<Scalars['Boolean']['input']>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -28683,6 +28692,7 @@ export type UserRepositoriesArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -28876,6 +28886,7 @@ export type UserWatchingArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 /** The possible durations that a user can be blocked for. */
