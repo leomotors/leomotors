@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2024-01-30T21:18:00Z"
+    "__pushedAt": "2024-01-31T21:15:58Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -470,12 +470,12 @@
     "TypeScript": 17149,
     "HTML": 346,
     "SCSS": 223,
-    "Svelte": 17341,
+    "Svelte": 17362,
     "Shell": 154,
     "CSS": 260,
     "Astro": 4027,
     "__isArchived": false,
-    "__pushedAt": "2024-01-08T13:31:45Z"
+    "__pushedAt": "2024-02-01T06:29:28Z"
   },
   "drunk-captcha": {
     "JavaScript": 1817,
@@ -572,8 +572,9 @@
     "C++": 94698,
     "TypeScript": 4120,
     "CSS": 57,
+    "C": 832,
     "__isArchived": false,
-    "__pushedAt": "2024-01-25T05:48:30Z"
+    "__pushedAt": "2024-02-01T05:34:25Z"
   },
   "cp49": {
     "JavaScript": 1502,
