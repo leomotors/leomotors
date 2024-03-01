@@ -22229,8 +22229,6 @@ export enum RepositoryRuleType {
   RequiredStatusChecks = 'REQUIRED_STATUS_CHECKS',
   /** Require all commits be made to a non-target branch and submitted via a pull request and required workflow checks to pass before they can be merged. */
   RequiredWorkflowStatusChecks = 'REQUIRED_WORKFLOW_STATUS_CHECKS',
-  /** Commits pushed to matching refs must have verified signatures. */
-  RulesetRequiredSignatures = 'RULESET_REQUIRED_SIGNATURES',
   /** Secret scanning */
   SecretScanning = 'SECRET_SCANNING',
   /** Tag */
