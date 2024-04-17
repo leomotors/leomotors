@@ -4961,6 +4961,48 @@ export type DependabotUpdateError = {
   title: Scalars['String']['output'];
 };
 
+/** A dependency manifest entry */
+export type DependencyGraphDependency = {
+  __typename?: 'DependencyGraphDependency';
+  /** Does the dependency itself have dependencies? */
+  hasDependencies: Scalars['Boolean']['output'];
+  /**
+   * The original name of the package, as it appears in the manifest.
+   * @deprecated `packageLabel` will be removed. Use normalized `packageName` field instead. Removal on 2022-10-01 UTC.
+   */
+  packageLabel: Scalars['String']['output'];
+  /** The dependency package manager */
+  packageManager?: Maybe<Scalars['String']['output']>;
+  /** The name of the package in the canonical form used by the package manager. */
+  packageName: Scalars['String']['output'];
+  /** The repository containing the package */
+  repository?: Maybe<Repository>;
+  /** The dependency version requirements */
+  requirements: Scalars['String']['output'];
+};
+
+/** The connection type for DependencyGraphDependency. */
+export type DependencyGraphDependencyConnection = {
+  __typename?: 'DependencyGraphDependencyConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DependencyGraphDependencyEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DependencyGraphDependency>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int']['output'];
+};
+
+/** An edge in a connection. */
+export type DependencyGraphDependencyEdge = {
+  __typename?: 'DependencyGraphDependencyEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String']['output'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DependencyGraphDependency>;
+};
+
 /** The possible ecosystems of a dependency graph package. */
 export enum DependencyGraphEcosystem {
   /** GitHub Actions */
@@ -4986,6 +5028,58 @@ export enum DependencyGraphEcosystem {
   /** Swift packages */
   Swift = 'SWIFT'
 }
+
+/** Dependency manifest for a repository */
+export type DependencyGraphManifest = Node & {
+  __typename?: 'DependencyGraphManifest';
+  /** Path to view the manifest file blob */
+  blobPath: Scalars['String']['output'];
+  /** A list of manifest dependencies */
+  dependencies?: Maybe<DependencyGraphDependencyConnection>;
+  /** The number of dependencies listed in the manifest */
+  dependenciesCount?: Maybe<Scalars['Int']['output']>;
+  /** Is the manifest too big to parse? */
+  exceedsMaxSize: Scalars['Boolean']['output'];
+  /** Fully qualified manifest filename */
+  filename: Scalars['String']['output'];
+  /** The Node ID of the DependencyGraphManifest object */
+  id: Scalars['ID']['output'];
+  /** Were we able to parse the manifest? */
+  parseable: Scalars['Boolean']['output'];
+  /** The repository containing the manifest */
+  repository: Repository;
+};
+
+
+/** Dependency manifest for a repository */
+export type DependencyGraphManifestDependenciesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The connection type for DependencyGraphManifest. */
+export type DependencyGraphManifestConnection = {
+  __typename?: 'DependencyGraphManifestConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DependencyGraphManifestEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DependencyGraphManifest>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int']['output'];
+};
+
+/** An edge in a connection. */
+export type DependencyGraphManifestEdge = {
+  __typename?: 'DependencyGraphManifestEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String']['output'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DependencyGraphManifest>;
+};
 
 /** A repository deploy key. */
 export type DeployKey = Node & {
@@ -21062,6 +21156,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   defaultBranchRef?: Maybe<Ref>;
   /** Whether or not branches are automatically deleted when merged in this repository. */
   deleteBranchOnMerge: Scalars['Boolean']['output'];
+  /** A list of dependency manifests contained in the repository */
+  dependencyGraphManifests?: Maybe<DependencyGraphManifestConnection>;
   /** A list of deploy keys that are on this repository. */
   deployKeys: DeployKeyConnection;
   /** Deployments associated with the repository */
@@ -21344,6 +21440,18 @@ export type RepositoryCommitCommentsArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Int']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** A repository contains the content for a project. */
+export type RepositoryDependencyGraphManifestsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  dependenciesAfter?: InputMaybe<Scalars['String']['input']>;
+  dependenciesFirst?: InputMaybe<Scalars['Int']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  withDependencies?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
