@@ -10146,7 +10146,7 @@ export type MaxFileSizeParametersInput = {
 /** Represents a member feature request notification */
 export type MemberFeatureRequestNotification = Node & {
   __typename?: 'MemberFeatureRequestNotification';
-  /** Represents member feature request body containing organization name and the number of feature requests */
+  /** Represents member feature request body containing entity name and the number of feature requests */
   body: Scalars['String']['output'];
   /** The Node ID of the MemberFeatureRequestNotification object */
   id: Scalars['ID']['output'];
