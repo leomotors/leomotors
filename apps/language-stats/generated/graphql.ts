@@ -5385,6 +5385,8 @@ export type DeploymentProtectionRuleEdge = {
 
 /** The possible protection rule types. */
 export enum DeploymentProtectionRuleType {
+  /** Branch policy */
+  BranchPolicy = 'BRANCH_POLICY',
   /** Required reviewers */
   RequiredReviewers = 'REQUIRED_REVIEWERS',
   /** Wait timer */
