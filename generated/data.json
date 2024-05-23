@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2024-05-21T21:17:57Z"
+    "__pushedAt": "2024-05-22T21:17:08Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -647,11 +647,11 @@
   },
   "embedded-final-project": {
     "CMake": 520,
-    "C": 16303,
+    "C": 16514,
     "Dockerfile": 471,
     "Makefile": 72,
     "Python": 5568,
     "__isArchived": false,
-    "__pushedAt": "2024-05-21T14:00:41Z"
+    "__pushedAt": "2024-05-23T14:26:33Z"
   }
 }
