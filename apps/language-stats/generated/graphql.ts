@@ -8230,6 +8230,8 @@ export enum FundingPlatform {
   Patreon = 'PATREON',
   /** Polar funding platform. */
   Polar = 'POLAR',
+  /** thanks.dev funding platform. */
+  ThanksDev = 'THANKS_DEV',
   /** Tidelift funding platform. */
   Tidelift = 'TIDELIFT'
 }
