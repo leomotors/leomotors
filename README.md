@@ -30,6 +30,7 @@ Note that your PR must be relevant otherwise, I won't merge. Please read the CON
   - Teaching Assistant (TA) in some subjects for CEDT
 
 - Ex Platform Engineer (Frontend) at BRIKL
+- Agoda Internship 2024
 
 See more in my [resume](https://resume.leomotors.me) (Note: Not updated)
 
