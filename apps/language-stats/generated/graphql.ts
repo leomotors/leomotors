@@ -18266,7 +18266,7 @@ export type PullRequest = Assignable & Closable & Comment & Labelable & Lockable
   closed: Scalars['Boolean']['output'];
   /** Identifies the date and time when the object was closed. */
   closedAt?: Maybe<Scalars['DateTime']['output']>;
-  /** List of issues that were may be closed by this pull request */
+  /** List of issues that may be closed by this pull request */
   closingIssuesReferences?: Maybe<IssueConnection>;
   /** A list of comments associated with the pull request. */
   comments: IssueCommentConnection;
