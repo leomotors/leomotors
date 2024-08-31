@@ -86,6 +86,9 @@ and more, I'm too lazy to update
 - [@leomotors/sv-components](https://github.com/Leomotors/sv-components) =>
   [![](https://img.shields.io/npm/v/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
   [![](https://img.shields.io/npm/dt/@leomotors/sv-components.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/sv-components)
+- [@leomotors/cocoa-vitepress-theme](https://github.com/Leomotors/cocoa-vitepress-theme) =>
+  [![](https://img.shields.io/npm/v/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
+  [![](https://img.shields.io/npm/dt/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
 - [@leomotors/config](https://github.com/Leomotors/node-config) =>
   [![](https://img.shields.io/npm/v/@leomotors/config.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/config)
   [![](https://img.shields.io/npm/dt/@leomotors/config.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/config)
