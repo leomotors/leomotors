@@ -8101,27 +8101,27 @@ export type FileDeletion = {
   path: Scalars['String']['input'];
 };
 
-/** Prevent commits that include files with specified file extensions from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+/** Prevent commits that include files with specified file extensions from being pushed to the commit graph. */
 export type FileExtensionRestrictionParameters = {
   __typename?: 'FileExtensionRestrictionParameters';
   /** The file extensions that are restricted from being pushed to the commit graph. */
   restrictedFileExtensions: Array<Scalars['String']['output']>;
 };
 
-/** Prevent commits that include files with specified file extensions from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+/** Prevent commits that include files with specified file extensions from being pushed to the commit graph. */
 export type FileExtensionRestrictionParametersInput = {
   /** The file extensions that are restricted from being pushed to the commit graph. */
   restrictedFileExtensions: Array<Scalars['String']['input']>;
 };
 
-/** Prevent commits that include changes in specified file paths from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+/** Prevent commits that include changes in specified file paths from being pushed to the commit graph. */
 export type FilePathRestrictionParameters = {
   __typename?: 'FilePathRestrictionParameters';
   /** The file paths that are restricted from being pushed to the commit graph. */
   restrictedFilePaths: Array<Scalars['String']['output']>;
 };
 
-/** Prevent commits that include changes in specified file paths from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+/** Prevent commits that include changes in specified file paths from being pushed to the commit graph. */
 export type FilePathRestrictionParametersInput = {
   /** The file paths that are restricted from being pushed to the commit graph. */
   restrictedFilePaths: Array<Scalars['String']['input']>;
@@ -10367,27 +10367,27 @@ export type MarketplaceListingEdge = {
   node?: Maybe<MarketplaceListing>;
 };
 
-/** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+/** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. */
 export type MaxFilePathLengthParameters = {
   __typename?: 'MaxFilePathLengthParameters';
   /** The maximum amount of characters allowed in file paths */
   maxFilePathLength: Scalars['Int']['output'];
 };
 
-/** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+/** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. */
 export type MaxFilePathLengthParametersInput = {
   /** The maximum amount of characters allowed in file paths */
   maxFilePathLength: Scalars['Int']['input'];
 };
 
-/** Prevent commits that exceed a specified file size limit from being pushed to the commit. NOTE: This rule is in beta and subject to change */
+/** Prevent commits that exceed a specified file size limit from being pushed to the commit. */
 export type MaxFileSizeParameters = {
   __typename?: 'MaxFileSizeParameters';
   /** The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS). */
   maxFileSize: Scalars['Int']['output'];
 };
 
-/** Prevent commits that exceed a specified file size limit from being pushed to the commit. NOTE: This rule is in beta and subject to change */
+/** Prevent commits that exceed a specified file size limit from being pushed to the commit. */
 export type MaxFileSizeParametersInput = {
   /** The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS). */
   maxFileSize: Scalars['Int']['input'];
@@ -23352,15 +23352,15 @@ export enum RepositoryRuleType {
   Creation = 'CREATION',
   /** Only allow users with bypass permissions to delete matching refs. */
   Deletion = 'DELETION',
-  /** Prevent commits that include files with specified file extensions from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+  /** Prevent commits that include files with specified file extensions from being pushed to the commit graph. */
   FileExtensionRestriction = 'FILE_EXTENSION_RESTRICTION',
-  /** Prevent commits that include changes in specified file paths from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+  /** Prevent commits that include changes in specified file paths from being pushed to the commit graph. */
   FilePathRestriction = 'FILE_PATH_RESTRICTION',
   /** Branch is read-only. Users cannot push to the branch. */
   LockBranch = 'LOCK_BRANCH',
-  /** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. NOTE: This rule is in beta and subject to change */
+  /** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. */
   MaxFilePathLength = 'MAX_FILE_PATH_LENGTH',
-  /** Prevent commits that exceed a specified file size limit from being pushed to the commit. NOTE: This rule is in beta and subject to change */
+  /** Prevent commits that exceed a specified file size limit from being pushed to the commit. */
   MaxFileSize = 'MAX_FILE_SIZE',
   /** Max ref updates */
   MaxRefUpdates = 'MAX_REF_UPDATES',
@@ -23531,7 +23531,7 @@ export type RepositoryRulesetEdge = {
   node?: Maybe<RepositoryRuleset>;
 };
 
-/** The targets supported for rulesets. NOTE: The push target is in beta and subject to change. */
+/** The targets supported for rulesets. */
 export enum RepositoryRulesetTarget {
   /** Branch */
   Branch = 'BRANCH',
