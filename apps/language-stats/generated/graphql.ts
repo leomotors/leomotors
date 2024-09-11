@@ -702,6 +702,8 @@ export type AnnouncementBanner = {
 /** A GitHub App. */
 export type App = Node & {
   __typename?: 'App';
+  /** The client ID of the app. */
+  clientId?: Maybe<Scalars['String']['output']>;
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime']['output'];
   /** Identifies the primary key from the database. */
