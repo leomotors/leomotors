@@ -24385,7 +24385,10 @@ export type SecurityAdvisory = Node & {
   __typename?: 'SecurityAdvisory';
   /** The classification of the advisory */
   classification: SecurityAdvisoryClassification;
-  /** The CVSS associated with this advisory */
+  /**
+   * The CVSS associated with this advisory
+   * @deprecated `cvss` will be removed. New `cvss_severities` field will now contain both `cvss_v3` and `cvss_v4` properties. Removal on 2025-10-01 UTC.
+   */
   cvss: Cvss;
   /** CWEs associated with this Advisory */
   cwes: CweConnection;
