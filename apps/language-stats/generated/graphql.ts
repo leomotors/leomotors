@@ -24540,6 +24540,10 @@ export type SecurityAdvisoryOrder = {
 
 /** Properties by which security advisory connections can be ordered. */
 export enum SecurityAdvisoryOrderField {
+  /** Order advisories by EPSS percentage */
+  EpssPercentage = 'EPSS_PERCENTAGE',
+  /** Order advisories by EPSS percentile */
+  EpssPercentile = 'EPSS_PERCENTILE',
   /** Order advisories by publication time */
   PublishedAt = 'PUBLISHED_AT',
   /** Order advisories by update time */
