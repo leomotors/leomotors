@@ -16821,12 +16821,17 @@ export type ProjectV2 = Closable & Node & Updatable & {
   createdAt: Scalars['DateTime']['output'];
   /** The actor who originally created the project. */
   creator?: Maybe<Actor>;
-  /** Identifies the primary key from the database. */
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated `databaseId` will be removed because it does not support 64-bit signed integer identifiers. Use `fullDatabaseId` instead. Removal on 2025-04-01 UTC.
+   */
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** A field of the project */
   field?: Maybe<ProjectV2FieldConfiguration>;
   /** List of fields and their constraints in the project */
   fields: ProjectV2FieldConfigurationConnection;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /** The Node ID of the ProjectV2 object */
   id: Scalars['ID']['output'];
   /** List of items in the project */
@@ -17193,7 +17198,10 @@ export type ProjectV2Item = Node & {
   createdAt: Scalars['DateTime']['output'];
   /** The actor who created the item. */
   creator?: Maybe<Actor>;
-  /** Identifies the primary key from the database. */
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated `databaseId` will be removed because it does not support 64-bit signed integer identifiers. Use `fullDatabaseId` instead. Removal on 2025-04-01 UTC.
+   */
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The field value of the first project field which matches the 'name' argument that is set on the item. */
   fieldValueByName?: Maybe<ProjectV2ItemFieldValue>;
@@ -17848,8 +17856,13 @@ export type ProjectV2StatusUpdate = Node & {
   createdAt: Scalars['DateTime']['output'];
   /** The actor who created the status update. */
   creator?: Maybe<Actor>;
-  /** Identifies the primary key from the database. */
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated `databaseId` will be removed because it does not support 64-bit signed integer identifiers. Use `fullDatabaseId` instead. Removal on 2025-04-01 UTC.
+   */
   databaseId?: Maybe<Scalars['Int']['output']>;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /** The Node ID of the ProjectV2StatusUpdate object */
   id: Scalars['ID']['output'];
   /** The project that contains this status update. */
@@ -17911,12 +17924,17 @@ export type ProjectV2View = Node & {
   __typename?: 'ProjectV2View';
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime']['output'];
-  /** Identifies the primary key from the database. */
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated `databaseId` will be removed because it does not support 64-bit signed integer identifiers. Use `fullDatabaseId` instead. Removal on 2025-04-01 UTC.
+   */
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The view's visible fields. */
   fields?: Maybe<ProjectV2FieldConfigurationConnection>;
   /** The project view's filter. */
   filter?: Maybe<Scalars['String']['output']>;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /**
    * The view's group-by field.
    * @deprecated The `ProjectV2View#order_by` API is deprecated in favour of the more capable `ProjectV2View#group_by_field` API. Check out the `ProjectV2View#group_by_fields` API as an example for the more capable alternative. Removal on 2023-04-01 UTC.
@@ -18090,10 +18108,15 @@ export type ProjectV2Workflow = Node & {
   __typename?: 'ProjectV2Workflow';
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime']['output'];
-  /** Identifies the primary key from the database. */
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated `databaseId` will be removed because it does not support 64-bit signed integer identifiers. Use `fullDatabaseId` instead. Removal on 2025-04-01 UTC.
+   */
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** Whether the workflow is enabled. */
   enabled: Scalars['Boolean']['output'];
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /** The Node ID of the ProjectV2Workflow object */
   id: Scalars['ID']['output'];
   /** The name of the workflow. */
