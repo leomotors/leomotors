@@ -13,16 +13,16 @@
     "format": "prettier --write .*.cjs src/**/*.{js,ts}"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.6",
-    "@graphql-codegen/cli": "^5.0.0",
-    "@graphql-codegen/typescript": "^4.0.1",
-    "@graphql-codegen/typescript-graphql-request": "^6.1.0",
-    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@babel/core": "^7.25.2",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/typescript": "^4.0.9",
+    "@graphql-codegen/typescript-graphql-request": "^6.2.0",
+    "@graphql-codegen/typescript-operations": "^4.2.3",
     "@leomotors/config": "workspace:0.0.0",
-    "@types/node": "^20.10.5",
-    "graphql": "^16.8.1",
+    "@types/node": "^20.16.10",
+    "graphql": "^16.9.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.6.2"
   },
   "dependencies": {
     "graphql-request": "^6.1.0",
