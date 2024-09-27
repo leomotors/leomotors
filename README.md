@@ -2,60 +2,53 @@
 
 <h3 align="center"> => <a href="https://leomotors.me">My Homepage</a> <= </h3>
 
-<details>
-<summary><b> Hacktoberfest Repos (in case you still want to contribute) </b></summary>
-
-## 🎃 Hacktoberfest Time!!! 🎃
-
-Feel free to contribute to my repositories below
-
-- [Anime Captcha](https://github.com/Leomotors/anime-captcha) -> My most popular Repo
-- [Golden Frame](https://github.com/Leomotors/golden-frame) -> Just Golden Frame, OpenCV Python
-- [Terminal Video Player](https://github.com/Leomotors/Terminal-Video-Player) -> Do what it says (Want someone to optimize algo into sublinear)
-
-These are repos I would want you to contribute, however, if you find other repos you would like to contribute.  
-Feel free to open PR and don't forget to tell me hacktoberfest so that I can add a label for you.  
-Note that your PR must be relevant otherwise, I won't merge. Please read the CONTRIBUTING.md of each repo.
-
-</details>
-
-## 🏢 Position
+## 🏢 Position & Experience
 
 - Student at Chulalongkorn University, Computer Engineering (Intania 106, CP49 🥗)
 
   - Core Team of @thinc-org [thinc.in.th](https://thinc.in.th) working on [CU Get Reg](https://github.com/thinc-org/cugetreg)
 
-  - Member of @isd-sgcu (Information System Development, Student Government of Chulalongkorn University)
+  - Teaching Assistant
 
-  - Teaching Assistant (TA) in some subjects for CEDT
+- Ex Platform Engineer (Frontend) at Brikl
 
-- Ex Platform Engineer (Frontend) at BRIKL
+- Completed Summer Internship at Agoda (2024)
 
-See more in my [resume](https://resume.leomotors.me) (Note: Not updated)
+See more in my [resume](https://resume.leomotors.me)
 
-## 🎒 Academic Stuff
+## ⚡ Current Skills
+
+- Works in Full Stack Application using TypeScript and its ecosystem. Experienced with Next.js, SvelteKit and PostgreSQL as my favourite database.
+- Sometimes write Python and Go for backend
+- Interested in (and currently learning) IoT development using C **(not C++)**
+- Studying Quantum Computing
+
+## 🔍 Current Interest: Building Home Server
+
+Current Setup is [Raspberry Pi 5](https://leomotors.me/blog/honamipi5/) but working on new home server (Rock 5 ITX), blog post coming soon (when I finish it)
+
+- Hosting Discord Bots
+- Hosting Applications (See https://github.com/leomotors?tab=packages, ex: [Golden Frame Generator](https://golden-frame.leomotors.me))
+- Grafana Dashboard which monitors system status, [Home Environment](https://github.com/leomotors/home-env) (Temperature and Humidity)
+- [GitOps](https://github.com/leomotors/honami-gitops) for managing Docker Containers versions
+- Home Media Server and Network File Storage
+
+### 🍵 My Gitea (Hosted on Pi) Highlights
+
+- https://cafe.leomotors.me/riscv64 - My attempt on making all my apps work on RISC-V (64-bit)
+
+## 🎒 Academic Stuff (from like 3 years ago)
 
 - 🏫 Graduated from (High School) Triam Udom Suksa School (TU82) in Math & Science with a GPAX of 3.95
 
 - 🥈 Silver Medal in 17th Thailand Olympiad in Informatics [Read Blog](https://github.com/Leomotors/TOI17-Journey#readme) and have gone under IOI Selection Camp (IPST 2.2 / Final Round)
 
-### Skills & What I like to do
-
-- 👨‍💻 Frequently used Language: C++ JavaScript TypeScript Python Dart(?)
-
-- 🖼️ Frequently used Stuff
-
-  - For Web Application: Svelte/Kit, Solid/Start(?), Next.js🔺, NestJS🐈(?)
-  - Other Application: discord.js 🤖 (Active Developer badge holder)
-
-- powerlevel10k enjoyer
-
-👀 Looking to collaborate, contribute to the Open-source community, and create more useful things
-
 ## ⚒️ My Deployed/Published Projects/Apps/Packages
 
 <details>
  <summary>🔺 Web App</summary>
+
+Note: This is not updated, but I'm also want to keep this section from previous version of readme
 
 - [Website Vector Calculator 2](https://github.com/Leomotors/Website-Vector-Calculator-2) => [Vercel App](https://mini-vector-calculator.vercel.app)
 - [My Repositories](https://github.com/Leomotors/my-repos) => [Vercel App](https://repos.leomotors.vercel.app)
@@ -63,8 +56,6 @@ See more in my [resume](https://resume.leomotors.me) (Note: Not updated)
 - [Stupid Problems](https://github.com/Leomotors/stupid-problems) => [GitHub Pages](https://leomotors.github.io/stupid-problems/)
 - [My Portfolio](https://github.com/Leomotors/portfolio-sv) => [Vercel App](https://portfolio.leomotors.vercel.app)
 - [กราบครับ](https://github.com/Leomotors/grab-krub) => [Vercel App](https://grab-krub.vercel.app)
-
-and more, I'm too lazy to update
 
 </details>
 
@@ -121,21 +112,15 @@ This list is automatically kept up to date by this monorepo.
 <details>
  <summary>🪟 Microsoft Store</summary>
 
+Note: App is removed from Microsoft Store because they said this app is useless.
+
 - [You are a Failure!](https://github.com/Leomotors/you-are-a-failure)
-  <a href="https://www.microsoft.com/store/productId/9NJ5TZW6MDGL">
-  <img src="https://getbadgecdn.azureedge.net/images/English_L.png" width=150>
-  </a>
 
 </details>
 
-[My Repositories List](https://repos.leomotors.vercel.app)
+[My Repositories List](https://repos.leomotors.me)
 
-## 🐄 Other Major Roles
-
-- Developer Head, Mobile App & Web Developer at [@Food-Busters](https://github.com/Food-Busters)
-- Server Administrator & Web Dev at [Crack 'n' Code](https://github.com/crackncode-th) in Pre-TOI18 Contest
-
-## 📜 Badges
+### 📜 Badges (From 3 Years Ago)
 
 <a href="https://www.credly.com/badges/179d5d39-7cae-4c46-9836-b1012bb0f9aa">
  <img src="https://images.credly.com/size/340x340/images/577c7534-c18d-4bee-bbb7-8be23a229fc6/image.png" height=100 />
@@ -148,15 +133,38 @@ This list is automatically kept up to date by this monorepo.
 ## 🔢 GitHub Stats
 
 <table>
-<tr><td> <img src="generated/languages.svg" /> </td>
-<td> <img src="generated/overview.svg" /> </td></tr>
+  <tr>
+    <td>
+      <img src="generated/languages.svg" /> 
+    </td>
+    <td>
+      <img src="generated/overview.svg" />
+    </td>
+  </tr>
+</table>
+
+## 👨‍⚖️ Civil Court Case Statistics
+
+**Win Rate**: 100% (Win 1 / Lose 0)
+
+2024 (**WIN 🟩**): Me (Plaintiff) vs Brikl Thailand Co., Ltd. (Defendant) - The court rules that Brikl have to pay me an amount of money.
+
+<table>
+  <tr>
+    <td>
+      <img src="images/nah_id_won.jpg" width="300" />
+    </td>
+    <td>
+      <img src="images/sukuna_won.jpg" width="300" />
+    </td>
+  </tr>
 </table>
 
 ## 🕐 Wakatime
 
 [![wakatime](https://wakatime.com/badge/user/7b85cf35-1e8b-4428-aed5-467d40e6e916.svg)](https://wakatime.com/@Leomotors)
 
-And wakapi self-hosted since October 2023 because I don't want to pay wakatime premium
+And wakapi self-hosted (on that Pi I mentioned above) since October 2023 because I don't want to pay wakatime premium
 
 ![](https://kapi.leomotors.me/api/badge/Leomotors/interval:any?label=wakapi)
 
