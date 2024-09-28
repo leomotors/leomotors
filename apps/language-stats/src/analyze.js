@@ -71,7 +71,7 @@ for (const reponame in langObj) {
   const repolang = langObj[reponame];
   CSVWrite += `${reponame},${getType(
     repolang.__isArchived,
-    repolang.__pushedAt
+    repolang.__pushedAt,
   )},`;
   for (const lang of languages) {
     if (repolang[lang]) {

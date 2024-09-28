@@ -1,14 +1,14 @@
 import { NPMPackage, NPMPackageReturnType, NPMReturnType } from "./types.js";
 
 const result = (await fetch(
-  "https://registry.npmjs.org/-/v1/search?text=maintainer:leomotors&size=250"
+  "https://registry.npmjs.org/-/v1/search?text=maintainer:leomotors&size=250",
 ).then((r) => r.json())) as NPMReturnType;
 
 const knownDate: Record<string, number> = {};
 
 async function getFirstDate(pkg: NPMPackage) {
   const response = (await fetch(`https://registry.npmjs.org/${pkg.name}`).then(
-    (r) => r.json()
+    (r) => r.json(),
   )) as NPMPackageReturnType;
 
   knownDate[pkg.name] = new Date(response.time.created).getTime();
@@ -18,7 +18,7 @@ const packages = result.objects
   .map((obj) => obj.package)
   .filter(
     (pkg) =>
-      "repository" in pkg.links && typeof pkg.links.repository === "string"
+      "repository" in pkg.links && typeof pkg.links.repository === "string",
   );
 
 for (const pkg of packages) {
@@ -26,7 +26,7 @@ for (const pkg of packages) {
 }
 
 const sortedPackages = packages.sort(
-  (a, b) => knownDate[a.name]! - knownDate[b.name]!
+  (a, b) => knownDate[a.name]! - knownDate[b.name]!,
 );
 
 function getReadmeLink(pkg: NPMPackage) {

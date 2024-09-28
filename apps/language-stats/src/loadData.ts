@@ -38,7 +38,7 @@ const data: {
 } = {};
 
 for (const repo of repos) {
-  const repoLangs: typeof data[string] = {};
+  const repoLangs: (typeof data)[string] = {};
 
   for (const edge of repo!.languages?.edges ?? []) {
     repoLangs[edge!.node.name] = edge!.size;

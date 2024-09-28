@@ -10,7 +10,7 @@
     "post-analyze": "bash post-analyze.bash",
     "codegen": "graphql-codegen --config codegen.yml",
     "lint": "eslint src --max-warnings=0",
-    "format": "prettier --write .*.cjs src/**/*.{js,ts}"
+    "format": "prettier --write src/**/*.{js,ts}"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
