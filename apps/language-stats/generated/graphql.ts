@@ -15207,6 +15207,7 @@ export type OrganizationRepositoryMigrationsArgs = {
 /** An account on GitHub, with one or more owners, that has repositories, members and teams. */
 export type OrganizationRulesetArgs = {
   databaseId: Scalars['Int']['input'];
+  includeParents?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
