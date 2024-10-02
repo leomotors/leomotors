@@ -19652,7 +19652,7 @@ export type PushAllowanceEdge = {
 };
 
 /** The query root of GitHub's GraphQL interface. */
-export type Query = {
+export type Query = Node & {
   __typename?: 'Query';
   /** Look up a code of conduct by its key */
   codeOfConduct?: Maybe<CodeOfConduct>;
@@ -19668,6 +19668,8 @@ export type Query = {
   enterpriseMemberInvitation?: Maybe<EnterpriseMemberInvitation>;
   /** Look up a pending enterprise unaffiliated member invitation by invitation token. */
   enterpriseMemberInvitationByToken?: Maybe<EnterpriseMemberInvitation>;
+  /** ID of the object. */
+  id: Scalars['ID']['output'];
   /** Look up an open source license by its key */
   license?: Maybe<License>;
   /** Return a list of known open source licenses */
@@ -24280,7 +24282,7 @@ export type RuleParametersInput = {
 };
 
 /** Types which can have `RepositoryRule` objects. */
-export type RuleSource = Organization | Repository;
+export type RuleSource = Enterprise | Organization | Repository;
 
 /** The possible digest algorithms used to sign SAML requests for an identity provider. */
 export enum SamlDigestAlgorithm {
