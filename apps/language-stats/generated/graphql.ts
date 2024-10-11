@@ -9229,6 +9229,8 @@ export type IssueUserContentEditsArgs = {
 export enum IssueClosedStateReason {
   /** An issue that has been closed as completed */
   Completed = 'COMPLETED',
+  /** An issue that has been closed as a duplicate */
+  Duplicate = 'DUPLICATE',
   /** An issue that has been closed as not planned */
   NotPlanned = 'NOT_PLANNED'
 }
@@ -9456,6 +9458,8 @@ export enum IssueState {
 export enum IssueStateReason {
   /** An issue that has been closed as completed */
   Completed = 'COMPLETED',
+  /** An issue that has been closed as a duplicate */
+  Duplicate = 'DUPLICATE',
   /** An issue that has been closed as not planned */
   NotPlanned = 'NOT_PLANNED',
   /** An issue that has been reopened */
