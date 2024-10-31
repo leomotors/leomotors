@@ -24861,6 +24861,8 @@ export type SocialAccountEdge = {
 
 /** Software or company that hosts social media accounts. */
 export enum SocialAccountProvider {
+  /** Decentralized microblogging social platform. */
+  Bluesky = 'BLUESKY',
   /** Social media and networking website. */
   Facebook = 'FACEBOOK',
   /** Catch-all for social media providers that do not yet have specific handling. */
