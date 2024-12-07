@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2024-12-05T21:19:35Z"
+    "__pushedAt": "2024-12-06T21:19:25Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -617,10 +617,10 @@
   },
   "honami-backup": {
     "JavaScript": 137,
-    "TypeScript": 16685,
+    "TypeScript": 17156,
     "Dockerfile": 1001,
     "__isArchived": false,
-    "__pushedAt": "2024-12-04T17:03:58Z"
+    "__pushedAt": "2024-12-07T07:42:33Z"
   },
   "honami-gitops": {
     "JavaScript": 413,
@@ -687,5 +687,11 @@
     "Python": 776,
     "__isArchived": false,
     "__pushedAt": "2024-12-04T02:01:25Z"
+  },
+  "hw-syn-lab-final-project": {
+    "Tcl": 10248,
+    "Verilog": 29209,
+    "__isArchived": false,
+    "__pushedAt": "2024-12-07T21:06:59Z"
   }
 }
