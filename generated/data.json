@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2024-12-06T21:19:25Z"
+    "__pushedAt": "2024-12-07T21:19:13Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -689,9 +689,10 @@
     "__pushedAt": "2024-12-04T02:01:25Z"
   },
   "hw-syn-lab-final-project": {
-    "Tcl": 10248,
-    "Verilog": 29209,
+    "Tcl": 10247,
+    "Verilog": 29492,
+    "Python": 597,
     "__isArchived": false,
-    "__pushedAt": "2024-12-07T21:06:59Z"
+    "__pushedAt": "2024-12-08T17:17:25Z"
   }
 }
