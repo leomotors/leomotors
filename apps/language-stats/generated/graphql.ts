@@ -712,15 +712,40 @@ export type AddedToProjectEvent = Node & {
   projectColumnName: Scalars['String']['output'];
 };
 
+/** An announcement banner for an enterprise or organization. */
+export type AnnouncementBanner = {
+  __typename?: 'AnnouncementBanner';
+  /** The date the announcement was created */
+  createdAt: Scalars['DateTime']['output'];
+  /** The expiration date of the announcement, if any */
+  expiresAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Whether the announcement can be dismissed by the user */
+  isUserDismissible: Scalars['Boolean']['output'];
+  /** The text of the announcement */
+  message?: Maybe<Scalars['String']['output']>;
+};
+
 /** Represents an announcement banner. */
 export type AnnouncementBannerI = {
-  /** The text of the announcement */
+  /**
+   * The text of the announcement
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcement?: Maybe<Scalars['String']['output']>;
-  /** The date the announcement was created */
+  /**
+   * The date the announcement was created
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementCreatedAt?: Maybe<Scalars['DateTime']['output']>;
-  /** The expiration date of the announcement, if any */
+  /**
+   * The expiration date of the announcement, if any
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementExpiresAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Whether the announcement can be dismissed by the user */
+  /**
+   * Whether the announcement can be dismissed by the user
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementUserDismissible?: Maybe<Scalars['Boolean']['output']>;
 };
 
@@ -6480,13 +6505,27 @@ export type EnqueuePullRequestPayload = {
 /** An account to manage multiple organizations with consolidated policy and billing. */
 export type Enterprise = AnnouncementBannerI & Node & {
   __typename?: 'Enterprise';
-  /** The text of the announcement */
+  /**
+   * The text of the announcement
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcement?: Maybe<Scalars['String']['output']>;
-  /** The date the announcement was created */
+  /** The announcement banner set on this enterprise, if any. Only visible to members of the enterprise. */
+  announcementBanner?: Maybe<AnnouncementBanner>;
+  /**
+   * The date the announcement was created
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementCreatedAt?: Maybe<Scalars['DateTime']['output']>;
-  /** The expiration date of the announcement, if any */
+  /**
+   * The expiration date of the announcement, if any
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementExpiresAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Whether the announcement can be dismissed by the user */
+  /**
+   * Whether the announcement can be dismissed by the user
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementUserDismissible?: Maybe<Scalars['Boolean']['output']>;
   /** A URL pointing to the enterprise's public avatar. */
   avatarUrl: Scalars['URI']['output'];
@@ -14893,13 +14932,27 @@ export type OrgUpdateMemberRepositoryInvitationPermissionAuditEntry = AuditEntry
 /** An account on GitHub, with one or more owners, that has repositories, members and teams. */
 export type Organization = Actor & AnnouncementBannerI & MemberStatusable & Node & PackageOwner & ProfileOwner & ProjectOwner & ProjectV2Owner & ProjectV2Recent & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable & {
   __typename?: 'Organization';
-  /** The text of the announcement */
+  /**
+   * The text of the announcement
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcement?: Maybe<Scalars['String']['output']>;
-  /** The date the announcement was created */
+  /** The announcement banner set on this organization, if any. Only visible to members of the organization's enterprise. */
+  announcementBanner?: Maybe<AnnouncementBanner>;
+  /**
+   * The date the announcement was created
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementCreatedAt?: Maybe<Scalars['DateTime']['output']>;
-  /** The expiration date of the announcement, if any */
+  /**
+   * The expiration date of the announcement, if any
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementExpiresAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Whether the announcement can be dismissed by the user */
+  /**
+   * Whether the announcement can be dismissed by the user
+   * @deprecated The individual `announcementX` fields do not follow our standard GraphQL patterns. Use the `announcementBanner` object instead. Removal on 2025-04-01 UTC.
+   */
   announcementUserDismissible?: Maybe<Scalars['Boolean']['output']>;
   /** Determine if this repository owner has any items that can be pinned to their profile. */
   anyPinnableItems: Scalars['Boolean']['output'];
