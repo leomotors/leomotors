@@ -31017,6 +31017,21 @@ export type UserListSuggestion = {
   name?: Maybe<Scalars['String']['output']>;
 };
 
+/** A repository owned by an Enterprise Managed user. */
+export type UserNamespaceRepository = Node & {
+  __typename?: 'UserNamespaceRepository';
+  /** The Node ID of the UserNamespaceRepository object */
+  id: Scalars['ID']['output'];
+  /** The name of the repository. */
+  name: Scalars['String']['output'];
+  /** The repository's name with owner. */
+  nameWithOwner: Scalars['String']['output'];
+  /** The user owner of the repository. */
+  owner: RepositoryOwner;
+  /** The repository owned by an enterprise managed user. */
+  repository?: Maybe<RepositoryInfo>;
+};
+
 /** The user's description of what they're currently doing. */
 export type UserStatus = Node & {
   __typename?: 'UserStatus';
