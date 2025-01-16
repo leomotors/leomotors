@@ -6599,6 +6599,8 @@ export type Enterprise = AnnouncementBannerI & Node & {
   rulesets?: Maybe<RepositoryRulesetConnection>;
   /** The URL-friendly identifier for the enterprise. */
   slug: Scalars['String']['output'];
+  /** Identifies the date and time when the object was last updated. */
+  updatedAt: Scalars['DateTime']['output'];
   /** The HTTP URL for this enterprise. */
   url: Scalars['URI']['output'];
   /** A list of repositories that belong to users. Only available for enterprises with Enterprise Managed Users. */
