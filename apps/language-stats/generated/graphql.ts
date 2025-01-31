@@ -17646,12 +17646,16 @@ export enum ProjectV2FieldType {
   Milestone = 'MILESTONE',
   /** Number */
   Number = 'NUMBER',
+  /** Parent issue */
+  ParentIssue = 'PARENT_ISSUE',
   /** Repository */
   Repository = 'REPOSITORY',
   /** Reviewers */
   Reviewers = 'REVIEWERS',
   /** Single Select */
   SingleSelect = 'SINGLE_SELECT',
+  /** Sub-issues progress */
+  SubIssuesProgress = 'SUB_ISSUES_PROGRESS',
   /** Text */
   Text = 'TEXT',
   /** Title */
