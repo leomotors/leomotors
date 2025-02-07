@@ -80,7 +80,7 @@ Note: This is not updated, but I'm also want to keep this section from previous 
 - [@leomotors/cocoa-vitepress-theme](git+https://github.com/Leomotors/cocoa-vitepress-theme.git) =>
   [![](https://img.shields.io/npm/v/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
   [![](https://img.shields.io/npm/dt/@leomotors/cocoa-vitepress-theme.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cocoa-vitepress-theme)
-- [@leomotors/config](git+https://github.com/Leomotors/node-config.git) =>
+- [@leomotors/config](git+https://github.com/leomotors/node-config.git) =>
   [![](https://img.shields.io/npm/v/@leomotors/config.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/config)
   [![](https://img.shields.io/npm/dt/@leomotors/config.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/config)
 - [@leomotors/prisma-nestjs-graphql](git+https://github.com/Leomotors/prisma-nestjs-graphql.git) =>
