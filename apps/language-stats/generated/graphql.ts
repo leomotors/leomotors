@@ -19395,7 +19395,7 @@ export enum PullRequestOrderField {
 /** Require all commits be made to a non-target branch and submitted via a pull request before they can be merged. */
 export type PullRequestParameters = {
   __typename?: 'PullRequestParameters';
-  /** When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled. */
+  /** Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled. */
   allowedMergeMethods?: Maybe<Array<Scalars['String']['output']>>;
   /** New, reviewable commits pushed will dismiss previous pull request review approvals. */
   dismissStaleReviewsOnPush: Scalars['Boolean']['output'];
@@ -19411,7 +19411,7 @@ export type PullRequestParameters = {
 
 /** Require all commits be made to a non-target branch and submitted via a pull request before they can be merged. */
 export type PullRequestParametersInput = {
-  /** When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled. */
+  /** Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled. */
   allowedMergeMethods?: InputMaybe<Array<Scalars['String']['input']>>;
   /** New, reviewable commits pushed will dismiss previous pull request review approvals. */
   dismissStaleReviewsOnPush: Scalars['Boolean']['input'];
