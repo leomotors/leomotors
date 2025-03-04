@@ -728,7 +728,10 @@ export type AddedToProjectEvent = Node & {
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The Node ID of the AddedToProjectEvent object */
   id: Scalars['ID']['output'];
-  /** Project referenced by event. */
+  /**
+   * Project referenced by event.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   project?: Maybe<Project>;
   /**
    * Project card referenced by this project event.
@@ -3479,7 +3482,10 @@ export type ConvertedNoteToIssueEvent = Node & {
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The Node ID of the ConvertedNoteToIssueEvent object */
   id: Scalars['ID']['output'];
-  /** Project referenced by event. */
+  /**
+   * Project referenced by event.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   project?: Maybe<Project>;
   /**
    * Project card referenced by this project event.
@@ -9167,7 +9173,10 @@ export type Issue = Assignable & Closable & Comment & Deletable & Labelable & Lo
   parent?: Maybe<Issue>;
   /** A list of Users that are participating in the Issue conversation. */
   participants: UserConnection;
-  /** List of project cards associated with this issue. */
+  /**
+   * List of project cards associated with this issue.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   projectCards: ProjectCardConnection;
   /** List of project items associated with this issue. */
   projectItems: ProjectV2ItemConnection;
@@ -11381,7 +11390,10 @@ export type MovedColumnsInProjectEvent = Node & {
    * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
    */
   previousProjectColumnName: Scalars['String']['output'];
-  /** Project referenced by event. */
+  /**
+   * Project referenced by event.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   project?: Maybe<Project>;
   /**
    * Project card referenced by this project event.
@@ -15259,7 +15271,10 @@ export type Organization = Actor & AnnouncementBannerI & MemberStatusable & Node
   viewerCanAdminister: Scalars['Boolean']['output'];
   /** Can the viewer pin repositories and gists to the profile? */
   viewerCanChangePinnedItems: Scalars['Boolean']['output'];
-  /** Can the current viewer create new projects on this owner. */
+  /**
+   * Can the current viewer create new projects on this owner.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   viewerCanCreateProjects: Scalars['Boolean']['output'];
   /** Viewer can create repositories on this organization */
   viewerCanCreateRepositories: Scalars['Boolean']['output'];
@@ -17011,9 +17026,15 @@ export type ProjectCard = Node & {
 
 /** The possible archived states of a project card. */
 export enum ProjectCardArchivedState {
-  /** A project card that is archived */
+  /**
+   * A project card that is archived
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   Archived = 'ARCHIVED',
-  /** A project card that is not archived */
+  /**
+   * A project card that is not archived
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   NotArchived = 'NOT_ARCHIVED'
 }
 
@@ -17209,7 +17230,10 @@ export enum ProjectOrderField {
 
 /** Represents an owner of a Project. */
 export type ProjectOwner = {
-  /** The Node ID of the ProjectOwner object */
+  /**
+   * The Node ID of the ProjectOwner object
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   id: Scalars['ID']['output'];
   /**
    * Find project by number.
@@ -17221,11 +17245,20 @@ export type ProjectOwner = {
    * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
    */
   projects: ProjectConnection;
-  /** The HTTP path listing owners projects */
+  /**
+   * The HTTP path listing owners projects
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   projectsResourcePath: Scalars['URI']['output'];
-  /** The HTTP URL listing owners projects */
+  /**
+   * The HTTP URL listing owners projects
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   projectsUrl: Scalars['URI']['output'];
-  /** Can the current viewer create new projects on this owner. */
+  /**
+   * Can the current viewer create new projects on this owner.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   viewerCanCreateProjects: Scalars['Boolean']['output'];
 };
 
@@ -18901,7 +18934,10 @@ export type PullRequest = Assignable & Closable & Comment & Labelable & Lockable
   permalink: Scalars['URI']['output'];
   /** The commit that GitHub automatically generated to test if this pull request could be merged. This field will not return a value if the pull request is merged, or if the test merge commit is still being generated. See the `mergeable` field for more details on the mergeability of the pull request. */
   potentialMergeCommit?: Maybe<Commit>;
-  /** List of project cards associated with this pull request. */
+  /**
+   * List of project cards associated with this pull request.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   projectCards: ProjectCardConnection;
   /** List of project items associated with this pull request. */
   projectItems: ProjectV2ItemConnection;
@@ -21359,7 +21395,10 @@ export type RemovedFromProjectEvent = Node & {
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The Node ID of the RemovedFromProjectEvent object */
   id: Scalars['ID']['output'];
-  /** Project referenced by event. */
+  /**
+   * Project referenced by event.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   project?: Maybe<Project>;
   /**
    * Column name referenced by this project event.
@@ -22769,7 +22808,10 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   usesCustomOpenGraphImage: Scalars['Boolean']['output'];
   /** Indicates whether the viewer has admin permissions on this repository. */
   viewerCanAdminister: Scalars['Boolean']['output'];
-  /** Can the current viewer create new projects on this owner. */
+  /**
+   * Can the current viewer create new projects on this owner.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   viewerCanCreateProjects: Scalars['Boolean']['output'];
   /** Check if the viewer is able to change their subscription status for the repository. */
   viewerCanSubscribe: Scalars['Boolean']['output'];
@@ -30625,7 +30667,10 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectOwner & P
   userViewType: UserViewType;
   /** Can the viewer pin repositories and gists to the profile? */
   viewerCanChangePinnedItems: Scalars['Boolean']['output'];
-  /** Can the current viewer create new projects on this owner. */
+  /**
+   * Can the current viewer create new projects on this owner.
+   * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
+   */
   viewerCanCreateProjects: Scalars['Boolean']['output'];
   /** Whether or not the viewer is able to follow the user. */
   viewerCanFollow: Scalars['Boolean']['output'];
