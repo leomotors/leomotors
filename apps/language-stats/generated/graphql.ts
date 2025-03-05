@@ -24335,6 +24335,8 @@ export type RepositoryVulnerabilityAlert = Node & RepositoryNode & {
   createdAt: Scalars['DateTime']['output'];
   /** The associated Dependabot update */
   dependabotUpdate?: Maybe<DependabotUpdate>;
+  /** The relationship of an alert's dependency. */
+  dependencyRelationship?: Maybe<RepositoryVulnerabilityAlertDependencyRelationship>;
   /** The scope of an alert's dependency */
   dependencyScope?: Maybe<RepositoryVulnerabilityAlertDependencyScope>;
   /** Comment explaining the reason the alert was dismissed */
@@ -24379,6 +24381,16 @@ export type RepositoryVulnerabilityAlertConnection = {
   /** Identifies the total count of items in the connection. */
   totalCount: Scalars['Int']['output'];
 };
+
+/** The possible relationships of an alert's dependency. */
+export enum RepositoryVulnerabilityAlertDependencyRelationship {
+  /** A direct dependency of your project */
+  Direct = 'DIRECT',
+  /** A transitive dependency of your project */
+  Transitive = 'TRANSITIVE',
+  /** The relationship is unknown */
+  Unknown = 'UNKNOWN'
+}
 
 /** The possible scopes of an alert's dependency. */
 export enum RepositoryVulnerabilityAlertDependencyScope {
