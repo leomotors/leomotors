@@ -25053,6 +25053,11 @@ export enum SearchType {
   Discussion = 'DISCUSSION',
   /** Returns results matching issues in repositories. */
   Issue = 'ISSUE',
+  /**
+   * Returns results matching issues in repositories.
+   * @deprecated Search for issues and pull requests will be overridden by advanced search on September 4, 2025. Removal on 2025-09-04 UTC.
+   */
+  IssueAdvanced = 'ISSUE_ADVANCED',
   /** Returns results matching repositories. */
   Repository = 'REPOSITORY',
   /** Returns results matching users and organizations on GitHub. */
