@@ -11177,6 +11177,8 @@ export type Milestone = Closable & Node & UniformResourceLocatable & {
   creator?: Maybe<Actor>;
   /** Identifies the description of the milestone. */
   description?: Maybe<Scalars['String']['output']>;
+  /** The HTML rendered description of the milestone using GitHub Flavored Markdown. */
+  descriptionHTML?: Maybe<Scalars['String']['output']>;
   /** Identifies the due date of the milestone. */
   dueOn?: Maybe<Scalars['DateTime']['output']>;
   /** The Node ID of the Milestone object */
@@ -25055,7 +25057,7 @@ export enum SearchType {
   Issue = 'ISSUE',
   /**
    * Returns results matching issues in repositories.
-   * @deprecated Search for issues and pull requests will be overridden by advanced search on September 4, 2025. Removal on 2025-09-04 UTC.
+   * @deprecated Search for issues and pull requests will be overridden by advanced search on September 4, 2025. You can read more about this change on https://github.blog/changelog/2025-03-06-github-issues-projects-api-support-for-issues-advanced-search-and-more/. Removal on 2025-09-04 UTC.
    */
   IssueAdvanced = 'ISSUE_ADVANCED',
   /** Returns results matching repositories. */
