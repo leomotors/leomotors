@@ -9797,7 +9797,7 @@ export type IssueTimelineItemEdge = {
 };
 
 /** An item in an issue timeline */
-export type IssueTimelineItems = AddedToProjectEvent | AssignedEvent | ClosedEvent | CommentDeletedEvent | ConnectedEvent | ConvertedNoteToIssueEvent | ConvertedToDiscussionEvent | CrossReferencedEvent | DemilestonedEvent | DisconnectedEvent | IssueComment | LabeledEvent | LockedEvent | MarkedAsDuplicateEvent | MentionedEvent | MilestonedEvent | MovedColumnsInProjectEvent | ParentIssueAddedEvent | ParentIssueRemovedEvent | PinnedEvent | ReferencedEvent | RemovedFromProjectEvent | RenamedTitleEvent | ReopenedEvent | SubIssueAddedEvent | SubIssueRemovedEvent | SubscribedEvent | TransferredEvent | UnassignedEvent | UnlabeledEvent | UnlockedEvent | UnmarkedAsDuplicateEvent | UnpinnedEvent | UnsubscribedEvent | UserBlockedEvent;
+export type IssueTimelineItems = AddedToProjectEvent | AssignedEvent | ClosedEvent | CommentDeletedEvent | ConnectedEvent | ConvertedNoteToIssueEvent | ConvertedToDiscussionEvent | CrossReferencedEvent | DemilestonedEvent | DisconnectedEvent | IssueComment | IssueTypeAddedEvent | IssueTypeChangedEvent | IssueTypeRemovedEvent | LabeledEvent | LockedEvent | MarkedAsDuplicateEvent | MentionedEvent | MilestonedEvent | MovedColumnsInProjectEvent | ParentIssueAddedEvent | ParentIssueRemovedEvent | PinnedEvent | ReferencedEvent | RemovedFromProjectEvent | RenamedTitleEvent | ReopenedEvent | SubIssueAddedEvent | SubIssueRemovedEvent | SubscribedEvent | TransferredEvent | UnassignedEvent | UnlabeledEvent | UnlockedEvent | UnmarkedAsDuplicateEvent | UnpinnedEvent | UnsubscribedEvent | UserBlockedEvent;
 
 /** The connection type for IssueTimelineItems. */
 export type IssueTimelineItemsConnection = {
@@ -9851,6 +9851,12 @@ export enum IssueTimelineItemsItemType {
   DisconnectedEvent = 'DISCONNECTED_EVENT',
   /** Represents a comment on an Issue. */
   IssueComment = 'ISSUE_COMMENT',
+  /** Represents a 'issue_type_added' event on a given issue. */
+  IssueTypeAddedEvent = 'ISSUE_TYPE_ADDED_EVENT',
+  /** Represents a 'issue_type_changed' event on a given issue. */
+  IssueTypeChangedEvent = 'ISSUE_TYPE_CHANGED_EVENT',
+  /** Represents a 'issue_type_removed' event on a given issue. */
+  IssueTypeRemovedEvent = 'ISSUE_TYPE_REMOVED_EVENT',
   /** Represents a 'labeled' event on a given issue or pull request. */
   LabeledEvent = 'LABELED_EVENT',
   /** Represents a 'locked' event on a given issue or pull request. */
@@ -9937,6 +9943,34 @@ export type IssueTypeIssuesArgs = {
   states?: InputMaybe<Array<IssueState>>;
 };
 
+/** Represents a 'issue_type_added' event on a given issue. */
+export type IssueTypeAddedEvent = Node & {
+  __typename?: 'IssueTypeAddedEvent';
+  /** Identifies the actor who performed the event. */
+  actor?: Maybe<Actor>;
+  /** Identifies the date and time when the object was created. */
+  createdAt: Scalars['DateTime']['output'];
+  /** The Node ID of the IssueTypeAddedEvent object */
+  id: Scalars['ID']['output'];
+  /** The issue type added. */
+  issueType?: Maybe<IssueType>;
+};
+
+/** Represents a 'issue_type_changed' event on a given issue. */
+export type IssueTypeChangedEvent = Node & {
+  __typename?: 'IssueTypeChangedEvent';
+  /** Identifies the actor who performed the event. */
+  actor?: Maybe<Actor>;
+  /** Identifies the date and time when the object was created. */
+  createdAt: Scalars['DateTime']['output'];
+  /** The Node ID of the IssueTypeChangedEvent object */
+  id: Scalars['ID']['output'];
+  /** The issue type added. */
+  issueType?: Maybe<IssueType>;
+  /** The issue type removed. */
+  prevIssueType?: Maybe<IssueType>;
+};
+
 /** The possible color for an issue type */
 export enum IssueTypeColor {
   /** blue */
@@ -9994,6 +10028,19 @@ export enum IssueTypeOrderField {
   /** Order issue types by name */
   Name = 'NAME'
 }
+
+/** Represents a 'issue_type_removed' event on a given issue. */
+export type IssueTypeRemovedEvent = Node & {
+  __typename?: 'IssueTypeRemovedEvent';
+  /** Identifies the actor who performed the event. */
+  actor?: Maybe<Actor>;
+  /** Identifies the date and time when the object was created. */
+  createdAt: Scalars['DateTime']['output'];
+  /** The Node ID of the IssueTypeRemovedEvent object */
+  id: Scalars['ID']['output'];
+  /** The issue type removed. */
+  issueType?: Maybe<IssueType>;
+};
 
 /** Represents a user signing up for a GitHub account. */
 export type JoinedGitHubContribution = Contribution & {
@@ -20211,7 +20258,7 @@ export type PullRequestTimelineItemEdge = {
 };
 
 /** An item in a pull request timeline */
-export type PullRequestTimelineItems = AddedToMergeQueueEvent | AddedToProjectEvent | AssignedEvent | AutoMergeDisabledEvent | AutoMergeEnabledEvent | AutoRebaseEnabledEvent | AutoSquashEnabledEvent | AutomaticBaseChangeFailedEvent | AutomaticBaseChangeSucceededEvent | BaseRefChangedEvent | BaseRefDeletedEvent | BaseRefForcePushedEvent | ClosedEvent | CommentDeletedEvent | ConnectedEvent | ConvertToDraftEvent | ConvertedNoteToIssueEvent | ConvertedToDiscussionEvent | CrossReferencedEvent | DemilestonedEvent | DeployedEvent | DeploymentEnvironmentChangedEvent | DisconnectedEvent | HeadRefDeletedEvent | HeadRefForcePushedEvent | HeadRefRestoredEvent | IssueComment | LabeledEvent | LockedEvent | MarkedAsDuplicateEvent | MentionedEvent | MergedEvent | MilestonedEvent | MovedColumnsInProjectEvent | ParentIssueAddedEvent | ParentIssueRemovedEvent | PinnedEvent | PullRequestCommit | PullRequestCommitCommentThread | PullRequestReview | PullRequestReviewThread | PullRequestRevisionMarker | ReadyForReviewEvent | ReferencedEvent | RemovedFromMergeQueueEvent | RemovedFromProjectEvent | RenamedTitleEvent | ReopenedEvent | ReviewDismissedEvent | ReviewRequestRemovedEvent | ReviewRequestedEvent | SubIssueAddedEvent | SubIssueRemovedEvent | SubscribedEvent | TransferredEvent | UnassignedEvent | UnlabeledEvent | UnlockedEvent | UnmarkedAsDuplicateEvent | UnpinnedEvent | UnsubscribedEvent | UserBlockedEvent;
+export type PullRequestTimelineItems = AddedToMergeQueueEvent | AddedToProjectEvent | AssignedEvent | AutoMergeDisabledEvent | AutoMergeEnabledEvent | AutoRebaseEnabledEvent | AutoSquashEnabledEvent | AutomaticBaseChangeFailedEvent | AutomaticBaseChangeSucceededEvent | BaseRefChangedEvent | BaseRefDeletedEvent | BaseRefForcePushedEvent | ClosedEvent | CommentDeletedEvent | ConnectedEvent | ConvertToDraftEvent | ConvertedNoteToIssueEvent | ConvertedToDiscussionEvent | CrossReferencedEvent | DemilestonedEvent | DeployedEvent | DeploymentEnvironmentChangedEvent | DisconnectedEvent | HeadRefDeletedEvent | HeadRefForcePushedEvent | HeadRefRestoredEvent | IssueComment | IssueTypeAddedEvent | IssueTypeChangedEvent | IssueTypeRemovedEvent | LabeledEvent | LockedEvent | MarkedAsDuplicateEvent | MentionedEvent | MergedEvent | MilestonedEvent | MovedColumnsInProjectEvent | ParentIssueAddedEvent | ParentIssueRemovedEvent | PinnedEvent | PullRequestCommit | PullRequestCommitCommentThread | PullRequestReview | PullRequestReviewThread | PullRequestRevisionMarker | ReadyForReviewEvent | ReferencedEvent | RemovedFromMergeQueueEvent | RemovedFromProjectEvent | RenamedTitleEvent | ReopenedEvent | ReviewDismissedEvent | ReviewRequestRemovedEvent | ReviewRequestedEvent | SubIssueAddedEvent | SubIssueRemovedEvent | SubscribedEvent | TransferredEvent | UnassignedEvent | UnlabeledEvent | UnlockedEvent | UnmarkedAsDuplicateEvent | UnpinnedEvent | UnsubscribedEvent | UserBlockedEvent;
 
 /** The connection type for PullRequestTimelineItems. */
 export type PullRequestTimelineItemsConnection = {
@@ -20297,6 +20344,12 @@ export enum PullRequestTimelineItemsItemType {
   HeadRefRestoredEvent = 'HEAD_REF_RESTORED_EVENT',
   /** Represents a comment on an Issue. */
   IssueComment = 'ISSUE_COMMENT',
+  /** Represents a 'issue_type_added' event on a given issue. */
+  IssueTypeAddedEvent = 'ISSUE_TYPE_ADDED_EVENT',
+  /** Represents a 'issue_type_changed' event on a given issue. */
+  IssueTypeChangedEvent = 'ISSUE_TYPE_CHANGED_EVENT',
+  /** Represents a 'issue_type_removed' event on a given issue. */
+  IssueTypeRemovedEvent = 'ISSUE_TYPE_REMOVED_EVENT',
   /** Represents a 'labeled' event on a given issue or pull request. */
   LabeledEvent = 'LABELED_EVENT',
   /** Represents a 'locked' event on a given issue or pull request. */
