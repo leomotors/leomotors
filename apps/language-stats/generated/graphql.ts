@@ -8364,14 +8364,14 @@ export type FileExtensionRestrictionParametersInput = {
   restrictedFileExtensions: Array<Scalars['String']['input']>;
 };
 
-/** Prevent commits that include changes in specified file paths from being pushed to the commit graph. */
+/** Prevent commits that include changes in specified file and folder paths from being pushed to the commit graph. This includes absolute paths that contain file names. */
 export type FilePathRestrictionParameters = {
   __typename?: 'FilePathRestrictionParameters';
   /** The file paths that are restricted from being pushed to the commit graph. */
   restrictedFilePaths: Array<Scalars['String']['output']>;
 };
 
-/** Prevent commits that include changes in specified file paths from being pushed to the commit graph. */
+/** Prevent commits that include changes in specified file and folder paths from being pushed to the commit graph. This includes absolute paths that contain file names. */
 export type FilePathRestrictionParametersInput = {
   /** The file paths that are restricted from being pushed to the commit graph. */
   restrictedFilePaths: Array<Scalars['String']['input']>;
@@ -10783,27 +10783,27 @@ export type MarketplaceListingEdge = {
   node?: Maybe<MarketplaceListing>;
 };
 
-/** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. */
+/** Prevent commits that include file paths that exceed the specified character limit from being pushed to the commit graph. */
 export type MaxFilePathLengthParameters = {
   __typename?: 'MaxFilePathLengthParameters';
-  /** The maximum amount of characters allowed in file paths */
+  /** The maximum amount of characters allowed in file paths. */
   maxFilePathLength: Scalars['Int']['output'];
 };
 
-/** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. */
+/** Prevent commits that include file paths that exceed the specified character limit from being pushed to the commit graph. */
 export type MaxFilePathLengthParametersInput = {
-  /** The maximum amount of characters allowed in file paths */
+  /** The maximum amount of characters allowed in file paths. */
   maxFilePathLength: Scalars['Int']['input'];
 };
 
-/** Prevent commits that exceed a specified file size limit from being pushed to the commit graph. */
+/** Prevent commits with individual files that exceed the specified limit from being pushed to the commit graph. */
 export type MaxFileSizeParameters = {
   __typename?: 'MaxFileSizeParameters';
   /** The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS). */
   maxFileSize: Scalars['Int']['output'];
 };
 
-/** Prevent commits that exceed a specified file size limit from being pushed to the commit graph. */
+/** Prevent commits with individual files that exceed the specified limit from being pushed to the commit graph. */
 export type MaxFileSizeParametersInput = {
   /** The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS). */
   maxFileSize: Scalars['Int']['input'];
@@ -24276,13 +24276,13 @@ export enum RepositoryRuleType {
   Deletion = 'DELETION',
   /** Prevent commits that include files with specified file extensions from being pushed to the commit graph. */
   FileExtensionRestriction = 'FILE_EXTENSION_RESTRICTION',
-  /** Prevent commits that include changes in specified file paths from being pushed to the commit graph. */
+  /** Prevent commits that include changes in specified file and folder paths from being pushed to the commit graph. This includes absolute paths that contain file names. */
   FilePathRestriction = 'FILE_PATH_RESTRICTION',
   /** Branch is read-only. Users cannot push to the branch. */
   LockBranch = 'LOCK_BRANCH',
-  /** Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph. */
+  /** Prevent commits that include file paths that exceed the specified character limit from being pushed to the commit graph. */
   MaxFilePathLength = 'MAX_FILE_PATH_LENGTH',
-  /** Prevent commits that exceed a specified file size limit from being pushed to the commit graph. */
+  /** Prevent commits with individual files that exceed the specified limit from being pushed to the commit graph. */
   MaxFileSize = 'MAX_FILE_SIZE',
   /** Max ref updates */
   MaxRefUpdates = 'MAX_REF_UPDATES',
