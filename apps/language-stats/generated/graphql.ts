@@ -5347,6 +5347,8 @@ export type DependencyGraphDependency = {
   packageManager?: Maybe<Scalars['String']['output']>;
   /** The name of the package in the canonical form used by the package manager. */
   packageName: Scalars['String']['output'];
+  /** Public preview: The dependency package URL */
+  packageUrl?: Maybe<Scalars['URI']['output']>;
   /** Public preview: The relationship of the dependency. Can be direct, transitive, or unknown */
   relationship: Scalars['String']['output'];
   /** The repository containing the package */
