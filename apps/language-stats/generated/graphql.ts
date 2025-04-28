@@ -6613,10 +6613,10 @@ export type DraftPullRequestReviewComment = {
 export type DraftPullRequestReviewThread = {
   /** Body of the comment to leave. */
   body: Scalars['String']['input'];
-  /** The line of the blob to which the thread refers. The end of the line range for multi-line comments. */
-  line: Scalars['Int']['input'];
-  /** Path to the file being commented on. */
-  path: Scalars['String']['input'];
+  /** The line of the blob to which the thread refers. The end of the line range for multi-line comments. Required if not using positioning. */
+  line?: InputMaybe<Scalars['Int']['input']>;
+  /** Path to the file being commented on. Required if not using positioning. */
+  path?: InputMaybe<Scalars['String']['input']>;
   /** The side of the diff on which the line resides. For multi-line comments, this is the side for the end of the line range. */
   side?: InputMaybe<DiffSide>;
   /** The first line of the range to which the comment refers. */
