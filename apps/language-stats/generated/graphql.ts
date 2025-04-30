@@ -573,7 +573,7 @@ export type AddPullRequestReviewThreadInput = {
   /** The line of the blob to which the thread refers, required for line-level threads. The end of the line range for multi-line comments. */
   line?: InputMaybe<Scalars['Int']['input']>;
   /** Path to the file being commented on. */
-  path: Scalars['String']['input'];
+  path?: InputMaybe<Scalars['String']['input']>;
   /** The node ID of the pull request reviewing */
   pullRequestId?: InputMaybe<Scalars['ID']['input']>;
   /** The Node ID of the review to modify. */
@@ -11602,6 +11602,8 @@ export type Milestone = Closable & Node & UniformResourceLocatable & {
   closed: Scalars['Boolean']['output'];
   /** Identifies the date and time when the object was closed. */
   closedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Identifies the number of closed issues associated with the milestone. */
+  closedIssueCount: Scalars['Int']['output'];
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime']['output'];
   /** Identifies the actor who created the milestone. */
@@ -11618,6 +11620,8 @@ export type Milestone = Closable & Node & UniformResourceLocatable & {
   issues: IssueConnection;
   /** Identifies the number of the milestone. */
   number: Scalars['Int']['output'];
+  /** Identifies the number of open issues associated with the milestone. */
+  openIssueCount: Scalars['Int']['output'];
   /** Identifies the percentage complete for the milestone */
   progressPercentage: Scalars['Float']['output'];
   /** A list of pull requests associated with the milestone. */
