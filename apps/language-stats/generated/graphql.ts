@@ -23281,6 +23281,8 @@ export type Release = Node & Reactable & UniformResourceLocatable & {
   descriptionHTML?: Maybe<Scalars['HTML']['output']>;
   /** The Node ID of the Release object */
   id: Scalars['ID']['output'];
+  /** Whether or not the release is immutable */
+  immutable: Scalars['Boolean']['output'];
   /** Whether or not the release is a draft */
   isDraft: Scalars['Boolean']['output'];
   /** Whether or not the release is the latest releast */
