@@ -12,16 +12,14 @@
 
 - Ex Platform Engineer (Frontend) at Brikl
 
-- Completed Summer Internship at Agoda (2024)
+- Completed Summer Internship at Agoda (2024 & 2025)
 
 See more in my [resume](https://resume.leomotors.me)
 
 ## ⚡ Current Skills
 
-- Works in Full Stack Application using TypeScript and its ecosystem. Experienced with Next.js, SvelteKit and PostgreSQL as my favourite database.
+- Works in Full Stack Application using TypeScript and its ecosystem. Experienced with Next.js, SvelteKit, and PostgreSQL as my favourite database.
 - Sometimes write Python and Go for backend
-- Interested in (and currently learning) IoT development using C **(not C++)**
-- Studying Quantum Computing
 
 ## 🔍 Current Interest: Building Home Server
 
@@ -37,7 +35,7 @@ Current Setup is [Raspberry Pi 5](https://leomotors.me/blog/honamipi5/) but work
 
 - https://cafe.leomotors.me/riscv64 - My attempt on making all my apps work on RISC-V (64-bit)
 
-## 🎒 Academic Stuff (from like 3 years ago)
+## 🎒 Academic Stuff (from like many years ago)
 
 - 🏫 Graduated from (High School) Triam Udom Suksa School (TU82) in Math & Science with a GPAX of 3.95
 
@@ -48,7 +46,7 @@ Current Setup is [Raspberry Pi 5](https://leomotors.me/blog/honamipi5/) but work
 <details>
  <summary>🔺 Web App</summary>
 
-Note: This is not updated, but I'm also want to keep this section from previous version of readme
+Note: This is not updated, but I also want to keep this section from the previous version of the readme
 
 - [Website Vector Calculator 2](https://github.com/Leomotors/Website-Vector-Calculator-2) => [Vercel App](https://mini-vector-calculator.vercel.app)
 - [My Repositories](https://github.com/Leomotors/my-repos) => [Vercel App](https://repos.leomotors.vercel.app)
@@ -157,7 +155,7 @@ Note: App is removed from Microsoft Store because they said this app is useless.
 
 [![wakatime](https://wakatime.com/badge/user/7b85cf35-1e8b-4428-aed5-467d40e6e916.svg)](https://wakatime.com/@Leomotors)
 
-And wakapi self-hosted (on that Pi I mentioned above) since October 2023 because I don't want to pay wakatime premium
+And wakapi self-hosted (on that Pi I mentioned above) since October 2023, because I don't want to pay wakatime premium
 
 ![](https://kapi.leomotors.me/api/badge/Leomotors/interval:any?label=wakapi)
 
