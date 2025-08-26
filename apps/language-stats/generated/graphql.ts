@@ -9490,6 +9490,8 @@ export type Issue = Assignable & Closable & Comment & Deletable & Labelable & Lo
   viewerCanReact: Scalars['Boolean']['output'];
   /** Indicates if the object can be reopened by the viewer. */
   viewerCanReopen: Scalars['Boolean']['output'];
+  /** Check if the current viewer can set fields on the issue. */
+  viewerCanSetFields?: Maybe<Scalars['Boolean']['output']>;
   /** Check if the viewer is able to change their subscription status for the repository. */
   viewerCanSubscribe: Scalars['Boolean']['output'];
   /** Check if the current viewer can update this object. */
@@ -26338,6 +26340,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
    * @deprecated Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. Removal on 2025-04-01 UTC.
    */
   viewerCanCreateProjects: Scalars['Boolean']['output'];
+  /** Indicates whether the current user can see issue fields in this repository */
+  viewerCanSeeIssueFields: Scalars['Boolean']['output'];
   /** Check if the viewer is able to change their subscription status for the repository. */
   viewerCanSubscribe: Scalars['Boolean']['output'];
   /** Indicates whether the viewer can update the topics of this repository. */
