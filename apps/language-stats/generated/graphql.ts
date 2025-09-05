@@ -29965,6 +29965,8 @@ export enum SponsorsCountryOrRegionCode {
   Sv = 'SV',
   /** Sint Maarten (Dutch part) */
   Sx = 'SX',
+  /** Syria */
+  Sy = 'SY',
   /** Swaziland */
   Sz = 'SZ',
   /** Turks and Caicos Islands */
