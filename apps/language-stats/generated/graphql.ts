@@ -6172,7 +6172,7 @@ export type Discussion = Closable & Comment & Deletable & Labelable & Lockable &
   answerChosenAt?: Maybe<Scalars['DateTime']['output']>;
   /** The user who chose this discussion's answer, if answered. */
   answerChosenBy?: Maybe<Actor>;
-  /** The actor who authored the comment. */
+  /** The actor who authored the discussion. */
   author?: Maybe<Actor>;
   /** Author's association with the subject of the comment. */
   authorAssociation: CommentAuthorAssociation;
