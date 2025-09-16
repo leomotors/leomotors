@@ -3724,6 +3724,23 @@ export type ConvertedToDiscussionEvent = Node & {
   id: Scalars['ID']['output'];
 };
 
+/** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review. */
+export type CopilotCodeReviewParameters = {
+  __typename?: 'CopilotCodeReviewParameters';
+  /** Copilot automatically reviews draft pull requests before they are marked as ready for review. */
+  reviewDraftPullRequests: Scalars['Boolean']['output'];
+  /** Copilot automatically reviews each new push to the pull request. */
+  reviewOnPush: Scalars['Boolean']['output'];
+};
+
+/** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review. */
+export type CopilotCodeReviewParametersInput = {
+  /** Copilot automatically reviews draft pull requests before they are marked as ready for review. */
+  reviewDraftPullRequests?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Copilot automatically reviews each new push to the pull request. */
+  reviewOnPush?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
 /** Copilot endpoint information */
 export type CopilotEndpoints = {
   __typename?: 'CopilotEndpoints';
@@ -27559,6 +27576,8 @@ export enum RepositoryRuleType {
   CommitAuthorEmailPattern = 'COMMIT_AUTHOR_EMAIL_PATTERN',
   /** Commit message pattern */
   CommitMessagePattern = 'COMMIT_MESSAGE_PATTERN',
+  /** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review. */
+  CopilotCodeReview = 'COPILOT_CODE_REVIEW',
   /** Only allow users with bypass permission to create matching refs. */
   Creation = 'CREATION',
   /** Only allow users with bypass permissions to delete matching refs. */
@@ -28577,7 +28596,7 @@ export enum RuleEnforcement {
 }
 
 /** Types which can be parameters for `RepositoryRule` objects. */
-export type RuleParameters = BranchNamePatternParameters | CodeScanningParameters | CommitAuthorEmailPatternParameters | CommitMessagePatternParameters | CommitterEmailPatternParameters | FileExtensionRestrictionParameters | FilePathRestrictionParameters | MaxFilePathLengthParameters | MaxFileSizeParameters | MergeQueueParameters | PullRequestParameters | RequiredDeploymentsParameters | RequiredStatusChecksParameters | TagNamePatternParameters | UpdateParameters | WorkflowsParameters;
+export type RuleParameters = BranchNamePatternParameters | CodeScanningParameters | CommitAuthorEmailPatternParameters | CommitMessagePatternParameters | CommitterEmailPatternParameters | CopilotCodeReviewParameters | FileExtensionRestrictionParameters | FilePathRestrictionParameters | MaxFilePathLengthParameters | MaxFileSizeParameters | MergeQueueParameters | PullRequestParameters | RequiredDeploymentsParameters | RequiredStatusChecksParameters | TagNamePatternParameters | UpdateParameters | WorkflowsParameters;
 
 /** Specifies the parameters for a `RepositoryRule` object. Only one of the fields should be specified. */
 export type RuleParametersInput = {
@@ -28591,6 +28610,8 @@ export type RuleParametersInput = {
   commitMessagePattern?: InputMaybe<CommitMessagePatternParametersInput>;
   /** Parameters used for the `committer_email_pattern` rule type */
   committerEmailPattern?: InputMaybe<CommitterEmailPatternParametersInput>;
+  /** Parameters used for the `copilot_code_review` rule type */
+  copilotCodeReview?: InputMaybe<CopilotCodeReviewParametersInput>;
   /** Parameters used for the `file_extension_restriction` rule type */
   fileExtensionRestriction?: InputMaybe<FileExtensionRestrictionParametersInput>;
   /** Parameters used for the `file_path_restriction` rule type */
