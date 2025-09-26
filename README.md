@@ -96,6 +96,9 @@ Note: This is not updated, but I also want to keep this section from the previou
 - [@cocoa-discord/music-module](git+https://github.com/leomotors/cocoa-discord.git) =>
   [![](https://img.shields.io/npm/v/@cocoa-discord/music-module.svg?maxAge=3600)](https://www.npmjs.com/package/@cocoa-discord/music-module)
   [![](https://img.shields.io/npm/dt/@cocoa-discord/music-module.svg?maxAge=3600)](https://www.npmjs.com/package/@cocoa-discord/music-module)
+- [@leomotors/cli-progress](git+https://github.com/leomotors/cli-progress.git) =>
+  [![](https://img.shields.io/npm/v/@leomotors/cli-progress.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cli-progress)
+  [![](https://img.shields.io/npm/dt/@leomotors/cli-progress.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cli-progress)
 
 This list is automatically kept up to date by this monorepo.
 
