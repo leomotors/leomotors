@@ -9962,6 +9962,10 @@ export type IssueDependenciesSummary = {
   blockedBy: Scalars['Int']['output'];
   /** Count of issues this issue is blocking */
   blocking: Scalars['Int']['output'];
+  /** Total count of issues this issue is blocked by (open and closed) */
+  totalBlockedBy: Scalars['Int']['output'];
+  /** Total count of issues this issue is blocking (open and closed) */
+  totalBlocking: Scalars['Int']['output'];
 };
 
 /** Ordering options issue dependencies */
