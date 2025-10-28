@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2025-10-26T21:25:59Z"
+    "__pushedAt": "2025-10-27T21:55:14Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -581,11 +581,11 @@
     "__pushedAt": "2023-10-16T09:03:05Z"
   },
   "intro-cedt-backend-activity": {
-    "JavaScript": 7419,
-    "HTML": 1773,
-    "CSS": 1218,
-    "__isArchived": true,
-    "__pushedAt": "2023-09-06T15:56:52Z"
+    "JavaScript": 10887,
+    "HTML": 1989,
+    "CSS": 2081,
+    "__isArchived": false,
+    "__pushedAt": "2025-10-28T06:15:13Z"
   },
   "espresso-generator": {
     "JavaScript": 1530,
@@ -718,15 +718,15 @@
     "__pushedAt": "2025-04-17T04:33:36Z"
   },
   "chuumai-tools": {
-    "TypeScript": 149790,
+    "TypeScript": 185510,
     "JavaScript": 2310,
     "Shell": 264,
     "CSS": 1706,
     "HTML": 29906,
-    "Svelte": 43785,
+    "Svelte": 43950,
     "Dockerfile": 1301,
     "__isArchived": false,
-    "__pushedAt": "2025-08-06T14:32:43Z"
+    "__pushedAt": "2025-10-28T19:04:08Z"
   },
   "yuri-chat": {
     "JavaScript": 1342,
@@ -760,5 +760,12 @@
     "HTML": 232,
     "__isArchived": false,
     "__pushedAt": "2025-10-25T14:38:27Z"
+  },
+  "swdevprac2-final-project": {
+    "JavaScript": 591,
+    "TypeScript": 4581,
+    "CSS": 488,
+    "__isArchived": false,
+    "__pushedAt": "2025-10-28T03:46:05Z"
   }
 }
