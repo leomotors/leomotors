@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2025-10-30T21:24:33Z"
+    "__pushedAt": "2025-10-31T21:22:55Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -251,12 +251,12 @@
     "__pushedAt": "2024-04-29T13:52:40Z"
   },
   "cocoa-discord": {
-    "TypeScript": 132511,
+    "TypeScript": 137740,
     "JavaScript": 6059,
     "CSS": 727,
     "Shell": 250,
     "__isArchived": false,
-    "__pushedAt": "2025-06-21T15:29:46Z"
+    "__pushedAt": "2025-11-01T19:03:13Z"
   },
   "simple-todo-app-tauri": {
     "HTML": 351,
