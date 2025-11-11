@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2025-11-09T22:05:59Z"
+    "__pushedAt": "2025-11-10T21:28:20Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -251,12 +251,11 @@
     "__pushedAt": "2024-04-29T13:52:40Z"
   },
   "cocoa-discord": {
-    "TypeScript": 194442,
-    "JavaScript": 4854,
+    "TypeScript": 105907,
+    "JavaScript": 4716,
     "CSS": 5247,
-    "Shell": 250,
     "__isArchived": false,
-    "__pushedAt": "2025-11-08T19:24:21Z"
+    "__pushedAt": "2025-11-11T18:26:19Z"
   },
   "simple-todo-app-tauri": {
     "HTML": 351,
@@ -763,10 +762,10 @@
   },
   "swdevprac2-final-project": {
     "JavaScript": 591,
-    "TypeScript": 4581,
+    "TypeScript": 24287,
     "CSS": 488,
     "__isArchived": false,
-    "__pushedAt": "2025-10-28T03:46:05Z"
+    "__pushedAt": "2025-11-11T15:51:03Z"
   },
   "swdevprac-final-project": {
     "TypeScript": 11413,
