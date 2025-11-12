@@ -22038,6 +22038,8 @@ export type PullRequestParameters = {
   requiredApprovingReviewCount: Scalars['Int']['output'];
   /** All conversations on code must be resolved before a pull request can be merged. */
   requiredReviewThreadResolution: Scalars['Boolean']['output'];
+  /** This field is in beta and subject to change. A collection of reviewers and associated file patterns. Each reviewer has a list of file patterns which determine the files that reviewer is required to review. */
+  requiredReviewers?: Maybe<Array<RequiredReviewerConfiguration>>;
 };
 
 /** Require all commits be made to a non-target branch and submitted via a pull request before they can be merged. */
@@ -22056,6 +22058,8 @@ export type PullRequestParametersInput = {
   requiredApprovingReviewCount: Scalars['Int']['input'];
   /** All conversations on code must be resolved before a pull request can be merged. */
   requiredReviewThreadResolution: Scalars['Boolean']['input'];
+  /** This argument is in beta and subject to change. A collection of reviewers and associated file patterns. Each reviewer has a list of file patterns which determine the files that reviewer is required to review. */
+  requiredReviewers?: InputMaybe<Array<RequiredReviewerConfigurationInput>>;
 };
 
 /** A review object for a given pull request. */
@@ -28373,6 +28377,27 @@ export type RequiredDeploymentsParameters = {
 export type RequiredDeploymentsParametersInput = {
   /** The environments that must be successfully deployed to before branches can be merged. */
   requiredDeploymentEnvironments: Array<Scalars['String']['input']>;
+};
+
+/** A reviewing team, and file patterns describing which files they must approve changes to. */
+export type RequiredReviewerConfiguration = {
+  __typename?: 'RequiredReviewerConfiguration';
+  /** Array of file patterns. Pull requests which change matching files must be approved by the specified team. File patterns use fnmatch syntax. */
+  filePatterns: Array<Scalars['String']['output']>;
+  /** Minimum number of approvals required from the specified team. If set to zero, the team will be added to the pull request but approval is optional. */
+  minimumApprovals: Scalars['Int']['output'];
+  /** Node ID of the team which must review changes to matching files. */
+  reviewerId: Scalars['ID']['output'];
+};
+
+/** A reviewing team, and file patterns describing which files they must approve changes to. */
+export type RequiredReviewerConfigurationInput = {
+  /** Array of file patterns. Pull requests which change matching files must be approved by the specified team. File patterns use fnmatch syntax. */
+  filePatterns: Array<Scalars['String']['input']>;
+  /** Minimum number of approvals required from the specified team. If set to zero, the team will be added to the pull request but approval is optional. */
+  minimumApprovals: Scalars['Int']['input'];
+  /** Node ID of the team which must review changes to matching files. */
+  reviewerId: Scalars['ID']['input'];
 };
 
 /** Represents a required status check for a protected branch, but not any specific run of that check. */
