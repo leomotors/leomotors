@@ -803,6 +803,16 @@ export type AddedToProjectV2Event = Node & ProjectV2Event & {
   wasAutomated: Scalars['Boolean']['output'];
 };
 
+/** Copilot Agentic fields in context of the current viewer. */
+export type Agentic = {
+  /** Channel value for subscribing to live updates for session creations. */
+  viewerCopilotAgentCreatesChannel?: Maybe<Scalars['String']['output']>;
+  /** Channel value for subscribing to live updates for session log updates. */
+  viewerCopilotAgentLogUpdatesChannel?: Maybe<Scalars['String']['output']>;
+  /** Channel value for subscribing to live updates for session updates. */
+  viewerCopilotAgentUpdatesChannel?: Maybe<Scalars['String']['output']>;
+};
+
 /** An announcement banner for an enterprise or organization. */
 export type AnnouncementBanner = {
   __typename?: 'AnnouncementBanner';
@@ -34704,7 +34714,7 @@ export type UpdateUserListsForItemPayload = {
 };
 
 /** A user is an individual's account on GitHub that owns repositories and can make new content. */
-export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectOwner & ProjectV2Owner & ProjectV2Recent & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable & {
+export type User = Actor & Agentic & Node & PackageOwner & ProfileOwner & ProjectOwner & ProjectV2Owner & ProjectV2Recent & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable & {
   __typename?: 'User';
   /** Determine if this repository owner has any items that can be pinned to their profile. */
   anyPinnableItems: Scalars['Boolean']['output'];
@@ -34900,6 +34910,12 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectOwner & P
   viewerCanFollow: Scalars['Boolean']['output'];
   /** Whether or not the viewer is able to sponsor this user/organization. */
   viewerCanSponsor: Scalars['Boolean']['output'];
+  /** Channel value for subscribing to live updates for session creations. */
+  viewerCopilotAgentCreatesChannel?: Maybe<Scalars['String']['output']>;
+  /** Channel value for subscribing to live updates for session log updates. */
+  viewerCopilotAgentLogUpdatesChannel?: Maybe<Scalars['String']['output']>;
+  /** Channel value for subscribing to live updates for session updates. */
+  viewerCopilotAgentUpdatesChannel?: Maybe<Scalars['String']['output']>;
   /** Whether or not this user is followed by the viewer. Inverse of isFollowingViewer. */
   viewerIsFollowing: Scalars['Boolean']['output'];
   /** True if the viewer is sponsoring this user/organization. */
