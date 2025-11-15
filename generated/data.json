@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2025-11-13T22:00:02Z"
+    "__pushedAt": "2025-11-14T21:26:06Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -761,16 +761,16 @@
     "__pushedAt": "2025-10-25T14:38:27Z"
   },
   "swdevprac2-final-project": {
-    "JavaScript": 591,
-    "TypeScript": 24287,
-    "CSS": 488,
+    "JavaScript": 1005,
+    "TypeScript": 34685,
+    "CSS": 5612,
     "__isArchived": false,
-    "__pushedAt": "2025-11-11T15:51:03Z"
+    "__pushedAt": "2025-11-15T17:29:54Z"
   },
   "swdevprac-final-project": {
-    "TypeScript": 11413,
-    "HTML": 586,
+    "TypeScript": 11506,
+    "HTML": 5376,
     "__isArchived": false,
-    "__pushedAt": "2025-11-04T18:11:39Z"
+    "__pushedAt": "2025-11-15T14:23:43Z"
   }
 }
