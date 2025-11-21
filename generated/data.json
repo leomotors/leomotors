@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2025-11-19T21:39:10Z"
+    "__pushedAt": "2025-11-20T21:33:11Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -768,9 +768,9 @@
     "__pushedAt": "2025-11-19T15:31:28Z"
   },
   "swdevprac-final-project": {
-    "TypeScript": 13087,
-    "HTML": 5376,
+    "TypeScript": 32530,
+    "Dockerfile": 564,
     "__isArchived": false,
-    "__pushedAt": "2025-11-20T16:46:33Z"
+    "__pushedAt": "2025-11-21T19:02:39Z"
   }
 }
