@@ -10202,6 +10202,12 @@ export enum IssueTimelineItemsItemType {
   DisconnectedEvent = 'DISCONNECTED_EVENT',
   /** Represents a comment on an Issue. */
   IssueComment = 'ISSUE_COMMENT',
+  /** Represents a 'issue_field_added' event on a given issue. */
+  IssueFieldAddedEvent = 'ISSUE_FIELD_ADDED_EVENT',
+  /** Represents a 'issue_field_changed' event on a given issue. */
+  IssueFieldChangedEvent = 'ISSUE_FIELD_CHANGED_EVENT',
+  /** Represents a 'issue_field_removed' event on a given issue. */
+  IssueFieldRemovedEvent = 'ISSUE_FIELD_REMOVED_EVENT',
   /** Represents a 'issue_type_added' event on a given issue. */
   IssueTypeAddedEvent = 'ISSUE_TYPE_ADDED_EVENT',
   /** Represents a 'issue_type_changed' event on a given issue. */
@@ -22726,6 +22732,12 @@ export enum PullRequestTimelineItemsItemType {
   HeadRefRestoredEvent = 'HEAD_REF_RESTORED_EVENT',
   /** Represents a comment on an Issue. */
   IssueComment = 'ISSUE_COMMENT',
+  /** Represents a 'issue_field_added' event on a given issue. */
+  IssueFieldAddedEvent = 'ISSUE_FIELD_ADDED_EVENT',
+  /** Represents a 'issue_field_changed' event on a given issue. */
+  IssueFieldChangedEvent = 'ISSUE_FIELD_CHANGED_EVENT',
+  /** Represents a 'issue_field_removed' event on a given issue. */
+  IssueFieldRemovedEvent = 'ISSUE_FIELD_REMOVED_EVENT',
   /** Represents a 'issue_type_added' event on a given issue. */
   IssueTypeAddedEvent = 'ISSUE_TYPE_ADDED_EVENT',
   /** Represents a 'issue_type_changed' event on a given issue. */
