@@ -99,6 +99,9 @@ Note: This is not updated, but I also want to keep this section from the previou
 - [@leomotors/cli-progress](git+https://github.com/leomotors/cli-progress.git) =>
   [![](https://img.shields.io/npm/v/@leomotors/cli-progress.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cli-progress)
   [![](https://img.shields.io/npm/dt/@leomotors/cli-progress.svg?maxAge=3600)](https://www.npmjs.com/package/@leomotors/cli-progress)
+- [@hoshina/react-map](git+https://github.com/hoshina-dev/react-map.git) =>
+  [![](https://img.shields.io/npm/v/@hoshina/react-map.svg?maxAge=3600)](https://www.npmjs.com/package/@hoshina/react-map)
+  [![](https://img.shields.io/npm/dt/@hoshina/react-map.svg?maxAge=3600)](https://www.npmjs.com/package/@hoshina/react-map)
 
 This list is automatically kept up to date by this monorepo.
 
