@@ -36154,7 +36154,7 @@ export type WorkflowsParametersInput = {
   workflows: Array<WorkflowFileReferenceInput>;
 };
 
-export type _Entity = Issue;
+export type _Entity = Issue | Repository;
 
 export type GetRepoLangsQueryVariables = Exact<{
   after?: InputMaybe<Scalars['String']['input']>;
