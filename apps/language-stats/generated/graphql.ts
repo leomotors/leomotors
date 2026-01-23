@@ -1416,7 +1416,7 @@ export type BranchActorAllowanceActor = App | Team | User;
 /** Parameters to be used for the branch_name_pattern rule */
 export type BranchNamePatternParameters = {
   __typename?: 'BranchNamePatternParameters';
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: Maybe<Scalars['String']['output']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean']['output'];
@@ -1428,7 +1428,7 @@ export type BranchNamePatternParameters = {
 
 /** Parameters to be used for the branch_name_pattern rule */
 export type BranchNamePatternParametersInput = {
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: InputMaybe<Scalars['String']['input']>;
   /** If true, the rule will fail if the pattern matches. */
   negate?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2868,7 +2868,7 @@ export type CommitAuthor = {
 /** Parameters to be used for the commit_author_email_pattern rule */
 export type CommitAuthorEmailPatternParameters = {
   __typename?: 'CommitAuthorEmailPatternParameters';
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: Maybe<Scalars['String']['output']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean']['output'];
@@ -2880,7 +2880,7 @@ export type CommitAuthorEmailPatternParameters = {
 
 /** Parameters to be used for the commit_author_email_pattern rule */
 export type CommitAuthorEmailPatternParametersInput = {
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: InputMaybe<Scalars['String']['input']>;
   /** If true, the rule will fail if the pattern matches. */
   negate?: InputMaybe<Scalars['Boolean']['input']>;
@@ -3112,7 +3112,7 @@ export type CommitMessage = {
 /** Parameters to be used for the commit_message_pattern rule */
 export type CommitMessagePatternParameters = {
   __typename?: 'CommitMessagePatternParameters';
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: Maybe<Scalars['String']['output']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean']['output'];
@@ -3124,7 +3124,7 @@ export type CommitMessagePatternParameters = {
 
 /** Parameters to be used for the commit_message_pattern rule */
 export type CommitMessagePatternParametersInput = {
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: InputMaybe<Scalars['String']['input']>;
   /** If true, the rule will fail if the pattern matches. */
   negate?: InputMaybe<Scalars['Boolean']['input']>;
@@ -3171,7 +3171,7 @@ export type CommittableBranch = {
 /** Parameters to be used for the committer_email_pattern rule */
 export type CommitterEmailPatternParameters = {
   __typename?: 'CommitterEmailPatternParameters';
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: Maybe<Scalars['String']['output']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean']['output'];
@@ -3183,7 +3183,7 @@ export type CommitterEmailPatternParameters = {
 
 /** Parameters to be used for the committer_email_pattern rule */
 export type CommitterEmailPatternParametersInput = {
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: InputMaybe<Scalars['String']['input']>;
   /** If true, the rule will fail if the pattern matches. */
   negate?: InputMaybe<Scalars['Boolean']['input']>;
@@ -31373,7 +31373,7 @@ export type Tag = GitObject & Node & {
 /** Parameters to be used for the tag_name_pattern rule */
 export type TagNamePatternParameters = {
   __typename?: 'TagNamePatternParameters';
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: Maybe<Scalars['String']['output']>;
   /** If true, the rule will fail if the pattern matches. */
   negate: Scalars['Boolean']['output'];
@@ -31385,7 +31385,7 @@ export type TagNamePatternParameters = {
 
 /** Parameters to be used for the tag_name_pattern rule */
 export type TagNamePatternParametersInput = {
-  /** How this rule will appear to users. */
+  /** How this rule appears when configuring it. */
   name?: InputMaybe<Scalars['String']['input']>;
   /** If true, the rule will fail if the pattern matches. */
   negate?: InputMaybe<Scalars['Boolean']['input']>;
