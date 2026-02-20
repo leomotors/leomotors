@@ -10194,6 +10194,10 @@ export enum IssueTimelineItemsItemType {
   DisconnectedEvent = 'DISCONNECTED_EVENT',
   /** Represents a comment on an Issue. */
   IssueComment = 'ISSUE_COMMENT',
+  /** Represents a 'issue_comment_pinned' event on a given issue. */
+  IssueCommentPinnedEvent = 'ISSUE_COMMENT_PINNED_EVENT',
+  /** Represents a 'issue_comment_unpinned' event on a given issue. */
+  IssueCommentUnpinnedEvent = 'ISSUE_COMMENT_UNPINNED_EVENT',
   /** Represents a 'issue_field_added' event on a given issue. */
   IssueFieldAddedEvent = 'ISSUE_FIELD_ADDED_EVENT',
   /** Represents a 'issue_field_changed' event on a given issue. */
@@ -22042,6 +22046,14 @@ export type PullRequestContributionsByRepositoryContributionsArgs = {
   orderBy?: InputMaybe<ContributionOrder>;
 };
 
+/** The policy controlling who can create pull requests in a repository. */
+export enum PullRequestCreationPolicy {
+  /** Anyone can create pull requests. */
+  All = 'ALL',
+  /** Only collaborators can create pull requests. */
+  CollaboratorsOnly = 'COLLABORATORS_ONLY'
+}
+
 /** An edge in a connection. */
 export type PullRequestEdge = {
   __typename?: 'PullRequestEdge';
@@ -22757,6 +22769,10 @@ export enum PullRequestTimelineItemsItemType {
   HeadRefRestoredEvent = 'HEAD_REF_RESTORED_EVENT',
   /** Represents a comment on an Issue. */
   IssueComment = 'ISSUE_COMMENT',
+  /** Represents a 'issue_comment_pinned' event on a given issue. */
+  IssueCommentPinnedEvent = 'ISSUE_COMMENT_PINNED_EVENT',
+  /** Represents a 'issue_comment_unpinned' event on a given issue. */
+  IssueCommentUnpinnedEvent = 'ISSUE_COMMENT_UNPINNED_EVENT',
   /** Represents a 'issue_field_added' event on a given issue. */
   IssueFieldAddedEvent = 'ISSUE_FIELD_ADDED_EVENT',
   /** Represents a 'issue_field_changed' event on a given issue. */
@@ -26382,6 +26398,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   hasIssuesEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository has the Projects feature enabled. */
   hasProjectsEnabled: Scalars['Boolean']['output'];
+  /** Indicates if the repository has the pull requests feature enabled. */
+  hasPullRequestsEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository displays a Sponsor button for financial contributions. */
   hasSponsorshipsEnabled: Scalars['Boolean']['output'];
   /** Whether vulnerability alerts are enabled for the repository. */
@@ -26502,6 +26520,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   projectsV2: ProjectV2Connection;
   /** Returns a single pull request from the current repository by number. */
   pullRequest?: Maybe<PullRequest>;
+  /** The policy controlling who can create pull requests in this repository. */
+  pullRequestCreationPolicy?: Maybe<PullRequestCreationPolicy>;
   /** Returns a list of pull request templates associated to the repository */
   pullRequestTemplates?: Maybe<Array<PullRequestTemplate>>;
   /** A list of pull requests that have been opened in the repository. */
@@ -27384,6 +27404,8 @@ export type RepositoryInfo = {
   hasIssuesEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository has the Projects feature enabled. */
   hasProjectsEnabled: Scalars['Boolean']['output'];
+  /** Indicates if the repository has the pull requests feature enabled. */
+  hasPullRequestsEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository displays a Sponsor button for financial contributions. */
   hasSponsorshipsEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository has wiki feature enabled. */
@@ -27418,6 +27440,8 @@ export type RepositoryInfo = {
   openGraphImageUrl: Scalars['URI']['output'];
   /** The User owner of the repository. */
   owner: RepositoryOwner;
+  /** The policy controlling who can create pull requests in this repository. */
+  pullRequestCreationPolicy?: Maybe<PullRequestCreationPolicy>;
   /** Identifies the date and time when the repository was last pushed to. */
   pushedAt?: Maybe<Scalars['DateTime']['output']>;
   /** The HTTP path for this repository */
@@ -34362,6 +34386,8 @@ export type UpdateRepositoryInput = {
   hasIssuesEnabled?: InputMaybe<Scalars['Boolean']['input']>;
   /** Indicates if the repository should have the project boards feature enabled. */
   hasProjectsEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Indicates if the repository should have the pull requests feature enabled. */
+  hasPullRequestsEnabled?: InputMaybe<Scalars['Boolean']['input']>;
   /** Indicates if the repository displays a Sponsor button for financial contributions. */
   hasSponsorshipsEnabled?: InputMaybe<Scalars['Boolean']['input']>;
   /** Indicates if the repository should have the wiki feature enabled. */
@@ -34370,6 +34396,8 @@ export type UpdateRepositoryInput = {
   homepageUrl?: InputMaybe<Scalars['URI']['input']>;
   /** The new name of the repository. */
   name?: InputMaybe<Scalars['String']['input']>;
+  /** The policy controlling who can create pull requests in this repository. */
+  pullRequestCreationPolicy?: InputMaybe<PullRequestCreationPolicy>;
   /** The ID of the repository to update. */
   repositoryId: Scalars['ID']['input'];
   /** Whether this repository should be marked as a template such that anyone who can access it can create new repositories with the same files and directory structure. */
