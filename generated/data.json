@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2026-03-03T22:24:19Z"
+    "__pushedAt": "2026-03-04T22:13:14Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -598,11 +598,12 @@
   },
   "home-env": {
     "C++": 5086,
-    "Dockerfile": 767,
-    "HTML": 1882,
-    "Go": 20046,
+    "Dockerfile": 717,
+    "HTML": 7299,
+    "Go": 21845,
+    "Makefile": 468,
     "__isArchived": false,
-    "__pushedAt": "2024-04-24T10:08:59Z"
+    "__pushedAt": "2026-03-05T16:38:30Z"
   },
   "leo-need": {
     "JavaScript": 457,
