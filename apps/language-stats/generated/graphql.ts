@@ -10496,6 +10496,16 @@ export enum IssueOrderField {
   UpdatedAt = 'UPDATED_AT'
 }
 
+/** Type of issue search performed */
+export enum IssueSearchType {
+  /** Hybrid search combining lexical and semantic approaches */
+  Hybrid = 'HYBRID',
+  /** Lexical (keyword-based) search */
+  Lexical = 'LEXICAL',
+  /** Semantic (meaning-based) search using embeddings */
+  Semantic = 'SEMANTIC'
+}
+
 /** The possible states of an issue. */
 export enum IssueState {
   /** An issue that has been closed */
@@ -11054,6 +11064,24 @@ export type LanguageOrder = {
 export enum LanguageOrderField {
   /** Order languages by the size of all files containing the language */
   Size = 'SIZE'
+}
+
+/** Reason why a semantic or hybrid issue search fell back to lexical search */
+export enum LexicalFallbackReason {
+  /** Query targets non-issue types (e.g., pull requests) */
+  NonIssueTarget = 'NON_ISSUE_TARGET',
+  /** Scoped query resolved to zero accessible repositories */
+  NoAccessibleRepos = 'NO_ACCESSIBLE_REPOS',
+  /** Query has only qualifiers and no free text terms */
+  NoTextTerms = 'NO_TEXT_TERMS',
+  /** Query uses an in: qualifier targeting non-semantic fields */
+  OnlyNonSemanticFieldsRequested = 'ONLY_NON_SEMANTIC_FIELDS_REQUESTED',
+  /** Query contains OR operators (nested boolean qualifiers) */
+  OrBooleanNotSupported = 'OR_BOOLEAN_NOT_SUPPORTED',
+  /** Query contains quoted text requiring exact matches */
+  QuotedText = 'QUOTED_TEXT',
+  /** Embedding generation failed or timed out */
+  ServerError = 'SERVER_ERROR'
 }
 
 /** A repository's open source license */
@@ -29729,6 +29757,10 @@ export type SearchResultItemConnection = {
   edges?: Maybe<Array<Maybe<SearchResultItemEdge>>>;
   /** The total number of issues that matched the search query. Regardless of the total number of matches, a maximum of 1,000 results will be available across all types. */
   issueCount: Scalars['Int']['output'];
+  /** The type of search that was performed for issues (lexical, semantic, or hybrid) */
+  issueSearchType?: Maybe<IssueSearchType>;
+  /** When a semantic or hybrid search falls back to lexical, the reasons why the fallback occurred. */
+  lexicalFallbackReason?: Maybe<Array<LexicalFallbackReason>>;
   /** A list of nodes. */
   nodes?: Maybe<Array<Maybe<SearchResultItem>>>;
   /** Information to aid in pagination. */
@@ -29760,6 +29792,10 @@ export enum SearchType {
   Issue = 'ISSUE',
   /** Returns results matching issues in repositories. */
   IssueAdvanced = 'ISSUE_ADVANCED',
+  /** Returns results matching issues using hybrid (lexical + semantic) search. */
+  IssueHybrid = 'ISSUE_HYBRID',
+  /** Returns results matching issues using semantic search. */
+  IssueSemantic = 'ISSUE_SEMANTIC',
   /** Returns results matching repositories. */
   Repository = 'REPOSITORY',
   /** Returns results matching users and organizations on GitHub. */
