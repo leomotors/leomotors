@@ -28749,6 +28749,8 @@ export type RepositoryRulesetBypassActor = Node & {
   deployKey: Scalars['Boolean']['output'];
   /** This actor represents the ability for an enterprise owner to bypass */
   enterpriseOwner: Scalars['Boolean']['output'];
+  /** This actor represents the ability for an enterprise role to bypass */
+  enterpriseRole: Scalars['Boolean']['output'];
   /** The Node ID of the RepositoryRulesetBypassActor object */
   id: Scalars['ID']['output'];
   /** This actor represents the ability for an organization owner to bypass */
@@ -28803,6 +28805,8 @@ export type RepositoryRulesetBypassActorInput = {
   deployKey?: InputMaybe<Scalars['Boolean']['input']>;
   /** For enterprise owner bypasses, true */
   enterpriseOwner?: InputMaybe<Scalars['Boolean']['input']>;
+  /** For enterprise role bypasses, true. NOTE: This bypass actor is in beta. */
+  enterpriseRole?: InputMaybe<Scalars['Boolean']['input']>;
   /** For organization owner bypasses, true */
   organizationAdmin?: InputMaybe<Scalars['Boolean']['input']>;
   /** For role bypasses, the role database ID */
@@ -32214,7 +32218,7 @@ export type TagNamePatternParametersInput = {
 };
 
 /** A team of users in an organization. */
-export type Team = MemberStatusable & Node & Subscribable & {
+export type Team = MemberStatusable & Node & Subscribable & TeamReviewRequestable & {
   __typename?: 'Team';
   /** A list of teams that are ancestors of this team. */
   ancestors: TeamConnection;
@@ -33153,6 +33157,16 @@ export enum TeamReviewAssignmentAlgorithm {
   /** Alternate reviews between each team member */
   RoundRobin = 'ROUND_ROBIN'
 }
+
+/** Represents a team that can be requested to review a pull request. */
+export type TeamReviewRequestable = {
+  /** The Node ID of the TeamReviewRequestable object */
+  id: Scalars['ID']['output'];
+  /** The name of the team. */
+  name: Scalars['String']['output'];
+  /** A unique, human-readable identifier for the team. */
+  slug: Scalars['String']['output'];
+};
 
 /** The role of a user on a team. */
 export enum TeamRole {
