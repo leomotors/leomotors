@@ -7215,7 +7215,7 @@ export enum EnterpriseAllowPrivateRepositoryForkingPolicyValue {
   EnterpriseOrganizations = 'ENTERPRISE_ORGANIZATIONS',
   /** Members can fork a repository to their enterprise-managed user account or an organization inside this enterprise. */
   EnterpriseOrganizationsUserAccounts = 'ENTERPRISE_ORGANIZATIONS_USER_ACCOUNTS',
-  /** Members can fork a repository to their user account or an organization, either inside or outside of this enterprise. */
+  /** Members can fork a repository to their user account or an organization, either inside or outside of this enterprise. Internal repositories can only be forked inside of this enterprise. */
   Everywhere = 'EVERYWHERE',
   /** Members can fork a repository only within the same organization (intra-org). */
   SameOrganization = 'SAME_ORGANIZATION',
@@ -28738,7 +28738,7 @@ export type RepositoryRulesetRulesArgs = {
   type?: InputMaybe<RepositoryRuleType>;
 };
 
-/** A team or app that has the ability to bypass a rules defined on a ruleset */
+/** A team, app or user that has the ability to bypass rules defined on a ruleset */
 export type RepositoryRulesetBypassActor = Node & {
   __typename?: 'RepositoryRulesetBypassActor';
   /** The actor that can bypass rules. */
@@ -28797,7 +28797,7 @@ export type RepositoryRulesetBypassActorEdge = {
 
 /** Specifies the attributes for a new or updated ruleset bypass actor. Only one of `actor_id`, `repository_role_database_id`, `organization_admin`, or `deploy_key` should be specified. */
 export type RepositoryRulesetBypassActorInput = {
-  /** For Team and Integration bypasses, the Team or Integration ID */
+  /** For Team, Integration and User bypasses, the Team, Integration, or User ID */
   actorId?: InputMaybe<Scalars['ID']['input']>;
   /** The bypass mode for this actor. */
   bypassMode: RepositoryRulesetBypassActorBypassMode;
