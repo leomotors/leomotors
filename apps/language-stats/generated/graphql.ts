@@ -30101,7 +30101,9 @@ export enum SecurityAdvisorySeverity {
   /** Low. */
   Low = 'LOW',
   /** Moderate. */
-  Moderate = 'MODERATE'
+  Moderate = 'MODERATE',
+  /** Unknown. */
+  Unknown = 'UNKNOWN'
 }
 
 /** An individual vulnerability within an Advisory */
