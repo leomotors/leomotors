@@ -28795,7 +28795,7 @@ export type RepositoryRulesetBypassActorEdge = {
   node?: Maybe<RepositoryRulesetBypassActor>;
 };
 
-/** Specifies the attributes for a new or updated ruleset bypass actor. Only one of `actor_id`, `repository_role_database_id`, `organization_admin`, or `deploy_key` should be specified. */
+/** Specifies the attributes for a new or updated ruleset bypass actor. Only one of `actor_id`, `repository_role_database_id`, `organization_admin`, `enterprise_owner`, or `deploy_key` should be specified. */
 export type RepositoryRulesetBypassActorInput = {
   /** For Team, Integration and User bypasses, the Team, Integration, or User ID */
   actorId?: InputMaybe<Scalars['ID']['input']>;
