@@ -20955,6 +20955,10 @@ export enum ProjectV2FieldOrderField {
 export enum ProjectV2FieldType {
   /** Assignees */
   Assignees = 'ASSIGNEES',
+  /** Closed */
+  Closed = 'CLOSED',
+  /** Created */
+  Created = 'CREATED',
   /** Date */
   Date = 'DATE',
   /** Issue type */
@@ -20986,7 +20990,9 @@ export enum ProjectV2FieldType {
   /** Tracked by */
   TrackedBy = 'TRACKED_BY',
   /** Tracks */
-  Tracks = 'TRACKS'
+  Tracks = 'TRACKS',
+  /** Updated */
+  Updated = 'UPDATED'
 }
 
 /** The values that can be used to update a field of an item inside a Project. Only 1 value can be updated at a time. */
