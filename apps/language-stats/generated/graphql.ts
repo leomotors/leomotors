@@ -3303,6 +3303,23 @@ export type ConnectedEvent = Node & {
   subject: ReferencedSubject;
 };
 
+/** The content warning for a repository */
+export type ContentWarning = {
+  __typename?: 'ContentWarning';
+  /** The content warning' category. E.g. 'mis_dis_information' */
+  category: Scalars['String']['output'];
+  /** The content warning's custom sub category text. E.g. 'dangerous stuff.' */
+  customSubCategory?: Maybe<Scalars['String']['output']>;
+  /** The content warning's sub category. E.g. 'medical_scientific' */
+  subCategory?: Maybe<Scalars['String']['output']>;
+  /** The content warning's sub title. E.g. 'The information contained in this page has not been verified.' */
+  subTitle?: Maybe<Scalars['String']['output']>;
+  /** The content warning's title. E.g. 'This page may contain false or misleading information.' */
+  title: Scalars['String']['output'];
+  /** The type of content warning. E.g. 'interstitial' */
+  type: Scalars['String']['output'];
+};
+
 /** The Contributing Guidelines for a repository. */
 export type ContributingGuidelines = {
   __typename?: 'ContributingGuidelines';
@@ -27335,6 +27352,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   viewerCanSubscribe: Scalars['Boolean']['output'];
   /** Indicates whether the viewer can update the topics of this repository. */
   viewerCanUpdateTopics: Scalars['Boolean']['output'];
+  /** The content warning for this repository for the viewer. */
+  viewerContentWarning?: Maybe<ContentWarning>;
   /** The last commit email for the viewer. */
   viewerDefaultCommitEmail?: Maybe<Scalars['String']['output']>;
   /** The last used merge method by the viewer or the default for the repository. */
