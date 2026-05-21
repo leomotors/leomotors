@@ -1663,7 +1663,7 @@ export type BulkSponsorship = {
 };
 
 /** Types that can represent a repository ruleset bypass actor. */
-export type BypassActor = App | Team | User;
+export type BypassActor = App | EnterpriseTeam | Team | User;
 
 /** A user, team, or app who has the ability to bypass a force push requirement on a protected branch. */
 export type BypassForcePushAllowance = Node & {
@@ -7020,6 +7020,10 @@ export type Enterprise = Node & {
   description?: Maybe<Scalars['String']['output']>;
   /** The description of the enterprise as HTML. */
   descriptionHTML: Scalars['HTML']['output'];
+  /** Find an enterprise team by its slug. */
+  enterpriseTeam?: Maybe<EnterpriseTeam>;
+  /** A list of enterprise teams in this enterprise. */
+  enterpriseTeams: EnterpriseTeamConnection;
   /** The Node ID of the Enterprise object */
   id: Scalars['ID']['output'];
   /** The location of the enterprise. */
@@ -7066,6 +7070,23 @@ export type Enterprise = Node & {
 /** An account to manage multiple organizations with consolidated policy and billing. */
 export type EnterpriseAvatarUrlArgs = {
   size?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** An account to manage multiple organizations with consolidated policy and billing. */
+export type EnterpriseEnterpriseTeamArgs = {
+  slug: Scalars['String']['input'];
+};
+
+
+/** An account to manage multiple organizations with consolidated policy and billing. */
+export type EnterpriseEnterpriseTeamsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  orderBy?: InputMaybe<EnterpriseTeamOrder>;
+  query?: InputMaybe<Scalars['String']['input']>;
 };
 
 
@@ -8365,6 +8386,192 @@ export enum EnterpriseServerUserAccountsUploadSyncState {
   Pending = 'PENDING',
   /** The synchronization of the upload succeeded. */
   Success = 'SUCCESS'
+}
+
+/** A team that belongs to an enterprise and can be assigned to multiple organizations. */
+export type EnterpriseTeam = Node & TeamReviewRequestable & {
+  __typename?: 'EnterpriseTeam';
+  /** Organizations this team is assigned to. */
+  assignedOrganizations: EnterpriseTeamAssignedOrganizationConnection;
+  /** The human-readable, unique identifier for the enterprise and team. */
+  combinedSlug: Scalars['String']['output'];
+  /** Identifies the date and time when the object was created. */
+  createdAt: Scalars['DateTime']['output'];
+  /** The description of the team. */
+  description?: Maybe<Scalars['String']['output']>;
+  /** The enterprise this team belongs to. */
+  enterprise?: Maybe<Enterprise>;
+  /** A list of users who are members of this enterprise team. */
+  enterpriseTeamMembers: EnterpriseTeamMemberConnection;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
+  /** The Node ID of the EnterpriseTeam object */
+  id: Scalars['ID']['output'];
+  /** Whether the viewer is a member of this team. */
+  isViewerMember: Scalars['Boolean']['output'];
+  /** The name of the team. */
+  name: Scalars['String']['output'];
+  /** Whether the team will receive notifications when mentioned. */
+  notificationSetting: TeamNotificationSetting;
+  /** How this team selects its associated organizations. */
+  organizationSelectionType: EnterpriseTeamOrganizationSelectionType;
+  /** The level of privacy the team has. */
+  privacy: TeamPrivacy;
+  /** The slug corresponding to the team. */
+  slug: Scalars['String']['output'];
+  /** Identifies the date and time when the object was last updated. */
+  updatedAt: Scalars['DateTime']['output'];
+  /** Whether the viewer can administer this team. */
+  viewerCanAdminister: Scalars['Boolean']['output'];
+};
+
+
+/** A team that belongs to an enterprise and can be assigned to multiple organizations. */
+export type EnterpriseTeamAssignedOrganizationsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  orderBy?: InputMaybe<EnterpriseTeamOrganizationOrder>;
+};
+
+
+/** A team that belongs to an enterprise and can be assigned to multiple organizations. */
+export type EnterpriseTeamEnterpriseTeamMembersArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  orderBy?: InputMaybe<EnterpriseTeamMemberOrder>;
+  query?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** The connection type for Organization. */
+export type EnterpriseTeamAssignedOrganizationConnection = {
+  __typename?: 'EnterpriseTeamAssignedOrganizationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EnterpriseTeamAssignedOrganizationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Organization>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int']['output'];
+};
+
+/** Represents an organization that an enterprise team is assigned to. */
+export type EnterpriseTeamAssignedOrganizationEdge = {
+  __typename?: 'EnterpriseTeamAssignedOrganizationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Organization>;
+};
+
+/** A list of enterprise teams owned by the enterprise. */
+export type EnterpriseTeamConnection = {
+  __typename?: 'EnterpriseTeamConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EnterpriseTeamEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<EnterpriseTeam>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int']['output'];
+};
+
+/** An edge in a connection. */
+export type EnterpriseTeamEdge = {
+  __typename?: 'EnterpriseTeamEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String']['output'];
+  /** The item at the end of the edge. */
+  node?: Maybe<EnterpriseTeam>;
+};
+
+/** The connection type for User. */
+export type EnterpriseTeamMemberConnection = {
+  __typename?: 'EnterpriseTeamMemberConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EnterpriseTeamMemberEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<User>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int']['output'];
+};
+
+/** Represents a user who is a member of an enterprise team. */
+export type EnterpriseTeamMemberEdge = {
+  __typename?: 'EnterpriseTeamMemberEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String']['output'];
+  node?: Maybe<User>;
+};
+
+/** Ordering options for enterprise team member connections. */
+export type EnterpriseTeamMemberOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order enterprise team members by. */
+  field: EnterpriseTeamMemberOrderField;
+};
+
+/** Properties by which enterprise team member connections can be ordered. */
+export enum EnterpriseTeamMemberOrderField {
+  /** Order enterprise team members by creation time. */
+  CreatedAt = 'CREATED_AT',
+  /** Order enterprise team members by ID. */
+  Id = 'ID',
+  /** Order enterprise team members by login. */
+  Login = 'LOGIN'
+}
+
+/** Ordering options for enterprise team connections. */
+export type EnterpriseTeamOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order enterprise teams by. */
+  field: EnterpriseTeamOrderField;
+};
+
+/** Properties by which enterprise team connections can be ordered. */
+export enum EnterpriseTeamOrderField {
+  /** Order enterprise teams by creation time. */
+  CreatedAt = 'CREATED_AT',
+  /** Order enterprise teams by ID. */
+  Id = 'ID',
+  /** Order enterprise teams by name. */
+  Name = 'NAME'
+}
+
+/** Ordering options for enterprise team organization connections. */
+export type EnterpriseTeamOrganizationOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order organizations by. */
+  field: EnterpriseTeamOrganizationOrderField;
+};
+
+/** Properties by which enterprise team organization connections can be ordered. */
+export enum EnterpriseTeamOrganizationOrderField {
+  /** Order enterprise team organizations by creation time. */
+  CreatedAt = 'CREATED_AT',
+  /** Order enterprise team organizations by ID. */
+  Id = 'ID',
+  /** Order enterprise team organizations by login. */
+  Login = 'LOGIN'
+}
+
+/** The possible organization selection types for an enterprise team. */
+export enum EnterpriseTeamOrganizationSelectionType {
+  /** The team is associated with all organizations in the enterprise. */
+  All = 'ALL',
+  /** The team is not associated with any organizations. */
+  Disabled = 'DISABLED',
+  /** The team is associated with selected organizations. */
+  Selected = 'SELECTED'
 }
 
 /** An account for a user who is an admin of an enterprise or a member of an enterprise through one or more organizations. */
@@ -19517,7 +19724,7 @@ export enum PatchStatus {
 }
 
 /** Types that can grant permissions on a repository to a user */
-export type PermissionGranter = Organization | Repository | Team;
+export type PermissionGranter = EnterpriseTeam | Organization | Repository | Team;
 
 /** A level of permission and source for a user's access to a repository. */
 export type PermissionSource = {
@@ -27192,6 +27399,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   isUserConfigurationRepository: Scalars['Boolean']['output'];
   /** Returns a single issue from the current repository by number. */
   issue?: Maybe<Issue>;
+  /** A list of the repository's issue fields, inherited from the organization */
+  issueFields?: Maybe<IssueFieldsConnection>;
   /** Returns a single issue-like object from the current repository by number. */
   issueOrPullRequest?: Maybe<IssueOrPullRequest>;
   /** Returns a list of issue templates associated to the repository */
@@ -27534,6 +27743,16 @@ export type RepositoryForksArgs = {
 /** A repository contains the content for a project. */
 export type RepositoryIssueArgs = {
   number: Scalars['Int']['input'];
+};
+
+
+/** A repository contains the content for a project. */
+export type RepositoryIssueFieldsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  orderBy?: InputMaybe<IssueFieldOrder>;
 };
 
 
@@ -29319,7 +29538,7 @@ export enum RequestableCheckStatusState {
 }
 
 /** Types that can be requested reviewers. */
-export type RequestedReviewer = Bot | Mannequin | Team | User;
+export type RequestedReviewer = Bot | EnterpriseTeam | Mannequin | Team | User;
 
 /** The connection type for RequestedReviewer. */
 export type RequestedReviewerConnection = {
@@ -36824,7 +37043,7 @@ export type WorkflowsParametersInput = {
   workflows: Array<WorkflowFileReferenceInput>;
 };
 
-export type _Entity = AddedToMergeQueueEvent | AddedToProjectEvent | AddedToProjectV2Event | App | AssignedEvent | AutoMergeDisabledEvent | AutoMergeEnabledEvent | AutoRebaseEnabledEvent | AutoSquashEnabledEvent | AutomaticBaseChangeFailedEvent | AutomaticBaseChangeSucceededEvent | BaseRefChangedEvent | BaseRefDeletedEvent | BaseRefForcePushedEvent | Blob | BlockedByAddedEvent | BlockedByRemovedEvent | BlockingAddedEvent | BlockingRemovedEvent | Bot | BranchProtectionRule | BypassForcePushAllowance | BypassPullRequestAllowance | Cwe | CheckRun | CheckSuite | ClosedEvent | CodeOfConduct | CommentDeletedEvent | Commit | CommitComment | CommitCommentThread | Comparison | ConnectedEvent | ConvertToDraftEvent | ConvertedFromDraftEvent | ConvertedNoteToIssueEvent | ConvertedToDiscussionEvent | CrossReferencedEvent | DemilestonedEvent | DependencyGraphManifest | DeployKey | DeployedEvent | Deployment | DeploymentEnvironmentChangedEvent | DeploymentReview | DeploymentStatus | DisconnectedEvent | Discussion | DiscussionCategory | DiscussionComment | DiscussionPoll | DiscussionPollOption | DraftIssue | Enterprise | EnterpriseAdministratorInvitation | EnterpriseIdentityProvider | EnterpriseMemberInvitation | EnterpriseRepositoryInfo | EnterpriseServerInstallation | EnterpriseServerUserAccount | EnterpriseServerUserAccountEmail | EnterpriseServerUserAccountsUpload | EnterpriseUserAccount | Environment | ExternalIdentity | Gist | GistComment | HeadRefDeletedEvent | HeadRefForcePushedEvent | HeadRefRestoredEvent | IpAllowListEntry | Issue | IssueComment | IssueCommentPinnedEvent | IssueCommentUnpinnedEvent | IssueFieldAddedEvent | IssueFieldChangedEvent | IssueFieldDate | IssueFieldDateValue | IssueFieldNumber | IssueFieldNumberValue | IssueFieldRemovedEvent | IssueFieldSingleSelect | IssueFieldSingleSelectOption | IssueFieldSingleSelectValue | IssueFieldText | IssueFieldTextValue | IssueType | IssueTypeAddedEvent | IssueTypeChangedEvent | IssueTypeRemovedEvent | Label | LabeledEvent | Language | License | LinkedBranch | LockedEvent | Mannequin | MarkedAsDuplicateEvent | MarketplaceCategory | MarketplaceListing | MemberFeatureRequestNotification | MembersCanDeleteReposClearAuditEntry | MembersCanDeleteReposDisableAuditEntry | MembersCanDeleteReposEnableAuditEntry | MentionedEvent | MergeQueue | MergeQueueEntry | MergedEvent | MigrationSource | Milestone | MilestonedEvent | MovedColumnsInProjectEvent | OidcProvider | OauthApplicationCreateAuditEntry | OrgAddBillingManagerAuditEntry | OrgAddMemberAuditEntry | OrgBlockUserAuditEntry | OrgConfigDisableCollaboratorsOnlyAuditEntry | OrgConfigEnableCollaboratorsOnlyAuditEntry | OrgCreateAuditEntry | OrgDisableOauthAppRestrictionsAuditEntry | OrgDisableSamlAuditEntry | OrgDisableTwoFactorRequirementAuditEntry | OrgEnableOauthAppRestrictionsAuditEntry | OrgEnableSamlAuditEntry | OrgEnableTwoFactorRequirementAuditEntry | OrgInviteMemberAuditEntry | OrgInviteToBusinessAuditEntry | OrgOauthAppAccessApprovedAuditEntry | OrgOauthAppAccessBlockedAuditEntry | OrgOauthAppAccessDeniedAuditEntry | OrgOauthAppAccessRequestedAuditEntry | OrgOauthAppAccessUnblockedAuditEntry | OrgRemoveBillingManagerAuditEntry | OrgRemoveMemberAuditEntry | OrgRemoveOutsideCollaboratorAuditEntry | OrgRestoreMemberAuditEntry | OrgUnblockUserAuditEntry | OrgUpdateDefaultRepositoryPermissionAuditEntry | OrgUpdateMemberAuditEntry | OrgUpdateMemberRepositoryCreationPermissionAuditEntry | OrgUpdateMemberRepositoryInvitationPermissionAuditEntry | Organization | OrganizationIdentityProvider | OrganizationInvitation | Package | PackageFile | PackageTag | PackageVersion | ParentIssueAddedEvent | ParentIssueRemovedEvent | PinnedDiscussion | PinnedEnvironment | PinnedEvent | PinnedIssue | PinnedIssueComment | PrivateRepositoryForkingDisableAuditEntry | PrivateRepositoryForkingEnableAuditEntry | Project | ProjectCard | ProjectColumn | ProjectV2 | ProjectV2Field | ProjectV2Item | ProjectV2ItemFieldDateValue | ProjectV2ItemFieldIterationValue | ProjectV2ItemFieldNumberValue | ProjectV2ItemFieldSingleSelectValue | ProjectV2ItemFieldTextValue | ProjectV2ItemStatusChangedEvent | ProjectV2IterationField | ProjectV2SingleSelectField | ProjectV2StatusUpdate | ProjectV2View | ProjectV2Workflow | PublicKey | PullRequest | PullRequestCommit | PullRequestCommitCommentThread | PullRequestReview | PullRequestReviewComment | PullRequestReviewThread | PullRequestThread | Push | PushAllowance | Query | Reaction | ReadyForReviewEvent | Ref | ReferencedEvent | Release | ReleaseAsset | RemovedFromMergeQueueEvent | RemovedFromProjectEvent | RemovedFromProjectV2Event | RenamedTitleEvent | ReopenedEvent | RepoAccessAuditEntry | RepoAddMemberAuditEntry | RepoAddTopicAuditEntry | RepoArchivedAuditEntry | RepoChangeMergeSettingAuditEntry | RepoConfigDisableAnonymousGitAccessAuditEntry | RepoConfigDisableCollaboratorsOnlyAuditEntry | RepoConfigDisableContributorsOnlyAuditEntry | RepoConfigDisableSockpuppetDisallowedAuditEntry | RepoConfigEnableAnonymousGitAccessAuditEntry | RepoConfigEnableCollaboratorsOnlyAuditEntry | RepoConfigEnableContributorsOnlyAuditEntry | RepoConfigEnableSockpuppetDisallowedAuditEntry | RepoConfigLockAnonymousGitAccessAuditEntry | RepoConfigUnlockAnonymousGitAccessAuditEntry | RepoCreateAuditEntry | RepoDestroyAuditEntry | RepoRemoveMemberAuditEntry | RepoRemoveTopicAuditEntry | Repository | RepositoryCustomProperty | RepositoryInvitation | RepositoryMigration | RepositoryRule | RepositoryRuleset | RepositoryRulesetBypassActor | RepositoryTopic | RepositoryVisibilityChangeDisableAuditEntry | RepositoryVisibilityChangeEnableAuditEntry | RepositoryVulnerabilityAlert | ReviewDismissalAllowance | ReviewDismissedEvent | ReviewRequest | ReviewRequestRemovedEvent | ReviewRequestedEvent | SavedReply | SecurityAdvisory | SponsorsActivity | SponsorsListing | SponsorsListingFeaturedItem | SponsorsTier | Sponsorship | SponsorshipNewsletter | Status | StatusCheckRollup | StatusContext | SubIssueAddedEvent | SubIssueRemovedEvent | SubscribedEvent | Team | TeamAddMemberAuditEntry | TeamAddRepositoryAuditEntry | TeamChangeParentTeamAuditEntry | TeamRemoveMemberAuditEntry | TeamRemoveRepositoryAuditEntry | Topic | TransferredEvent | Tree | UnassignedEvent | UnlabeledEvent | UnlockedEvent | UnmarkedAsDuplicateEvent | UnpinnedEvent | UnsubscribedEvent | User | UserBlockedEvent | UserContentEdit | UserList | UserNamespaceRepository | UserStatus | VerifiableDomain | Workflow | WorkflowRun | WorkflowRunFile;
+export type _Entity = AddedToMergeQueueEvent | AddedToProjectEvent | AddedToProjectV2Event | App | AssignedEvent | AutoMergeDisabledEvent | AutoMergeEnabledEvent | AutoRebaseEnabledEvent | AutoSquashEnabledEvent | AutomaticBaseChangeFailedEvent | AutomaticBaseChangeSucceededEvent | BaseRefChangedEvent | BaseRefDeletedEvent | BaseRefForcePushedEvent | Blob | BlockedByAddedEvent | BlockedByRemovedEvent | BlockingAddedEvent | BlockingRemovedEvent | Bot | BranchProtectionRule | BypassForcePushAllowance | BypassPullRequestAllowance | Cwe | CheckRun | CheckSuite | ClosedEvent | CodeOfConduct | CommentDeletedEvent | Commit | CommitComment | CommitCommentThread | Comparison | ConnectedEvent | ConvertToDraftEvent | ConvertedFromDraftEvent | ConvertedNoteToIssueEvent | ConvertedToDiscussionEvent | CrossReferencedEvent | DemilestonedEvent | DependencyGraphManifest | DeployKey | DeployedEvent | Deployment | DeploymentEnvironmentChangedEvent | DeploymentReview | DeploymentStatus | DisconnectedEvent | Discussion | DiscussionCategory | DiscussionComment | DiscussionPoll | DiscussionPollOption | DraftIssue | Enterprise | EnterpriseAdministratorInvitation | EnterpriseIdentityProvider | EnterpriseMemberInvitation | EnterpriseRepositoryInfo | EnterpriseServerInstallation | EnterpriseServerUserAccount | EnterpriseServerUserAccountEmail | EnterpriseServerUserAccountsUpload | EnterpriseTeam | EnterpriseUserAccount | Environment | ExternalIdentity | Gist | GistComment | HeadRefDeletedEvent | HeadRefForcePushedEvent | HeadRefRestoredEvent | IpAllowListEntry | Issue | IssueComment | IssueCommentPinnedEvent | IssueCommentUnpinnedEvent | IssueFieldAddedEvent | IssueFieldChangedEvent | IssueFieldDate | IssueFieldDateValue | IssueFieldNumber | IssueFieldNumberValue | IssueFieldRemovedEvent | IssueFieldSingleSelect | IssueFieldSingleSelectOption | IssueFieldSingleSelectValue | IssueFieldText | IssueFieldTextValue | IssueType | IssueTypeAddedEvent | IssueTypeChangedEvent | IssueTypeRemovedEvent | Label | LabeledEvent | Language | License | LinkedBranch | LockedEvent | Mannequin | MarkedAsDuplicateEvent | MarketplaceCategory | MarketplaceListing | MemberFeatureRequestNotification | MembersCanDeleteReposClearAuditEntry | MembersCanDeleteReposDisableAuditEntry | MembersCanDeleteReposEnableAuditEntry | MentionedEvent | MergeQueue | MergeQueueEntry | MergedEvent | MigrationSource | Milestone | MilestonedEvent | MovedColumnsInProjectEvent | OidcProvider | OauthApplicationCreateAuditEntry | OrgAddBillingManagerAuditEntry | OrgAddMemberAuditEntry | OrgBlockUserAuditEntry | OrgConfigDisableCollaboratorsOnlyAuditEntry | OrgConfigEnableCollaboratorsOnlyAuditEntry | OrgCreateAuditEntry | OrgDisableOauthAppRestrictionsAuditEntry | OrgDisableSamlAuditEntry | OrgDisableTwoFactorRequirementAuditEntry | OrgEnableOauthAppRestrictionsAuditEntry | OrgEnableSamlAuditEntry | OrgEnableTwoFactorRequirementAuditEntry | OrgInviteMemberAuditEntry | OrgInviteToBusinessAuditEntry | OrgOauthAppAccessApprovedAuditEntry | OrgOauthAppAccessBlockedAuditEntry | OrgOauthAppAccessDeniedAuditEntry | OrgOauthAppAccessRequestedAuditEntry | OrgOauthAppAccessUnblockedAuditEntry | OrgRemoveBillingManagerAuditEntry | OrgRemoveMemberAuditEntry | OrgRemoveOutsideCollaboratorAuditEntry | OrgRestoreMemberAuditEntry | OrgUnblockUserAuditEntry | OrgUpdateDefaultRepositoryPermissionAuditEntry | OrgUpdateMemberAuditEntry | OrgUpdateMemberRepositoryCreationPermissionAuditEntry | OrgUpdateMemberRepositoryInvitationPermissionAuditEntry | Organization | OrganizationIdentityProvider | OrganizationInvitation | Package | PackageFile | PackageTag | PackageVersion | ParentIssueAddedEvent | ParentIssueRemovedEvent | PinnedDiscussion | PinnedEnvironment | PinnedEvent | PinnedIssue | PinnedIssueComment | PrivateRepositoryForkingDisableAuditEntry | PrivateRepositoryForkingEnableAuditEntry | Project | ProjectCard | ProjectColumn | ProjectV2 | ProjectV2Field | ProjectV2Item | ProjectV2ItemFieldDateValue | ProjectV2ItemFieldIterationValue | ProjectV2ItemFieldNumberValue | ProjectV2ItemFieldSingleSelectValue | ProjectV2ItemFieldTextValue | ProjectV2ItemStatusChangedEvent | ProjectV2IterationField | ProjectV2SingleSelectField | ProjectV2StatusUpdate | ProjectV2View | ProjectV2Workflow | PublicKey | PullRequest | PullRequestCommit | PullRequestCommitCommentThread | PullRequestReview | PullRequestReviewComment | PullRequestReviewThread | PullRequestThread | Push | PushAllowance | Query | Reaction | ReadyForReviewEvent | Ref | ReferencedEvent | Release | ReleaseAsset | RemovedFromMergeQueueEvent | RemovedFromProjectEvent | RemovedFromProjectV2Event | RenamedTitleEvent | ReopenedEvent | RepoAccessAuditEntry | RepoAddMemberAuditEntry | RepoAddTopicAuditEntry | RepoArchivedAuditEntry | RepoChangeMergeSettingAuditEntry | RepoConfigDisableAnonymousGitAccessAuditEntry | RepoConfigDisableCollaboratorsOnlyAuditEntry | RepoConfigDisableContributorsOnlyAuditEntry | RepoConfigDisableSockpuppetDisallowedAuditEntry | RepoConfigEnableAnonymousGitAccessAuditEntry | RepoConfigEnableCollaboratorsOnlyAuditEntry | RepoConfigEnableContributorsOnlyAuditEntry | RepoConfigEnableSockpuppetDisallowedAuditEntry | RepoConfigLockAnonymousGitAccessAuditEntry | RepoConfigUnlockAnonymousGitAccessAuditEntry | RepoCreateAuditEntry | RepoDestroyAuditEntry | RepoRemoveMemberAuditEntry | RepoRemoveTopicAuditEntry | Repository | RepositoryCustomProperty | RepositoryInvitation | RepositoryMigration | RepositoryRule | RepositoryRuleset | RepositoryRulesetBypassActor | RepositoryTopic | RepositoryVisibilityChangeDisableAuditEntry | RepositoryVisibilityChangeEnableAuditEntry | RepositoryVulnerabilityAlert | ReviewDismissalAllowance | ReviewDismissedEvent | ReviewRequest | ReviewRequestRemovedEvent | ReviewRequestedEvent | SavedReply | SecurityAdvisory | SponsorsActivity | SponsorsListing | SponsorsListingFeaturedItem | SponsorsTier | Sponsorship | SponsorshipNewsletter | Status | StatusCheckRollup | StatusContext | SubIssueAddedEvent | SubIssueRemovedEvent | SubscribedEvent | Team | TeamAddMemberAuditEntry | TeamAddRepositoryAuditEntry | TeamChangeParentTeamAuditEntry | TeamRemoveMemberAuditEntry | TeamRemoveRepositoryAuditEntry | Topic | TransferredEvent | Tree | UnassignedEvent | UnlabeledEvent | UnlockedEvent | UnmarkedAsDuplicateEvent | UnpinnedEvent | UnsubscribedEvent | User | UserBlockedEvent | UserContentEdit | UserList | UserNamespaceRepository | UserStatus | VerifiableDomain | Workflow | WorkflowRun | WorkflowRunFile;
 
 export type GetRepoLangsQueryVariables = Exact<{
   after?: InputMaybe<Scalars['String']['input']>;
