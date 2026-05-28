@@ -27292,6 +27292,8 @@ export enum ReportedContentClassifiers {
   Abuse = 'ABUSE',
   /** A duplicated piece of content */
   Duplicate = 'DUPLICATE',
+  /** A low quality piece of content */
+  LowQuality = 'LOW_QUALITY',
   /** An irrelevant piece of content */
   OffTopic = 'OFF_TOPIC',
   /** An outdated piece of content */
