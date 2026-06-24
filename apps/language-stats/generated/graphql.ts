@@ -13032,7 +13032,7 @@ export type Mutation = {
   addProjectV2DraftIssue?: Maybe<AddProjectV2DraftIssuePayload>;
   /** Links an existing content instance to a Project. */
   addProjectV2ItemById?: Maybe<AddProjectV2ItemByIdPayload>;
-  /** Add users to the pull request creation cap bypass list. Bypassed users can create pull requests regardless of the configured cap. Only repository admins can manage the bypass list. You can add a maximum of 100 users per request. The bypass list can only hold a maximum of 100 users. */
+  /** Add users to the pull request creation cap bypass list. Bypassed users can create pull requests regardless of the configured cap. Only users with maintainer permissions can manage the bypass list. You can add a maximum of 100 users per request. The bypass list can only hold a maximum of 100 users. */
   addPullRequestCreationCapBypassUsers?: Maybe<AddPullRequestCreationCapBypassUsersPayload>;
   /** Adds a review to a Pull Request. */
   addPullRequestReview?: Maybe<AddPullRequestReviewPayload>;
@@ -13378,7 +13378,7 @@ export type Mutation = {
   removeLabelsFromLabelable?: Maybe<RemoveLabelsFromLabelablePayload>;
   /** Removes outside collaborator from all repositories in an organization. */
   removeOutsideCollaborator?: Maybe<RemoveOutsideCollaboratorPayload>;
-  /** Remove users from the pull request creation cap bypass list. Only repository admins can manage the bypass list. */
+  /** Remove users from the pull request creation cap bypass list. Only users with maintainer permissions can manage the bypass list. */
   removePullRequestCreationCapBypassUsers?: Maybe<RemovePullRequestCreationCapBypassUsersPayload>;
   /** Removes a reaction from a subject. */
   removeReaction?: Maybe<RemoveReactionPayload>;
@@ -27624,7 +27624,7 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   projectsV2: ProjectV2Connection;
   /** Returns a single pull request from the current repository by number. */
   pullRequest?: Maybe<PullRequest>;
-  /** A list of users who are exempt from the pull request creation cap on this repository. Only visible to repository admins. */
+  /** The pull request creation cap configuration for this repository. Only visible to repository maintainers and administrators. */
   pullRequestCreationCapConfig?: Maybe<PullRequestCreationCapConfig>;
   /** The policy controlling who can create pull requests in this repository. */
   pullRequestCreationPolicy?: Maybe<PullRequestCreationPolicy>;
