@@ -10446,6 +10446,8 @@ export type IssueFieldAddedEvent = Node & {
   id: Scalars['ID']['output'];
   /** The issue field added. */
   issueField?: Maybe<IssueFields>;
+  /** The selected options for option-backed fields; single-select returns one option and multi-select returns many. */
+  options?: Maybe<Array<IssueFieldTimelineOption>>;
   /** The value of the added field. */
   value?: Maybe<Scalars['String']['output']>;
 };
@@ -10463,10 +10465,14 @@ export type IssueFieldChangedEvent = Node & {
   issueField?: Maybe<IssueFields>;
   /** The new color if it is a single-select field. */
   newColor?: Maybe<Scalars['String']['output']>;
+  /** The new options for option-backed fields; single-select returns one option and multi-select returns many. */
+  newOptions?: Maybe<Array<IssueFieldTimelineOption>>;
   /** The new value of the field. */
   newValue?: Maybe<Scalars['String']['output']>;
   /** The previous color if it was a single-select field. */
   previousColor?: Maybe<Scalars['String']['output']>;
+  /** The previous options for option-backed fields; single-select returns one option and multi-select returns many. */
+  previousOptions?: Maybe<Array<IssueFieldTimelineOption>>;
   /** The previous value of the field. */
   previousValue?: Maybe<Scalars['String']['output']>;
 };
@@ -10640,6 +10646,8 @@ export type IssueFieldRemovedEvent = Node & {
   id: Scalars['ID']['output'];
   /** The issue field removed. */
   issueField?: Maybe<IssueFields>;
+  /** The removed options for option-backed fields; single-select returns one option and multi-select returns many. */
+  options?: Maybe<Array<IssueFieldTimelineOption>>;
 };
 
 /** Represents a single select issue field. */
@@ -10761,6 +10769,15 @@ export type IssueFieldTextValue = IssueFieldValueCommon & Node & {
   id: Scalars['ID']['output'];
   /** Value of the field. */
   value: Scalars['String']['output'];
+};
+
+/** Represents a selected option for a timeline issue field event. */
+export type IssueFieldTimelineOption = {
+  __typename?: 'IssueFieldTimelineOption';
+  /** The option color. */
+  color?: Maybe<Scalars['String']['output']>;
+  /** The option name. */
+  name: Scalars['String']['output'];
 };
 
 /** Issue field values */
