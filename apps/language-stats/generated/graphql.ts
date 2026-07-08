@@ -229,8 +229,8 @@ export type AddAssigneesToAssignableInput = {
   agentAssignment?: InputMaybe<AgentAssignmentInput>;
   /** The id of the assignable object to add assignees to. */
   assignableId: Scalars['ID']['input'];
-  /** The ids of actors (users or bots) to add as assignees. */
-  assigneeIds: Array<Scalars['ID']['input']>;
+  /** The ids of actors (users or bots) to add as assignees. Mutually exclusive with `assignees`. */
+  assigneeIds?: InputMaybe<Array<Scalars['ID']['input']>>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']['input']>;
 };
@@ -6879,6 +6879,23 @@ export type DismissRepositoryVulnerabilityAlertPayload = {
   clientMutationId?: Maybe<Scalars['String']['output']>;
   /** The Dependabot alert that was dismissed */
   repositoryVulnerabilityAlert?: Maybe<RepositoryVulnerabilityAlert>;
+};
+
+/** Specify people, teams, or apps allowed to dismiss pull request reviews. */
+export type DismissalRestriction = {
+  __typename?: 'DismissalRestriction';
+  /** Specify people, teams, or apps allowed to dismiss pull request reviews. */
+  allowedActors?: Maybe<Array<Scalars['ID']['output']>>;
+  /** Whether to restrict review dismissal to specific actors. */
+  enabled: Scalars['Boolean']['output'];
+};
+
+/** Specify people, teams, or apps allowed to dismiss pull request reviews. */
+export type DismissalRestrictionInput = {
+  /** Specify people, teams, or apps allowed to dismiss pull request reviews. */
+  allowedActors?: InputMaybe<Array<Scalars['ID']['input']>>;
+  /** Whether to restrict review dismissal to specific actors. */
+  enabled: Scalars['Boolean']['input'];
 };
 
 /** A draft issue within a project. */
@@ -23192,6 +23209,8 @@ export type PullRequestParameters = {
   allowedMergeMethods?: Maybe<Array<PullRequestAllowedMergeMethods>>;
   /** New, reviewable commits pushed will dismiss previous pull request review approvals. */
   dismissStaleReviewsOnPush: Scalars['Boolean']['output'];
+  /** Specify people, teams, or apps allowed to dismiss pull request reviews. */
+  dismissalRestriction?: Maybe<DismissalRestriction>;
   /** Require an approving review in pull requests that modify files that have a designated code owner. */
   requireCodeOwnerReview: Scalars['Boolean']['output'];
   /** Whether the most recent reviewable push must be approved by someone other than the person who pushed it. */
@@ -23210,6 +23229,8 @@ export type PullRequestParametersInput = {
   allowedMergeMethods?: InputMaybe<Array<PullRequestAllowedMergeMethods>>;
   /** New, reviewable commits pushed will dismiss previous pull request review approvals. */
   dismissStaleReviewsOnPush: Scalars['Boolean']['input'];
+  /** Specify people, teams, or apps allowed to dismiss pull request reviews. */
+  dismissalRestriction?: InputMaybe<DismissalRestrictionInput>;
   /** Require an approving review in pull requests that modify files that have a designated code owner. */
   requireCodeOwnerReview: Scalars['Boolean']['input'];
   /** Whether the most recent reviewable push must be approved by someone other than the person who pushed it. */
