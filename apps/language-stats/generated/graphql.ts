@@ -23826,6 +23826,8 @@ export enum PullRequestTimelineItemsItemType {
   AddedToProjectEvent = 'ADDED_TO_PROJECT_EVENT',
   /** Represents a 'added_to_project_v2' event on a given issue or pull request. */
   AddedToProjectV2Event = 'ADDED_TO_PROJECT_V2_EVENT',
+  /** Represents an 'archived' event on a given pull request. */
+  ArchivedEvent = 'ARCHIVED_EVENT',
   /** Represents an 'assigned' event on any assignable object. */
   AssignedEvent = 'ASSIGNED_EVENT',
   /** Represents a 'automatic_base_change_failed' event on a given pull request. */
@@ -23962,6 +23964,8 @@ export enum PullRequestTimelineItemsItemType {
   SubIssueRemovedEvent = 'SUB_ISSUE_REMOVED_EVENT',
   /** Represents a 'transferred' event on a given issue or pull request. */
   TransferredEvent = 'TRANSFERRED_EVENT',
+  /** Represents an 'unarchived' event on a given pull request. */
+  UnarchivedEvent = 'UNARCHIVED_EVENT',
   /** Represents an 'unassigned' event on any assignable object. */
   UnassignedEvent = 'UNASSIGNED_EVENT',
   /** Represents an 'unlabeled' event on a given issue or pull request. */
