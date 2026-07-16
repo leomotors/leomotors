@@ -1011,6 +1011,8 @@ export type Assignable = {
   assignees: UserConnection;
   /** A list of suggested actors to assign to this object */
   suggestedActors: AssigneeConnection;
+  /** Indicates if the viewer can edit assignees for this object. */
+  viewerCanAssign: Scalars['Boolean']['output'];
 };
 
 
@@ -9959,6 +9961,8 @@ export type Issue = Assignable & Closable & Comment & Deletable & Labelable & Lo
   url: Scalars['URI']['output'];
   /** A list of edits to this content. */
   userContentEdits?: Maybe<UserContentEditConnection>;
+  /** Indicates if the viewer can edit assignees for this object. */
+  viewerCanAssign: Scalars['Boolean']['output'];
   /** Indicates if the object can be closed by the viewer. */
   viewerCanClose: Scalars['Boolean']['output'];
   /** Check if the current viewer can delete this object. */
@@ -9971,10 +9975,16 @@ export type Issue = Assignable & Closable & Comment & Deletable & Labelable & Lo
   viewerCanReopen: Scalars['Boolean']['output'];
   /** Check if the current viewer can set fields on the issue. */
   viewerCanSetFields?: Maybe<Scalars['Boolean']['output']>;
+  /** Indicates if the viewer can edit the milestone of the issue. */
+  viewerCanSetMilestone: Scalars['Boolean']['output'];
   /** Check if the viewer is able to change their subscription status for the repository. */
   viewerCanSubscribe: Scalars['Boolean']['output'];
+  /** Check if the current viewer can set the issue type of this issue. */
+  viewerCanType?: Maybe<Scalars['Boolean']['output']>;
   /** Check if the current viewer can update this object. */
   viewerCanUpdate: Scalars['Boolean']['output'];
+  /** Check if the viewer has triage-level (or higher) access to update this issue's metadata. Note: this reflects the viewer's base repository role and does not account for individual fine-grained permissions granted via custom repository roles. */
+  viewerCanUpdateMetadata?: Maybe<Scalars['Boolean']['output']>;
   /** Reasons why the current viewer can not update this comment. */
   viewerCannotUpdateReasons: Array<CommentCannotUpdateReason>;
   /** Did the viewer author this comment. */
@@ -22767,6 +22777,8 @@ export type PullRequest = Assignable & Closable & Comment & Labelable & Lockable
   userContentEdits?: Maybe<UserContentEditConnection>;
   /** Whether or not the viewer can apply suggestion. */
   viewerCanApplySuggestion: Scalars['Boolean']['output'];
+  /** Indicates if the viewer can edit assignees for this object. */
+  viewerCanAssign: Scalars['Boolean']['output'];
   /** Indicates if the object can be closed by the viewer. */
   viewerCanClose: Scalars['Boolean']['output'];
   /** Check if the viewer can restore the deleted head ref. */
