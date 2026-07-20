@@ -10984,6 +10984,22 @@ export enum IssueStateReason {
   Reopened = 'REOPENED'
 }
 
+/** Specifies a target state for an issue, with optional metadata such as a rationale, close reason, or duplicate reference. Suggestion metadata (`rationale`, `confidence`, `suggest`) is only meaningful when `value` is `CLOSED`; it is silently ignored otherwise. */
+export type IssueStateUpdateInput = {
+  /** The confidence level the agent had when suggesting this close. Only meaningful when `value` is `CLOSED`. */
+  confidence?: InputMaybe<IssueEventConfidenceLevel>;
+  /** The ID of the issue that this is a duplicate of. Only meaningful when `value` is `CLOSED` and `stateReason` is `DUPLICATE`. */
+  duplicateIssueId?: InputMaybe<Scalars['ID']['input']>;
+  /** Optional rationale describing why the issue is being closed. Only meaningful when `value` is `CLOSED`. Max 280 characters. */
+  rationale?: InputMaybe<Scalars['String']['input']>;
+  /** The reason for closing the issue. Only meaningful when `value` is `CLOSED`. */
+  stateReason?: InputMaybe<IssueClosedStateReason>;
+  /** If true, the close is stored as a pending suggestion for human review rather than being applied directly. Only meaningful when `value` is `CLOSED`; silently ignored otherwise. */
+  suggest?: InputMaybe<Scalars['Boolean']['input']>;
+  /** The target state. */
+  value: IssueState;
+};
+
 /** A repository issue template. */
 export type IssueTemplate = {
   __typename?: 'IssueTemplate';
@@ -35168,6 +35184,8 @@ export type UpdateIssueInput = {
   projectIds?: InputMaybe<Array<Scalars['ID']['input']>>;
   /** The desired issue state. */
   state?: InputMaybe<IssueState>;
+  /** The desired issue state, with optional rationale, state reason, or duplicate reference. Mutually exclusive with `state`. */
+  stateInput?: InputMaybe<IssueStateUpdateInput>;
   /** The title for the issue. */
   title?: InputMaybe<Scalars['String']['input']>;
 };
