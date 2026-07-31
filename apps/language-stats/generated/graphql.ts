@@ -12991,7 +12991,9 @@ export enum MigrationSourceType {
   /** A Bitbucket Server migration source. */
   BitbucketServer = 'BITBUCKET_SERVER',
   /** A GitHub Migration API source. */
-  GithubArchive = 'GITHUB_ARCHIVE'
+  GithubArchive = 'GITHUB_ARCHIVE',
+  /** A GitLab migration source. */
+  Gitlab = 'GITLAB'
 }
 
 /** The GitHub Enterprise Importer (GEI) migration state. */
