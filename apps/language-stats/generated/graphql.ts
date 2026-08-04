@@ -13654,7 +13654,7 @@ export type Mutation = {
   removeEnterpriseAdmin?: Maybe<RemoveEnterpriseAdminPayload>;
   /** Removes the identity provider from an enterprise. Owners of enterprises both with and without Enterprise Managed Users may use this mutation. */
   removeEnterpriseIdentityProvider?: Maybe<RemoveEnterpriseIdentityProviderPayload>;
-  /** Completely removes a user from the enterprise */
+  /** Completely removes a user from the enterprise asynchronously. */
   removeEnterpriseMember?: Maybe<RemoveEnterpriseMemberPayload>;
   /** Removes an organization from the enterprise */
   removeEnterpriseOrganization?: Maybe<RemoveEnterpriseOrganizationPayload>;
