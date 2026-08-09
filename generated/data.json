@@ -17,7 +17,7 @@
     "Shell": 189,
     "Python": 22250,
     "__isArchived": false,
-    "__pushedAt": "2026-08-07T21:48:51Z"
+    "__pushedAt": "2026-08-08T21:38:24Z"
   },
   "salim-bot": {
     "TypeScript": 78866,
@@ -811,5 +811,12 @@
     "CSS": 23,
     "__isArchived": false,
     "__pushedAt": "2026-04-21T16:14:58Z"
+  },
+  "tax-maxxing": {
+    "JavaScript": 4113,
+    "TypeScript": 146886,
+    "CSS": 2073,
+    "__isArchived": false,
+    "__pushedAt": "2026-08-09T09:37:44Z"
   }
 }
