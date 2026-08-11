@@ -10989,6 +10989,28 @@ export type IssueFieldValueEdge = {
   node?: Maybe<IssueFieldValue>;
 };
 
+/** A filter for matching an issue field value. Exactly one value argument should be provided. */
+export type IssueFieldValueFilter = {
+  /** Matches a date issue field value (YYYY-MM-DD). */
+  dateValue?: InputMaybe<Scalars['String']['input']>;
+  /** The ID of the issue field to filter by. Exactly one of `fieldId` or `fieldName` must be provided. */
+  fieldId?: InputMaybe<Scalars['ID']['input']>;
+  /** The name of the issue field to filter by. Exactly one of `fieldId` or `fieldName` must be provided. */
+  fieldName?: InputMaybe<Scalars['String']['input']>;
+  /** Matches issues containing all of the multi-select issue field option IDs. */
+  multiSelectOptionIds?: InputMaybe<Array<Scalars['ID']['input']>>;
+  /** Matches issues containing all of the multi-select issue field option names. */
+  multiSelectOptionValues?: InputMaybe<Array<Scalars['String']['input']>>;
+  /** Matches a numeric issue field value. */
+  numberValue?: InputMaybe<Scalars['Float']['input']>;
+  /** Matches a single-select issue field option by ID. */
+  singleSelectOptionId?: InputMaybe<Scalars['ID']['input']>;
+  /** Matches a single-select issue field option by name. */
+  singleSelectOptionValue?: InputMaybe<Scalars['String']['input']>;
+  /** Matches a text issue field value. */
+  textValue?: InputMaybe<Scalars['String']['input']>;
+};
+
 /** The visibility of an issue field. */
 export enum IssueFieldVisibility {
   /** All */
@@ -11028,6 +11050,8 @@ export type IssueFilters = {
   assignee?: InputMaybe<Scalars['String']['input']>;
   /** List issues created by given name. */
   createdBy?: InputMaybe<Scalars['String']['input']>;
+  /** List issues where each supplied issue field value filter matches. */
+  issueFieldValues?: InputMaybe<Array<IssueFieldValueFilter>>;
   /** List issues where the list of label names exist on the issue. */
   labels?: InputMaybe<Array<Scalars['String']['input']>>;
   /** List issues where the given name is mentioned in the issue. */
@@ -18873,6 +18897,8 @@ export type Organization = Actor & MemberStatusable & Node & PackageOwner & Prof
   pendingMembers: UserConnection;
   /** A list of repositories and gists this profile owner can pin to their profile. */
   pinnableItems: PinnableItemConnection;
+  /** An ordered list of issue fields pinned to issues when no type is selected. */
+  pinnedIssueFields?: Maybe<IssueFieldsConnection>;
   /** A list of repositories and gists this profile owner has pinned to their profile */
   pinnedItems: PinnableItemConnection;
   /** Returns how many more items this profile owner can pin to their profile. */
@@ -19135,6 +19161,15 @@ export type OrganizationPinnableItemsArgs = {
   first?: InputMaybe<Scalars['Int']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
   types?: InputMaybe<Array<PinnableItemType>>;
+};
+
+
+/** An account on GitHub, with one or more owners, that has repositories, members and teams. */
+export type OrganizationPinnedIssueFieldsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
 };
 
 
@@ -21621,6 +21656,10 @@ export type ProjectV2Field = Node & ProjectV2FieldCommon & {
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The Node ID of the ProjectV2Field object */
   id: Scalars['ID']['output'];
+  /** Returns true if this field is associated with an organization issue field */
+  isIssueField: Scalars['Boolean']['output'];
+  /** The organization issue field associated with this project field, if any */
+  issueField?: Maybe<IssueFields>;
   /** The project field's name. */
   name: Scalars['String']['output'];
   /** The project that contains this field. */
@@ -21639,6 +21678,8 @@ export type ProjectV2FieldCommon = {
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The Node ID of the ProjectV2FieldCommon object */
   id: Scalars['ID']['output'];
+  /** Returns true if this field is associated with an organization issue field */
+  isIssueField: Scalars['Boolean']['output'];
   /** The project field's name. */
   name: Scalars['String']['output'];
   /** The project that contains this field. */
@@ -22235,6 +22276,8 @@ export type ProjectV2IterationField = Node & ProjectV2FieldCommon & {
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The Node ID of the ProjectV2IterationField object */
   id: Scalars['ID']['output'];
+  /** Returns true if this field is associated with an organization issue field */
+  isIssueField: Scalars['Boolean']['output'];
   /** The project field's name. */
   name: Scalars['String']['output'];
   /** The project that contains this field. */
@@ -22292,6 +22335,10 @@ export type ProjectV2MultiSelectField = Node & ProjectV2FieldCommon & {
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The Node ID of the ProjectV2MultiSelectField object */
   id: Scalars['ID']['output'];
+  /** Returns true if this field is associated with an organization issue field */
+  isIssueField: Scalars['Boolean']['output'];
+  /** The organization issue field associated with this project field, if any */
+  issueField?: Maybe<IssueFields>;
   /** Options for the multi select field */
   multiSelectOptions: Array<ProjectV2MultiSelectFieldOption>;
   /** The project field's name. */
@@ -22433,6 +22480,10 @@ export type ProjectV2SingleSelectField = Node & ProjectV2FieldCommon & {
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The Node ID of the ProjectV2SingleSelectField object */
   id: Scalars['ID']['output'];
+  /** Returns true if this field is associated with an organization issue field */
+  isIssueField: Scalars['Boolean']['output'];
+  /** The organization issue field associated with this project field, if any */
+  issueField?: Maybe<IssueFields>;
   /** The project field's name. */
   name: Scalars['String']['output'];
   /** Options for the single select field */
