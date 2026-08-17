@@ -10131,6 +10131,7 @@ export type IssueBlockingArgs = {
 export type IssueClosedByPullRequestsReferencesArgs = {
   after?: InputMaybe<Scalars['String']['input']>;
   before?: InputMaybe<Scalars['String']['input']>;
+  excludeUserLinked?: InputMaybe<Scalars['Boolean']['input']>;
   first?: InputMaybe<Scalars['Int']['input']>;
   includeClosedPrs?: InputMaybe<Scalars['Boolean']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
@@ -23031,9 +23032,7 @@ export enum ProofOfPresenceRequirement {
   /** Proof of presence is not required. */
   NoPolicy = 'NO_POLICY',
   /** Members must complete a fresh re-authentication against the enterprise identity provider. */
-  Reauth = 'REAUTH',
-  /** Members must satisfy a phishing-resistant security key re-authentication (Microsoft Entra only). */
-  SecurityKey = 'SECURITY_KEY'
+  Reauth = 'REAUTH'
 }
 
 /** A property that must match */
@@ -23382,6 +23381,7 @@ export type PullRequestAssigneesArgs = {
 export type PullRequestClosingIssuesReferencesArgs = {
   after?: InputMaybe<Scalars['String']['input']>;
   before?: InputMaybe<Scalars['String']['input']>;
+  excludeUserLinked?: InputMaybe<Scalars['Boolean']['input']>;
   first?: InputMaybe<Scalars['Int']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
   orderBy?: InputMaybe<IssueOrder>;
