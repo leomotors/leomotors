@@ -10974,6 +10974,28 @@ export type IssueFieldTimelineOption = {
   name: Scalars['String']['output'];
 };
 
+/** Updates an issue field using its user-facing name. */
+export type IssueFieldUpdateInput = {
+  /** The name of the issue field. */
+  fieldName: Scalars['String']['input'];
+  /** The operation to perform. */
+  operation: IssueFieldUpdateOperation;
+  /** The value or comma-separated option names for the operation. */
+  value?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** The operation to perform on an issue field value. */
+export enum IssueFieldUpdateOperation {
+  /** Sets a scalar field or adds options to a multi-select field. */
+  Add = 'ADD',
+  /** Clears the field value. */
+  Clear = 'CLEAR',
+  /** Removes options from a multi-select field. */
+  Remove = 'REMOVE',
+  /** Replaces the field value. */
+  Set = 'SET'
+}
+
 /** Issue field values */
 export type IssueFieldValue = IssueFieldDateValue | IssueFieldMultiSelectValue | IssueFieldNumberValue | IssueFieldSingleSelectValue | IssueFieldTextValue;
 
@@ -35798,6 +35820,8 @@ export type UpdateIssueInput = {
   clientMutationId?: InputMaybe<Scalars['String']['input']>;
   /** The ID of the Issue to modify. */
   id: Scalars['ID']['input'];
+  /** Issue field updates resolved by field and option names. */
+  issueFieldUpdates?: InputMaybe<Array<IssueFieldUpdateInput>>;
   /** The Issue Type to set on this issue, with optional rationale. Mutually exclusive with `issueTypeId`. */
   issueType?: InputMaybe<IssueTypeUpdateInput>;
   /** The ID of the Issue Type for this issue. */
