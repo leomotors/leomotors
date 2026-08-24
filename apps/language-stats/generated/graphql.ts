@@ -24305,6 +24305,16 @@ export type PullRequestReviewThreadEdge = {
   node?: Maybe<PullRequestReviewThread>;
 };
 
+/** The possible reasons a pull request review thread was resolved. */
+export enum PullRequestReviewThreadResolutionReason {
+  /** The review comment was addressed. */
+  Addressed = 'ADDRESSED',
+  /** The review comment is invalid. */
+  Invalid = 'INVALID',
+  /** The review comment will not be addressed. */
+  WontFix = 'WONT_FIX'
+}
+
 /** The possible subject types of a pull request review comment. */
 export enum PullRequestReviewThreadSubjectType {
   /** A comment that has been made against the file of a pull request */
@@ -30575,6 +30585,8 @@ export type RerequestCheckSuitePayload = {
 export type ResolveReviewThreadInput = {
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** The reason a Copilot code review thread was resolved. */
+  resolutionReason?: InputMaybe<PullRequestReviewThreadResolutionReason>;
   /** The ID of the thread to resolve */
   threadId: Scalars['ID']['input'];
 };
