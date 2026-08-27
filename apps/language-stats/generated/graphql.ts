@@ -7237,6 +7237,7 @@ export type EnterpriseEnterpriseTeamsArgs = {
   last?: InputMaybe<Scalars['Int']['input']>;
   orderBy?: InputMaybe<EnterpriseTeamOrder>;
   query?: InputMaybe<Scalars['String']['input']>;
+  userLogins?: InputMaybe<Array<Scalars['String']['input']>>;
 };
 
 
