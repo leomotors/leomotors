@@ -31138,7 +31138,7 @@ export type SecurityAdvisory = Node & {
   origin: Scalars['String']['output'];
   /** The permalink for the advisory */
   permalink?: Maybe<Scalars['URI']['output']>;
-  /** When the advisory was published */
+  /** When GitHub published this advisory */
   publishedAt: Scalars['DateTime']['output'];
   /** A list of references for this advisory */
   references: Array<SecurityAdvisoryReference>;
