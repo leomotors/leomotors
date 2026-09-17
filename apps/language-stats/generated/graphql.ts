@@ -29691,6 +29691,8 @@ export enum RepositoryPermission {
   Read = 'READ',
   /** Can read and clone this repository. Can also manage issues and pull requests */
   Triage = 'TRIAGE',
+  /** Can read and clone this repository. Can also manage issues and pull requests, plus additional triage abilities */
+  TriagePlus = 'TRIAGE_PLUS',
   /** Can read, clone, and push to this repository. Can also manage issues and pull requests */
   Write = 'WRITE'
 }
