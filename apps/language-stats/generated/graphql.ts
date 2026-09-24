@@ -13684,7 +13684,14 @@ export type Mutation = {
   markPullRequestReadyForReview?: Maybe<MarkPullRequestReadyForReviewPayload>;
   /** Merge a head into a branch. */
   mergeBranch?: Maybe<MergeBranchPayload>;
-  /** Merge a pull request. */
+  /**
+   * Merge a pull request.
+   *
+   * > [!NOTE]
+   * > We recommend using the [asynchronous merge REST API](${externalDocsUrl}/rest/pulls/pulls#merge-a-pull-request-asynchronously) instead.
+   * > This mutation does not support stacked pull requests.
+   *
+   */
   mergePullRequest?: Maybe<MergePullRequestPayload>;
   /** Minimizes a comment on an Issue, Commit, Pull Request, or Gist */
   minimizeComment?: Maybe<MinimizeCommentPayload>;
