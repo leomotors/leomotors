@@ -22408,6 +22408,8 @@ export enum ProjectV2ItemType {
 export type ProjectV2Iteration = {
   /** The duration of the iteration, in days. */
   duration: Scalars['Int']['input'];
+  /** The ID of an existing iteration. Include this to preserve the iteration's identity during replacement updates. */
+  id?: InputMaybe<Scalars['String']['input']>;
   /** The start date for the iteration. */
   startDate: Scalars['Date']['input'];
   /** The title for the iteration. */
