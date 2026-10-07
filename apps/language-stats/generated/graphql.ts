@@ -2660,7 +2660,7 @@ export type ClosedEvent = Node & UniformResourceLocatable & {
 /** The object which triggered a `ClosedEvent`. */
 export type Closer = Commit | ProjectV2 | PullRequest;
 
-/** Enforce minimum line coverage thresholds on pull requests. When configured, uploaded coverage data must meet the specified criteria before changes can be merged. */
+/** Enforce minimum line coverage thresholds on pull requests. This rule evaluates uploaded coverage data but does not wait for coverage uploads. To ensure coverage is evaluated before merging, make each status check associated with a coverage upload a required status check. */
 export type CodeCoverageParameters = {
   __typename?: 'CodeCoverageParameters';
   /** The maximum percentage points that line coverage may drop relative to the default branch. Pull requests that reduce line coverage by more than this amount will be blocked. */
@@ -2669,7 +2669,7 @@ export type CodeCoverageParameters = {
   minimumCoverage?: Maybe<Scalars['Float']['output']>;
 };
 
-/** Enforce minimum line coverage thresholds on pull requests. When configured, uploaded coverage data must meet the specified criteria before changes can be merged. */
+/** Enforce minimum line coverage thresholds on pull requests. This rule evaluates uploaded coverage data but does not wait for coverage uploads. To ensure coverage is evaluated before merging, make each status check associated with a coverage upload a required status check. */
 export type CodeCoverageParametersInput = {
   /** The maximum percentage points that line coverage may drop relative to the default branch. Pull requests that reduce line coverage by more than this amount will be blocked. */
   maxCoverageDrop?: InputMaybe<Scalars['Float']['input']>;
@@ -29974,7 +29974,7 @@ export enum RepositoryRuleType {
   Authorization = 'AUTHORIZATION',
   /** Branch name pattern */
   BranchNamePattern = 'BRANCH_NAME_PATTERN',
-  /** Enforce minimum line coverage thresholds on pull requests. When configured, uploaded coverage data must meet the specified criteria before changes can be merged. */
+  /** Enforce minimum line coverage thresholds on pull requests. This rule evaluates uploaded coverage data but does not wait for coverage uploads. To ensure coverage is evaluated before merging, make each status check associated with a coverage upload a required status check. */
   CodeCoverage = 'CODE_COVERAGE',
   /** Choose which severity levels of code quality results should block pull request merges. When configured, a code quality analysis must be done on the pull request before the changes can be merged. */
   CodeQuality = 'CODE_QUALITY',
