@@ -13476,7 +13476,7 @@ export type Mutation = {
   approveVerifiableDomain?: Maybe<ApproveVerifiableDomainPayload>;
   /** Archives a ProjectV2Item */
   archiveProjectV2Item?: Maybe<ArchiveProjectV2ItemPayload>;
-  /** Archive a pull request. Closes and marks the pull request as archived. Only repository admins can archive pull requests. */
+  /** Archive a pull request. Closes and marks the pull request as archived. Users with the triage role or higher can archive pull requests. */
   archivePullRequest?: Maybe<ArchivePullRequestPayload>;
   /** Marks a repository as archived. */
   archiveRepository?: Maybe<ArchiveRepositoryPayload>;
@@ -13877,7 +13877,7 @@ export type Mutation = {
   transferIssue?: Maybe<TransferIssuePayload>;
   /** Unarchives a ProjectV2Item */
   unarchiveProjectV2Item?: Maybe<UnarchiveProjectV2ItemPayload>;
-  /** Unarchive a pull request. Removes the archived flag from the pull request. Does not automatically reopen or unlock the pull request. Only repository admins can unarchive pull requests. */
+  /** Unarchive a pull request. Removes the archived flag from the pull request. Does not automatically reopen or unlock the pull request. Users with the triage role or higher can unarchive pull requests. */
   unarchivePullRequest?: Maybe<UnarchivePullRequestPayload>;
   /** Unarchives a repository. */
   unarchiveRepository?: Maybe<UnarchiveRepositoryPayload>;
@@ -28434,6 +28434,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   forkingAllowed: Scalars['Boolean']['output'];
   /** A list of direct forked repositories. */
   forks: RepositoryConnection;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /** The funding links for this repository */
   fundingLinks: Array<FundingLink>;
   /** Indicates if the repository has the Discussions feature enabled. */
