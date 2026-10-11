@@ -3988,7 +3988,7 @@ export type ConvertedToDiscussionEvent = Node & {
   id: Scalars['ID']['output'];
 };
 
-/** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review and their premium requests quota has not reached the limit. */
+/** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review and AI credits. */
 export type CopilotCodeReviewParameters = {
   __typename?: 'CopilotCodeReviewParameters';
   /** Copilot automatically reviews draft pull requests before they are marked as ready for review. */
@@ -3997,7 +3997,7 @@ export type CopilotCodeReviewParameters = {
   reviewOnPush: Scalars['Boolean']['output'];
 };
 
-/** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review and their premium requests quota has not reached the limit. */
+/** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review and AI credits. */
 export type CopilotCodeReviewParametersInput = {
   /** Copilot automatically reviews draft pull requests before they are marked as ready for review. */
   reviewDraftPullRequests?: InputMaybe<Scalars['Boolean']['input']>;
@@ -29988,7 +29988,7 @@ export enum RepositoryRuleType {
   CommitAuthorEmailPattern = 'COMMIT_AUTHOR_EMAIL_PATTERN',
   /** Commit message pattern */
   CommitMessagePattern = 'COMMIT_MESSAGE_PATTERN',
-  /** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review and their premium requests quota has not reached the limit. */
+  /** Request Copilot code review for new pull requests automatically if the author has access to Copilot code review and AI credits. */
   CopilotCodeReview = 'COPILOT_CODE_REVIEW',
   /** Only allow users with bypass permission to create matching refs. */
   Creation = 'CREATION',
