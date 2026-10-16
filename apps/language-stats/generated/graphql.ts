@@ -23966,7 +23966,7 @@ export type PullRequestParameters = {
   requiredApprovingReviewCount: Scalars['Int']['output'];
   /** All conversations on code must be resolved before a pull request can be merged. */
   requiredReviewThreadResolution: Scalars['Boolean']['output'];
-  /** This field is in beta and subject to change. A collection of reviewers and associated file patterns. Each reviewer has a list of file patterns which determine the files that reviewer is required to review. */
+  /** A collection of reviewers and associated file patterns. Each reviewer has a list of file patterns which determine the files that reviewer is required to review. */
   requiredReviewers?: Maybe<Array<RequiredReviewerConfiguration>>;
 };
 
@@ -23986,7 +23986,7 @@ export type PullRequestParametersInput = {
   requiredApprovingReviewCount: Scalars['Int']['input'];
   /** All conversations on code must be resolved before a pull request can be merged. */
   requiredReviewThreadResolution: Scalars['Boolean']['input'];
-  /** This argument is in beta and subject to change. A collection of reviewers and associated file patterns. Each reviewer has a list of file patterns which determine the files that reviewer is required to review. */
+  /** A collection of reviewers and associated file patterns. Each reviewer has a list of file patterns which determine the files that reviewer is required to review. */
   requiredReviewers?: InputMaybe<Array<RequiredReviewerConfigurationInput>>;
 };
 
