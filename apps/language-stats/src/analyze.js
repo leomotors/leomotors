@@ -1,13 +1,13 @@
 // * analyze.js: Analyze as it name suggests and save to csv
 
-import * as fs from "fs/promises";
+import * as fs from "node:fs/promises";
 
 let langObj = {};
 
 try {
   const buffer = await fs.readFile("data/data.json");
   langObj = JSON.parse(buffer.toString());
-} catch (err) {
+} catch {
   console.log("data.json not found");
   process.exit(1);
 }
@@ -21,19 +21,16 @@ for (const repo in langObj) {
     if (lang.includes("Jupyter")) continue;
 
     if (langCounter[lang]) {
-      langCounter[lang] += parseInt(langStats[lang]);
+      langCounter[lang] += parseInt(langStats[lang], 10);
     } else {
-      langCounter[lang] = parseInt(langStats[lang]);
+      langCounter[lang] = parseInt(langStats[lang], 10);
     }
   }
 }
 
 const sorted = Object.entries(langCounter).sort(([, a], [, b]) => b - a);
 
-const languages = [];
-sorted.map((lang) => {
-  languages.push(lang[0]);
-});
+const languages = sorted.map(([lang]) => lang);
 
 console.log(langCounter);
 
@@ -55,7 +52,7 @@ function getType(archived, date) {
   if (archived) return "ARCHIVED";
 
   const time = new Date(date).getTime();
-  const diff = new Date().getTime() - time;
+  const diff = Date.now() - time;
 
   if (diff >= 3 * onemo) {
     return "ABANDONED";

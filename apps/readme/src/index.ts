@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 
-import { readmeLinks } from "./npm.js";
+import { readmeLinks } from "./npm.ts";
 
 const readme = await fs.readFile("./template.md", "utf-8");
 

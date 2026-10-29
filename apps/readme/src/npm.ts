@@ -1,4 +1,8 @@
-import { NPMPackage, NPMPackageReturnType, NPMReturnType } from "./types.js";
+import type {
+  NPMPackage,
+  NPMPackageReturnType,
+  NPMReturnType,
+} from "./types.ts";
 
 const result = (await fetch(
   "https://registry.npmjs.org/-/v1/search?text=maintainer:leomotors&size=250",

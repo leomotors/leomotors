@@ -4,10 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint": "eslint src --max-warnings=0",
-    "format": "eslint src --fix",
-    "build": "tsc",
-    "load": "node dist/index.js",
+    "typecheck": "tsc",
+    "load": "node src/index.ts",
     "post-analyze": "bash post-analyze.bash"
   }
 }

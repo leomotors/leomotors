@@ -1,31 +1,12 @@
 {
   "name": "@leomotors/language-stats",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Get Summary of Your Language Stats",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "load": "mkdir -p data && node dist/src/loadData.js",
-    "analyze": "mkdir -p out && node dist/src/analyze.js",
-    "post-analyze": "bash post-analyze.bash",
-    "codegen": "graphql-codegen --config codegen.yml",
-    "lint": "eslint src --max-warnings=0",
-    "format": "prettier --write src/**/*.{js,ts}"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@graphql-codegen/cli": "^5.0.2",
-    "@graphql-codegen/typescript": "^4.0.9",
-    "@graphql-codegen/typescript-graphql-request": "^6.2.0",
-    "@graphql-codegen/typescript-operations": "^4.2.3",
-    "@leomotors/config": "workspace:0.0.0",
-    "@types/node": "^20.16.10",
-    "graphql": "^16.9.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.2"
-  },
-  "dependencies": {
-    "graphql-request": "^6.1.0",
-    "graphql-tag": "^2.12.6"
+    "typecheck": "tsc",
+    "load": "mkdir -p data && node --env-file-if-exists=../../.env src/loadData.ts",
+    "analyze": "mkdir -p out && node src/analyze.js",
+    "post-analyze": "bash post-analyze.bash"
   }
 }

@@ -1,48 +1,19 @@
 {
-  "pipeline": {
-    "codegen": {
-      "cache": false
-    },
-    "build": {
-      "dependsOn": [
-        "codegen",
-        "^build"
-      ],
-      "outputs": [
-        "dist/**"
-      ]
-    },
+  "$schema": "https://turborepo.com/schema.json",
+  "globalEnv": ["GH_PAT"],
+  "tasks": {
     "load": {
-      "dependsOn": [
-        "build",
-        "^build",
-        "codegen"
-      ],
-      "outputs": [
-        "data"
-      ],
+      "outputs": ["data/**"],
       "cache": false
     },
     "analyze": {
-      "dependsOn": [
-        "load"
-      ],
-      "outputs": [
-        "out"
-      ]
+      "dependsOn": ["load"],
+      "outputs": ["out/**"]
     },
     "post-analyze": {
-      "dependsOn": [
-        "analyze"
-      ],
+      "dependsOn": ["analyze"],
       "cache": false
     },
-    "lint": {},
-    "format": {
-      "cache": false
-    }
-  },
-  "globalEnv": [
-    "GH_PAT"
-  ]
+    "typecheck": {}
+  }
 }

@@ -2,33 +2,24 @@
   "name": "leomotors",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "type": "module",
   "scripts": {
-    "codegen": "FORCE_COLOR=2 dotenv -- turbo run codegen",
-    "build": "FORCE_COLOR=2 dotenv -- turbo run build",
-    "load": "FORCE_COLOR=2 dotenv -- turbo run load",
-    "analyze": "FORCE_COLOR=2 dotenv -- turbo run analyze",
-    "post-analyze": "FORCE_COLOR=2 dotenv -- turbo run post-analyze",
-    "lint": "FORCE_COLOR=2 turbo run lint",
-    "format": "FORCE_COLOR=2 turbo run format"
+    "load": "turbo run load",
+    "analyze": "turbo run analyze",
+    "post-analyze": "turbo run post-analyze",
+    "typecheck": "turbo run typecheck",
+    "lint": "biome check",
+    "format": "biome check --write"
   },
   "devDependencies": {
-    "@leomotors/config": "workspace:0.0.0",
-    "@types/node": "20.10.5",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "dotenv-cli": "^7.4.2",
-    "eslint": "^8.57.1",
-    "prettier": "^3.3.3",
-    "turbo": "^1.13.4",
-    "typescript": "^5.6.2"
+    "@biomejs/biome": "2.6.3",
+    "@types/node": "^24.19.2",
+    "turbo": "^2.11.10",
+    "typescript": "^7.0.2"
   },
   "engines": {
-    "node": "^20.9",
-    "pnpm": "^9"
+    "node": ">=24",
+    "pnpm": ">=12"
   },
-  "packageManager": "pnpm@9.11.0"
+  "packageManager": "pnpm@12.16.0"
 }

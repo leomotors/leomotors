@@ -1,34 +1,84 @@
 import fs from "node:fs/promises";
 
-import { GraphQLClient } from "graphql-request";
+const query = /* GraphQL */ `
+  query getRepoLangs($after: String) {
+    viewer {
+      repositories(
+        ownerAffiliations: OWNER
+        isFork: false
+        privacy: PUBLIC
+        first: 100
+        after: $after
+      ) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          name
+          isArchived
+          pushedAt
+          languages(first: 100) {
+            edges {
+              size
+              node {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
-import { getSdk } from "../generated/graphql.js";
+type Repo = {
+  name: string;
+  isArchived: boolean;
+  pushedAt: string;
+  languages: { edges: { size: number; node: { name: string } }[] };
+};
 
-const gqlClient = new GraphQLClient("https://api.github.com/graphql", {
-  headers: {
-    Authorization: "Bearer " + process.env.GH_PAT,
-  },
-});
+type RepoPage = {
+  pageInfo: { hasNextPage: boolean; endCursor: string | null };
+  nodes: Repo[];
+};
 
-const sdk = getSdk(gqlClient);
-
-console.log("Fetching Page 1");
-let result = await sdk.getRepoLangs();
-let page = 1;
-
-const repos = result.viewer.repositories.nodes ?? [];
-
-while (result.viewer.repositories.pageInfo.hasNextPage) {
-  page++;
-  console.log(`Fetching Page ${page}`);
-  result = await sdk.getRepoLangs({
-    after: result.viewer.repositories.pageInfo.endCursor,
+async function getRepoLangs(after: string | null): Promise<RepoPage> {
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.GH_PAT}`,
+      "User-Agent": "leomotors-language-stats",
+    },
+    body: JSON.stringify({ query, variables: { after } }),
   });
 
-  for (const node of result.viewer.repositories.nodes ?? []) {
-    repos.push(node);
+  const body = (await res.json()) as {
+    data?: { viewer: { repositories: RepoPage } };
+    errors?: unknown;
+  };
+
+  if (!res.ok || !body.data) {
+    throw new Error(
+      `GitHub GraphQL failed (${res.status}): ${JSON.stringify(body.errors)}`,
+    );
   }
+
+  return body.data.viewer.repositories;
 }
+
+const repos: Repo[] = [];
+let after: string | null = null;
+let page = 0;
+
+do {
+  page++;
+  console.log(`Fetching Page ${page}`);
+  const result = await getRepoLangs(after);
+  repos.push(...result.nodes);
+  after = result.pageInfo.hasNextPage ? result.pageInfo.endCursor : null;
+} while (after);
 
 const data: {
   [repoName: string]: { [langName: string]: number } & {
@@ -40,13 +90,13 @@ const data: {
 for (const repo of repos) {
   const repoLangs: (typeof data)[string] = {};
 
-  for (const edge of repo!.languages?.edges ?? []) {
-    repoLangs[edge!.node.name] = edge!.size;
+  for (const edge of repo.languages.edges) {
+    repoLangs[edge.node.name] = edge.size;
   }
 
-  repoLangs.__isArchived = repo!.isArchived;
-  repoLangs.__pushedAt = repo!.pushedAt;
-  data[repo!.name] = repoLangs;
+  repoLangs.__isArchived = repo.isArchived;
+  repoLangs.__pushedAt = repo.pushedAt;
+  data[repo.name] = repoLangs;
 }
 
 await fs.writeFile("data/data.json", JSON.stringify(data, null, 2));
